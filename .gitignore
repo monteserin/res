@@ -1,0 +1,66 @@
+servidor-apache/index.php
+web/servidor/php/pruebas/pizzeria/dompdf/
+design/autocad/librerias
+**/node_modules/
+**/Library/
+**/Temp/
+**/lib/
+**/bin/
+/flutter/**/build
+.metadata
+**/*.exe
+
+
+.idea
+
+/res/unity-3d/ex
+
+##### CARPETAS COMENTADAS PARA NO REBASAR EL TIEMPO LIMITE DE SUBIDA DE 6 HORAS (360 MIN)
+# borramos el .git-nosecuento en remoto
+# borramos la carpeta .git en local
+# git init
+# git remote add origin https://github.com/monteserin/res.git
+# git add .
+# git commit -m "first upload 15-09-2024"
+# git push origin master --force
+
+
+
+#A lo mejor estas carpetas pueden no estar en el gitignore para la subida inicial
+#phaser
+#podcasting
+#javascript
+#java
+
+# Uno de estos dos tardó muchísimo en subirse
+#hibernate-jpa
+#spring-boot
+
+#=========================================================
+#flutter
+#html5
+#react
+#wp
+#regalitos
+#wordpress-plugin
+#blender
+
+#autocad-3d
+
+#android
+#stencyl
+#unity-3d
+
+# Las siguientes carpetas dieron problemas en la subida usando github. C# y godot fallan fijo. Con la de godot, las subidas posteriores me empezaron a dar timeouts
+
+#godot
+#c-sharp
+
+#assets 
+
+#exito
+#exito2
+#autocad
+
+# Ficheros que tendré que subir manualmente porque superan el tamaño máximo de subida para un fichero
+JEE-workspace.zip
