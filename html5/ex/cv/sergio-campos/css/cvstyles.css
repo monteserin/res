@@ -1,0 +1,597 @@
+html, body {
+    height: 100%;
+    width: 100%;
+    font-family: 'Arsenal', sans-serif;
+    color: slategrey;
+    background-color: #f0f8ff;
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+ul, li, a, p, h1, h2, h3, h4 {
+    list-style: none;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+h2 {
+    font-size: 1.25em;
+
+}
+
+h3 {
+    font-size: 1.1em;
+}
+
+header {
+    background-color: rgba(66, 114, 112, 0.8);
+    width: 100%;
+    height: 45px;
+    top: 0;
+    position: fixed;
+}
+
+.cv {
+    display: none;
+}
+
+.curr {
+    display: inline;
+    margin: 5px 20px 5px 25px;
+    color: white;
+}
+
+/* o.O ******************** Inicio Menú Layouts ******************** O.o */
+.menu {
+    display: inline-block;
+    width: 100px;
+    position: fixed;
+    right: 25px;
+    top: 4px;
+    text-align: center;
+    z-index: 90;
+}
+
+.menu .menulist {
+    /*display: block;*/
+}
+
+.menu a {
+    font-size: 0.8em;
+    color: skyblue;
+    background: white;
+    padding: 3px 5px 3px 5px;
+    margin: 5px;
+    border: 1px solid skyblue;
+    border-radius: 5px;
+}
+
+.menu a:hover {
+    color: lightsteelblue;
+}
+
+.menu a:active {
+    color: white;
+    background-color: lightsteelblue;
+}
+
+.menulist a {
+    display: block;
+}
+
+.menulist:hover > a {
+    color: white;
+    background-color: lightsteelblue;
+}
+
+.menulist ul {
+    position: absolute;
+    padding: 0px;
+    margin-top: 0px;
+    margin-left: 0px;
+    opacity: 0;
+    overflow: hidden;
+    max-height: 0;
+    transition: 0.5s;
+}
+
+.menulist:hover ul {
+    opacity: 1;
+    max-height: 500px;
+}
+
+/* o.O ******************** Fin Menú Layouts ******************** O.o */
+/* o.O ******************** Inicio Sección ******************** O.o */
+
+/*++++++++++++++++++++Animaciones en la sección+++++++++++++++++++*/
+
+/*.caida{
+	animation: puerta 0.8s ease 0s forwards;
+		transform: perspective(500px) rotateX(-90deg);
+		transform-origin: 0% 0%;
+}
+@keyframes puerta {
+	to {
+		transform: perspective(500px) rotateX(0deg);
+		transform-origin: 0% 0%;
+	}
+}
+*/
+.abre {
+    animation: puertac 0.8s ease 0s forwards;
+}
+
+@keyframes puertac {
+    from {
+        transform: perspective(500px) rotateY(-90deg);
+        transform-origin: 0% 0%;
+    }
+    to {
+        transform: perspective(500px) rotateY(0deg);
+        transform-origin: 0% 0%;
+    }
+}
+
+/*++++++++++++++++++++ Fin Animaciones en la sección+++++++++++++++++++*/
+
+.wrapper {
+
+    display: flex;
+
+    flex-flow: row wrap;
+
+    align-items: flex-start;
+    margin: 45px auto;
+    width: 70%;
+    height: 95%;
+}
+
+.seccion {
+    display: flex;
+    flex-flow: row wrap;
+    width: 100%;
+    margin: 0;
+    align-content: flex-start;
+
+}
+
+.personal {
+    width: 33%;
+    flex: 3 1 200px;
+
+}
+
+.formacion .colmono div:nth-child(3) {
+    border-bottom: 1px solid lightsteelblue;
+    padding-bottom: 5px;
+}
+
+.formacion {
+    width: 33%;
+    flex: 3 1 200px;
+}
+
+.inner {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+/*********** ***********/
+.colmono {
+    flex: 3 1 100%;
+    border: solid slategrey;
+    border-width: 0 2px;
+    border-radius: 30px;
+    padding: 15px;
+}
+
+.software {
+    display: flex;
+    justify-content: space-around;
+    flex: 3 1 275px;
+    margin-left: 2%;
+}
+
+.pgm {
+    display: inline-block;
+    line-height: 25px;
+    margin: auto 0px;
+}
+
+.idiomas {
+    flex: 3 1 275px;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 5px;
+}
+
+.idiomas p {
+
+}
+
+/*********** ***********/
+
+section .secctitulo {
+    width: 100%;
+    height: 35px;
+    line-height: 35px;
+    padding-left: 30px;
+}
+
+img.foto {
+    width: 100%;
+    margin-top: 25px;
+
+}
+
+.colfoto {
+    flex: 3 0 20%;
+    /*	border: 1px solid lightsteelblue;
+    border-radius: 10px;*/
+    margin-right: 2%;
+
+}
+
+.colpresentacion {
+    flex: 3 3 78%;
+    /*	border: 1px solid lightsteelblue;
+    border-radius: 10px;*/
+}
+
+.colpresentacion p {
+    margin-top: 25px;
+    margin-right: 15px;
+}
+
+.coldoble {
+    flex: 3 1 20%;
+    border: solid slategrey;
+    border-width: 0 2px;
+    border-radius: 30px;
+    padding: 15px;
+    /*	Cuando declaramos ambas propiedades, column-count es el número máximo
+    de columnas y column-width es el ancho mínimo para esas columnas */
+    -webkit-columns: 3 300px;
+    -moz-columns: 3 300px;
+    columns: 3 300px;
+    /*espaciado entre columnas*/
+    -webkit-column-gap: 50px;
+    -moz-column-gap: 50px;
+    column-gap: 50px;
+    /*lineas separadoras*/
+    -webkit-column-rule: 1px solid lightsteelblue;
+    -moz-column-rule: 1px solid lightsteelblue;
+    column-rule: 1px solid lightsteelblue;
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.ampersand {
+    font-family: sans-serif;
+    font-weight: lighter;
+}
+
+.subtitol {
+    font-size: 1.1em;
+}
+
+.bloques {
+    margin: 10px;
+    page-break-inside: avoid; /* Firefox */
+    break-inside: avoid; /* IE 10+ */
+}
+
+/* o.O ******************** Fin Sección ******************** O.o */
+/* o.O ******************** Inicio Barras ******************** O.o */
+.seconds {
+    border: solid slategrey;
+    border-width: 0 0 0 2px;
+    border-radius: 30px;
+    height: 25px;
+    width: 120px;
+    margin: 5px auto;
+    position: relative;
+}
+
+.bartxt {
+    position: absolute;
+    margin-left: 5px;
+    font-stretch: condensed;
+}
+
+.bar {
+    border-radius: 30px;
+    height: 25px;
+    width: 25px;
+    border: solid slategrey;
+    border-radius: 30px;
+    border-width: 0 2px 0 0;
+    background: linear-gradient(rgba(112, 128, 144, 0.5), rgba(184, 192, 200, 0.2), rgba(112, 128, 144, 0.2)); /* Standard syntax (must be last) */
+}
+
+.animating {
+    animation: progress 1s linear forwards;
+}
+
+.logos {
+    float: right;
+    height: 25px;
+    width: auto;
+}
+
+@keyframes progress {
+    0% {
+        width: 25px;
+    }
+    100% {
+        width: 100%;
+    }
+}
+
+.animating95 {
+    animation: progress95 1s linear forwards;
+}
+
+@keyframes progress95 {
+    0% {
+        width: 25px;
+    }
+    100% {
+        width: 95%;
+    }
+}
+
+.animating90 {
+    animation: progress90 1s linear forwards;
+}
+
+@keyframes progress90 {
+    0% {
+        width: 25px;
+    }
+    100% {
+        width: 90%;
+    }
+}
+
+.animating85 {
+    animation: progress85 1s linear forwards;
+}
+
+@keyframes progress85 {
+    0% {
+        width: 25px;
+    }
+    100% {
+        width: 85%;
+    }
+}
+
+.animating80 {
+    animation: progress80 1s linear forwards;
+}
+
+@keyframes progress80 {
+    0% {
+        width: 25px;
+    }
+    100% {
+        width: 80%;
+    }
+}
+
+.animating75 {
+    animation: progress75 1s linear forwards;
+}
+
+@keyframes progress75 {
+    0% {
+        width: 25px;
+    }
+    100% {
+        width: 75%;
+    }
+}
+
+.animating70 {
+    animation: progress70 1s linear forwards;
+}
+
+@keyframes progress70 {
+    0% {
+        width: 25px;
+    }
+    100% {
+        width: 70%;
+    }
+}
+
+.animating55 {
+    animation: progress55 1s linear forwards;
+}
+
+@keyframes progress55 {
+    0% {
+        width: 25px;
+    }
+    100% {
+        width: 55%;
+    }
+}
+
+.animating45 {
+    animation: progress45 1s linear forwards;
+}
+
+@keyframes progress45 {
+    0% {
+        width: 25px;
+    }
+    100% {
+        width: 45%;
+    }
+}
+
+.animating35 {
+    animation: progress35 1s linear forwards;
+}
+
+@keyframes progress35 {
+    0% {
+        width: 25px;
+    }
+    100% {
+        width: 35%;
+    }
+}
+
+.animating25 {
+    animation: progress25 1s linear forwards;
+}
+
+@keyframes progress25 {
+    0% {
+        width: 25px;
+    }
+    100% {
+        width: 25%;
+    }
+}
+
+/* o.O ******************** Fin Barras ******************** O.o */
+
+.francesa {
+    padding-left: 25px;
+    text-indent: -25px;
+}
+
+/* o.O ******************** Media Queries ******************** O.o */
+
+@media only screen and (max-width: 385px) {
+    .menu {
+        display: block;
+
+    }
+
+    .curr {
+        display: none;
+    }
+
+    .cv {
+        display: inline;
+        margin: 5px 20px 5px 25px;
+        color: white;
+    }
+
+}
+
+@media print {
+    body {
+        font-family: sans-serif;
+        font-weight: lighter;
+    }
+
+    header {
+        display: none;
+    }
+
+    .wrapper {
+        display: block;
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%
+
+    }
+
+    .coldoble {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%
+    }
+
+    .formacion .colmono div:nth-child(3) {
+        border-bottom: 0px solid lightsteelblue;
+    }
+
+    .seccion {
+        margin-left: 0;
+        margin-right: 0;
+        margin-bottom: 0px;
+        margin-top: 0px;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+    }
+
+    .bloques {
+        margin-left: 10px;
+        margin-right: 10px;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    .secctitulo {
+        font-size: 1em;
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 0px;
+        margin-top: 0px;
+    }
+
+    .formacion {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%
+    }
+
+    .personal {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%
+    }
+
+    .inner {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%;
+    }
+
+    img.foto {
+        margin-left: auto;
+        margin-right: auto;
+        padding-left: 0;
+        padding-right: 0;
+        width: 73px;
+        height: 106px;
+    }
+
+    .colpresentacion {
+        margin-left: 0;
+        margin-right: 0;
+        padding-left: 0;
+        padding-right: 0;
+        width: 100%
+    }
+
+}
+
+
+
+
+

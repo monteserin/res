@@ -1,0 +1,155 @@
+.navbar {
+    display: flex;
+    align-items: center;
+}
+
+.navbar ul {
+    list-style: none;
+    display: flex;
+    margin: auto;
+}
+
+.navbar a {
+    display: block;
+    text-decoration: none;
+    padding: 7px;
+    border: 1px solid black;
+    border-radius: 7px;
+    margin: 5px;
+}
+
+.navbar .logo {
+    width: 120px;
+    border-radius: 100%;
+}
+
+.cartWidget {
+    width: 40px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.numProd {
+    font-size: 1.5rem;
+    margin-left: 7px;
+    display: inline-block;
+}
+
+.cartWidgetContainer {
+    display: inline-flex;
+    align-items: center;
+}
+
+.items {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.itemCount {
+    font-size: 1.5rem;
+    width: 130px;
+}
+
+.itemCount .toprow {
+    display: flex;
+    align-items: center;
+}
+
+.itemCount span {
+    display: inline-block;
+    text-align: center;
+    flex-grow: 1;
+}
+
+.itemCount button.add {
+    display: block;
+    background-color: transparent;
+    border: 1px solid blue;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    width: 100%;
+    cursor: pointer;
+}
+
+.itemCount .btn {
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    background-color: white;
+    border-radius: 100%;
+    border: 1px solid black;
+    cursor: pointer;
+    font-size: 1.2rem;
+    padding: 0;
+}
+
+.itemCount p {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.item {
+    border: 3px solid gray;
+    background-color: palegoldenrod;
+    width: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.item .itemTitle {
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 10px;
+
+}
+
+.item img {
+    display: block;
+    margin: auto;
+    height: 130px;
+}
+
+.item .description {
+    font-size: 1rem;
+    text-align: center;
+}
+
+.item .itemStock {
+    background-color: gray;
+}
+
+.item a {
+    display: block;
+    background-color: white;
+    padding: 7px;
+    border-radius: 7px;
+    border: 1px solid black;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    color: black;
+}
+
+.item .stock {
+    text-align: center;
+}
+
+.detailedInfo {
+    background-color: white;
+}
+
+.detailedInfo img {
+    display: block;
+    margin: auto;
+    max-width: 300px;
+}
+
+#root {
+    max-width: 1200px;
+    margin: auto;
+}

@@ -1,0 +1,16 @@
+input[required] {
+    border: solid 4px blue;
+}
+
+input:valid {
+    background: paleGreen;
+}
+
+input:invalid {
+    background: salmon;
+}
+
+label {
+    width: 150px;
+    display: inline-block;
+}

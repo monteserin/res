@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>shadow en Canvas de HTML5 | Pablo Monteserín</title>	<head></head>
+			<meta name="description" content="Ejemplo de como añadir un sombreado en la etiqueta canvas de html utilizando Javascript">
+
+	<body>
+	<h1>Ejemplo de como añadir un sombreado en la etiqueta canvas de html utilizando Javascript</h1>
+		<canvas id="canvas" width="400px" height="400px" style="border:2px solid black" />
+		<script>
+			var c = document.getElementById("canvas");
+			var ctx = c.getContext("2d");
+									// set up our basic shadow settings
+						ctx.shadowColor = "#000000";
+						ctx.shadowOffsetX = 10;
+						ctx.shadowOffsetY = 10;
+						ctx.shadowBlur = 10;
+						
+						ctx.fillStyle = "rgba(0,0,255,1)";
+						ctx.fillRect(20,20,200,100);	
+    	</script>
+	</body>
+</html>

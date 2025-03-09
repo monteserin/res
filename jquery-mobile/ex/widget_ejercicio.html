@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ejercicio widget jQuery Mobile | Pablo Monteserín</title>
+    <meta charset='utf-8'>
+    <meta name="description"
+        content="Hacer que un panel con una lista de enlaces entre en pantalla al pulsar un botón usando el plugin de Javascript jQuery Mobile">
+    <meta name="robots" content="noindex, follow">
+    <link rel="stylesheet" type="text/css" href="https://pablomonteserin.com/res/jquery-mobile/ex/jquery.mobile.css">
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery-mobile/ex/jquery-1.11.js"></script>
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery-mobile/ex/jquery.mobile.js"></script>
+
+</head>
+
+<body>
+    <section id="firstpage" data-role="page">
+        <header data-role="header" data-theme="b">
+            <h1>Panel flotante con menú en jQuery Mobile</h1>
+
+            <a href="#shortlist" class="ui-btn-right">Push</a>
+
+            <div id="shortlist" data-role="panel" data-display="overlay" data-position="right">
+                <ul data-role="listview">
+                    <li><a href="#">Enlace 1</a></li>
+                    <li><a href="#">Enlace 2</a></li>
+                    <li><a href="#">Enlace 3</a></li>
+                    <li><a href="#">Enlace 4</a></li>
+                    <li><a href="#">Enlace 5</a></li>
+
+                </ul>
+            </div>
+
+        </header>
+        <div data-role="content">
+            <p>Esta es la primera página</p>
+
+            <footer data-role="footer">El pie de la página</footer>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,22 @@
+[gd_scene load_steps=6 format=3 uid="uid://df87vhqf3ec8e"]
+
+[ext_resource type="Script" path="res://scenes/gravity_rocket.gd" id="1_olos2"]
+[ext_resource type="Texture2D" uid="uid://dlbp21odxd2st" path="res://assets/missile1.png" id="2_lxlqg"]
+[ext_resource type="PackedScene" uid="uid://dcobwqw487e5g" path="res://scenes/explosion.tscn" id="2_ujohx"]
+[ext_resource type="PackedScene" uid="uid://c26cwsd2gi850" path="res://scenes/lose.tscn" id="3_khigo"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dmkaq"]
+height = 60.0
+
+[node name="Sprite2D2" type="CharacterBody2D"]
+z_index = 1000
+position = Vector2(361, -36)
+script = ExtResource("1_olos2")
+explosion_scene = ExtResource("2_ujohx")
+lose_scene = ExtResource("3_khigo")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_lxlqg")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_dmkaq")

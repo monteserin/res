@@ -1,0 +1,15 @@
+<div id="friends"></div>
+
+<script>
+
+    const printFriends = (gnome) => {
+        document.querySelector('#friends').innerHTML = `<ul>${gnome.friends.map( o => `<li>${o}</li>`).join('')}</ul>`
+    }
+    const gnome = JSON.parse(localStorage.getItem('gnome'));
+    console.log(gnome)
+
+printFriends(gnome);
+
+
+
+</script>

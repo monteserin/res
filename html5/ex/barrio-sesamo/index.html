@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>index</title>
+    <meta charset="utf-8" />
+    <meta name="description"
+        content="Maquetación de una página responsive con HTML y CSS. Utilizaremos los estilos background con transparencia, transition, font-family, border-radius, etc...">
+    <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame
+    Remove this if you use the .htaccess -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="robots" content="noindex, follow">
+    <meta name="description" content="" />
+    <meta name="author" content="monty" />
+    <meta name="viewport" content="width=device-width; initial-scale=1.0" />
+    <!-- Replace favicon.ico & apple-touch-icon.png in the root of your domain and delete these references -->
+    <link rel="shortcut icon" href="favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <script src="javascript.js"></script>
+</head>
+
+<body>
+    <header>
+        <h1>BARRIO SESAMO</h1>
+        <nav>
+            <ul>
+                <li>
+                    <a href="#">HOME</a>
+                </li>
+                <li>
+                    <a href="#">CONTACT </a>
+                </li>
+                <li><a href="#">ABOUT</a></li>
+                <li><a href="#">IMAGE GALLERY</a></li>
+                <li><a href="#">VIDEO GALLERY</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section id="wrapper">
+        <article>
+            <h2>Titulo</h2>
+            <p>Lorem ipsum dolor sit amet, ad mazim referrentur pro, choro tibique ei eos. Mel no clita omittam
+                suavitate,
+                utinam dictas delectus eu eum. Sint adipisci duo ea. Te inani nullam ridens nec. Assum verear copiosae
+                ad
+                cum.</p>
+            <br /><br />
+            <video controls="controls">
+                <source src="https://pablomonteserin.com/res/html5/ex/barrio-sesamo/videos/leon.ogv" type="video/ogg" />
+                <source src="https://pablomonteserin.com/res/html5/ex/barrio-sesamo/videos/leon.mp4" type="video/mp4" />
+                <source src="https://pablomonteserin.com/res/html5/ex/barrio-sesamo/videos/leon.webm" type="video/webm" />
+            </video>
+        </article>
+        <article>
+            <h2>Titulo</h2>
+            <p>Ei hinc dicant dolorem mea. Usu porro clita ei, vel timeam prodesset ne. Alii elitr ex eum, te sea quis
+                nostrum necessitatibus. Corpora vituperatoribus et eum. Enim eros detracto sit cu, tollit copiosae
+                deterruisset eum ex, unum oratio repudiandae ex eum.</p>
+            <br />
+            <audio controls="controls" preload="preload" loop="loop">
+                <source src="https://pablomonteserin.com/res/html5/ex/barrio-sesamo/audio/HakunaMatataItMeansNoWorries.wav" type="audio/wav" />
+                <source src="https://pablomonteserin.com/res/html5/ex/barrio-sesamo/audio/HakunaMatataItMeansNoWorries.mp3" type="audio/mp3" />
+                <source src="https://pablomonteserin.com/res/html5/ex/barrio-sesamo/audio/HakunaMatataItMeansNoWorries.ogg" type="audio/ogg" />
+            </audio>
+        </article>
+        <article>
+            <form>
+                <fieldset>
+                    <label>Nombre</label>
+                    <input type="text" placeholder="escriba su nombre, por favor" required="required" /><br><br>
+                    <label>Edad:</label>
+                    <input type="number" value="18" id="edad" /><br><br>
+                    <label>Grado de fanatismo de Barrio Sésamo:
+                    </label>
+                    <input type="range" value="18" id="gradoFanatismo" /><br><br>
+                    <label>Email</label>
+                    <input type="email" value="18" /><br><br>
+                    <input id="btn" type="button" value="Generar gráfico" onclick="pintarCara()" />
+                </fieldset>
+            </form>
+            <div id="canvasWrapper">
+                <canvas id="canvas" />
+            </div>
+        </article>
+    </section>
+    <footer>
+        <p>
+            &copy; Copyright by Pablo Monteserín
+        </p>
+    </footer>
+</body>
+
+</html>

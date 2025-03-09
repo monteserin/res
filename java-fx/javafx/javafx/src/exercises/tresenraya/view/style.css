@@ -1,0 +1,13 @@
+.btn {
+	-fx-max-width: Infinity;
+	max-width: Infinity;
+	-fx-max-height: Infinity;
+	max-height: Infinity;
+}
+
+.row {
+	-fx-max-width: Infinity;
+	max-width: Infinity;
+	-fx-max-height: Infinity;
+	max-height: Infinity;
+}

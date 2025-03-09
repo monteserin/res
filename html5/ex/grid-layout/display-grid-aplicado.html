@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>display:grid aplicado | Pablo Monteserín</title>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Ejemplo práctico de como usar el estilo de CSS display:grid para montar una regilla de capas que tienen diferentes formas y tamaños">
+    <meta name="robots" content="noindex, follow">
+
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: 1fr 0.5fr 1.5fr;
+            column-gap: 0;
+            row-gap: 0;
+        }
+
+        .rosita {
+            background: pink;
+            grid-column: 1/3;
+            /*Desde la primera línea divisoria hasta la tercera */
+            grid-row: 1;
+        }
+
+        .verde {
+            background: green;
+            grid-column: 2;
+            grid-row: 3;
+        }
+
+        .blue {
+            background: blue;
+            grid-column: 3;
+            grid-row: 1/4;
+        }
+
+        .brown {
+            background: brown;
+            grid-row: 2/4;
+        }
+
+        .yellow {
+            background: yellow;
+            grid-column: 2;
+            grid-row: 2;
+        }
+
+        .green {
+            color: green
+        }
+
+        pre {
+            background: #D8D8D8;
+            border: 1px solid #00a9ff;
+            padding: 20px;
+        }
+
+        code {
+            background: #eaeaea;
+            padding: 15px;
+            display: block;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Uso del estilo 'display-grid'</h1>
+    <pre><code>&lt;style&gt;
+	.container{
+		display: grid;
+		grid-template-columns: repeat(3, 1fr); <span class="green" style="color:green">/*1 fr una <span
+            style="font-weight: bold">fr</span>acción del espacio que queda libre*/</span>
+		grid-template-rows: 1fr 0.5fr 1.5fr;
+		column-gap: 0;
+		row-gap:0;
+	}
+	.rosita{
+		background: pink;
+		grid-column: 1/3; 	<span class="green">/*Desde la primera línea divisoria hasta la tercera */</span>
+		grid-row: 1; 		<span class="green">/*Desde la primera línea divisoria hasta la siguiente */</span>
+	}
+	.verde{
+		background: green;
+		grid-column: 2;
+		grid-row:3;
+	}
+	.blue{
+		background: blue;
+		grid-column: 3;	
+		grid-row: 1/4;
+	}
+	.brown{
+		background:brown;
+		grid-row: 2/4;	
+	}
+	.yellow{
+		background: yellow;
+		grid-column: 2;
+		grid-row: 2;
+	}
+&lt;/style&gt;</code></pre>
+    <div class="container">
+        <div class="rosita"></div>
+        <div class="blue"></div>
+        <div class="brown">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates optio, tempore expedita
+            reiciendis, sequi debitis excepturi cum quo, beatae alias praesentium, ut est architecto eius illum nesciunt
+            dolores et perferendis!
+        </div>
+        <div class="yellow">
+            <p>pablomonteserin.com</p>
+        </div>
+        <div class="verde"></div>
+    </div>
+
+
+    <script>
+
+
+    </script>
+</body>
+
+</html>

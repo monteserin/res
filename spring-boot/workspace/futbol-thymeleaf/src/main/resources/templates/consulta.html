@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+	<style>
+		.equipo {
+			width: 200px;
+			height: 60px;
+			border: 1px solid black;
+			display: flex;
+			align-items: flex-start
+		}
+
+		.equipos {
+			display: flex;
+			flex-wrap: wrap;
+			width: 1024px;
+			margin: auto
+		}
+
+		.equipo_datos {
+			display: flex
+		}
+	</style>
+</head>
+
+<body>
+
+	<div class="equipos">
+		<div th:each="equipo:${equipos}">
+			<div class="equipo">
+				<a th:href="|/consulta-equipo-por-id/${equipo.equipoCod}|"><img th:src="|/${equipo.fotoEscudo}|" /></a>
+				<div class="equipo_datos">
+					<span th:text="${equipo.nombre}"></span> <br>
+					<span th:text="${equipo.fundacion}"></span><br>
+					<span th:text="${equipo.presidente}"></span>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+
+</body>
+
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>flexbox, order | Pablo Monteserín</title>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Ejemplo práctico de como usar el estilo CSS order de flexbox para ordenador el contenido de una capa que tiene display:flex">
+    <meta name="robots" content="noindex, follow">
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .colKhaki {
+            background: Khaki;
+            order: 1;
+        }
+
+        .colGreen {
+            background: paleGreen;
+            order: 2;
+        }
+
+        .colSalmon {
+            background: salmon;
+            order: 3;
+        }
+
+        .col {
+            width: 300px
+        }
+
+        pre {
+            background: #D8D8D8;
+            border: 1px solid #00a9ff;
+            padding: 20px;
+        }
+
+        code {
+            background: #eaeaea;
+            padding: 15px;
+            display: block;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Uso del estilo 'order'</h1>
+    <pre><code>&lt;style&gt;
+	.container{
+			display: flex;	
+	}
+	.colKhaki{
+		background: Khaki;
+		order: <select id="colKhaki_order"><option value="0">0 (por defecto)</option><option value="1">1</option><option
+            value="2">2</option><option value="3">3</option></select>;
+	}
+	.colGreen{
+		background: paleGreen;
+		order: <select id="colGreen_order"><option value="0">0 (por defecto)</option><option value="1">1</option><option
+            value="2">2</option><option value="3">3</option></select>;
+	}
+	.colSalmon{
+		background: salmon;
+		order: <select id="colSalmon_order"><option value="0">0 (por defecto)</option><option value="1">1</option><option
+            value="2">2</option><option value="3">3</option></select>;
+	}
+	.col{
+		width: 300px
+	}
+&lt;/style&gt;</code></pre>
+    <div class="container">
+        <div class="col colKhaki">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum recusandae autem
+            sapiente
+            veritatis, perferendis ea fugiat, provident repellendus, vitae a iusto animi tenetur, rem tempore neque.
+            Atque
+            suscipit dolorem, ea!
+        </div>
+        <div class="col colGreen">Lorem ipsum dolor sit amet, consectetur</div>
+        <div class="col colSalmon">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates iure, a ad,
+            voluptas
+            beatae obcaecati dolorem asperiores libero nesciunt dignissimos.
+        </div>
+    </div>
+
+
+    <script>
+
+        document.getElementById("colKhaki_order").onchange = function () {
+            document.querySelector(".colKhaki").style.order = this.value;
+        }
+        document.getElementById("colGreen_order").onchange = function () {
+            document.querySelector(".colGreen").style.order = this.value;
+        }
+        document.getElementById("colSalmon_order").onchange = function () {
+            document.querySelector(".colSalmon").style.order = this.value;
+        }
+
+
+    </script>
+</body>
+
+</html>

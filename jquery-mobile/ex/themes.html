@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Themes en jQuery Mobile | Pablo Monteserín</title>
+    <meta charset='utf-8'>
+    <meta name="robots" content="noindex">
+    <meta name="description"
+        content="Ejemplo de como cargar los dos themes  (data-theme) en la misma página web hecha jQuery Mobile, que es un plugin pensado para hacer alicaciones móviles">
+    <meta name="robots" content="noindex, follow">
+    <link rel="stylesheet" type="text/css" href="jquery.mobile.css">
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery-mobile/ex/jquery-1.11.js"></script>
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery-mobile/ex/jquery.mobile.js"></script>
+</head>
+
+<body>
+    <section id="firstpage" data-role="page" data-theme="a">
+        <header data-role="header" data-theme="b">
+            <h1>Themes en jQuery Mobile</h1>
+        </header>
+        <div data-role="content" data-theme="a">
+            <ol data-role="listview" data-filter="true" data-filter-placeholder="txt a buscar" data-divider-theme="b"
+                data-count-theme="b">
+                <li><a href="#">first part</a></li>
+                <li data-role="list-divider">Divider</li>
+                <li><a href="#">List item 2</a></li>
+                <li><a href="#">List item 3</a>
+                </li>
+            </ol>
+        </div>
+        <footer data-role="footer" data-theme="a">El pie de la página</footer>
+    </section>
+
+</body>
+
+</html>

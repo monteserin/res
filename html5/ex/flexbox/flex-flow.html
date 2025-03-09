@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>flexbox, flex-flow | Pablo Monteserín</title>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Ejemplo práctico de como usar el estilo CSS flex-flow de flexbox para modificar directamente el flex-direction y el flex-wrap">
+    <meta name="robots" content="noindex, follow">
+
+    <style>
+        .container {
+            display: flex;
+            flex-flow: row nowrap;
+        }
+
+        .colKhaki {
+            background: Khaki;
+        }
+
+        .colSalmon {
+            background: salmon;
+        }
+
+        .col {
+            width: 300px
+        }
+
+        pre {
+            background: #D8D8D8;
+            border: 1px solid #00a9ff;
+            padding: 20px;
+        }
+
+        code {
+            background: #eaeaea;
+            padding: 15px;
+            display: block;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Uso del estilo 'flex-flow'</h1>
+    <pre><code>&lt;style&gt;
+	.container{
+			display: flex;
+			flex-flow: <select id="flex_direction"><option value="row">row</option><option value="row-reverse">row-reverse</option><option
+            value="column">column</option><option value="column-reverse">column-reverse</option></select> <select
+            id="flex_wrap"><option value="nowrap">nowrap</option><option value="wrap">wrap</option><option
+            value="wrap-reverse">wrap-reverse</option></select>;
+	}
+	.colKhaki{
+		background: Khaki; 
+	}
+	.colSalmon{
+		background: salmon;s
+	}
+	.col{
+		width: <select id="anchura_col"><option value="300px">300px</option><option value="auto">auto</option></select>
+	}
+&lt;/style&gt;</code></pre>
+    <div class="container">
+        <div class="col colKhaki">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum recusandae autem
+            sapiente
+            veritatis, perferendis ea fugiat, provident repellendus, vitae a iusto animi tenetur, rem tempore neque.
+            Atque
+            suscipit dolorem, ea!
+        </div>
+        <div class="col colSalmon">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates iure, a ad,
+            voluptas
+            beatae obcaecati dolorem asperiores libero nesciunt dignissimos.
+        </div>
+    </div>
+
+
+    <script>
+        document.getElementById("flex_direction").onchange = function () {
+            document.querySelector(".container").style.flexDirection = this.value;
+        }
+
+        document.getElementById("flex_wrap").onchange = function () {
+            document.querySelector(".container").style.flexWrap = this.value;
+        }
+
+        document.getElementById("anchura_col").onchange = function () {
+            document.querySelector(".col").style.width = this.value;
+        }
+    </script>
+</body>
+
+</html>

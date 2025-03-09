@@ -1,0 +1,2 @@
+C:\data\tutos\res\unity-3d\ex\puzzleconraycast\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+C:\data\tutos\res\unity-3d\ex\puzzleconraycast\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache

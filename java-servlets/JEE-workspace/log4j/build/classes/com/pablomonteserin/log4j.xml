@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+<!--Los appender son los elementos donde verteremos las trazas. En su declaración indicaremos su nombre y la clase que lo va a implementar-->
+<appender name="Fichero" class="org.apache.log4j.RollingFileAppender">
+<!-- El atributo value indica dónde irán a parar las trazas-->
+	<param name="File" value="/home/monty/log4j.log"/> 
+<!-- MaxFileSize indica hasta cuanta información pueden almacenar los ficheros de trazas. A partir de ese tamaño se borrarán las más antiguas --> 
+	<param name="MaxFileSize" value="5000KB"/>
+<!-- Una vez rebasado el tamaño indicado en el parámetro MaxFileSize, se irán generando ficheros que contendrán las trazas más antiguas. En este caso se podrán generar hasta un total de 10 -->
+	<param name="MaxBackupIndex" value="10"/>
+<!-- El layout define la apariencia que van a tener las trazas-->
+	<layout class="org.apache.log4j.PatternLayout">
+		<param name="ConversionPattern" value="%d{dd MMM yyyy HH:mm:ss} [%p] %C %M %m %n"/>
+	</layout>
+</appender>
+<!-- El siguiente appender saca las trazas en la consola del servidor, en vez de en un fichero de texto --> 
+<appender name="Consola" class="org.apache.log4j.ConsoleAppender">
+	<layout class="org.apache.log4j.PatternLayout">
+		<param name="ConversionPattern" value="%X{terminal} %d{dd MMM yyyy HH:mm:ss} [%p] %C %M %m %n"/>
+	</layout>
+</appender>
+<logger name="com.pablomonteserin">
+<!-- level indica el tipo de trazas que se van a sacar (nivel de trazabilidad). off, debug, info, warn, error, fatal, all
+Lo típico es poner debug en desarrollo y error en produccion. Las trazas de mas a la izquierda, incluyen a las trazas de más a la derecha-->
+	<level value="debug"/>
+	<appender-ref ref="Fichero"/>
+	<appender-ref ref="Consola"/>
+</logger> 
+</log4j:configuration>

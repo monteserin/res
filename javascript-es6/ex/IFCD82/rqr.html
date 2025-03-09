@@ -1,0 +1,40 @@
+<script>
+    const coleccionDeColecciones = [
+        ['aaaaaa', 'bbbbb', 'cccc'],
+        ['dddd', 'eeee', 'fffff']
+    ];
+
+    coleccionDeColecciones.forEach((c, i) => { // 0
+        c.forEach((o, j) => { // 0
+            console.log(o); // aaaaaa
+            console.log(coleccionDeColecciones[i][j]) // aaaaa
+            coleccionDeColecciones[i][j] =
+                o = 
+
+        });
+    });
+
+</script>
+
+
+<script>
+    const cosas = ['corazon', 'cara sonriente', 'sol']
+
+    cosas.forEach(cosa => console.log(cosa));
+</script>
+
+<script>
+
+    const calcularCoste = () => {
+        const numNoches = prompt('numero de noches');
+        const destino = prompt('destino');
+        const resultado1 = costeHotel(numNoches);
+        const resultado2 = costeAvion(destino, numNoches);
+        const resultado3 = costeAlquilerCoche(numNoches);
+        console.log("Coste viaje: " + resultado1);
+        console.log("Resultado viaje: ", resultado2);
+        console.log("Resultado alquiler coche: ", resultado3);
+        console.log("Total:", resultado1 + resultado2 + resultado3);
+    }
+
+</script>

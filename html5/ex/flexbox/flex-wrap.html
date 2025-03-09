@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>flexbox, flex-wrap | Pablo Monteserín</title>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Ejemplo de como usar el estilo flex-wrap para establecer como se va a comportar la capa respecto de su contenido cuando esta tiene ancho automático">
+    <meta name="robots" content="noindex, follow">
+    <style>
+        .container {
+            display: flex;
+            flex-wrap: nowrap;
+        }
+
+        .col {
+            border: 1px solid black;
+            width: 300px
+        }
+
+        pre {
+            background: #D8D8D8;
+            border: 1px solid #00a9ff;
+            padding: 20px;
+        }
+
+        code {
+            background: #eaeaea;
+            padding: 15px;
+            display: block;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Uso del estilo 'flex-wrap'</h1>
+    <pre><code>&lt;style&gt;
+	.container{
+			display: flex;
+			flex-wrap: <select id="flex_wrap"><option value="nowrap">nowrap</option><option value="wrap">wrap</option><option
+            value="wrap-reverse">wrap-reverse</option></select>;
+	}
+	.col{
+        border:1px solid black;
+		width: <select id="anchura_col"><option value="300px">300px</option><option value="auto">auto</option></select>
+	}
+&lt;/style&gt;</code></pre>
+    <div class="container">
+        <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum recusandae autem sapiente
+            veritatis, perferendis ea fugiat, provident repellendus, vitae a iusto animi tenetur, rem tempore neque.
+            Atque
+            suscipit dolorem, ea!
+        </div>
+        <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum recusandae autem sapiente
+            veritatis, perferendis ea fugiat, provident repellendus, vitae a iusto animi tenetur, rem tempore neque.
+            Atque
+            suscipit dolorem, ea!
+        </div>
+        <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum recusandae autem sapiente
+            veritatis, perferendis ea fugiat, provident repellendus, vitae a iusto animi tenetur, rem tempore neque.
+            Atque
+            suscipit dolorem, ea!
+        </div>
+        <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum recusandae autem sapiente
+            veritatis, perferendis ea fugiat, provident repellendus, vitae a iusto animi tenetur, rem tempore neque.
+            Atque
+            suscipit dolorem, ea!
+        </div>
+        <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum recusandae autem sapiente
+            veritatis, perferendis ea fugiat, provident repellendus, vitae a iusto animi tenetur, rem tempore neque.
+            Atque
+            suscipit dolorem, ea!
+        </div>
+        <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum recusandae autem sapiente
+            veritatis, perferendis ea fugiat, provident repellendus, vitae a iusto animi tenetur, rem tempore neque.
+            Atque
+            suscipit dolorem, ea!
+        </div>
+        <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum recusandae autem sapiente
+            veritatis, perferendis ea fugiat, provident repellendus, vitae a iusto animi tenetur, rem tempore neque.
+            Atque
+            suscipit dolorem, ea!
+        </div>
+        <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum recusandae autem sapiente
+            veritatis, perferendis ea fugiat, provident repellendus, vitae a iusto animi tenetur, rem tempore neque.
+            Atque
+            suscipit dolorem, ea!
+        </div>
+        <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum recusandae autem sapiente
+            veritatis, perferendis ea fugiat, provident repellendus, vitae a iusto animi tenetur, rem tempore neque.
+            Atque
+            suscipit dolorem, ea!
+        </div>
+        <div class="col">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum recusandae autem sapiente
+            veritatis, perferendis ea fugiat, provident repellendus, vitae a iusto animi tenetur, rem tempore neque.
+            Atque
+            suscipit dolorem, ea!
+        </div>
+
+
+    </div>
+
+
+    <script>
+        document.getElementById("flex_wrap").onchange = function () {
+            document.querySelector(".container").style.flexWrap = this.value;
+        }
+
+        document.getElementById("anchura_col").onchange = function () {
+            var objs = document.querySelectorAll(".col");
+            for (var i = 0; i < objs.length; i++) {
+                objs[i].style.width = this.value;
+            }
+        }
+
+    </script>
+</body>
+
+</html>

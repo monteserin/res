@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Margin collapse HTML | Pablo Monteserín</title>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Explicación del margin collapse, que es lo que ocurre cuando inmediantamente dentro de una capa hay otra capa que tiene un margin-top">
+    <meta name="robots" content="noindex, follow">
+    <style type="text/css">
+        body.margin-collapse div {
+            width: 100%;
+            height: 400px;
+            background: pink
+        }
+
+        body.margin-collapse p {
+            background: green;
+            color: white;
+            font-weight: bold
+        }
+    </style>
+    <meta name="viewport" content="width= device-width , initial-scale=1.0 , user-scalable=no" />
+</head>
+
+<body class="margin-collapse">
+
+    <div style="background:pink">
+        <h1>
+            Margin Collapsed: Márgenes que empujan al padre y no al elemento que lo tiene declarado o que entre hermanos
+            desaparece uno de ellos quedando más juntos de lo deseado.
+        </h1>
+
+        <h2>En CSS los márgenes adyacentes (<span style="color:blue">ningún padding o border que los separe</span>) de
+            dos o
+            más cajas (que pueden estar una al lado de la otra o anidadas) se combinan para formar un solo margen.
+        </h2>
+        <h2>Los márgenes laterales (horizontales) no se combinan o cierran entre ellos, sólo los superiores e inferiores
+            (verticales). </h2>
+    </div>
+
+    <div>
+        <p>El márgen de este párrafo se está conbinando con el márgen del div que lo envuelve (aunque sea cero), dándo
+            lugar
+            a un nuevo márgen que será el mayor de ambos que se aplica sobre la capa padre. Por esta razón estas dos
+            capas
+            rosas están separadas y no juntas</p>
+    </div>
+    <div style="border:1px solid black">
+        <p>Si vuelves a la primera cita de este artículo, verás que <span style="color:black"> una condición es que no
+                haya paddings o bordes interpuestos entre los márgenes</span>.
+            Así que sólo es necesario añadir un borde o un padding al padre de la etiqueta que tiene margin.</p>
+        <p>También serviría darle el estilo overflow:auto u overflow:hidden al padre</p>
+    </div>
+
+    <p style="padding:1px; margin:40px">Estos dos párrafos verdes tienen 40 px de margen y sin embargo, se collapsan y
+        sólo
+        cuenta uno.</p>
+    <p style="padding:1px; margin:40px">Estos dos párrafos verdes tienen 40 px de margen y sin embargo, se collapsan y
+        sólo
+        cuenta uno.</p>
+    <hr style="color:transparent">
+    <p style="padding:1px; margin:40px;">Para evitar el colapso de márgenes entre hermanos un &lt;hr&gt; de color
+        transparente o un &lt;img&gt; de un px de grosor (el tamaño de la etiqueta se suma), surte efecto.</p>
+</body>
+
+</html>

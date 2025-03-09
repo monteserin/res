@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>grid con varias celdas en jQuery Mobile | Pablo Monteserín</title>
+    <meta charset='utf-8'>
+    <meta name="description" content="Ejemplo de creación de una rejilla con varias celdas utilizando jQuery Mobile">
+    <meta name="robots" content="noindex, follow">
+    <link rel="stylesheet" type="text/css" href="https://pablomonteserin.com/res/jquery-mobile/ex/jquery.mobile.css">
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery-mobile/ex/jquery-1.11.js"></script>
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery-mobile/ex/jquery.mobile.js"></script>
+    <style type="text/css">
+        .content div div p {
+            background: lightGray;
+            border: 1px solid gray;
+            height: 75px;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="firstpage" data-role="page">
+        <header data-role="header">
+            <h1>Cabecera</h1>
+        </header>
+
+        <div class="content" data-role="content">
+            <div class="ui-grid-b">
+                <div class="ui-block-a">
+                    <p>Content</p>
+                </div>
+                <div class="ui-block-b">
+                    <p>Content</p>
+                </div>
+
+                <div class="ui-block-a">
+                    <p>Content</p>
+                </div>
+                <div class="ui-block-b">
+                    <p>Content</p>
+                </div>
+                <div class="ui-block-c">
+                    <p>Content</p>
+                </div>
+            </div>
+        </div>
+
+
+        <footer data-role="footer">El pie de la página</footer>
+    </section>
+</body>
+
+</html>

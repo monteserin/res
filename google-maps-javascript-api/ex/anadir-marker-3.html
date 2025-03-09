@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Añadir un marker HTML5 con fotografía personalizada</title>
+	<meta name="description"
+		content="Carga de una mapa de Google Maps utilizando Javascript y usando markers personalizados">
+
+	<!-- API
+	http://code.google.com/apis/maps/documentation/javascript/tutorial.html
+-->
+	<script type="text/javascript"
+		src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRzpL0lfAREobXgI1yxvk8uKHkVXz8Mf4">
+		</script>
+
+	<script>
+		window.onload = init;
+
+		function init() {
+			var myOptions = {
+				center: new google.maps.LatLng(43.5293101753168, -5.6773233792),
+				zoom: 18,
+				mapTypeId: google.maps.MapTypeId.ROADMAP
+			};
+			map = new google.maps.Map(document.getElementById("mapa"), myOptions);
+			addMarker(43.5293101753168, -5.6773233792);
+		}
+
+		var pinIcon = new google.maps.MarkerImage(
+			"../Tux.svg",
+			null, /* size is determined at runtime */
+			null, /* origin is 0,0 */
+			null, /* anchor is bottom center of the scaled image */
+			new google.maps.Size(42, 68)
+		);
+
+
+
+		function addMarker(lat, lng) {
+			var mapMarker = new google.maps.Marker({
+				position: new google.maps.LatLng(lat, lng),
+				title: "Estás aquí.",
+				icon: pinIcon
+			});
+			mapMarker.setMap(map);
+		}
+
+	</script>
+
+
+</head>
+
+<body>
+	<div id="mapa" style="width:100%; height:500px; background: red"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>plugin jQuery para validación de formulario | Pablo Monteserín</title>
+    <meta name="description"
+        content="Ejemplo de uso de un plugin de jQuery para validar campos de un formulario. Si hay algo escrito, si son dígitos, si tienen cierta longitud, etc...">
+    <meta name="robots" content="noindex, follow">
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery/ex/jquery.js"></script>
+    <script src="https://pablomonteserin.com/res/assets/js/jquery.validate.js"></script>
+
+    <script src="javascript.js"></script>
+    <style>
+        label:not(.error) {
+            width: 200px;
+            display: inline-block;
+        }
+
+        input.error {
+            border: 2px solid red;
+        }
+
+        label.error {
+            background: url('http://dev.jquery.com/view/trunk/plugins/validate/demo/images/unchecked.gif') no-repeat;
+            padding-left: 16px;
+        }
+
+        label.valid {
+            background: url('http://dev.jquery.com/view/trunk/plugins/validate/demo/images/checked.gif') no-repeat;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <form id="myform" method="post" action="rqr.html">
+
+        <label for="idFieldNombre">Nombre: </label>
+        <input class="left" id="idFieldNombre" name="fieldNombre" /><br />
+
+        <label for="idFieldApellidos">Apellidos: </label>
+        <input class="left" id="idFieldApellidos" name="fieldApellidos" /><br />
+
+        <label for="idFieldEdad">Edad: </label>
+        <input class="left" id="idFieldEdad" name="fieldEdad" /><br />
+
+        <label for="idFieldDireccion">Dirección: </label>
+        <input class="left" id="idFieldDireccion" name="fieldDireccion" /><br />
+
+        <label for="idFieldCP">Código postal: </label>
+        <input class="left" id="idFieldCP" name="fieldCP" /><br />
+
+        <label for="idFieldCorreo">Correo electrónico: </label>
+        <input class="left" id="idFieldCorreo" name="fieldCorreo" /><br />
+
+        <label for="idFieldPagina">Página web </label>
+        <input class="left" id="idFieldPagina" name="fieldPagina" /><br>
+
+        <label for="idPassword">Password</label>
+        <input type="password" class="left" id="idPassword" name="fieldPassword" /><br>
+
+        <label for="idPassword2">Repite el password</label>
+        <input type="password" class="left" id="idPassword2" name="fieldPasswordb" /><br>
+
+        <input type="submit" class="left" id="field" name="field" value="send" />
+    </form>
+
+
+</body>
+
+</html>

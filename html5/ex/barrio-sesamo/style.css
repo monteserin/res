@@ -1,0 +1,158 @@
+@font-face {
+  font-family: sesamo;
+  src: url(https://pablomonteserin.com/res/html5/ex/barrio-sesamo/AlphaStreet.ttf);
+}
+
+body {
+  background: url(https://pablomonteserin.com/res/html5/ex/barrio-sesamo/images/elmo.png)
+      no-repeat,
+    url(https://pablomonteserin.com/res/html5/ex/barrio-sesamo/images/seamless-brick-wall-pattern.png)
+      repeat;
+  background-size: /* 100% auto,*/ auto auto;
+  background-origin: border-box;
+  background-position: center 100px;
+  margin: 0;
+}
+
+nav ul a {
+  display: inline-block;
+  padding: 10px;
+  border-radius: 15px;
+  background: green;
+  transition: 0.8s;
+  border: 4px solid yellow;
+  text-decoration: none;
+  color: white;
+  font-family: sesamo;
+}
+
+nav ul a:hover {
+  background: paleGreen;
+  color: black;
+}
+
+video {
+  max-width: 400px;
+  width: 100%;
+}
+
+nav ul {
+  list-style: none;
+  height: 40px;
+  width: 800px;
+  margin: auto;
+  margin-bottom: 50px;
+  border-radius: 15px;
+  padding: 0;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+}
+
+canvas {
+  width: 100%;
+  height: auto;
+}
+
+article {
+  margin: 10px auto 10px auto;
+  transition: 3s;
+  width: 944px;
+  background: rgba(165, 73, 48, 0.7);
+  border: 3px solid white;
+  border-radius: 30px;
+  padding: 40px;
+  transition: 1s;
+  box-sizing: border-box;
+  text-align: center;
+  color: white;
+  font-weight: lighter;
+  font-family: arial;
+}
+
+article:hover {
+  box-shadow: 10px 50px 100px black;
+  background: rgba(165, 73, 48, 0.99);
+  transform: scale(1.1);
+  -moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+}
+
+header h1 {
+  margin: auto;
+  text-align: center;
+  font-size: 100px;
+  color: white;
+  font-family: sesamo;
+  text-shadow: 10px 10px 10px black;
+}
+
+input {
+  width: 80%;
+  padding: 15px;
+  border-radius: 5px;
+  border: 0.5px solid grey;
+}
+
+label {
+  display: inline-block;
+  width: 200px;
+  font-size: 18px;
+  margin: 10px auto;
+}
+
+[required] {
+  border-color: green;
+  box-shadow: 0px 0px 5px green;
+}
+
+:invalid {
+  border-color: red;
+  box-shadow: 0px 0px 5px red;
+}
+
+#canvasWrapper {
+  text-align: center;
+}
+
+#canvas {
+  /*existe diferencia entre poner el width y el height como estilo y como atributo*/
+  border: solid 4px black;
+  display: inline-block;
+}
+
+footer p {
+  font-size: 1.5em;
+  color: white;
+  text-shadow: 5px 5px 5px black;
+  margin-left: 10px;
+}
+
+#btn {
+  width: 50%;
+}
+
+@media (max-width: 1040px) {
+  article {
+    width: 90%;
+    margin: 20px auto;
+  }
+
+  nav ul {
+    width: 80%;
+    height: auto;
+    overflow: hidden;
+  }
+}
+
+@media (max-width: 440px) {
+  header h1 {
+    font-size: 50px;
+  }
+
+  audio {
+    width: 100%;
+  }
+}

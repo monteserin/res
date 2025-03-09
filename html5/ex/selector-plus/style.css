@@ -1,0 +1,10 @@
+input + span {
+    background: purple;
+    color: white
+}
+
+/*alt gr + 4 para dibujar símbolo*/
+input ~ div {
+    background: green;
+    color: white
+}

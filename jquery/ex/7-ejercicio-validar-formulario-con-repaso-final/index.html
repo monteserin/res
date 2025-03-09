@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Validar formulario con jQuery con repaso final</title>
+    <meta name="description"
+        content="Ejemplo de como validar manualmente  un formulario utilizando la librería de Javascript jQuery pero sin utilizar un plugin específico de validación">
+    <meta name="robots" content="noindex, follow">
+    <style>
+        span {
+            color: red
+        }
+    </style>
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery/ex/jquery.js"></script>
+    <script src="javascript.js"></script>
+
+</head>
+
+<body>
+    <h1>Validación de un formulario con jQuery</h1>
+
+    <form name="formulario" id="pp">
+        <div name="rqr"></div>
+        <table>
+            <tr name="uuu">
+                <td name="psst">Nombre:</td>
+                <td id="pp">
+                    <input id="nombre" class="required" type="text" />
+                    <span></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Edad:</td>
+                <td>
+                    <input type="text" class="numero" />
+                    <span></span>
+                </td>
+            </tr>
+            <tr>
+                <td>CP:</td>
+                <td>
+                    <input type="text" maxlength="5" class="fiveDigits" />
+                    <span></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Fecha Nacimiento:</td>
+                <td>
+                    <input type="text" class="fecha" />
+                    <span></span>
+                </td>
+            </tr>
+            <tr>
+                <td>mail:</td>
+                <td>
+                    <input type="text" class="mail" />
+                    <span></span>
+                </td>
+            </tr>
+        </table>
+        <input type="button" id="enviar" value="Enviar" />
+    </form>
+
+</body>
+
+</html>

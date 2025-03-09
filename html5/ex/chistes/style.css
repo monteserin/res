@@ -1,0 +1,48 @@
+body {
+    background-color: #FBC79F;
+}
+
+.container {
+    width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    color: white;
+    text-align: center;
+}
+
+
+.box {
+    padding: 10px;
+    margin-top: 20px;
+}
+
+.box p {
+    margin: 0;
+}
+
+.green {
+    background-color: #8AD0C0;
+    border: 5px solid #65988C;
+}
+
+.gray {
+    background-color: #E0E0E0;
+    border: 5px dotted #848484
+}
+
+.double {
+    background-color: #E0E0E0;
+    border: 5px double #848484
+}
+
+.yellow {
+    background-color: #FFFFB5;
+    border: 5px solid #FFFF00;
+}
+
+.purple {
+    background-color: #DFDAF2;
+    border: 5px dashed #A89BDB;
+}

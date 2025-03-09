@@ -1,0 +1,46 @@
+body {
+    background-color: #287554;
+}
+
+h1 {
+    color: white;
+    font-size: 3.5rem;
+}
+
+.box {
+    width: 50%;
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+.center {
+    margin: auto;
+}
+
+
+.right {
+    margin-left: 50%;
+}
+
+.white {
+    background-color: white;
+    border: 5px solid black;
+}
+
+.brown {
+    background-color: #aa5a3a;
+    border: 5px solid #862600;
+    color: white;
+}
+
+.orange {
+    background-color: #aa7a3a;
+    border: 5px solid #864d00;
+    color: white;
+}
+
+.blue {
+    background-color: #2a506d;
+    border: 5px dashed #697c8b;
+    color: white;
+}

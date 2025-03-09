@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Monteserín Slider con jQuery | Pablo Monteserín</title>
+			    <meta name="description" content="Slider de fotos programador en jQuery y con múltiples posibilidades de configuración">
+
+		<style>
+.monteserinSlider li{display: none; position: absolute;list-style:none;}
+.monteserinSlider ul{position: relative;list-style:none;}
+
+</style>
+<style>
+	ul#monteserinSlider{font-size: 5em}
+
+</style>
+</head>
+<body>
+<h1>Plugin de jQuery: Monteserín slider</h1>
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+<script type="text/javascript" src="monteserinSlider.js"></script>
+
+<script type="text/javascript" >
+$(function(){
+	$("#monteserinSlider1").monteserinSlider();
+	$("#monteserinSlider2").monteserinSlider({
+		fadeInTime:500,
+		fadeOutTime:500,
+		waitTime:5000
+	});
+});
+</script>
+
+
+<ul id="monteserinSlider1" class="monteserinSlider">
+	<li>Ok</li>
+	<li>this is the Monteserin Slider</li>
+	<li>...so...</li>
+	<li>is great, yeah?</li>
+	<li>happy you appreciate it</li>
+</ul>
+
+
+
+<ul id="monteserinSlider2" class="monteserinSlider" style="background:red; margin-top:40px;  display:block; position:relative; ">
+	<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus earum quisquam accusamus commodi delectus vitae.	</li>
+	<li>Lorem ipsum dolor sit amet.</li>
+	<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsam, velit officiis quidem adipisci itaque, ratione rerum sapiente inventore possimus, cumque id repudiandae nam perferendis error repellendus suscipit. Voluptatem atque, odio aspernatur asperiores nesciunt beatae quod at unde. Sed, dolorum, placeat.</li>
+	<li>Lorem ipsum dolor sit amet, consectetur adipisicing.</li>
+	<li>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Earum quidem quas voluptates. Veritatis molestiae amet dicta soluta iure reiciendis dolor, voluptates quam! Adipisci, maiores inventore sed aliquam eveniet a minus.</li>
+</ul>
+</body>
+</html>

@@ -1,0 +1,22 @@
+div#box {
+  width: 300px;
+  height: 300px;
+  background: red;
+  animation-duration: 2s;
+  animation-timing-function: ease-in;
+  animation-iteration-count: 1;
+  animation-delay: 2s;
+}
+
+div#box:hover {
+  animation-name: move;
+}
+
+@keyframes move {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(45deg);
+  }
+}

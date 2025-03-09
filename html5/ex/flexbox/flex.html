@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>flexbox, flex | Pablo Monteserín</title>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Ejemplo práctico de como usar los estilos CSS display:flex y flex para darle tamaño a las capas que usen este estilo">
+    <meta name="robots" content="noindex, follow">
+
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .colKhaki {
+            background: Khaki;
+            flex: 0 0 100px;
+        }
+
+        .colGreen {
+            background: paleGreen;
+            flex: 0 0 100px;
+        }
+
+        .colSalmon {
+            background: salmon;
+            flex: 0 0 100px
+        }
+
+        pre {
+            background: #D8D8D8;
+            border: 1px solid #00a9ff;
+            padding: 20px;
+        }
+
+        code {
+            background: #eaeaea;
+            padding: 15px;
+            display: block;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Uso del estilo 'flex'</h1>
+    <pre><code>&lt;style&gt;
+	.container{
+			display: flex;
+	}
+	.colKhaki{
+		background: Khaki;
+		flex: <select id="colKhaki_flex_grow"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option
+            value="3">3</option></select> <select id="colKhaki_flex_shrink"><option value="0">0</option><option
+            value="1">1</option><option value="2">2</option><option value="3">3</option></select> <select
+            id="colKhaki_flex_basis"><option value="100px">100px</option><option value="200px">200px</option><option
+            value="300px">300px</option></select>
+	}
+	.colGreen{
+		background: paleGreen;
+		flex: <select id="colGreen_flex_grow"><option value="0">0</option><option value="1">1</option><option value="2">2</option><option
+            value="3">3</option></select>  <select id="colGreen_flex_shrink"><option value="0">0</option><option
+            value="1">1</option><option value="2">2</option><option value="3">3</option></select> <select
+            id="colGreen_flex_basis"><option value="100px">100px</option><option value="200px">200px</option><option
+            value="900px">900px</option></select> ;
+	}
+	.colSalmon{
+		background: salmon;
+		flex: <select id="colSalmon_flex_grow"><option value="0">0</option><option value="1">1</option><option
+            value="2">2</option><option value="3">3</option></select>  <select id="colSalmon_flex_shrink"><option
+            value="0">0</option><option value="1">1</option><option value="2">2</option><option
+            value="3">3</option></select> <select id="colSalmon_flex_basis"><option value="100px">100px</option><option
+            value="200px">200px</option><option value="900px">900px</option></select> ;
+	}
+&lt;/style&gt;</code></pre>
+    <div class="container">
+        <div class="col colKhaki">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum recusandae autem
+            sapiente
+            veritatis, perferendis ea fugiat, provident repellendus, vitae a iusto animi tenetur, rem tempore neque.
+            Atque
+            suscipit dolorem, ea!
+        </div>
+        <div class="col colGreen">Lorem ipsum dolor sit amet, consectetur</div>
+        <div class="col colSalmon">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates iure, a ad,
+            voluptas
+            beatae obcaecati dolorem asperiores libero nesciunt dignissimos.
+        </div>
+    </div>
+
+
+    <script>
+
+
+        document.getElementById("colKhaki_flex_grow").onchange = function () {
+            document.querySelector(".colKhaki").style.flexGrow = this.value;
+        }
+        document.getElementById("colGreen_flex_grow").onchange = function () {
+            document.querySelector(".colGreen").style.flexGrow = this.value;
+        }
+        document.getElementById("colSalmon_flex_grow").onchange = function () {
+            document.querySelector(".colSalmon").style.flexGrow = this.value;
+        }
+
+        document.getElementById("colKhaki_flex_basis").onchange = function () {
+            document.querySelector(".colKhaki").style.flexBasis = this.value;
+        }
+        document.getElementById("colGreen_flex_basis").onchange = function () {
+            document.querySelector(".colGreen").style.flexBasis = this.value;
+        }
+        document.getElementById("colSalmon_flex_basis").onchange = function () {
+            document.querySelector(".colSalmon").style.flexBasis = this.value;
+        }
+
+
+        document.getElementById("colKhaki_flex_shrink").onchange = function () {
+            document.querySelector(".colKhaki").style.flexShrink = this.value;
+        }
+        document.getElementById("colGreen_flex_shrink").onchange = function () {
+            document.querySelector(".colGreen").style.flexShrink = this.value;
+        }
+        document.getElementById("colSalmon_flex_shrink").onchange = function () {
+            document.querySelector(".colSalmon").style.flexShrink = this.value;
+        }
+    </script>
+</body>
+
+</html>

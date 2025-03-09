@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>ejercicio formulario en PHP | Pablo Monteserín</title>
+        <meta name="description" content="Ejemplo un formulario que envía datos a un documento PHP para ser concatenados en una cadena de texto">
+
+</head>
+<body>
+<h1>Envío de la información de un formulario HTML a un documento PHP</h1>
+    <form method="post" action="ejercicioFormulario.php">
+        Nombre del cliente:<br/>
+        <input name="nombre" type="text" size="51" maxlength="5"><br/><br/>
+        Material de la caja
+        <select name="material">
+          <option value="cartón">Cart&oacute;n</option>
+          <option value="plástico">Pl&aacute;stico</option>
+      </select>   
+      <br/><br/>Seleccione un tama&ntilde;o para la caja<br/>
+      <input type="radio" name="radioTamano" value="peque&ntilde;o">Peque&ntilde;o<br/>
+      <input type="radio" name="radioTamano" value="mediano">Mediano<br/>
+      <input type="radio" name="radioTamano" value="grande">Grande<br/> 
+      <br/>Comentarios<br/><textarea name="textArea" cols="51" rows="4"></textarea><br/>
+      <input type="submit" name="Submit" value="Enviar formulario"><br/>
+  </form>
+</body>
+</html>

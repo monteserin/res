@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>flexbox, justify-content | Pablo Monteserín</title>
+    <meta name="description"
+        content="Ejemplo práctico de como usar el estilo CSS justify-content de flexbox para alinear y desitrubir el contenido de una capa">
+    <meta name="robots" content="noindex, follow">
+    <style>
+        .container {
+            display: flex;
+            justify-content: flex-start;
+        }
+
+        .colKhaki {
+            background: Khaki;
+        }
+
+        .colGreen {
+            background: paleGreen;
+        }
+
+        .colSalmon {
+            background: salmon;
+        }
+
+        .col {
+            width: 300px
+        }
+
+        pre {
+            background: #D8D8D8;
+            border: 1px solid #00a9ff;
+            padding: 20px;
+        }
+
+        code {
+            background: #eaeaea;
+            padding: 15px;
+            display: block;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Uso del estilo 'justify-content'</h1>
+    <pre><code>&lt;style&gt;
+	.container{
+		display: flex;
+		justify-content: <select id="justify_content"><option value="flex-start">flex-start</option><option
+            value="flex-end">flex-end</option><option value="center">center</option><option value="space-between">space-between</option><option
+            value="space-around">space-around</option><option value="space-evenly">space-evenly</option></select>;
+	}
+	.colKhaki{
+		background: Khaki;
+	}
+	.colGreen{
+		background: paleGreen;
+	}
+	.colSalmon{
+		background: salmon;
+	}
+	.col{
+		width: <select id="anchura_col"><option value="300px">300px</option><option value="auto">auto</option></select>
+	}
+&lt;/style&gt;</code></pre>
+    <div class="container">
+        <div class="col colKhaki">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum recusandae autem
+            sapiente
+            veritatis, perferendis ea fugiat, provident repellendus, vitae a iusto animi tenetur, rem tempore neque.
+            Atque
+            suscipit dolorem, ea!
+        </div>
+        <div class="col colGreen">Lorem ipsum dolor sit amet, consectetur</div>
+        <div class="col colSalmon">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates iure, a ad,
+            voluptas
+            beatae obcaecati dolorem asperiores libero nesciunt dignissimos.
+        </div>
+    </div>
+
+
+    <script>
+        document.getElementById("justify_content").onchange = function () {
+            document.querySelector(".container").style.justifyContent = this.value;
+        }
+        document.getElementById("anchura_col").onchange = function () {
+            document.querySelector(".col").style.width = this.value;
+        }
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,58 @@
+body.anuncios-en-columnas {
+    font-family: sans-serif;
+    margin: 5px;
+}
+
+.anuncios-en-columnas div.bloque {
+    border-right: #AAAAAA 3px dashed;
+    border-left: #AAAAAA 3px dashed;
+    float: left;
+    margin: 5px;
+    padding: 0px 10px;
+    width: 150px;
+}
+
+.anuncios-en-columnas div div {
+    border: black 1px solid;
+    margin: 5px 0px;
+    overflow: auto; /* para que salgan barras desplaz. en anuncio EM002 */
+}
+
+.anuncios-en-columnas h1 {
+    background-color: #BBBBBB;
+    font-size: 200%;
+    margin: 0px;
+    padding: 0px 10px;
+}
+
+.anuncios-en-columnas h2 {
+    text-align: right;
+    font-size: 150%;
+    background-color: #DDDDDD;
+    border-bottom: #BBBBBB 3px dashed;
+    margin: 0px 0px 10px;
+    padding: 0px 10px 5px;
+}
+
+.anuncios-en-columnas h3 {
+    text-align: center;
+    text-transform: uppercase;
+    font-size: 110%;
+    background-color: #EEEEEE;
+    margin: 0px;
+    padding: 10px 0px
+}
+
+.anuncios-en-columnas h4 {
+    text-align: right;
+    font-size: 110%;
+    background-color: #BBBBBB;
+    color: white;
+    margin: 0px;
+    padding: 0px 10px;
+}
+
+.anuncios-en-columnas p {
+    padding: 0px 10px;
+    margin: 5px;
+}

@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>display:grid | Pablo Monteserín</title>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Ejemplo práctico de como usar el estilo display:grid para montar una regilla de capas">
+    <meta name="robots" content="noindex, follow">
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 100px 100px 100px;
+            grid-template-rows: 100px 100px 100px;
+            column-gap: 0;
+            row-gap: 0;
+
+        }
+
+        .boxKhaki {
+            background: Khaki;
+        }
+
+        .boxGreen {
+            background: paleGreen;
+        }
+
+        .boxSalmon {
+            background: salmon;
+        }
+
+        .box {
+            border: 1px solid black
+        }
+
+        pre {
+            background: #D8D8D8;
+            border: 1px solid #00a9ff;
+            padding: 20px;
+        }
+
+        code {
+            background: #eaeaea;
+            padding: 15px;
+            display: block;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Uso del estilo 'display:grid'</h1>
+    <pre><code>&lt;style&gt;
+	.container{
+		display: <select id="display"><option value="grid">grid</option><option value="block">block</option></select>;
+		grid-template-columns: <select id="grid_template_columns1" class="box_columns"><option
+            value="100px">100px</option><option value="300px">300px</option><option
+            value="1fr">1fr</option><option value="2r">2fr</option><option value="33vh">33vh</option><option
+            value="33vw">33vw</option></select> <select id="grid_template_columns2" class="box_columns"><option
+            value="100px">100px</option><option value="300px">300px</option><option
+            value="1fr">1fr</option><option value="2r">2fr</option><option value="33vh">33vh</option><option
+            value="33vw">33vw</option></select> <select id="grid_template_columns3" class="box_columns"><option
+            value="100px">100px</option><option value="300px">300px</option><option
+            value="1fr">1fr</option><option value="2r">2fr</option><option value="33vh">33vh</option><option
+            value="33vw">33vw</option></select>; <span class="green" style="color:green">/*1 fr una <span
+            style="font-weight: bold">fr</span>acción del espacio que queda libre*/</span>
+		grid-template-rows: <select id="grid_template_rows1" class="box_rows"><option value="100px">100px</option><option
+            value="300px">300px</option><option value="1fr">1fr</option><option
+            value="2r">2fr</option><option value="33vh">33vh</option><option value="33vw">33vw</option></select> <select
+            id="grid_template_rows2" class="box_rows"><option value="100px">100px</option><option
+            value="300px">300px</option><option value="1fr">1fr</option><option
+            value="2r">2fr</option><option value="33vh">33vh</option><option value="33vw">33vw</option></select> <select
+            id="grid_template_rows3" class="box_rows"><option value="100px">100px</option><option
+            value="300px">300px</option><option value="1fr">1fr</option><option
+            value="2r">2fr</option><option value="33vh">33vh</option><option value="33vw">33vw</option></select>; <span
+            class="green"><span style="color:green">/*Para repetir el mismo valor 3 veces podíamos haber usado repeat(3, 33.33vh)*/</span></span>
+		column-gap: <select id="grid_column_gap"><option value="0px">0px</option><option value="15px">15px</option></select>;
+		row-gap:<select id="grid_row_gap"><option value="0px">0px</option><option
+            value="15px">15px</option></select>
+	}
+&lt;/style&gt;</code></pre>
+    <div class="container">
+        <div class="box boxKhaki">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum recusandae autem
+            sapiente
+            veritatis, perferendis ea fugiat, provident repellendus, vitae a iusto animi tenetur, rem tempore neque.
+            Atque
+            suscipit dolorem, ea!
+        </div>
+        <div class="box boxGreen">Lorem ipsum dolor sit amet, consectetur</div>
+        <div class="box boxSalmon">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates iure, a ad,
+            voluptas
+            beatae obcaecati dolorem asperiores libero nesciunt dignissimos.
+        </div>
+
+        <div class="box boxKhaki">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum recusandae autem
+            sapiente
+            veritatis, perferendis ea fugiat, provident repellendus, vitae a iusto animi tenetur, rem tempore neque.
+            Atque
+            suscipit dolorem, ea!
+        </div>
+        <div class="box boxGreen">Lorem ipsum dolor sit amet, consectetur</div>
+        <div class="box boxSalmon">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates iure, a ad,
+            voluptas
+            beatae obcaecati dolorem asperiores libero nesciunt dignissimos.
+        </div>
+
+        <div class="box boxKhaki">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum recusandae autem
+            sapiente
+            veritatis, perferendis ea fugiat, provident repellendus, vitae a iusto animi tenetur, rem tempore neque.
+            Atque
+            suscipit dolorem, ea!
+        </div>
+        <div class="box boxGreen">Lorem ipsum dolor sit amet, consectetur</div>
+        <div class="box boxSalmon">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates iure, a ad,
+            voluptas
+            beatae obcaecati dolorem asperiores libero nesciunt dignissimos.
+        </div>
+
+    </div>
+
+
+    <script>
+        document.getElementById("display").onchange = function () {
+            document.querySelector(".container").style.display = this.value;
+        }
+        document.getElementById("grid_column_gap").onchange = function () {
+            document.querySelector(".container").style.gridColumnGap = this.value;
+        }
+        document.getElementById("grid_row_gap").onchange = function () {
+            document.querySelector(".container").style.gridRowGap = this.value;
+        }
+
+
+        var elements = document.querySelectorAll(".box_columns");
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].onchange = function () {
+                var v1 = document.getElementById("grid_template_columns1").value;
+                var v2 = document.getElementById("grid_template_columns2").value;
+                var v3 = document.getElementById("grid_template_columns3").value;
+                var valor = v1 + " " + v2 + " " + v3;
+
+                document.querySelector(".container").style.gridTemplateColumns = valor
+            }
+        }
+
+        /* --------------------  */
+
+        var elements = document.querySelectorAll(".box_rows");
+        for (var i = 0; i < elements.length; i++) {
+            elements[i].onchange = function () {
+                var v1 = document.getElementById("grid_template_rows1").value;
+                var v2 = document.getElementById("grid_template_rows2").value;
+                var v3 = document.getElementById("grid_template_rows3").value;
+                var valor = v1 + " " + v2 + " " + v3;
+
+                document.querySelector(".container").style.gridTemplateRows = valor
+            }
+        }
+
+
+    </script>
+</body>
+
+</html>

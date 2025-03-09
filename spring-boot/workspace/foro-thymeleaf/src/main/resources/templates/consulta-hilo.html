@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<h2 th:text="${hilo.titulo}"></h2>
+<p th:text="${hilo.txt}"></p>
+
+<h3>Comentarios</h3>
+
+<form method="post" action="/comentario">
+<textarea placeholder="Escribe tu comentario" name="txt"></textarea><br/>
+<button>Añadir nuevo comentario</button>
+<input type="hidden" th:value="${hilo.id}" name="hilo"/>
+</form>
+<ul>
+		<li th:each="comentario : ${comentarios}">
+			<p th:text="${comentario.txt}"></p>
+		</li>
+	</ul>
+</body>
+</html>

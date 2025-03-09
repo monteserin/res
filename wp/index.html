@@ -1,0 +1,392 @@
+<!doctype html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title>Profesor vs algunos alumnos</title>
+
+	<link rel="stylesheet" href="css/reveal.css">
+
+	<!-- Theme used for syntax highlighting of code -->
+	<link rel="stylesheet" href="lib/css/zenburn.css">
+	<style>
+		@font-face {
+			font-family: gotham;
+			src: url(./fonts/gotham-bold.ttf);
+		}
+
+		* {
+			font-family: gotham;
+		}
+
+		.tl {
+			text-align: left;
+		}
+
+		.c1 {
+			background-color: #537D91 !important;
+		}
+
+		.c2 {
+			background-color: #f77754 !important;
+
+		}
+
+		.c2 *,
+		.c1 * {
+			color: white !important
+		}
+
+		.t2 {
+			font-size: 2rem !important;
+		}
+
+		.nube {
+			position: static;
+			background-image: url(./img/nube_piensa.svg);
+			background-repeat: no-repeat;
+			color: black !important;
+			background-size: 100% 100% !important;
+			box-sizing: border-box;
+			padding: 120px 100px 220px 100px !important;
+			margin-top: 60px !important;
+			display: flex;
+			align-items: center;
+		}
+
+		button.navigate-right,
+		button.navigate-left {
+			background-size: 100% 100%;
+			width: 50px !important;
+			height: 40px !important;
+			transform: scale(1) !important;
+			-webkit-transform: scale(1) !important;
+			padding: 0 !important;
+			border: none !important;
+			background-repeat: no-repeat !important;
+			top: 35px !important;
+			opacity: 1 !important;
+			background-repeat: no-repeat !important;
+		}
+
+		.w100 {
+			width: 100%
+		}
+
+		* {
+			font-size: 2rem;
+			padding: 15px;
+		}
+
+		p {
+			padding-bottom: 15px !important;
+		}
+
+		.top {
+			top: 0 !important
+		}
+
+		.has-dark-background button.navigate-right {
+			background-image: url(./img/flecha_f77754.svg) !important;
+		}
+
+		.has-light-background button.navigate-right {
+			background-image: url(./img/flecha_white.svg) !important;
+		}
+
+		.s1 {
+			background-image: url(./img/subrayado_01.svg);
+			background-size: cover;
+			margin: 10px;
+			padding: 20px 50px 20px 80px !important;
+			color: black !important;
+		}
+
+		.s2 {
+			background-image: url(./img/subrayado_03.svg);
+			background-size: cover;
+			margin: 10px !important;
+			padding: 20px 50px 20px 80px !important;
+			color: black !important;
+		}
+
+		.slide-number {
+			display: none !important;
+		}
+
+		.navigate-up {
+			display: none;
+		}
+
+		.navigate-down {
+			display: none;
+		}
+
+		.controls {
+			right: 40px !important
+		}
+
+		.pablo_piensa {
+			position: absolute;
+			bottom: 0;
+			left: 25px;
+			z-index: 999;
+			height: 60vh;
+		}
+
+		.pablo_monteserin {
+			color: rgba(255, 255, 255, 0.6);
+			position: absolute;
+			z-index: 9999;
+			top: 20px;
+			left: 20px;
+			font-size: 1.4rem !important;
+			text-transform: uppercase;
+		}
+
+		.circulitos {
+			background-image: url(https://pablomonteserin.com/wp-content/themes/m/img/badgets/circulitos.svg);
+			background-repeat: no-repeat;
+			width: 50px;
+			height: 20px;
+			background-size: 100% auto;
+			position: absolute;
+			z-index: 99999;
+			left: 23px;
+			top: 50px;
+		}
+
+		.mb {
+			margin-bottom: 20px !important;
+		}
+
+		.center {
+			text-align: center;
+		}
+
+		.blue {
+			color: #537d91 !important;
+		}
+
+		.white {
+			color: white !important
+		}
+
+		h2 {
+			font-size: 2rem !important;
+		}
+
+		h3 {
+			font-size: 1.7rem !important;
+		}
+
+		h4 {
+			font-size: 1.4rem !important;
+		}
+
+		.conSeparacion li {
+			margin: 15px;
+			font-size: 1rem;
+		}
+	</style>
+	<style>
+		.imagen_centrada {
+			display: block;
+			margin: auto !important;
+			width: 500px
+		}
+	</style>
+	<!-- Printing and PDF exports -->
+</head>
+
+<body>
+	<div class="reveal">
+		<p class="pablo_monteserin">Pablo Monteserín
+		<div class="circulitos"></div>
+		</p>
+
+		<img class="pablo_piensa" src="./img/pablo_piensa.svg" alt="">
+
+		<div class="slides">
+
+
+			<section class="c1 top" style="position:static !important">
+
+				<p class="nube center" style="justify-content: center;">¿Qué es Wordpress?</p> <br>
+
+
+			</section>
+			<section class="c2">
+				<p class="mb">¿Hay más gestores de contenidos?</p>
+
+				<p class="fragment"><a href="https://trends.builtwith.com/cms" target="_blank">Sí, pero como si no</a>
+				</p>
+			</section>
+
+
+			<section class="tl c1">
+				<p class="mb center">Wordpress.com vs Wordpress.org</p>
+				<div>
+					<div style="width:100%; display: flex;">
+						<a href="https://wordpress.org/" target="_blank" style="width: 50%;"><img src="./img/1.png"
+								alt="" style="width: 100%;"></a>
+						<br>&nbsp;
+						<a href="https://wordpress.com/read" target="_blank" style="width: 50%"><img src="./img/2.png"
+								alt="" style="width: 100%;"></a>
+					</div>
+				</div>
+
+			</section>
+
+
+			<section class=" tl c1">
+
+				<h2>Objetivo: hacer <a href="https://pablomonteserin.com/sites/las-cosas-de-monteserin/"
+						target="_blank"> esta página web</a></h2>
+				<br>
+				<p>Puedes seguir el curso creándote una <a href="https://wpsandbox.net/" target="_blank">plataforma de
+						pruebas</a>.</p>
+
+			</section>
+			<section class="c2" style="font-size:2rem">
+				<h2 style="text-align: left;">La selección de la plantilla</h2>
+				<br>
+				<ul style="display: grid; grid-template-columns: 50% 50%;">
+					<li style="margin-bottom: 20px;text-align: left"><span
+							style="color:#537D91 !important; font-weight: bold; ">De pago:</span>
+						<ul style="margin-top:15px; text-align: left; margin-left: 40px;">
+							<li><a href="https://themeforest.net/" target="_blank">Theme Forest</a></li>
+							<li><a href="https://www.elegantthemes.com/" target="_blank">Divi</a></li>
+							<li><a href="https://generatepress.com/" target="_blank">Generate Press</a></li>
+						</ul>
+					</li>
+					<li style="text-align: left;"><span
+							style="color:#537D91 !important; font-weight: bold;">Gratuitas:</span>
+						<ul style="margin-top:15px; margin-left: 40px;">
+							<li><a href="https://wpastra.com/" target="_blank">Astra</a></li>
+							<li><a href="https://woocommerce.com/es-es/storefront/" target="_blank">StoreFront</a></li>
+							<li><a href="https://oceanwp.org/" target="_blank">Ocean WP</a></li>
+						</ul>
+					</li>
+
+				</ul>
+
+			</section>
+
+			<section class="c1">
+				<h2 class="mb" style="margin-bottom: 40px !important;">Entradas vs páginas</h2>
+
+				<div style="display: grid; grid-template-columns: 50% 50%; ">
+
+
+
+					<div style="border-right: 2px solid white">
+
+						<h3
+							style="margin-bottom: 10px; text-align: left; border-bottom: 2px solid white; padding-bottom: 20px;  padding-left: 70px;">
+							Entradas</h3>
+						<h4 style="margin-top: 45px; margin-bottom:10px; text-align: left;  padding-left: 70px;">
+							Ejemplos</h4>
+						<ul style="text-align: left;  padding-left: 70px;">
+							<li>Noticias</li>
+							<li>Artículos</li>
+
+						</ul>
+
+						<h4 style="margin-top: 45px; margin-bottom:10px; text-align: left;  padding-left: 70px;">
+							Organización</h4>
+						<ul style="text-align: left; text-align: left;  padding-left: 70px;">
+							<li>Por hora y fecha</li>
+							<li>Por categorías</li>
+							<li>Por etiquetas</li>
+							<li>Por autor</li>
+						</ul>
+					</div>
+
+					<div>
+						<h3
+							style="margin-bottom: 10px; text-align: left; border-bottom: 2px solid white; padding-left: 70px; padding-bottom: 20px;">
+							Páginas</h3>
+
+						<h4 style="margin-top: 45px; margin-bottom:10px; text-align: left; padding-left: 70px;">Ejemplos
+						</h4>
+						<ul style="text-align: left; padding-left: 70px;">
+							<li>Contacto</li>
+							<li>Acerca de nosotros</li>
+							<li>La home</li>
+						</ul>
+						<h4 style="margin-top: 45px; margin-bottom:10px; text-align: left; padding-left: 70px;">
+							Organización</h4>
+						<ul style="text-align: left;padding-left: 70px;">
+							<li>Relación Padre/hijo</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+
+			<section class=" tl c1">
+
+				<h2>Los plugins que usaremos</h2>
+
+				<ul class="conSeparacion">
+					<li><a href="https://wordpress.org/plugins/contact-form-7/" target="_blank">Contact Form 7</a></li>
+					<li><a href="https://es.wordpress.org/plugins/envira-gallery-lite/" target="_blank">Gallery Plugin
+							for WordPress – Envira Photo Gallery</a></li>
+					<li><a href="https://wordpress.org/plugins/smart-slider-3/" target="_blank">Smart Slider 3</a></li>
+					<li><a href="https://wordpress.org/plugins/disable-comments/" target="_blank">Disable Comments –
+							Remove Comments & Protect From Spam</a></li>
+					<li><a href="https://wordpress.org/plugins/woocommerce/" target="_blank">WooCommerce</a></li>
+					<li><a href="https://wordpress.org/plugins/font-awesome/" target="_blank">Font Awesome</a></li>
+					<li><a href="https://wordpress.org/plugins/code-snippets/" target="_blank">Code Snippets</a></li>
+					<li><a href="https://wordpress.org/plugins/popup-maker/" target="_blank">Popup maker</a></li>
+				</ul>
+			</section>
+
+		</div>
+	</div>
+
+	<script src="lib/js/head.min.js"></script>
+	<script src="js/reveal.js"></script>
+
+	<script>
+		// More info about config & dependencies:
+		// - https://github.com/hakimel/reveal.js#configuration
+		// - https://github.com/hakimel/reveal.js#dependencies
+		Reveal.initialize({
+			keyboard: true,
+			touch: true,
+			dependencies: [
+				{ src: 'plugin/markdown/marked.js' },
+				{ src: 'plugin/markdown/markdown.js' },
+				{ src: 'plugin/notes/notes.js', async: true },
+				{ src: 'plugin/highlight/highlight.js', async: true, callback: function () { hljs.initHighlightingOnLoad(); } }
+			]
+		});
+	</script>
+
+	<script>
+
+		function lastOfType(className) {
+			var allElemsOfType = document.getElementsByClassName(className);
+			if (!allElemsOfType || !allElemsOfType.length) return null;
+			else return allElemsOfType[allElemsOfType.length - 1];
+		}
+
+		Reveal.initialize({ slideNumber: true });
+
+
+
+		Reveal.on('slidechanged', event => {
+			if (event.indexh != 0) document.querySelector('.pablo_piensa').style.display = 'none';
+			else document.querySelector('.pablo_piensa').style.display = 'block';
+		});
+
+
+	</script>
+
+</body>
+
+</html>

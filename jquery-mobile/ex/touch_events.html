@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>touch events en jQuery Mobile | Pablo Monteserín</title>
+    <meta charset='utf-8'>
+    <meta name="description" content="Ejemplo de como detectar touch events en jQuery Mobile">
+    <meta name="robots" content="noindex, follow">
+    <link rel="stylesheet" type="text/css" href="jquery.mobile.css">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery.mobile.js"></script>
+    <script type="text/javascript">
+        $(document).on("pageinit", "#firstpage", function (evt) {
+            $("#firstpage").on("tap", function (e) {
+                alert("tap");
+            });
+
+            $("#firstpage").on("swiperight", function (e) {
+                alert("swiperight");
+            });
+
+            $("#firstpage").on("swipeleft", function (e) {
+                alert("swipeleft");
+            });
+
+        })
+    </script>
+</head>
+
+<body>
+    <section id="firstpage" data-role="page">
+        <header data-role="header">
+            <h1>Cabecera</h1>
+        </header>
+        <div data-role="content">
+            <p>Esta es la primera página</p>
+        </div>
+        <footer data-role="footer">El pie de la página</footer>
+    </section>
+</body>
+
+</html>

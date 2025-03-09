@@ -1,0 +1,16 @@
+input[type="checkbox"] {
+  display: none;
+}
+
+input[type="checkbox"] + label {
+  display: inline-block;
+  width: 19px;
+  height: 19px;
+  background: url(https://pablomonteserin.com/res/html5/ex/checkbox-personalizado/check_radio_sheet.png);
+  cursor: pointer;
+}
+
+input[type="checkbox"]:checked + label {
+  background: url(https://pablomonteserin.com/res/html5/ex/checkbox-personalizado/check_radio_sheet.png) -19px
+    top;
+}

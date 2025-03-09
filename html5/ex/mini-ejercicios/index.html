@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Pruebas HTML</title>
+    <meta charset="UTF-8" />
+    <meta name="robots" content="noindex" />
+    <meta
+      name="description"
+      content="Colección de ejercicios de maquetación destinados a evaluar tus destrezas maquetando una página web con código HTML y CSS"
+    />
+    <meta name="robots" content="noindex, follow" />
+
+    <style>
+      li {
+        padding: 30px;
+        cursor: pointer;
+        font-size: 1.4rem;
+        padding-bottom: 90px;
+      }
+
+      li:hover {
+        background-color: #f0f0f0;
+      }
+
+      .btn {
+        width: 20px;
+        height: 20px;
+        background-color: red;
+        border-radius: 100%;
+        box-shadow: 2px 2px 2px black;
+        display: inline-block;
+        margin-right: 10px;
+      }
+      .monteserinCosita img {
+        max-width: 100%;
+      }
+    </style>
+  </head>
+
+  <body class="monteserinCosita">
+    <h1>Colección de ejercicios de maquetación con HTML y CSS</h1>
+    <p>Hacer todos los ejercicios en un único código HTML.</p>
+    <p>
+      Para hacer estos ejercicios el contenido de las capas nunca podrá salir
+      fuera de ellas.
+    </p>
+    <ol>
+      <li>
+        <div>
+          <label for="check1"> <div class="btn"></div> </label>Hacer un div rojo
+          de 1024px de ancho y 100px de alto centrado horizontalmente en la
+          pantalla.
+        </div>
+        <img src="./imgs/01.png" alt="" />
+      </li>
+      <li>
+        <div>
+          <label for="check2"> <div class="btn"></div> </label>El div debe tener
+          las esquinas redondeadas
+        </div>
+        <img src="./imgs//02.png" alt="" />
+      </li>
+      <li>
+        <div>
+          <label for="check3"> <div class="btn"></div> </label>Cuando el pasemos
+          por encima del div, debe cambiar de color.
+        </div>
+        <img src="./imgs/03.png" alt="" />
+      </li>
+      <li>
+        <div>
+          <label for="check4"> <div class="btn"></div> </label>Dentro del div
+          meter tres columnas de tres colores diferentes que estén pegadas
+          horizontalmente.
+        </div>
+        <img src="./imgs/04.png" alt="" />
+      </li>
+      <li>
+        <div>
+          <label for="check5"> <div class="btn"></div> </label>Dentro de la
+          primera columna, poner una lista de 4 enlaces
+        </div>
+        <img src="./imgs/05.png" alt="" />
+      </li>
+      <li>
+        <div>
+          <label for="check6"> <div class="btn"></div> </label>Dentro de la
+          segunda columna, meter una imagen de forma que cuando pulsemos sobre
+          ella se abra la página de google en una nueva pestaña.
+        </div>
+        <img src="./imgs/06.png" alt="" />
+      </li>
+      <li>
+        <div>
+          <label for="check7"> <div class="btn"></div> </label>Dentro de la
+          tercera y última columna, meter una tabla de tres filas y dos celdas
+          por fila. Cada celda debe tener una imagen.
+        </div>
+        <img src="./imgs//07.png" alt="" />
+      </li>
+      <li>
+        <div>
+          <label for="check8"> <div class="btn"></div> </label>Añadir suficiente
+          contenido a la primera columna como para que aparezca una barra de
+          scroll vertical en la página. Que quede claro, la barra de scroll debe
+          aparecer en la página, no en la columna.
+        </div>
+        <img src="./imgs/08.png" alt="" />
+      </li>
+      <li>
+        <div>
+          <label for="check9"> <div class="btn"></div> </label>Pegada a la
+          esquina superior derecha de la web, introducir una capa que permanezca
+          fija al hacer scroll.
+        </div>
+        <img src="./imgs/09.png" alt="" />
+      </li>
+      <li>
+        <div>
+          <label for="check10"> <div class="btn"></div> </label>Pegada a la
+          esquina superior izquierda de la web, introducir una capa, de tal
+          forma que al pasar el cursor por encima de la capa, aparezca una
+          imagen.
+        </div>
+        <img src="./imgs/10.png" alt="" />
+      </li>
+      <li>
+        <div>
+          <label for="check11"> <div class="btn"></div> </label>El div rojo
+          inicial debe tener un sombreado externo verde.
+        </div>
+        <img src="./imgs/11.png" alt="" />
+      </li>
+      <li>
+        <div>
+          <label for="check12"> <div class="btn"></div> </label>Introducir,
+          encima del div rojo inicial, un encabezado h1 que se vea
+          horizontalmente centrado en la web y tenga un sombreado para texto.
+        </div>
+        <img src="./imgs/12.png" alt="" />
+      </li>
+      <li>
+        <div>
+          <label for="check13"> <div class="btn"></div> </label>Al pasar el
+          ratón por encima del encabezado, su sombreado debe desplazarse hacia
+          la izquierda
+        </div>
+        <img src="./imgs/13.png" alt="" />
+      </li>
+    </ol>
+
+    <script>
+      const lis = document.querySelectorAll("li");
+
+      lis.forEach((li, index) => {
+        li.addEventListener("click", () => {
+          const btn = li.querySelector(".btn");
+          if (li.style.textDecoration == "line-through") {
+            li.style.textDecoration = "none";
+            btn.style.backgroundColor = "red";
+            li.style.opacity = 1;
+            li.style.backgroundColor = "transparent";
+          } else {
+            li.style.textDecoration = "line-through";
+            btn.style.backgroundColor = "green";
+            li.style.opacity = 0.5;
+            li.style.backgroundColor = "gray";
+          }
+        });
+      });
+    </script>
+  </body>
+</html>

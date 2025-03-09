@@ -1,0 +1,23 @@
+.menu-by-steps {
+    list-style: none;
+    padding-left: 0;
+}
+
+.menu-by-steps a {
+    background-color: pink;
+    padding: 15px;
+    border: 3px solid black;
+    display: block;
+    transition: 0.5s;
+    color: black;
+    text-decoration: none;
+    border-radius: 7px;
+}
+
+.menu-by-steps a:hover {
+    background-color: salmon;
+}
+
+.menu-by-steps li.hasChildren a:after {
+    content: ' o';
+}

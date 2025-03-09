@@ -1,0 +1,8 @@
+@font-face {
+  font-family: miFuente;
+  src: url(https://pablomonteserin.com/res/html5/ex/carga-fuente/fuente.ttf);
+}
+
+h1.load-font {
+  font-family: miFuente !important;
+}

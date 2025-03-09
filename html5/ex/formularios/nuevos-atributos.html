@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Nuevos Atributos HTML5| Pablo Monteserín</title>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Repaso de los nuevos atributos para formularios HTML (placeholder, autofocus, pattern, formnovalidate, autocomplete, etc.)">
+    <meta name="robots" content="noindex, follow">
+</head>
+
+<body>
+    <h1>Ejemplo de varios atributos HTML para formularios</h1>
+    <form>
+        El atributo autocomplete almacena los resultados en la caché para el futuro
+        autocomplete<input type="text" autocomplete="on" />
+        <br /><br />
+        El atributo autofocus coloca el foco por defecto en el input que lo invoca
+        <!-- No le pongo el atributo autofocus para que la página que tiene el iframe que carga está página no se vaya a la ubicación de esta-->
+        <br />autofocus<input type="text" autofocus />
+        <br />
+        <br />placeholder<input type="text" placeholder="pista acerca del contenido" />
+        <br />
+        <br />pattern<input type="text" title="debes introducir 5 dígitos numéricos" pattern="^[0-9]{5}$" />
+        <input type="submit" />
+        <br /><br />
+        <input type="text" list="sugerencias" />
+
+        <datalist id="sugerencias">
+            <option value="sugerencia 1"></option>
+            <option value="sugerencia 2"></option>
+            <option value="sugerencia 3"></option>
+        </datalist>
+
+        El atributo formnovalidate permite enviar los datos del formulario aunque estos no hayan sido validados. Podemos
+        utilizar este atributo junto con el botón de submit o con el tag del formulario(&lt;form&gt;)
+        <input type="submit" value="envio sin validación" formnovalidate="formnovalidate" />
+    </form>
+
+</body>
+
+</html>

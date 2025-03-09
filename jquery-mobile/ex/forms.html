@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Teoría formularios en jQuery Mobile | Pablo Monteserín</title>
+    <meta charset='utf-8'>
+    <meta name="description"
+        content="Ejemplo de creación de formularios utilizando jQuery Mobile utilizando diferentes tipos de labels (visibles y ocultos)">
+    <meta name="robots" content="noindex, follow">
+    <link rel="stylesheet" type="text/css" href="https://pablomonteserin.com/res/jquery-mobile/ex/jquery.mobile.css">
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery-mobile/ex/jquery-1.11.js"></script>
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery-mobile/ex/jquery.mobile.js"></script>
+</head>
+
+<body>
+    <section id="firstpage" data-role="page">
+        <header data-role="header">
+            <h1>Formularios en jQuery Mobile</h1>
+        </header>
+        <div data-role="content">
+            <form method="get" action="">
+                <h2>labels visibles</h2>
+                <label for="basicfield">Basic Text Field:</label>
+                <input type="text" name="basicfield" id="basicfield" value="" placeholder="texto"><br>
+                <div data-role="fieldcontain">
+                    <label for="address">Your address:</label>
+                    <input type="text" name="address" id="address" value="" placeholder="">
+                </div>
+
+
+                <h2>labels ocultos <span style="font-size:0.5em"> (aunque google sigue indexándolo y los lectores
+                        auditivos son capaces de oírlo)
+                </h2>
+                <h5>ui-hidden-accesible oculta el label al que se lo asigno</span></h5>
+                <label for="username" class="ui-hidden-accessible">Basic Text Field:</label>
+                <input type="text" name="username" id="username" value="" placeholder="texto"><br>
+                <h5>ui-hide-label se aplica a la capa contenedora y oculta los label que hay dentro</h5>
+                <div data-role="fieldcontain" class="ui-hide-label">
+                    <label for="address">Your address:</label>
+                    <input type="text" name="address" id="address" value="" placeholder="">
+                </div>
+
+            </form>
+        </div>
+        <footer data-role="footer">El pie de la página</footer>
+    </section>
+</body>
+
+</html>

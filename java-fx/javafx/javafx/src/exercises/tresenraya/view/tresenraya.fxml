@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.collections.*?>
+<?import java.lang.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.collections.FXCollections ?>
+
+<VBox stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="exercises.tresenraya.view.MainController">
+   <children>
+      <HBox styleClass="row" VBox.vgrow="ALWAYS">
+         <children>
+            <Button id="0" mnemonicParsing="false" onAction="#btnPulsado" styleClass="btn" text="Button" HBox.hgrow="ALWAYS">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button id="1" mnemonicParsing="false" onAction="#btnPulsado" styleClass="btn" text="Button" HBox.hgrow="ALWAYS" />
+            <Button id="2" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnPulsado" styleClass="btn" text="Button" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <HBox styleClass="row" VBox.vgrow="ALWAYS">
+         <children>
+            <Button id="3" mnemonicParsing="false" onAction="#btnPulsado" styleClass="btn" text="Button" HBox.hgrow="ALWAYS">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button id="4" mnemonicParsing="false" onAction="#btnPulsado" styleClass="btn" text="Button" HBox.hgrow="ALWAYS" />
+            <Button id="5" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnPulsado" styleClass="btn" text="Button" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+      <HBox styleClass="row" VBox.vgrow="ALWAYS">
+         <children>
+            <Button id="6" mnemonicParsing="false" onAction="#btnPulsado" styleClass="btn" text="Button" HBox.hgrow="ALWAYS">
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </Button>
+            <Button id="7" mnemonicParsing="false" onAction="#btnPulsado" styleClass="btn" text="Button" HBox.hgrow="ALWAYS" />
+            <Button id="8" minWidth="-Infinity" mnemonicParsing="false" onAction="#btnPulsado" styleClass="btn" text="Button" HBox.hgrow="ALWAYS" />
+         </children>
+      </HBox>
+   </children>
+</VBox>

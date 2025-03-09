@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Curriculum Vitae</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+    <meta name="MobileOptimized" content="width">
+    <meta name="HandheldFriendly" content="true">
+    <meta http-equiv="x-ua-compatible" content="IE=edge">
+    <meta name="msapplication-tap-highlight" content="no">
+    <meta name="description"
+        content="Maquetación del curriculum de Giselle Vitali con HTML y CSS. El curriculum tiene transiciones animadas con CSS, es responsive, implementa Javascript, etc.">
+    <meta name="robots" content="noindex, follow">
+
+    <link rel="stylesheet" href="css/cv_style2.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Give+You+Glory" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+    <script>
+        $(document).ready(inicializar);
+
+        function inicializar() {
+
+            var alturaDocument = $(document).height();
+            var altura_screen = window.innerHeight;
+            $(document).scroll(function () {
+                var scrollTop = $(window).scrollTop();
+                var anchuraBarrita = scrollTop * 100 / (alturaDocument - altura_screen);
+
+                if (anchuraBarrita > 40) {
+
+                    if (anchuraBarrita > 70) {
+                        $(".estado").addClass("rosa");
+                    } else {
+                        $(".estado").addClass("lila");
+                        $(".estado").removeClass("rosa");
+
+
+                    }
+                } else {
+                    $(".estado").removeClass("naranja");
+                    $(".estado").removeClass("lila");
+
+                }
+
+
+                $(".estado").css("width", anchuraBarrita + "%");
+
+                /* ****************** */
+                elementOffset = $('.barrita-a').offset().top;
+                var distancia = scrollTop - elementOffset;
+                distancia = distancia + altura_screen;
+                if (distancia > 0) {
+                    $(".barrita-d").addClass("o50");
+                    $(".barrita-a").addClass("a90");
+                }
+                /* ****************** */
+                elementOffset = $('.cerebro-b').offset().top;
+                var distancia = scrollTop - elementOffset;
+                distancia = distancia + altura_screen;
+                if (distancia > 0) {
+                    $(".cerebro-a").addClass("primero");
+                    $(".cerebro-b").addClass("segundo");
+                    $(".cerebro-c").addClass("tercero");
+                    $(".cerebro-d").addClass("cuarto");
+                    $(".cerebro-e").addClass("quinto");
+                    $(".cerebro-f").addClass("sexto");
+                    $(".cerebro-g").addClass("septimo");
+                    $(".cerebro-h").addClass("octavo");
+                }
+                /* ****************** */
+                elementOffset = $('.ojo-b').offset().top;
+                var distancia = scrollTop - elementOffset;
+                distancia = distancia + altura_screen;
+                if (distancia > 0) {
+                    $(".ojo-a").addClass("primero");
+                    $(".ojo-b").addClass("segundo");
+                    $(".ojo-c").addClass("tercero");
+                    $(".ojo-d").addClass("cuarto");
+                    $(".ojo-e").addClass("quinto");
+                    $(".ojo-f").addClass("sexto");
+                }
+                /* ****************** */
+                elementOffset = $('.cor-b').offset().top;
+                var distancia = scrollTop - elementOffset;
+                distancia = distancia + altura_screen;
+                if (distancia > 0) {
+                    $(".cor-a").addClass("primero");
+                    $(".cor-b").addClass("segundo");
+                    $(".cor-c").addClass("tercero");
+                    $(".cor-d").addClass("cuarto");
+                    $(".cor-e").addClass("quinto");
+                    $(".cor-f").addClass("sexto");
+                    $(".cor-g").addClass("septimo");
+                    $(".cor-h").addClass("octavo");
+                }
+            });
+            $('a[href*="#"]:not([href="#"])').click(function () {
+                if (location.pathname.replace(/^\//, '') == this.pathname.replace(/^\//, '') && location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) + ']');
+                    if (target.length) {
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000);
+                        return false;
+                    }
+                }
+            });
+        }
+    </script>
+</head>
+
+<body>
+
+    <div id="skrollr-body">
+        <header>
+            <h1>Giselle Vitalli</h1>
+            <img class="logo" src="img/logo.png" alt="Logo Giselle Vitali">
+        </header>
+        <div>
+            <div class="competencias anim-ilu">
+                <img src="img/ilustrador.svg" alt="logo Illustrator">
+                <div>
+                    <h3>ILUSTRADORA</h3>
+                </div>
+            </div>
+            <div class="competencias anim-dis">
+                <img src="img/disenador.svg" alt="imagen diseñador">
+                <div>
+                    <h3>DISEÑADORA</h3>
+                </div>
+            </div>
+            <div class="competencias anim-art">
+                <img src="img/artista.svg" alt="imagen artista">
+                <div>
+                    <h3>ARTISTA</h3>
+                </div>
+            </div>
+            <div class="competencias anim-maq">
+                <img src="img/maquetador.svg" alt="imagen maquetador">
+                <div>
+                    <h3>HTML - CSS</h3>
+                </div>
+            </div>
+            <div class="competencias anim-pro">
+                <img src="img/profesor.svg" alt="imagen profesor">
+                <div>
+                    <h3>PROFESORA</h3>
+                </div>
+            </div>
+        </div>
+        <img class="scroll" src="img/scroll.png" alt="flechita scroll">
+        <section>
+            <article class="secciones">
+                <h2>ESTUDIOS</h2>
+                <h4><i class="fa fa-graduation-cap" aria-hidden="true"></i> Cumlaude&nbsp;&nbsp;&nbsp;&nbsp;<i
+                        class="fa fa-calendar" aria-hidden="true"></i> Actual</h4>
+                <div class="contsecciones cerebro">
+                    <div class="columnaizq">
+                        <p class="cerebro-a"> Septiembre 2011 - Julio 2012<br>
+                            <span>Especialización en animación y realización<br> de 3D con 3ds Max</span><br>
+                            9Zeros Escola d’animació de Catalunya<br>
+                            Barcelona, España.
+                        </p>
+                        <p class="cerebro-b"> Octubre 2010 - Julio 2011<br>
+                            <span>PostGrado en Ilustración </span><br>
+                            Centro universitario de Diseño BAU<br>
+                            Barcelona, España.<br>
+                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                        </p>
+                        <p class="cerebro-c"> Septiembre 2006 - Agosto 2009<br>
+                            <span> Ilustración</span><br>
+                            Instituto de Diseño de Caracas<br>
+                            Venezuela.<br>
+                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                        </p>
+                        <p class="cerebro-d"> Septiembre 2004 - Julio 2006<br>
+                            <span> Bachiller en Ciencias</span><br>
+                            Venezuela.<br>
+                            <i class="fa fa-graduation-cap" aria-hidden="true"></i>
+                        </p>
+                    </div>
+                    <div class="columnader">
+                        <p style="padding-bottom:174px;" class="cerebro-g">Enero - Mayo 2017<br>
+                            <span>Confección y Publicación de páginas web</span><br>
+                            Institut de Serveis de formació TADEL<br>
+                            Barcelona, España.<br>
+                            <i class="fa fa-calendar" aria-hidden="true"></i>
+                        </p>
+                        <p class="cerebro-f">Octubre - Noviembre 2016 <br>
+                            <span>Sóc Mobile _ Diseño APP</span><br>
+                            Barcelona Activa<br>
+                            Barcelona, España.
+                        </p>
+                        <p class="cerebro-e">Septiembre 2016<br>
+                            <span>MID EMPRENEDORS, Grupo 1</span><br>
+                            Barcelona Centro de Diseño BCD y <br>
+                            Makers of Barcelona MOB<br>
+                            Barcelona, España.<br>
+                        </p>
+                    </div>
+                </div>
+                <div class="conocimientos">
+                    <div class="programas">
+                        <img src="img/ai.svg" alt="adobe illustrator">
+                        <div class="barra_wrapper">
+                            <div class="barrita-a"></div>
+                        </div>
+                    </div>
+                    <div class="programas">
+                        <img src="img/psd.svg" alt="photoshop">
+                        <div class="barra_wrapper">
+                            <div class="barrita-a"></div>
+                        </div>
+                    </div>
+                    <div class="programas">
+                        <img src="img/max.svg" alt="3D studio max">
+                        <div class="barra_wrapper">
+                            <div class="barrita-d"></div>
+                        </div>
+                    </div>
+                    <div class="programas">
+                        <img src="img/html.svg" alt="html">
+                        <div class="barra_wrapper">
+                            <div class="barrita-d"></div>
+                        </div>
+                    </div>
+                    <div class="programas">
+                        <img src="img/css.svg" alt="css">
+                        <div class="barra_wrapper">
+                            <div class="barrita-d"></div>
+                        </div>
+                    </div>
+                    <div class="masconocimientos">
+                        <p><span><i class="fa fa-plus" aria-hidden="true"></i></span> Adobe
+                            Indesign y After Effects, Sublime Text, Brackets... <span>PLATAFORMAS:</span> Apple /
+                            Windows</p>
+                    </div>
+
+                </div>
+            </article>
+            <article class="secciones">
+                <h2>EXPERIENCIA</h2>
+                <h4><i class="fa fa-heart" aria-hidden="true"></i> Inolvidable</h4>
+                <div class=" contsecciones ojo">
+                    <div class="columnaizq">
+                        <p class="ojo-a">2016 - Actualidad<br>
+                            <span>Ilustrador Colaborador</span><br>
+                            Ala de Mosca<br>
+                            Estudio de Ilustración<br>
+                            España<br>
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </p>
+                        <p class="ojo-b">2013 - Actualidad<br>
+                            <span>Ilustrador Freelance</span>
+                        </p>
+                        <p class="ojo-c">2010<br>
+                            <span>ILUSTRADOR</span><br>
+                            Departamento de prensa y <br>
+                            Departamento de arte<br>
+                            Estudio Creativo 7150<br>
+                            Venezuela
+                        </p>
+                        <p class="ojo-d">2009 - 2010<br>
+                            <span>PROFESOR</span><br>
+                            Ilustración, 3er semestre<br>
+                            Tecnicas de Ilustración I<br>
+                            Intituto de Diseño de Caracas<br>
+                            Venezuela<br>
+                            <i class="fa fa-heart" aria-hidden="true"></i>
+                        </p>
+                    </div>
+                    <div class="columnader">
+                        <p class="ojo-f"> 2017 - Actualidad<br>
+                            <span>PROFESOR</span><br>
+                            Taller de Ilustración Narrativa<br>
+                            Centro Civico Urgell<br>
+                            Barcelona
+                        </p>
+                        <p class="ojo-e"> 2016<br>
+                            <span>Atención al Cliente</span><br>
+                            FNAC España <br>
+                            Centro Comercial Las Arenas, Barcelona<br>
+                        </p>
+                        <span>En busqueda del empleo ideal </span><i class="fa fa-heartbeat" aria-hidden="true"
+                            style="color:#5F9A9C; font-size: 2.5em;"></i><br>
+                        <h4>·Resumen de Requsitos·</h4>
+                        <p style="opacity: 1; margin-right: 2%">
+                            * Equipo multidisciplinar<br>
+                            (Cambio mi café por las plantas)<br>
+                            * Con personas creativas y apasionadas a los retos<br>
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="contsecciones cor">
+                    <div class="columnaizq bajo">
+                        <h2 style="margin-left: 10%; padding-top: 5%">CLIENTES</h2>
+                        <p class="cor-a"><span>ISGlobal</span><br>
+                            Barcelona Institute for Global Health<br> España
+                        </p>
+                        <p class="cor-b">
+                            <span>33Recomana</span><br>
+                            Curiositat Il·lustrada<br>
+                            TV3 España
+                        </p>
+                        <p class="cor-a">
+                            <span>Editorial Santillana</span><br>
+                            España
+                        </p>
+                        <p class="cor-c"><span>Revista QUO</span><br>
+                            México
+                        </p>
+                        <p class="cor-b"><span>FisioClock</span><br>
+                            España
+                        </p>
+                        <p class="cor-c">
+                            <span>Lee Kong Chian School of Medicine<br>Nanyang Technological
+                                University</span><br>Singapur
+                        </p>
+                    </div>
+                    <div class="columnader">
+                        <h2 style="margin-right: 10%; padding-top: 5%">COLABORADORES</h2>
+                        <p class="cor-h"><span>TEXITURA</span> Revista Patterns<br>
+                            España
+                        </p>
+                        <p class="cor-f"><span>Revista MONO</span><br>
+                            Venezuela
+                        </p>
+                        <p class="cor-g"><span>CHUCHERIAS DE ARTE Ediciones</span><br>
+                            España
+                        </p>
+                        <p class="cor-f"><span>Revista ÜALÀ</span><br>
+                            España
+                        </p>
+                        <p class="cor-g"><span>Revista SOY + SALUDABLE</span><br>
+                            Venezuela
+                        </p>
+                        <p class="cor-h"> <span>Monografías de actualización<br>
+                                SOCIEDAD ESPAÑOLA DE MEDICINA<br>
+                                Y CIRUGIA DEL PIE Y TOBILLO</span><br>
+                            España
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <article>
+                <div class="contseccionexpo">
+                    <h2 class="tituloexpo">EXPOSICIONES</h2>
+                    <h4><i class="fa fa-eye" aria-hidden="true"></i> Individual</h4>
+                    <div class="expos">
+                        <h2 class="fechas">2016</h2>
+                        <p class="infoexpo"><span>BY PASS.</span> Backgraound Store & Gallery. Colectiva. Barcelona -
+                            España.<br>
+                            <span>MISCELLANEA EST.</span> Galeria Atalante. Colectiva. Madrid - España.
+                        </p>
+                    </div>
+                    <div class="expos">
+                        <h2 class="fechas">2015</h2>
+                        <p class="infoexpo"><i class="fa fa-eye" aria-hidden="true"></i> <span>VULNERE.</span>
+                            Background
+                            Store & Gallery. Individual. Barcelona - España .
+                        </p>
+                    </div>
+                    <div class="expos">
+                        <h2 class="fechas">2014</h2>
+                        <p class="infoexpo"><span>In the Flesh: Physical Anatomy and the Human Form.</span> Colectiva.
+                            The Park School Baltimore - EE. UU.<br>
+                            <span>BDC. (Barcelona Drawing City).</span> Colectiva. Paris - Francia.<br>
+                            <span>GIOCONDA PROJECT.</span> W3 Gallery. Colectiva. Acton - Londres.<br>
+                            <span>KÖLNER LISTE Fair for contemporary art.</span> Colectiva. Colonia - Alemania.<br>
+                            <i class="fa fa-eye" aria-hidden="true"></i> <span>NUNC VITAE.</span> Academia de Bellas
+                            Artes.
+                            Individual, Sabadell - España.
+                        </p>
+                    </div>
+                    <div class="expos">
+                        <h2 class="fechas">2013</h2>
+                        <p class="infoexpo"><span>GMAC Grand Marché d'Art Contemporain.</span> Colectiva. Paris -
+                            Francia.<br>
+                            <i class="fa fa-eye" aria-hidden="true"></i> <span>_APENDIXS_</span> Centro Cultural La
+                            Bòbila.
+                            Individual, Barcelona - España.<br>
+                            <span>Dissecting Art, Intersecting Anatomy.</span> S3 Gallery. Colectiva. Chicago, IL -
+                            Estados
+                            Unidos.
+                        </p>
+                    </div>
+                    <div class="expos">
+                        <h2 class="fechas">2012</h2>
+                        <p class="infoexpo"><span>HAPPEN&NG. CEART.</span> Centro de Arte Tomás y Valiente. Colectiva.
+                            Madrid - España.<br>
+                            <span>ART EN FEMENÍ.</span> Centro Cultural Bellvitge. Colectiva. Hospitalet de Llobregat -
+                            España.
+                        </p>
+                    </div>
+                    <div class="expos">
+                        <h2 class="fechas">2011</h2>
+                        <p class="infoexpo"><span>RECICLATE-REINVENTATE.</span> Galeria Maxó. Colectiva. Barcelona -
+                            España.
+                        </p>
+                    </div>
+                    <div class="expos">
+                        <h2 class="fechas">2010</h2>
+                        <p class="infoexpo"><span>100% HECHO EN VENEZUELA,</span> Expoferia. Museo de Bellas Artes.
+                            Caracas
+                            - Venezuela.<br>
+                            <span>MERCADO DALI,</span> Mercado de arte y diseño. Caracas - Venezuela.
+                        </p>
+                    </div>
+                    <img class="pies" src="img/pies.jpg" alt="pies">
+                </div>
+            </article>
+            <a href="#skrollr-body"><img class="scroll2" src="img/scroll.png" alt="flechita scroll"></a>
+            <div class="boton">
+                <a target="_blank" href="http://gisellevitali.hol.es/cv_competencias.pdf">Ver CV de Competencias</a>
+            </div>
+            <article>
+                <p class="saludo">" El Negro solo es el lado oscuro de cada Color "</p>
+                <div class="footer">
+                    <ul class="iconos-pie">
+                        <li><a target="_blank" href="https://www.instagram.com/gv_ilustra/"><i class="fa fa-instagram"
+                                    aria-hidden="true"></i></a>
+                        </li>
+                        <li><a target="_blank" href="https://www.behance.net/gv_ilustra"><i class="fa fa-behance"
+                                    aria-hidden="true"></i></a></li>
+                        <li><a target="_blank" href="https://www.facebook.com/GiselleVitali.ilustra"><i
+                                    class="fa fa-facebook-square" aria-hidden="true"></i></a></li>
+                        <li><a target="_blank" href="https://www.linkedin.com"><i class="fa fa-linkedin"
+                                    aria-hidden="true"></i></a></li>
+                    </ul>
+
+                </div>
+            </article>
+        </section>
+    </div>
+    <div class="estado"></div>
+
+</body>
+
+</html>

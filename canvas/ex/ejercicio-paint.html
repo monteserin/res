@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>ejercicio paint en canvas de HTML5 | Pablo Monteserín</title>
+	<meta name="description"
+		content="Ejemplo de como hacer un paa aplicación de tipo paint utilizando la etiqueta canvas de html">
+
+</head>
+
+<body>
+	<canvas id="canvas" width="400px" height="400px" style="border: solid black 10px"></canvas>
+	<script type="text/javascript">
+		var canvas = document.getElementById("canvas");
+		var ctx = canvas.getContext("2d");
+		var grosor = 3;
+
+		document.onmousedown = ratonPulsado;
+		document.onmouseup = ratonLevantado;
+
+		function ratonLevantado() {
+			document.onmousemove = null;
+
+		}
+		function ratonPulsado() {
+			document.onmousemove = ratonSeMueve;
+
+		}
+
+		function ratonSeMueve(event) {
+			var x = event.clientX;
+			var y = event.clientY;
+			ctx.beginPath();
+			ctx.arc(x, y, grosor, 0, Math.PI * 2, true);
+			ctx.fill();
+			ctx.closePath();
+		}
+
+		function cambiaColor(color) {
+			ctx.fillStyle = color;
+		}
+
+		function cambiaGrosor(grosor) {
+			this.grosor = grosor;
+		}
+	</script>
+	<input type="button" value="red" onclick="cambiaColor(this.value)" />
+	<input type="button" value="blue" onclick="cambiaColor(this.value)" />
+	<input type="button" value="black" onclick="cambiaColor(this.value)" />
+	<input type="range" value="1" min="1" max="30" value="3" onchange="cambiaGrosor(this.value)" />
+
+
+</body>
+
+</html>

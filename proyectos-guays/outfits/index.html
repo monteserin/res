@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>OutfitTips</title>
+	<link rel="shortcut icon"  href="fotos/etiqueta.png" type="image/jpg"/>
+	<link rel="stylesheet" href="estilo.css">
+	
+	<link rel="stylesheet" href="font-awesome-4.6.3/css/font-awesome.css">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+	
+	<script type="text/javascript"	src="libreria.min.js"></script>
+
+<div class="sujeta">
+		<div class="etiqueta"></div>
+		<div class="texto">
+			<select id="momento">
+				<option value="" disabled selected>-Selecciona-</option>
+				<option value="dia">Día</option>
+				<option value="noche">Noche</option>
+			</select>
+			<br>
+			<label for="temperatura">¿Qué temperatura hace?</label> <br>
+			<input type="checkbox" class="temperatura" value="frio"><p> <i class="fa fa-long-arrow-down" aria-hidden="true"></i>10º</p> 
+			<input type="checkbox" class="temperatura" value="templado"><p> 10º<i class="fa fa-arrows-h" aria-hidden="true"></i>15º</p> 
+			<input type="checkbox" class="temperatura" value="hot"><p> 15º<i class="fa fa-arrows-h" aria-hidden="true"></i>20º</p>
+			<input type="checkbox" class="temperatura" value="muycaliente"><p><i class="fa fa-long-arrow-up" aria-hidden="true"></i>20º</p>
+			<br>
+			<a href="#" id="boton" class="boton xs">Crear Outfit</a>
+		</div>
+</div>
+
+<div class="sujeta2">
+		<div class="ropa">
+			<img src="" id="chaquet">
+			<img src="" alt="" id="ropaArriba">
+			<img src="" id="ropaAbajo">
+		</div>
+</div>
+
+<script type="text/javascript">
+
+//------------------------------------------ ARRAYS------------------------------
+// 0 es día // 1 es noche
+//AÑADIR CATEGORIA
+var superior = [
+{nombre:"Camiseta manga corta blanca", momento: "dia", temparatura:"templado-hot", foto:"camiseta3.png", tiene_parte_abajo:true},
+{nombre:"Camiseta manga corta salmón", momento: "dia", temparatura:"templado-hot", foto:"camiseta2.png", tiene_parte_abajo:true},
+{nombre:"Camiseta manga corta marinera", momento: "dia", temparatura:"templado-hot", foto:"camiseta.png", tiene_parte_abajo:true},
+{nombre:"Camiseta manga larga", momento:"dia", temparatura:"frio", foto:"mangalarga.png", tiene_parte_abajo:true},
+{nombre:"Jersei", momento:"dia",temparatura:"frio", foto:"jersei.png", tiene_parte_abajo:true},
+{nombre:"Tirantes finos blancos", momento:"dia", temparatura:"muycaliente", foto:"tirantes1.png", tiene_parte_abajo:true}, 
+{nombre:"Tirantes con volante", momento:"dia", temparatura:"muycaliente", foto:"tirantes2.png", tiene_parte_abajo:true},
+{nombre:"Tirantes gruesos", momento:"dia", temparatura:"muycaliente", foto:"tirantes3.png", tiene_parte_abajo:true}, 
+{nombre:"Blusa con estampadado indio", momento:"dia", temparatura:"hot-muycaliente", foto:"blusadia.png", tiene_parte_abajo:true}, 
+{nombre:"Blusa roja", momento:"dia", temparatura:"frio-templado-hot", foto:"blusadia2.png", tiene_parte_abajo:true},
+{nombre:"Top negro de tirantes finos", momento:"dia", temparatura:"muycaliente", foto:"top1.png", tiene_parte_abajo:true},
+{nombre:"Top negro de manga corta", momento:"dia", temparatura:"muycaliente", foto:"top2.png", tiene_parte_abajo:true},
+{nombre:"Top veraniego", momento:"dia", temparatura:"muycaliente", foto:"top3.png", tiene_parte_abajo:true},
+{nombre:"Vestido media manga liso", momento:"dia", temparatura:"templado-hot-muycaliente", foto:"vestidodia1.png", tiene_parte_abajo:false },
+{nombre:"Vestido crochet blanco", momento:"dia", temparatura:"muycaliente", foto:"vestidodia2.png", tiene_parte_abajo:false},
+{nombre:"Vestido blanco largo", momento:"dia", temparatura:"muycaliente", foto:"vestidodia3.png", tiene_parte_abajo:false},
+{nombre:"Mono corto", momento:"dia", temparatura:"muycaliente", foto:"mono2.png", tiene_parte_abajo:false},
+{nombre:"Mono largo", momento:"dia", temparatura:"templado-hot-muycaliente", foto:"mononoche.png", tiene_parte_abajo:false},
+
+
+{nombre:"Manga corta con decoración en el cuello", momento:"noche", temparatura:"frio-templado-hot-muycaliente", foto:"camisetanoche1.png", tiene_parte_abajo:true},
+{nombre:"Manga corta con collares", momento:"noche", temparatura:"frio-templado-hot-muycaliente", foto:"camisetanoche2.png", tiene_parte_abajo:true},
+{nombre:"Manga corta con lentejuelas", momento:"noche", temparatura:"frio-templado-hot-muycaliente", foto:"camisetanoche3.png", tiene_parte_abajo:true},
+{nombre:"Tirantes con cuello negro", momento:"noche", temparatura:"templado-hot-muycaliente", foto:"tirantesnoche1.png", tiene_parte_abajo:true},
+{nombre:"Tirantes con cuello blanco", momento:"noche", temparatura:"templado-hot-muycaliente", foto:"tirantesnoche2.png", tiene_parte_abajo:true},
+{nombre:"Blusa blanca", momento:"noche", temparatura:"frio-templado-hot-muycaliente", foto:"blusanoche.png", tiene_parte_abajo:true},
+{nombre:"Blusa negra", momento:"noche", temparatura:"frio-templado-hot-muycaliente", foto:"blusanoche2.png", tiene_parte_abajo:true},
+{nombre:"Top negro de manga corta", momento:"noche", temparatura:"templado-hot-muycaliente", foto:"top2.png", tiene_parte_abajo:true},
+{nombre:"Top negro de tirantes finos", momento:"noche", temparatura:"templado-hot-muycaliente", foto:"top1.png", tiene_parte_abajo:true},
+{nombre:"Vestido para la noche negro", momento:"noche", temparatura:"frio-templado-hot-muycaliente", foto:"vestidonoche.png", tiene_parte_abajo:false},
+{nombre:"Vestido canalé", momento:"noche", temparatura:"frio-templado-hot-muycaliente", foto:"vestidonoche2.png", tiene_parte_abajo:false},
+{nombre:"Mono largo para la noche", momento:"noche", temparatura:"templado-hot-muycaliente", foto:"mononoche.png", tiene_parte_abajo:false},
+{nombre:"Mono largo para la noche", momento:"noche", temparatura:"templado-hot-muycaliente", foto:"monorojo.png", tiene_parte_abajo:false}
+];
+
+var inferior =  [
+{nombre:"Pantalón largo", momento:"dia", temparatura:"frio-templado-hot", foto:"pantalondia3.png"},
+{nombre:"Pantalón largo roturas delanteras", momento:"dia", temparatura:"frio-templado-hot", foto:"pantalon2.png"},
+{nombre:"Falda tejana hasta la rodilla", momento:"dia", temparatura:"hot-muycaliente", foto:"faldadia2.png"},
+{nombre:"Falda lijera larga", momento:"dia", temparatura:"hot-muycaliente", foto:"faldadia.png"},
+{nombre:"Short tejano claro", momento:"dia", temparatura:"muycaliente", foto:"shortdia.png"},
+{nombre:"Short tejano oscuro", momento:"dia", temparatura:"muycaliente", foto:"shortdia2.png"},
+{nombre:"Bermuda", momento:"dia", temparatura:"muycaliente", foto:"shortdia3.png"},
+
+
+{nombre:"pantalón oscuro", momento:"noche", temparatura:"frio-templado-hot-muycaliente", foto:"pantalonoche.png"},
+{nombre:"pantalón tejano oscuro", momento:"noche", temparatura:"frio-templado-hot-muycaliente", foto:"pantalonnegro.png"},
+{nombre:"Falda negra con volantes", momento:"noche", temparatura:"frio-templado-hot-muycaliente", foto:"faldanoche.png"},
+{nombre:"Falda larga obertura lateral", momento:"noche", temparatura:"frio-templado-hot", foto:"faldanoche2.png"},
+{nombre:"Falda negra ajustada", momento:"noche", temparatura:"frio-templado-hot-muycaliente", foto:"faldanoche3.png"},
+{nombre:"Short negro", momento:"noche", temparatura:"hot-muycaliente", foto:"shortnegro.png"},
+{nombre:"Short estampado", momento:"noche", temparatura:"hot-muycaliente", foto:"shortnoche2.png"}
+];
+
+var chaqueta = [
+{nombre:"kimono", momento:"dia", temparatura:"hot", foto:"kimono.png"},
+{nombre:"Chaqueta de polipiel", momento:"dia", temparatura:"frio-templado-hot", foto:"chaquetapiel.png"},
+{nombre:"Chaqueta tejana", momento:"dia", temparatura:"templado-hot", foto:"chaquetatejana.png"},
+{nombre:"Chaqueta con borrego", momento:"dia", temparatura:"frio", foto:"chaquetadiagorda.png"},
+
+{nombre:"Americana", momento:"noche", temparatura:"templado-hot", foto:"chaquetanoche1.png"},
+{nombre:"Chaqueta de polipiel", momento:"noche", temparatura:"frio-templado-hot", foto:"chaquetapiel.png"},
+{nombre:"Kimono", momento:"noche", temparatura:"hot-muycaliente", foto:"kimono.png"},
+{nombre:"Chaqueta bomber fina", momento:"noche", temparatura:"hot", foto:"chaquetafina.png"},
+{nombre:"Chaqueta con borrego", momento:"noche",temparatura:"frio", foto:"chaquetadiagorda.png"}
+];
+
+//--------------------------------------FUNCIONES Y CODIGO------------------------------------
+
+	//recorrer el array top y mirar si el segundo elemento es un 1 y añadirlo a la seleccion 
+$(document).ready(function () {
+	$("#boton").click(function () {
+			$("#ropaAbajo").attr("src", "");
+			$("#ropaArriba").attr("src", "");
+			$("#chaquet").attr("src", "");
+
+		//al acabar la funcion aqui abajo separa segun el tipo que es
+		var prendas_arriba = getSeleccionPrendas(superior);
+		var prendas_abajo = getSeleccionPrendas(inferior);
+		var chaquetas = getSeleccionPrendas(chaqueta)
+
+
+		if (chaquetas.length > 0) {
+			var aleatoria_chaqueta = Math.floor(Math.random() * (chaquetas.length ));
+			var chaq = chaquetas[aleatoria_chaqueta];
+			$("#chaquet").attr("src", "fotos/"+chaq.foto);
+			$("#chaquet").css("display", "inline-block");
+		}else{
+					$("#chaquet").css("display", "none");
+				}
+
+		if (prendas_arriba.length > 0) {
+			var aleatoria_arriba = Math.floor(Math.random() * (prendas_arriba.length ));
+			var p_arriba = prendas_arriba[aleatoria_arriba];
+			$("#ropaArriba").attr("src", "fotos/"+p_arriba.foto);
+			$("#ropaArriba").css("display", "inline-block");
+		}else{
+					$("#ropaArriba").css("display", "none");
+				}
+
+			if (prendas_arriba.length > 0) {
+				var aleatoria_abajo = Math.floor(Math.random() * (prendas_abajo.length ));
+				if (p_arriba.tiene_parte_abajo == true) {
+					var p_abajo = prendas_abajo[aleatoria_abajo];
+					$("#ropaAbajo").attr("src", "fotos/"+p_abajo.foto);
+					$("#ropaAbajo").css("display", "inline-block");
+
+				}else{
+					$("#ropaAbajo").css("display", "none");
+				}				
+		}
+		
+//PAra que se vea la prenda en la app . Llamamos al id del div 
+
+$(".ropa").css("display", "block").css("margin","auto");
+
+	});
+});
+	
+	function getSeleccionPrendas(arr) {
+			seleccion = [];
+			var combo = $("#momento").val();
+		//llega toda la ropa y comprueba todo el array
+			for (i in arr){
+						//paso 1: rec objetos con jquery y 2: transforma objetos de jquery en array de txt nativo (each) 
+						
+						//si la prenda es del momento del dia selecionado	
+				var loMeto1 = false;
+				var loMeto2 = false;
+
+				if (arr[i].momento == combo) {
+						loMeto1=true; // si es diferente a lo que hay seleccionado en el combo no lo meto
+				}
+					//cuando la temperatura esta seleccionada le decimos que recorra cada objeto del array de temperaturas cuando es diferente de 0, eso significa que hay algo seleccionado. 
+				var $temperaturas = $('.temperatura:checked')	
+				if($temperaturas.length !=0){
+					$temperaturas.each(function () {
+						var temperaturaMarcada = $(this).val();
+						var temperaturaPrenda = arr[i].temparatura;
+
+						//Comprobamos si la temperatura marcada esta dentro de las temperaturas que tienen las prendas 
+							if(temperaturaPrenda.indexOf(temperaturaMarcada)>=0){
+								loMeto2= true;
+							}
+					});
+				}
+				//paso 3:if magico y 4: comprobamos si alguno de los valores del array está dentro de la cadena de javascri
+				//para que los checks de la combo se metan estando marcados o no.
+
+				//si todo lo seleccionado se cumple, esa prenda se mete en el array nuevo creado que es SELECCION
+				if(loMeto1==true  && loMeto2==true ){
+					seleccion.push(arr[i]);	
+				}
+			}
+			return seleccion;
+	}
+</script>
+</body>
+</html>

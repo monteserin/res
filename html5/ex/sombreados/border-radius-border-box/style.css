@@ -1,0 +1,7 @@
+div.sombreados-border-radius-shadow {
+    background: red;
+    width: 500px;
+    height: 500px;
+    box-shadow: 10px 50px 100px green, inset 10px 50px 100px blue;
+    border-radius: 0px 50px 100px 150px;
+}

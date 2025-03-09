@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="robots" content="noindex">
+
+	<title>animación de un cuadrado verticalmente</title>
+	        <meta name="description" content="Pintamos en pantalla un enemigo del cangrejo que se mueve verticalmente con el fin de no dejarle atravesar la playa. Luego añadiremos más enemigos">
+
+</head>
+<body>
+<h1>Ejemplo de animación de un rectángulo en un canvas con Javascript</h1>
+	<canvas id="canvas" width="400" height="400"></canvas>
+
+<script>
+var c = document.getElementById("canvas");
+var ctx = c.getContext("2d");
+
+var x = 10;
+var y = 10;
+var w = 20;
+var h = 30;
+var speed = 2;
+
+
+var update = function(){
+	y +=speed;
+	if(y>400 || y<0)speed=-speed;
+}
+var draw = function(){
+	ctx.clearRect(0,0,400,400);
+	ctx.fillStyle = "rgb(200, 0, 100)";
+	ctx.fillRect(x, y, w, h);
+	console.log(speed);
+}
+var step = function(){
+	update();
+	draw();
+	window.requestAnimationFrame(step);
+};
+
+step();
+
+</script>
+	
+</body>
+</html>

@@ -1,0 +1,38 @@
+body {
+    background-color: #fddbbd;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+h1 {
+    color: #b0b0b0;
+    text-align: center;
+}
+
+.box {
+    width: 200px;
+    height: 200px;
+    border: 3px dashed #c9a568;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+.box p::first-letter {
+    font-size: 3rem;
+    float: left;
+    color: #c9a568;
+}
+
+.box p {
+    line-height: 1.5rem;
+}
+
+.boxes {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}

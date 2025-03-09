@@ -1,0 +1,12 @@
+.wrap {width:385px; height:450px; position:relative; overflow:hidden; font-family:arial, sans-serif;}
+.wrap img {display:block;}
+.wrap div {width:365px; height:425px; padding:426px 10px 10px 10px; position:absolute; left:0; top:0; background:url(trans.gif);}
+.wrap div b {display:block; width:420px; height:450px; position:absolute; left:0; top:420px; z-index:1; background:#000; filter: alpha(opacity=40);
+ filter: progid:DXImageTransform.Microsoft.Alpha(opacity=40); opacity:0.40;}
+.wrap div span {position:relative; z-index:500;}
+.wrap div h1{font-size:22px; color:#fc0; text-align:center; margin:0; padding:0;}
+.wrap div p {font-size:12px; color:#fff; line-height:16px;}
+.wrap div a {color:#fc0; font-size:12px; position:absolute; left:0; top:400px; text-decoration:none; display:block; margin:0; text-align:right; width:200px;}
+.wrap div a:hover {color:#ff0;}
+
+.clear {clear:both;}

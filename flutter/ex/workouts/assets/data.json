@@ -1,0 +1,1279 @@
+[
+{
+"titulo": "core",
+"description": "Si estás en baja forma, ejercicios del 1 al 13 (inclusive), url: https://pablomonteserin.com/core/",
+"rutinas": []
+},
+{
+"titulo": "Resistencia / masa muscular",
+"rutinas": [
+{
+"titulo": "tirar / empujar",
+"rutina": [
+{
+"ex": "Supersets",
+"of": [
+{
+"ex": "Flexiones",
+"rep": "8 - 12"
+},
+{
+"ex": "Dominadas",
+"rep": "8 - 12"
+}
+],
+"series": "3 series"
+},
+{
+"ex": "Supersets",
+"of": [
+{
+"ex": "Dips",
+"rep": "8 - 12"
+},
+{
+"ex": "Dominadas Horizontales",
+"rep": "8 - 12"
+}
+],
+"series": "3 series"
+}
+]
+},
+{
+"titulo": "Piernas / Core",
+"rutina": [
+{
+"ex": "Supersets",
+"of": [
+{
+"ex": "Desplantes Laterales",
+"rep": "8 - 12"
+},
+{
+"ex": "Abdominales",
+"rep": "8 - 12"
+}
+],
+"series": "3 series"
+},
+{
+"ex": "Supersets",
+"of": [
+{
+"ex": "Elevaciones de talones",
+"rep": "8 - 12"
+},
+{
+"ex": "Flexiones S&M",
+"rep": "8 - 12"
+}
+],
+"series": "3 series"
+},
+{
+"ex": "Plancha Lateral",
+"series": "2 veces por lado",
+"time": "30s por lado"
+},
+{
+"ex": "Superset",
+"of": [
+{
+"ex": "Abdominales Bicicleta de pie",
+"rep": "8 - 12 por lado"
+},
+{
+"ex": "Oblicuos",
+"rep": "25"
+},
+{
+"ex": "Tijeras Horizontales",
+"rep": "25"
+},
+{
+"ex": "Tijeras Verticales",
+"rep": "25"
+}
+],
+"series": "1 series"
+}
+]
+}
+]
+},
+{
+"titulo": "Fuerza",
+"rutinas": [
+{
+"titulo": "Flexiones explosivas",
+"video": "flexiones",
+
+"rutina": [
+{
+"ex": "Flexiones con salto",
+"rep": "10 s",
+"series": "3 series. 30 segundos de descanso entre serie"
+},
+{
+"ex": "Flexiones a velocidad rápida",
+"rep": "10 s",
+"series": "3 series. 30 segundos de descanso entre serie"
+},
+{
+"ex": "Flexiones negativas. Subida rápida, bajada lenta",
+"rep": "10 s",
+"series": "3 series. 30 segundos de descanso entre serie"
+},
+{
+"ex": "Flexiones con pies elevados",
+"rep": "10 s",
+"series": "3 series. 30 segundos de descanso entre serie"
+},
+{
+"ex": "Flexiones con manos elevadas",
+"rep": "10 s",
+"series": "3 series. 30 segundos de descanso entre serie"
+}
+]
+},
+{
+"titulo": "Piernas explosivas (7 series)",
+"video": "piernas",
+"rutina": [
+{
+"ex": "Sentadillas",
+"rep": "20s "
+},
+{
+"ex": "Paso profundo hacia atrás",
+"rep": "20s "
+},
+{
+"ex": "Descanso",
+"rep": "20s"
+}
+],
+"series": 7
+
+},
+{
+"titulo": "Abdominales",
+"video": "abs",
+"rutina": [
+{
+"ex": "Halos de abdominales",
+"rep": "1min "
+},
+{
+"ex": "Crunch de rana",
+"rep": "1min"
+},
+{
+"ex": "Remos rusos",
+"rep": "1min"
+},
+{
+"ex": "Enhebrar la aguja con plancha lateral",
+"rep": "1min"
+},
+{
+"ex": "Deslizamiento de rodilla viuda negra",
+"rep": "1min"
+},
+{
+"ex": "Círculos de rana",
+"rep": "1min"
+},
+{
+"ex": "Pliegues abdominales con deslizamiento",
+"rep": "1min"
+}
+]
+}
+]
+},
+{
+"titulo": "core",
+"description": "Ejercicios del 14(inclusive) a lo que lleguemos, url: https://pablomonteserin.com/core/",
+"rutinas": []
+},
+{
+"titulo": "Fuerza",
+"numero_de_veces": 2,
+"rutinas": [
+{
+"titulo": "Empujar / Core",
+"rutina": [
+{
+"ex": "Flexiones +1",
+"rep": "5-8",
+"series": "3 series"
+},
+{
+"ex": "Flexiones Verticales +1",
+"rep": "5 - 8",
+"series": "3 series"
+},
+{
+"ex": "Flexiones con manos juntas",
+"rep": "8 - 10",
+"series": "3 series"
+},
+{
+"ex": "Dips",
+"rep": "8 - 10",
+"series": "3 series"
+},
+{
+"ex": "Abdominales +1",
+"rep": "8 - 10",
+"series": "3 series"
+},
+{
+"ex": "Plancha Lateral",
+"time": "1 min",
+"series": "2 series x lado"
+},
+{
+"ex": "Superset",
+"of": [
+{
+"ex": "Abdominales Bicicleta",
+"rep": "8 - 12 series x lado"
+},
+{
+"ex": "Oblicuos",
+"rep": 25
+},
+{
+"ex": "Tijeras Horizontales",
+"rep": 25
+},
+{
+"ex": "Tijeras Verticales",
+"rep": 25
+}
+],
+"series": "1 round"
+},
+{
+"ex": "Lumbares",
+"rep": 12
+}
+]
+},
+{
+"titulo": "Piernas / Tirar",
+"rutina": [
+{
+"ex": "Sentadillas",
+"desc": "Niveles 4 y 5",
+"rep": "5 - 8",
+"series": "3 series"
+},
+{
+"ex": "Elevaciones de talones",
+"rep": "8 - 10 por pierna",
+"series": "3 series"
+},
+{
+"ex": "Sentadilla Búlgara",
+"desc": "El talón debe tocar el en la bajada. Si hay peso, que esté en el lado de la pierna que flexiona)",
+"rep": "5 - 8 por pierna",
+"series": "3 series"
+},
+{
+"ex": "Desplantes",
+"rep": "5 - 8 rep por pierna",
+"series": "3 series"
+},
+{
+"ex": "Levantamiento de caderas con 1 pierna",
+"rep": "8 - 10",
+"series": "2 series"
+},
+{
+"ex": "Dominadas",
+"rep": "5 - 8 rep",
+"series": "3 series"
+},
+{
+"ex": "Dominadas Supinas",
+"rep": "5 - 10",
+"series": "3 series"
+},
+{
+"ex": "Dominadas Horizontales",
+"rep": "5 - 8 x mano",
+"series": "3 series"
+}
+]
+}
+]
+},
+
+{
+"titulo": "Potencia",
+"numero_de_veces": 2,
+"rutinas": [
+{
+"titulo": "Empujar",
+"rutina": [
+{
+"ex": "Flexiones con Palmada",
+"rep": "8 - 10",
+"series": "3 series"
+},
+{
+"ex": "Flexiones Hindús",
+"rep": "8 - 10",
+"series": "3 series"
+},
+{
+"ex": "Dips",
+"rep": "8 - 10",
+"series": "3 series"
+},
+{
+"ex": "Flexiones espartanas",
+"rep": "8 - 10",
+"series": 3
+}
+]
+},
+{
+"titulo": "Tirar / Core",
+"rutina": [
+{
+"ex": "Dominadas",
+"rep": "5 - 8",
+"series": "3 series"
+},
+{
+"ex": "Dominadas Horizontales",
+"rep": "8 - 10",
+"series": "3 series"
+},
+{
+"ex": "Dominadas Supinas",
+"rep": "5 - 8",
+"series": "3 series"
+},
+{
+"ex": "Abdominales",
+"rep": "8 - 10",
+"series": "3 series"
+},
+{
+"ex": "Levantamiento de caderas con 1 pierna",
+"rep": "8 - 10",
+"series": "3 series"
+},
+{
+"ex": "Plancha con flexión",
+"rep": "15 - 20",
+"series": "3 series"
+},
+{
+"ex": "Plancha lateral con flexión",
+"rep": "15 - 20",
+"series": "2 por lado"
+}
+]
+}
+]
+},
+
+{
+"titulo": "Kettlebell Iniciación 1",
+"numero_de_veces": 1,
+"rutinas": [
+{
+"titulo": "Día 1",
+"rutina": [
+{
+"ex": "Circuito",
+"of": [
+{
+"ex": "shot - clockwise",
+"rep": 20
+},
+{
+"ex": "Single Arm Deadlift - Left",
+"rep": 20
+},
+{
+"ex": "Singshot - anti-clockwise",
+"rep": 20
+},
+{
+"ex": "Single Arm Deadlift - Right",
+"rep": 20
+},
+{
+"ex": "shot - clockwise",
+"rep": 20
+},
+{
+"ex": "Halo - alternate directions",
+"rep": 20
+},
+{
+"ex": "Singshot - anti-clockwise",
+"rep": 20
+},
+{
+"ex": "Bodyweight Squats",
+"rep": 20
+}
+],
+"series": "3. 60s de descanso entre circuitos"
+}
+]
+}
+]
+},
+
+{
+"titulo": "Kettlebell Fuerza 1",
+"numero_de_veces": 1,
+"rutinas": [
+{
+"titulo": "Día 1",
+"rutina": [
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "One Handed Row",
+"rep": 5,
+"desc": "Velocidad de ejecución normal"
+},
+{
+"ex": "Overhead Press",
+"rep": 5,
+"desc": "Velocidad de ejecución normal"
+}
+],
+"series": "5. 90s de descanso entre series"
+},
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Two Handed Swing",
+"rep": 20,
+"desc": "Velocidad de ejecución normal"
+},
+{
+"ex": "Push Ups",
+"rep": 10,
+"desc": "Velocidad de ejecución normal"
+}
+],
+"series": "5. 90s de descanso entre series"
+}
+]
+},
+{
+"titulo": "Día 2",
+"rutina": [
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Reverse Lunge",
+"rep": 10,
+"desc": "Velocidad de ejecución normal"
+},
+{
+"ex": "Single Leg DeadLift",
+"rep": 8,
+"desc": "Velocidad de ejecución normal"
+}
+],
+"series": "4. 60s de descanso entre series"
+},
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Racket Squat",
+"rep": "10 x lado",
+"desc": "Velocidad de ejecución normal"
+},
+{
+"ex": "Side Lunge Single",
+"rep": "8 x lado",
+"desc": "Velocidad de ejecución normal"
+}
+],
+"series": "4. 60s de descanso entre series"
+}
+]
+},
+{
+"titulo": "Día 3",
+"rutina": [
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "One Handed Row",
+"rep": 5,
+"desc": "Velocidad de ejecución normal"
+},
+{
+"ex": "Overhead Press",
+"rep": 5,
+"desc": "Velocidad de ejecución normal"
+}
+],
+"series": "5 series. 90s de descanso entre series"
+},
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Two Handed Swing",
+"rep": 20,
+"desc": "Velocidad de ejecución normal"
+},
+{
+"ex": "Push Ups",
+"rep": 10,
+"desc": "Velocidad de ejecución normal"
+}
+],
+"series": "5 series. 90s de descanso entre series"
+},
+{
+"ex": "Clean",
+"rep": 5,
+"series": "5 series",
+"desc": "Velocidad de ejecución normal"
+}
+]
+},
+{
+"titulo": "Día 4",
+"rutina": [
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Reverse Lunge",
+"rep": 10,
+"desc": "Velocidad de ejecución normal"
+},
+{
+"ex": "Single Leg DeadLift",
+"rep": 8,
+"desc": "Velocidad de ejecución normal"
+}
+],
+"series": "4 series. 60s de descanso entre series"
+},
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Racked Squat",
+"rep": 10,
+"desc": "Velocidad de ejecución normal"
+},
+{
+"ex": "Side Lunge Single",
+"rep": "8 x lado",
+"desc": "Velocidad de ejecución normal"
+}
+],
+"series": "4 series. 60s de descanso entre series"
+}
+]
+}
+]
+},
+
+{
+"titulo": "Kettlebell Fuerza 5",
+"numero_de_veces": 1,
+"rutinas": [
+{
+"titulo": "Día 1",
+"rutina": [
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Suitcase Row",
+"rep": 3
+},
+{
+"ex": "Clean & Press",
+"rep": 3
+}
+],
+"series": "6. 90s de descanso entre series"
+},
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Snatch",
+"rep": 3
+},
+{
+"ex": "Narrow Push Ups",
+"rep": 6,
+"desc": "manos cerca del pecho"
+}
+],
+"series": "6 series. 90s de descanso entre series"
+},
+{
+"ex": "Windmill",
+"rep": 3,
+"series": "6 series. 90s de descanso entre series."
+}
+]
+},
+{
+"titulo": "Día 2",
+"rutina": [
+{
+"ex": "Double Lunge",
+"rep": 5,
+"series": "4 series. 90s de descanso entre series"
+},
+{
+"ex": "Superserie",
+"of": [
+{ "ex": "Single Leg DeadLift", "rep": 6, "desc": "slow" },
+{
+"ex": "Racked Squat",
+"rep": 6,
+"desc": "slow"
+}
+],
+"series": "4 series. 90s de descanso entre series"
+},
+{
+"ex": "Sit and Press",
+"rep": 10,
+"series": "3 series. 60s de descanso entre series"
+}
+]
+},
+{
+"titulo": "Día 3",
+"rutina": [
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Suitcase Row",
+"rep": 3,
+"desc": "slow"
+},
+{
+"ex": "Clean & Press",
+"rep": 3
+}
+],
+"series": "6. 90s de descanso entre series"
+},
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Snatch",
+"rep": 3
+},
+{
+"ex": "Narrow Push Ups",
+"rep": 6,
+"desc": "Manos cerca del pecho. Velocidad de ejecución lenta"
+}
+],
+"series": "6 series. 90s de descanso entre series"
+},
+{
+"ex": "Windmill",
+"rep": 3,
+"desc": "slow",
+"series": "6 series. 90s de descanso entre series."
+}
+]
+}
+]
+},
+
+{
+"titulo": "Kettlebell Fuerza 9",
+"numero_de_veces": 1,
+"rutinas": [
+{
+"titulo": "Día 1",
+"rutina": [
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Plank Row",
+"rep": 4
+},
+{
+"ex": "Half Kneeling Overhead Press",
+"rep": 4,
+"desc": "Velocidad de ejecución lenta"
+}
+],
+"series": "6 series. 90s de descanso entre series"
+},
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Clean & Press",
+"rep": 4
+},
+{
+"ex": "Push Ups",
+"rep": 10,
+"desc": "Velocidad de ejecución rápida"
+}
+],
+"series": "6. 90s de descanso entre series"
+}
+]
+},
+{
+"titulo": "Día 2",
+"rutina": [
+{
+"ex": "Pistol Squat",
+"rep": 6,
+"series": "5 series. 90s de descanso entre series"
+},
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Double Lunge",
+"rep": 8
+},
+{
+"ex": "Racked Squat",
+"rep": 8,
+"desc": "Velocidad de ejecución rápida"
+}
+],
+"series": "5 series. 90s de descanso entre series"
+},
+{
+"ex": "Two Handed Swing",
+"rep": "30",
+"series": "5 series"
+}
+]
+},
+
+{
+"titulo": "Día 3",
+"rutina": [
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Plank Row",
+"rep": 4
+},
+{
+"ex": "Half Kneeling Overhead Press",
+"rep": 4,
+"desc": "Velocidad de ejecución rápida"
+}
+],
+"series": "6 series. 90s de descanso entre series"
+},
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Clean & Press",
+"rep": 4
+},
+{
+"ex": "Push Ups",
+"rep": 10,
+"desc": "Velocidad de ejecución rápida"
+}
+],
+"series": "6 series. 90s de descanso entre series"
+}
+]
+},
+{
+"titulo": "Día 4",
+"rutina": [
+{
+"ex": "Pistol Squat",
+"rep": 6,
+"series": "5 series. 90s de descanso entre series"
+},
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Double Lunge",
+"rep": 8
+},
+{
+"ex": "Racked Squat",
+"desc": "fast",
+"rep": "8"
+}
+],
+"series": "5. 90s de descanso entre series"
+},
+{
+"ex": "Two Handed Swing",
+"rep": 30,
+"series": "5 series"
+}
+]
+}
+]
+},
+
+{
+"titulo": "Kettlebell Fuerza 10",
+"numero_de_veces": 1,
+"rutinas": [
+{
+"titulo": "Día 1",
+"rutina": [
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Plank row",
+"rep": 12
+},
+{
+"ex": "Half Kneeling Overhead Press",
+"rep": 12,
+"desc": "fast"
+}
+],
+"series": "4 series. 60s de descanso entre series"
+},
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Clean & Press",
+"rep": 12
+},
+{
+"ex": "Push Ups",
+"rep": 20,
+"desc": "fast"
+}
+],
+"series": "4 series. 60s de descanso entre series"
+}
+]
+},
+{
+"titulo": "Día 2",
+"rutina": [
+{
+"ex": "Pistol Squat",
+"rep": 4,
+"series": "6 series. 120s de descanso entre series"
+},
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Double Lunge",
+"rep": 4
+},
+{
+"ex": "Racked Squat",
+"rep": 4,
+"desc": "fast"
+}
+],
+"series": "6 series. 120s de descanso entre series"
+},
+{
+"ex": "Two Handed Swing",
+"rep": 20,
+"series": "6 series"
+}
+]
+},
+
+{
+"titulo": "Día 3",
+"rutina": [
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Plank Row",
+"rep": 12
+},
+{
+"ex": "Half Kneeling Overhead Press",
+"rep": 12,
+"desc": "fast"
+}
+],
+"series": "4. 60s de descanso entre series"
+},
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Clean & Press",
+"rep": 12
+},
+{
+"ex": "Push Ups",
+"rep": 20,
+"desc": "fast"
+}
+],
+"series": "4 series. 60s de descanso entre series"
+}
+]
+},
+{
+"titulo": "Día 4",
+"rutina": [
+{
+"ex": "Pistol Squat",
+"rep": 4,
+"series": "6. 120s de descanso entre series"
+},
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Double Lunge",
+"rep": 4
+},
+{
+"ex": "Racked Squat",
+"rep": 4,
+"desc": "fast"
+}
+],
+"series": "6 series. 120s de descanso entre series"
+},
+{
+"ex": "Snatch",
+"rep": 4,
+"series": "6 series"
+}
+]
+}
+]
+},
+
+{
+"titulo": "Kettlebell Fuerza 11",
+"numero_de_veces": 1,
+"rutinas": [
+{
+"titulo": "Día 1",
+"rutina": [
+{
+"nombre": "Superserie",
+"of": [
+{
+"ex": "Plank Row",
+"rep": 8
+},
+{
+"ex": "Half Kneeling Overhead Press",
+"rep": 8,
+"desc": "fast"
+}
+],
+"series": "5. 90s de descanso entre series"
+},
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Clean & Press",
+"rep": 8
+},
+{
+"ex": "Push Ups",
+"rep": 15,
+"desc": "fast"
+}
+],
+"series": "5 series. 90s de descanso entre series"
+}
+]
+},
+{
+"titulo": "Día 2",
+"rutina": [
+{
+"ex": "Pistol Squat",
+"rep": 8,
+"series": "4. 60s de descanso entre series"
+},
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Double Lunge",
+"rep": 12
+},
+{
+"ex": "Racked Squat",
+"rep": 12,
+"desc": "fast"
+}
+],
+"series": "4 series. 60s de descanso entre series"
+},
+{
+"ex": "Two Handed Swing",
+"rep": 40,
+"series": "4 series"
+}
+]
+},
+
+{
+"titulo": "Día 3",
+"rutina": [
+{
+"nombre": "Superserie",
+"of": [
+{
+"ex": "Plank Row",
+"rep": 8
+},
+{
+"ex": "Half Kneeling Overhead Press",
+"rep": 8,
+"desc": "fast"
+}
+],
+"series": "5 series. 90s de descanso entre series"
+},
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Clean & Press",
+"rep": 8
+},
+{
+"ex": "Push Ups",
+"rep": 15,
+"desc": "fast"
+}
+],
+"series": "5 series. 90s de descanso entre series"
+}
+]
+},
+{
+"titulo": "Día 4",
+"rutina": [
+{
+"ex": "Pistol Squat",
+"rep": 8,
+"series": "4 series. 60s de descanso entre series"
+},
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Double Lunge",
+"rep": 12
+},
+{
+"ex": "Racked Squat",
+"rep": 12,
+"desc": "fast"
+}
+],
+"series": "4 series. 60s de descanso entre series"
+},
+{
+"ex": "Snatch",
+"rep": 8,
+"series": "4 series. 90s de descanso entre series"
+}
+]
+}
+]
+},
+
+{
+"titulo": "Kettlebell Fuerza 12",
+"numero_de_veces": 1,
+"rutinas": [
+{
+"titulo": "Día 1",
+"rutina": [
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Plank Row",
+"rep": 4
+},
+{
+"ex": "Half Kneeling Overhead Press",
+"rep": 4,
+"desc": "Velocidad de ejecución rápida"
+}
+],
+"series": "6 series. 90s de descanso entre series"
+},
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Clean & Press",
+"rep": 4
+},
+{
+"ex": "Push Ups",
+"rep": 10,
+"desc": "Velocidad de ejecución rápida"
+}
+],
+"series": "6 series. 90s de descanso entre series"
+}
+]
+},
+{
+"titulo": "Día 2",
+"rutina": [
+{
+"ex": "Pistol Squat",
+"rep": 6,
+"series": "5. 90s de descanso entre series"
+},
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Double Lunge",
+"rep": 8
+},
+{
+"ex": "Racked Squat",
+"rep": 8,
+"desc": "Velocidad de ejecución rápida"
+}
+],
+"series": "5 series. 90s de descanso entre series"
+},
+{
+"ex": "Two Handed Swing",
+"rep": 30,
+"series": "5 series. 90s de descanso entre series."
+}
+]
+},
+
+{
+"titulo": "Día 3",
+"rutina": [
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Plank Row",
+"rep": 4
+},
+{
+"ex": "Half Kneeling Overhead Press",
+"rep": 4,
+"desc": "Velocidad de ejecución rápida"
+}
+],
+"series": "6 series. 90s de descanso entre series"
+},
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Clean & Press",
+"rep": 4
+},
+{
+"ex": "Push Ups",
+"rep": 10,
+"desc": "Velocidad de ejecución rápida"
+}
+],
+"series": "6 series. 90s de descanso entre series"
+}
+]
+},
+{
+"titulo": "Día 4",
+"rutina": [
+{
+"ex": "Pistol Squat",
+"rep": 6,
+"series": "5 series. 90s de descanso entre series"
+},
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Double Lunge",
+"rep": 8
+},
+{
+"ex": "Racked Squat",
+"rep": 8,
+"desc": "Velocidad de ejecución rápida"
+}
+],
+"series": "5 series. 90s de descanso entre series"
+},
+{
+"ex": "Superserie",
+"of": [
+{
+"ex": "Two Handed Swing",
+"rep": 30
+},
+{
+"ex": "Levantamiento Turco",
+"rep": 3,
+"desc": "Velocidad de ejecución rápida"
+}
+],
+"series": "5 series. 90s de descanso entre series"
+},
+{
+"ex": "Snatch",
+"rep": 6,
+"series": "5 series. 90s de descanso entre series"
+}
+]
+}
+]
+}
+]

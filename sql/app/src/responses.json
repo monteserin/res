@@ -1,0 +1,755 @@
+[
+  [
+    {
+      "question": "Muestra el título de cada libro",
+      "sql": "SELECT title FROM books",
+      "data": [
+        {
+          "title": "El ingenioso hidalgo don Quijote de la Mancha"
+        },
+        {
+          "title": "Segunda parte del ingenioso caballero don Quijote de la Mancha"
+        },
+        {
+          "title": "Victus"
+        },
+        {
+          "title": "El Caballero de la armadura oxidada"
+        },
+        {
+          "title": "El médico"
+        },
+        {
+          "title": "El camino de los reyes"
+        },
+        {
+          "title": "Los Pilares de la Tierra"
+        },
+        {
+          "title": "El caballero del Rubí"
+        },
+        {
+          "title": "El caballero del Rubí II"
+        },
+        {
+          "title": "El caballero del Rubí III"
+        },
+        {
+          "title": "Policisne de Boecia"
+        },
+        {
+          "title": "Espejo de príncipes y caballeros"
+        }
+      ]
+    },
+    {
+      "question": "Muestra el precio de cada libro",
+      "sql": "SELECT price FROM books",
+      "data": [
+        {
+          "price": "21"
+        },
+        {
+          "price": "12"
+        },
+        {
+          "price": "10"
+        },
+        {
+          "price": "5"
+        },
+        {
+          "price": "12"
+        },
+        {
+          "price": "11"
+        },
+        {
+          "price": "7"
+        },
+        {
+          "price": "9"
+        },
+        {
+          "price": "8"
+        },
+        {
+          "price": "10"
+        },
+        {
+          "price": "7"
+        },
+        {
+          "price": "8"
+        }
+      ]
+    },
+    {
+      "question": "Muestra el título y el precio de cada libro",
+      "sql": "SELECT title, price FROM books",
+      "data": [
+        {
+          "title": "El ingenioso hidalgo don Quijote de la Mancha",
+          "price": "21"
+        },
+        {
+          "title": "Segunda parte del ingenioso caballero don Quijote de la Mancha",
+          "price": "12"
+        },
+        {
+          "title": "Victus",
+          "price": "10"
+        },
+        {
+          "title": "El Caballero de la armadura oxidada",
+          "price": "5"
+        },
+        {
+          "title": "El médico",
+          "price": "12"
+        },
+        {
+          "title": "El camino de los reyes",
+          "price": "11"
+        },
+        {
+          "title": "Los Pilares de la Tierra",
+          "price": "7"
+        },
+        {
+          "title": "El caballero del Rubí",
+          "price": "9"
+        },
+        {
+          "title": "El caballero del Rubí II",
+          "price": "8"
+        },
+        {
+          "title": "El caballero del Rubí III",
+          "price": "10"
+        },
+        {
+          "title": "Policisne de Boecia",
+          "price": "7"
+        },
+        {
+          "title": "Espejo de príncipes y caballeros",
+          "price": "8"
+        }
+      ]
+    },
+    {
+      "question": "Muestra toda la información de cada libro",
+      "sql": "SELECT * FROM books",
+      "data": [
+        {
+          "id": "1",
+          "title": "El ingenioso hidalgo don Quijote de la Mancha",
+          "author_id": "1",
+          "price": "21"
+        },
+        {
+          "id": "2",
+          "title": "Segunda parte del ingenioso caballero don Quijote de la Mancha",
+          "author_id": "1",
+          "price": "12"
+        },
+        {
+          "id": "3",
+          "title": "Victus",
+          "author_id": "2",
+          "price": "10"
+        },
+        {
+          "id": "4",
+          "title": "El Caballero de la armadura oxidada",
+          "author_id": "3",
+          "price": "5"
+        },
+        {
+          "id": "5",
+          "title": "El médico",
+          "author_id": "4",
+          "price": "12"
+        },
+        {
+          "id": "6",
+          "title": "El camino de los reyes",
+          "author_id": "5",
+          "price": "11"
+        },
+        {
+          "id": "7",
+          "title": "Los Pilares de la Tierra",
+          "author_id": "6",
+          "price": "7"
+        },
+        {
+          "id": "8",
+          "title": "El caballero del Rubí",
+          "author_id": "7",
+          "price": "9"
+        },
+        {
+          "id": "9",
+          "title": "El caballero del Rubí II",
+          "author_id": "7",
+          "price": "8"
+        },
+        {
+          "id": "10",
+          "title": "El caballero del Rubí III",
+          "author_id": "7",
+          "price": "10"
+        },
+        {
+          "id": "11",
+          "title": "Policisne de Boecia",
+          "author_id": null,
+          "price": "7"
+        },
+        {
+          "id": "12",
+          "title": "Espejo de príncipes y caballeros",
+          "author_id": null,
+          "price": "8"
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "question": "Muestra el libro con id 5",
+      "sql": "SELECT * FROM books WHERE id = 5",
+      "data": [
+        {
+          "id": "5",
+          "title": "El médico",
+          "author_id": "4",
+          "price": "12"
+        }
+      ]
+    },
+    {
+      "question": "Muestra el libro cuyo precio esta entre 10 y 15",
+      "sql": "SELECT * FROM books WHERE price BETWEEN 10 AND 15",
+      "data": [
+        {
+          "id": "2",
+          "title": "Segunda parte del ingenioso caballero don Quijote de la Mancha",
+          "author_id": "1",
+          "price": "12"
+        },
+        {
+          "id": "3",
+          "title": "Victus",
+          "author_id": "2",
+          "price": "10"
+        },
+        {
+          "id": "5",
+          "title": "El médico",
+          "author_id": "4",
+          "price": "12"
+        },
+        {
+          "id": "6",
+          "title": "El camino de los reyes",
+          "author_id": "5",
+          "price": "11"
+        },
+        {
+          "id": "10",
+          "title": "El caballero del Rubí III",
+          "author_id": "7",
+          "price": "10"
+        }
+      ]
+    },
+    {
+      "question": "Muestra los libros cuyo precio no esté entre 10 y 15",
+      "sql": "SELECT * FROM books WHERE price NOT BETWEEN 10 and 15",
+      "data": [
+        {
+          "id": "1",
+          "title": "El ingenioso hidalgo don Quijote de la Mancha",
+          "author_id": "1",
+          "price": "21"
+        },
+        {
+          "id": "4",
+          "title": "El Caballero de la armadura oxidada",
+          "author_id": "3",
+          "price": "5"
+        },
+        {
+          "id": "7",
+          "title": "Los Pilares de la Tierra",
+          "author_id": "6",
+          "price": "7"
+        },
+        {
+          "id": "8",
+          "title": "El caballero del Rubí",
+          "author_id": "7",
+          "price": "9"
+        },
+        {
+          "id": "9",
+          "title": "El caballero del Rubí II",
+          "author_id": "7",
+          "price": "8"
+        },
+        {
+          "id": "11",
+          "title": "Policisne de Boecia",
+          "author_id": null,
+          "price": "7"
+        },
+        {
+          "id": "12",
+          "title": "Espejo de príncipes y caballeros",
+          "author_id": null,
+          "price": "8"
+        }
+      ]
+    },
+    {
+      "question": "Muestra los 5 libros más baratos",
+      "sql": "SELECT * from books  ORDER BY price LIMIT 5",
+      "data": [
+        {
+          "id": "4",
+          "title": "El Caballero de la armadura oxidada",
+          "author_id": "3",
+          "price": "5"
+        },
+        {
+          "id": "7",
+          "title": "Los Pilares de la Tierra",
+          "author_id": "6",
+          "price": "7"
+        },
+        {
+          "id": "11",
+          "title": "Policisne de Boecia",
+          "author_id": null,
+          "price": "7"
+        },
+        {
+          "id": "9",
+          "title": "El caballero del Rubí II",
+          "author_id": "7",
+          "price": "8"
+        },
+        {
+          "id": "12",
+          "title": "Espejo de príncipes y caballeros",
+          "author_id": null,
+          "price": "8"
+        }
+      ]
+    },
+    {
+      "question": "Muestra los libros de \"El caballero del Rubi\"",
+      "sql": "SELECT * FROM books WHERE title LIKE '%El caballero del Rubí%'",
+      "data": [
+        {
+          "id": "8",
+          "title": "El caballero del Rubí",
+          "author_id": "7",
+          "price": "9"
+        },
+        {
+          "id": "9",
+          "title": "El caballero del Rubí II",
+          "author_id": "7",
+          "price": "8"
+        },
+        {
+          "id": "10",
+          "title": "El caballero del Rubí III",
+          "author_id": "7",
+          "price": "10"
+        }
+      ]
+    },
+    {
+      "question": "Muestra los libros que costaron 10€",
+      "sql": "SELECT * FROM books WHERE price = 10",
+      "data": [
+        {
+          "id": "3",
+          "title": "Victus",
+          "author_id": "2",
+          "price": "10"
+        },
+        {
+          "id": "10",
+          "title": "El caballero del Rubí III",
+          "author_id": "7",
+          "price": "10"
+        }
+      ]
+    },
+    {
+      "question": "Muestra todos los autores, ordenados alfabéticamente",
+      "sql": "SELECT * FROM authors  ORDER BY name",
+      "data": [
+        {
+          "id": "2",
+          "name": "Albert Sánchez Piñol",
+          "born_date": "1965"
+        },
+        {
+          "id": "5",
+          "name": "Brandon Sanderson",
+          "born_date": "1975"
+        },
+        {
+          "id": "7",
+          "name": "David Eddings",
+          "born_date": "1931"
+        },
+        {
+          "id": "9",
+          "name": "Gerardo Monteserín",
+          "born_date": "1978"
+        },
+        {
+          "id": "6",
+          "name": "Ken Follet",
+          "born_date": "1949"
+        },
+        {
+          "id": "1",
+          "name": "Miguel de Cervantes",
+          "born_date": "1547"
+        },
+        {
+          "id": "4",
+          "name": "Noah Gordon",
+          "born_date": "1926"
+        },
+        {
+          "id": "8",
+          "name": "Pablo Monteserín",
+          "born_date": "1982"
+        },
+        {
+          "id": "3",
+          "name": "Robert Fisher",
+          "born_date": "1922"
+        }
+      ]
+    },
+    {
+      "question": "Muestra los 4 libros más caros, ordenados de más caro a más barato",
+      "sql": "SELECT * FROM books ORDER BY price DESC LIMIT 4",
+      "data": [
+        {
+          "id": "1",
+          "title": "El ingenioso hidalgo don Quijote de la Mancha",
+          "author_id": "1",
+          "price": "21"
+        },
+        {
+          "id": "2",
+          "title": "Segunda parte del ingenioso caballero don Quijote de la Mancha",
+          "author_id": "1",
+          "price": "12"
+        },
+        {
+          "id": "5",
+          "title": "El médico",
+          "author_id": "4",
+          "price": "12"
+        },
+        {
+          "id": "6",
+          "title": "El camino de los reyes",
+          "author_id": "5",
+          "price": "11"
+        }
+      ]
+    },
+    {
+      "question": "Muestra los 5 primeros libros ordenados alfabéticamente",
+      "sql": "SELECT * FROM books ORDER BY title LIMIT 5",
+      "data": [
+        {
+          "id": "4",
+          "title": "El Caballero de la armadura oxidada",
+          "author_id": "3",
+          "price": "5"
+        },
+        {
+          "id": "8",
+          "title": "El caballero del Rubí",
+          "author_id": "7",
+          "price": "9"
+        },
+        {
+          "id": "9",
+          "title": "El caballero del Rubí II",
+          "author_id": "7",
+          "price": "8"
+        },
+        {
+          "id": "10",
+          "title": "El caballero del Rubí III",
+          "author_id": "7",
+          "price": "10"
+        },
+        {
+          "id": "6",
+          "title": "El camino de los reyes",
+          "author_id": "5",
+          "price": "11"
+        }
+      ]
+    },
+    {
+      "question": "Muestra los 5 siguientes libros ordenados alfabéticamente",
+      "sql": "SELECT * FROM books ORDER BY title LIMIT 5 OFFSET 5",
+      "data": [
+        {
+          "id": "1",
+          "title": "El ingenioso hidalgo don Quijote de la Mancha",
+          "author_id": "1",
+          "price": "21"
+        },
+        {
+          "id": "5",
+          "title": "El médico",
+          "author_id": "4",
+          "price": "12"
+        },
+        {
+          "id": "12",
+          "title": "Espejo de príncipes y caballeros",
+          "author_id": null,
+          "price": "8"
+        },
+        {
+          "id": "7",
+          "title": "Los Pilares de la Tierra",
+          "author_id": "6",
+          "price": "7"
+        },
+        {
+          "id": "11",
+          "title": "Policisne de Boecia",
+          "author_id": null,
+          "price": "7"
+        }
+      ]
+    }
+  ],
+  [
+    {
+      "question": "Muestra los libros con su autor",
+      "sql": "SELECT title, name FROM books JOIN authors on authors.id = books.author_id",
+      "data": [
+        {
+          "title": "El ingenioso hidalgo don Quijote de la Mancha",
+          "name": "Miguel de Cervantes"
+        },
+        {
+          "title": "Segunda parte del ingenioso caballero don Quijote de la Mancha",
+          "name": "Miguel de Cervantes"
+        },
+        {
+          "title": "Victus",
+          "name": "Albert Sánchez Piñol"
+        },
+        {
+          "title": "El Caballero de la armadura oxidada",
+          "name": "Robert Fisher"
+        },
+        {
+          "title": "El médico",
+          "name": "Noah Gordon"
+        },
+        {
+          "title": "El camino de los reyes",
+          "name": "Brandon Sanderson"
+        },
+        {
+          "title": "Los Pilares de la Tierra",
+          "name": "Ken Follet"
+        },
+        {
+          "title": "El caballero del Rubí",
+          "name": "David Eddings"
+        },
+        {
+          "title": "El caballero del Rubí II",
+          "name": "David Eddings"
+        },
+        {
+          "title": "El caballero del Rubí III",
+          "name": "David Eddings"
+        }
+      ]
+    },
+    {
+      "question": "Muestra los libros ordenados por la fecha de nacimiento de su autor",
+      "sql": "SELECT title, name, born_date FROM books JOIN authors on authors.id = books.author_id ORDER BY authors.born_date",
+      "data": [
+        {
+          "title": "El ingenioso hidalgo don Quijote de la Mancha",
+          "name": "Miguel de Cervantes",
+          "born_date": "1547"
+        },
+        {
+          "title": "Segunda parte del ingenioso caballero don Quijote de la Mancha",
+          "name": "Miguel de Cervantes",
+          "born_date": "1547"
+        },
+        {
+          "title": "El Caballero de la armadura oxidada",
+          "name": "Robert Fisher",
+          "born_date": "1922"
+        },
+        {
+          "title": "El médico",
+          "name": "Noah Gordon",
+          "born_date": "1926"
+        },
+        {
+          "title": "El caballero del Rubí II",
+          "name": "David Eddings",
+          "born_date": "1931"
+        },
+        {
+          "title": "El caballero del Rubí",
+          "name": "David Eddings",
+          "born_date": "1931"
+        },
+        {
+          "title": "El caballero del Rubí III",
+          "name": "David Eddings",
+          "born_date": "1931"
+        },
+        {
+          "title": "Los Pilares de la Tierra",
+          "name": "Ken Follet",
+          "born_date": "1949"
+        },
+        {
+          "title": "Victus",
+          "name": "Albert Sánchez Piñol",
+          "born_date": "1965"
+        },
+        {
+          "title": "El camino de los reyes",
+          "name": "Brandon Sanderson",
+          "born_date": "1975"
+        }
+      ]
+    },
+    {
+      "question": "Muestra los libros cuyos autores nacieron después de 1950",
+      "sql": "SELECT title, name, born_date FROM books JOIN authors on authors.id = books.author_id WHERE authors.born_date > 1950",
+      "data": [
+        {
+          "title": "Victus",
+          "name": "Albert Sánchez Piñol",
+          "born_date": "1965"
+        },
+        {
+          "title": "El camino de los reyes",
+          "name": "Brandon Sanderson",
+          "born_date": "1975"
+        }
+      ]
+    },
+    {
+      "question": "Muestra los autores que no han escrito ningún libro",
+      "sql": "SELECT name FROM authors LEFT JOIN books on authors.id = books.author_id WHERE books.author_id IS NULL",
+      "data": [
+        {
+          "name": "Pablo Monteserín"
+        },
+        {
+          "name": "Gerardo Monteserín"
+        }
+      ]
+    },
+    {
+      "question": "Muestra los autores que nacieron en un año par",
+      "sql": "SELECT name FROM authors WHERE born_date%2 = 0",
+      "data": [
+        {
+          "name": "Robert Fisher"
+        },
+        {
+          "name": "Noah Gordon"
+        },
+        {
+          "name": "Pablo Monteserín"
+        },
+        {
+          "name": "Gerardo Monteserín"
+        }
+      ]
+    },
+    {
+      "question": "Muestra el autor que nació hace más tiempo",
+      "sql": "SELECT name, MIN(born_date) FROM authors",
+      "data": [
+        {
+          "name": "Miguel de Cervantes",
+          "MIN(born_date)": "1547"
+        }
+      ]
+    },
+    {
+      "question": "Muestra cuanto costaría comprar (total_amount) toda la saga de \"El caballero del Rubí\"",
+      "sql": "SELECT title, SUM(price) AS total_amount FROM books WHERE title LIKE '%El caballero del Rubí%'",
+      "data": [
+        {
+          "title": "El caballero del Rubí",
+          "total_amount": "27"
+        }
+      ]
+    },
+    {
+      "question": "Muestra cuantos libros hay en la base de datos",
+      "sql": "SELECT COUNT(*) FROM books",
+      "data": [
+        {
+          "COUNT(*)": "12"
+        }
+      ]
+    },
+    {
+      "question": "Muestra cuantos autores hay en la base de datos",
+      "sql": "SELECT COUNT(*) FROM authors",
+      "data": [
+        {
+          "COUNT(*)": "9"
+        }
+      ]
+    },
+    {
+      "question": "Muestra cuantos libros cuestan más de 10 euros",
+      "sql": "SELECT COUNT(*) FROM books WHERE price > 10",
+      "data": [
+        {
+          "COUNT(*)": "4"
+        }
+      ]
+    },
+    {
+      "question": "Muestra cuantos autores nacieron después del año 1900",
+      "sql": "SELECT COUNT(*) FROM authors WHERE born_date > 1900",
+      "data": [
+        {
+          "COUNT(*)": "8"
+        }
+      ]
+    }
+  ]
+]

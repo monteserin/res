@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>hola mundo en el canvas de HTML5 | Pablo Monteserín</title>
+	<meta name="description"
+		content="Ejemplo básico de un 'hola mundo' modificando el canvas de html utilizando Javascript">
+
+</head>
+
+<body>
+	<canvas id="canvas" width="400px" height="400px" style="border:2px solid black" />
+	<script>
+		var c = document.getElementById("canvas");
+		var ctx = c.getContext("2d");
+
+		ctx.font = "40px Arial";
+		ctx.fillText("Hola mundo", 50, 50);
+	</script>
+
+
+</body>
+
+</html>

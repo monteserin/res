@@ -1,0 +1,5424 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1z0-851</title>
+	<meta name="robots" content="noindex">
+
+		<meta name="description" content="Estas son las preguntas que varios alumnos y yo utilizamos para obtener la certificación de Java 1z0-851">
+
+	<link rel="stylesheet" href="style.css">
+
+	<script src="jquery.js"></script>
+
+	
+<script src="js.js"></script>
+</head>
+<body>
+	<h1>1z0-851</h1>
+	<input type="button" id="ver_soluciones" value="Ver soluciones">
+	<input type="button" id="ver_explicaciones" value="Ver explicaciones">
+	<input type="button" id="siguiente" value="siguiente">
+	<input type="button" id="atras" value="atrás">
+<!-- CLASS PATH-->
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+		Given:
+11. public class Commander{
+12. public static void main(String [] args){
+13. String myProp = /* insert code here */
+14. System.out.println(myProp);
+15. }
+16. }
+and the command line: java -Dprop.custom=gobstopper Commander. Which two, placed on line 13 will produce the
+output gobstopper? (Choose two. )
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">System.load(“prop.custom”);</div>
+		<div><input type="checkbox">System.getenv(“prop.custom”);</div>
+		<div><input type="checkbox">System.property(“prop.custom”);</div>
+		<div class="correcta"><input type="checkbox">System.getProperty(“prop.custom”);</div>
+		<div class="correcta"><input type="checkbox">System.getProperties().getProperty(“prop.custom”);</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+1. package com.company.application;
+2.
+3. public class MainClass{
+4. public static void main(String [] args){}
+5. }
+And MainClass exists in the /apps/com/company/application directory. Assume the CLASSPATH enviroment variable
+is set to “.” (current directory). Which two java commands entered at the command line will run MainClass?(Choose
+two.)		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">java MainClass if run from the /apps directory</div>
+		<div class="correcta"><input type="checkbox">java com.company.application.MainClass if run from the /apps directory</div>
+		<div class="correcta"><input type="checkbox">java -classpath /apps com.company.application.MainClass if run from any directory</div>
+		<div><input type="checkbox">java -classpath. MainClass if run from the /apps/com/company/application directory</div>
+		<div><input type="checkbox">java -classpath /apps/com/company/application:. MainClass if run from the /apps directory</div>
+		<div><input type="checkbox">java com.company.application.MainClass if run from the /apps/com/company/application directory</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+A UNIX user named Bob wants to replace his chess program with a new one, but he is not sure where the told one is
+installed. Bob is currently able to run a Java chess program starting from his home directory /home/bob using the
+command: java -classpath /test:/home/bob/downloads/*.jar games.Chess Bob's CLASSPATH is set (at login time) to:
+/usr/lib:/home/bob/classes:/opt/java/lib:/opt/java/lib/*.jar.
+What is possible location for the Chess.class file?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">/test/Chess.class</div>
+		<div><input type="checkbox">/home/bob/Chess.class</div>
+		<div class="correcta"><input type="checkbox">/test/games/Chess.class</div>
+		<div><input type="checkbox">/usr/lib/games/Chess.class</div>
+		<div><input type="checkbox">/home/bob/games/Chess.class</div>
+		<div><input type="checkbox">inside jarfile /opt/java/lib/Games.jar (with a correct manifest)</div>
+		<div><input type="checkbox">inside jarfile /home/bob/downloads/Games.jar (with a correct manifest)</div>
+		
+	</div>
+
+
+	<div class="ex">
+		<p>java -classpath /test:/home/bob/downloads/*.jar games.Chess → this tell the compiler to look first for classes in under
+the directory /test. If the searched item is not found, the compiler will then look inside the jars (only items in jars will
+be considered) in the directory /home/bob/downloads/</p>
+	</div>
+</article>
+
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+	A developer is creating a class Book, that needs to access class Paper. The Paper class is deployed in a JAR named
+myLib.jar. Which three, taken independently, will allow the developer to use the Paper class while compiling the Book
+class?(Choose three.)	
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">The JAR file is located at $JAVA_HOME/jre/classes/myLib.jar</div>
+		<div class="correcta"><input type="checkbox">The JAR file is located at $JAVA_HOME/jre/lib/ext/myLib.jar</div>
+		<div><input type="checkbox">The JAR file is located at /foo/myLib.jar and a classpath enviroment variable is set that includes
+/foo/myLib.jar/Paper.class</div>
+		<div class="correcta"><input type="checkbox">The JAR file located at /foo/myLib.jar and a classpath enviroment variable is set that includes /foo/myLib.jar</div>
+		<div><input type="checkbox">The JAR file is located at /foo/myLib.jar and the Book class is compiled using java -cp /foo/myLib.jar/Paper
+Book.java</div>
+		<div><input type="checkbox">The JAR file is located at /foo/myLib.jar and the Book class is compiled using javac -d /foo/myLib.jar Book.java</div>
+		<div class="correcta"><input type="checkbox">The JAR file is located at /foo/myLib.jar and the Book class is compiled using javac -classpath /foo/myLib.jar
+Book.java</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+1. package com.company.application;
+2.
+3. public class MainClass{
+4. public static void main(String [] args){}
+5. }
+And MainClass exists in the /apps/com/company/application directory. Assume the CLASSPATH enviroment variable
+is set to “.” (current directory). Which two java commands entered at the command line will run MainClass?(Choose
+two.)
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">java MainClass if run from the /apps directory</div>
+		<div class="correcta"><input type="checkbox">java com.company.application.MainClass if run from the /apps directory</div>
+		<div class="correcta"><input type="checkbox">java -classpath /apps com.company.application.MainClass if run from any directory</div>
+		<div><input type="checkbox">java -classpath MainClass if run from the /apps/com/company/application directory</div>
+		<div><input type="checkbox">java-classpath /apps/com/company/application:. MainClass if run from the /apps directory</div>
+		<div><input type="checkbox">java com.company.application.MainClass if run from the /apps/com/company/application directory</div>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given a correctly compiled class whose source code is:
+1. package com.sun.sjcp:
+2. public class Commander{
+3. public static void main(String [] args){
+4. // more code here
+5. }
+6. }
+Assume that the class file is located in /foo/com/sun/sjcp/, the current directory is /foo/, and that the classpath contains
+“.” (current directory). Which command line correctly runs Commander?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">java Commander</div>
+		<div class="correcta"><input type="checkbox">java com.sun.sjcp.Commander</div>
+		<div><input type="checkbox">java com/sun/sjcp/Commander</div>
+		<div><input type="checkbox">java -cp com.sun.sjcp.Commander</div>
+		<div><input type="checkbox">java -cp com/sun/sjcp Commander</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given the following directory structure: bigProyect |--source | |--Utils.java | |--classes |-- And the following command
+line invocation: javac -d classes source/Utils.java Assume the current directory is bigProyect, what is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">If the compile is successful, Util.class is added to the source directory.</div>
+		<div><input type="checkbox">The compiler returns an invalid flag error.</div>
+		<div class="correcta"><input type="checkbox">If the compile is successful, Utils.class is added to the classes directory.</div>
+		<div><input type="checkbox">If the compile is successful, Utils.class is added to the bigProyect directory.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+<!-- Garbage collector-->
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+1. public class GC{
+2. private Object o;
+3. private void doSomethigElse(Object obj){o = obj}
+4. public void doSomething(){
+5. Object o = new Object();
+6. doSomethingElse(o);
+7. o = new Object();
+8. doSomethingElse(null);
+9. o = null;
+10. }
+11. }
+When the doSomething method is called, after which line does the Object created in line 5 become available for
+garbage collection?
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Line 5</div>
+		<div><input type="checkbox">Line 6</div>
+		<div><input type="checkbox">Line 7</div>
+		<div class="correcta"><input type="checkbox">Line 8</div>
+		<div><input type="checkbox">Line 9</div>
+		<div><input type="checkbox">Line 10</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+11. class Snoochy{
+12. Boochy booch;
+13. public Snoochy(){
+14. }
+15.
+16. class Boochy{
+17. Snoochy snooch;
+18. public Boochy(Snoochy s){snooch = s;}
+19. }
+And the statements:
+21. public static void main(String [] args){
+22. Snoochy snoog = new Snoochy();
+23. snoog = null;
+24. //more code here
+25. }
+Which statement is true about the objects referenced by snoog, snooch, and booch inmediately after line 23 executes?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">None of these objects are eligible for garbage collection.</div>
+		<div><input type="checkbox">Only the object referenced by booch is eligible for garbage collection.</div>
+		<div><input type="checkbox">Only the object referenced by snoog is eligible for garbage collection.</div>
+		<div><input type="checkbox">Only the object referenced by snooch is eligible for garbage collection.</div>
+		<div class="correcta"><input type="checkbox">The objects referenced by snooch and booch are eligible for garbage collection.</div>
+	</div>
+
+
+	<div class="ex">
+		<p>En el momento en que un objeto es nulo, dejaremos de poder acceder a sus propiedades y pasarán a ser elegibles por el recolector de basura.</p>
+	</div>
+</article>
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Which statement is true?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">A class's finalize() method CANNOT be invoked explicity.</div>
+		<div><input type="checkbox">super.finalize() is called implicity by any overriding finalize() method.</div>
+		<div class="correcta"><input type="checkbox">The finalize() method for a given object is called no more than once by the garbage collector.</div>
+		<div><input type="checkbox">The order in which finalize() is called on two objects is based on the order in which the two objects became
+finalizable.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+<!-- Genéricos y colecciones-->
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given a pre-generics implementation of a method:
+11. public static int sum(List list){
+12. int sum = 0;
+13. for(Iterator iter = list.iterator(); iter.hasNext(); ){
+14. int i = ((Integer)iter.next()).intValue();
+15. sum += i;
+16. }
+17. return sum;
+18. }
+What three changes allow the class to be used with generics and avoid an unchecked warning?(Choose three.)		
+	</pre>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">Remove line 14.</div>
+		<div><input type="checkbox">Replace line 14 with “int i = iter.next();”.</div>
+		<div class="correcta"><input type="checkbox">Replace line 13 with “for(int i:intList) {”.</div>
+		<div><input type="checkbox">Replace line 13 with “for(Iterator iter:intList){”.</div>
+		<div><input type="checkbox">Replace the method declaration with “sum(List&lt;int&gt;intList)”.</div>
+		<div class="correcta"><input type="checkbox">Replace the method declaration with sum “sum(List&lt;Integer&gt;intList)”.</div>
+	</div>
+
+
+	<div class="ex">
+	<p>Para eliminar los warnings que arroja una colección de datos, debo especificar el tipo de datos que dicha colección va a
+almacenar (lista de la línea 11). Este tipo de dato no puede ser una primitiva, luego “Replace the method declaration
+with “sum(List<int>intList)” es incorrecto y “Replace the method declaration with sum “sum(List<Integer>intList)” es
+correcto. Por otra parte, el bucle for() puede recibir como parámetro el tipo de dato sobre el que esto iterando. Tal como
+acabamos de ver, este caso ese tipo de dato es un Integer, luego “Replace line 13 with 'for(int i:intList) {'” es correcto y
+“Replace line 13 with 'for(Iterator iter:intList){'” es incorrecto.</p>	
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+11. //insert code here
+12. private N min, max;
+13. public N getMin(){return min; }
+14. public N getMax(){return max; }
+15. public void add(N added){
+16. if(min == null || added.doubleValue() < min.doubleValue())
+17. min = added;
+18. if(max == null || added.doubleValue() > max.doubleValue())
+19. max = added;
+20. }
+21. }
+Which two, inserted at line 11, will allow the code to compile?(Choose two.)		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">public class MinMax&lt;?&gt;{</div>
+		<div><input type="checkbox">public class MinMax&lt;? extends Number&gt;{</div>
+		<div><input type="checkbox">public class MinMax&lt;N extends Object&gt;{</div>
+		<div class="correcta"><input type="checkbox">public class MinMax&lt;N extends Number&gt;{</div>
+		<div><input type="checkbox">public class MinMax&lt;? Extends Object&gt; {</div>
+		<div class="correcta"><input type="checkbox">F. public class MinMax&lt;N extends Integer&gt;{</div>
+
+	</div>
+
+
+	<div class="ex">
+<p>MinMax será una clase que almacene objetos de tipo N, los cuales podrán heredar de Number y de Object. No tiene
+sentido especificar que hereden de Object, ya que todo hereda de object. Los tipos genéricos van siempre entre los
+símbolos &lt;&gt;</p>		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+A programmer has an algorithm that requires a java.util.List that provides an efficient implementation of(0, object), but
+does NOT need to support quick random access. What supports these requirements?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">java.util.Queue</div>
+		<div><input type="checkbox">java.util.ArrayList</div>
+		<div><input type="checkbox">java.util.LienarList</div>
+		<div class="correcta"><input type="checkbox">java.util.LinkedList</div>
+	</div>
+
+
+	<div class="ex">
+		<p>LinkedList allows for constant-time insertions or removals, but only sequential access of elements. In other words, you
+can walk the list forwards or backwards, but grabbing an element in the middle takes time proportional to the size of
+the list.
+ArrayLists, on the other hand, allow random access, so you can grab any element in constant time. But adding orremoving from anywhere but the end requires shifting all the latter elements over, either to make an opening or fill the
+gap. Also, if you add more elements than the capacity of the underlying array, a new array (twice the size) is allocated,
+and the old array is copied to the new one, so adding to an ArrayList is O(n) in the worst case but constant on average</p>
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+12. import java.util.*;
+13. public class Explorer1{
+14. public static void main(String [] args){
+15. TreeSet&lt;Integer&gt;s = new TreeSet&lt;Integer&gt;();
+16. TreeSet&lt;Integer&gt;subs = new TreeSet&lt;Integer&gt;();
+17. for(int i = 606; i &lt;613; i++)
+18. if(i%2 == 0)s.add(i)
+19. subs = (TreeSet)s.subSet(608, true, 611, true);
+20. s.add(609);
+21. System.out.println(s + &#x201c;&#x201d; + subs);
+22. }
+23. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Compilation fails.</div>
+		<div><input type="checkbox">An exception is thrown at runtime.</div>
+		<div><input type="checkbox">[608, 609, 610, 612][608, 610]</div>
+		<div><input type="checkbox">[608, 609, 610, 612][608, 609, 610]</div>
+		<div><input type="checkbox">[606, 608, 609, 610, 612][608, 610]</div>
+		<div class="correcta"><input type="checkbox">[606, 608, 609, 610, 612][608, 609, 610]</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+12. import java.util.*;
+13. public class Explorer2{
+14. public static void main(String args[]){
+15. TreeSet&lt;Integer&gt; s = new TreeSet&lt;Integer&gt;();
+16. TreeSet&lt;Integer&gt; subs = new TreeSet&lt;Integer&gt;();
+17. for(int i=606; i&lt;613; i++)
+18. if(i%2 == 0)s.add(i)
+19. subs = (TreeSet)s.subSet(608, true, 611, true);
+20. s.add(629);
+21. System.out.println(s + &#x201c;&#x201d; + subs);
+22. }
+23. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Compilation fails.</div>
+		<div><input type="checkbox">An exception is thrown at runtime.</div>
+		<div><input type="checkbox">[608, 610, 612, 629][608, 610]</div>
+		<div><input type="checkbox">[608, 610, 612, 629][608, 610, 629]</div>
+		<div class="correcta"><input type="checkbox">[606, 608, 610, 612, 629][608, 610]</div>
+		<div><input type="checkbox">[606, 608, 610, 612, 629][608, 610, 629]</div>
+	</div>
+
+
+	<div class="ex">
+	subSet(E fromElement, E toElement)
+Returns a view of the portion of this set whose elements range from fromElement, inclusive, to toElement, exclusive.	
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+12. import java.util.*;
+13. public class Explorer3{
+14. public static void main(String [] args){
+15. TreeSet&lt;Integer&gt; s = new TreeSet&lt;Integer&gt;();
+16. TreeSet&lt;Integer&gt; subs = new TreeSet&lt;Integer&gt;();
+17. for(int i = 606; i &lt;613; i++)18. if(i%2 == 0)s.add(i);
+19. subs = (TreeSet)s.subSet(608, true, 611, true);
+20. subs.add(629);
+21. System.out.println(s + &#x201c;&#x201d; + subs);
+22. }
+23. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Compilation fails.</div>
+		<div class="correcta"><input type="checkbox">An exception is thrown at runtime.</div>
+		<div><input type="checkbox">[608, 610, 612, 629][608, 610]</div>
+		<div><input type="checkbox">[608, 610, 612, 629][608, 610, 629]</div>
+		<div><input type="checkbox">[606, 608, 610, 612, 629][608, 610]</div>
+		<div><input type="checkbox">[606, 608, 610, 612, 629][608, 610, 629]</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+1. public class Score implements Comparable&lt;Score&gt;
+2. private int wins, loses;
+3. public Score(int w, int i){wins = w; losses i;}
+4. public int getWins(){return wins;}
+5. public int getLosses(){return losses;}
+6. public String toString(){
+7. return &#x201c;&lt;&#x201d;+wins +&#x201d;,&#x201d;+losses+&#x201d;&gt;&#x201d;;
+8. }
+9. //insert code here
+10. }
+Which method will complete this class?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">public int compareTo(Object o){/*more code here*/}</div>
+		<div class="correcta"><input type="checkbox">public int compareTo(Score other){/*more code here*/}</div>
+		<div><input type="checkbox">public int compare(Score s1, Score s2){/*more code here*/}</div>
+		<div><input type="checkbox">public int compare(Object o1, Object o2){/*more code here*/}</div>
+	</div>
+
+
+	<div class="ex">
+<p>Para comparar un objeto de la clase Score con otro, el segundo también debe ser de la clase Score.</p>		
+	</div>
+</article>
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+11. public class Person{
+12. private name;
+13. public Person(String name){
+14. this.name = name;
+15. }
+16. public int hashCode(){
+17. return 420;
+18. }
+19. }
+Which statement is true?		
+	</pre>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">The time to find the value from HashMap with a Person key depends on the size of the map.</div>
+		<div><input type="checkbox">Deleting a Person key from a HashMap will delete all map entries for all keys of type Person.</div>
+		<div><input type="checkbox">Inserting a second Person object into a HashSet will cause the first Person object to be removed as a duplicate.</div>
+		<div><input type="checkbox">The time to determine whether a Person object is contained in a HashSet is constant and does NOT depent on the
+size of the map.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+5. import java.util.*;
+6. public class SortOf{
+7. public static void main(String [] args){
+8. ArrayList&lt;Integer&gt; a = new ArrayList&lt;Integer&gt;();
+9. a.add(1); a.add(5); a.add(3);11. Collection.sort(a);
+12. a.add(2);
+13. Collections.reverse(a);
+14. System.out.println(a);
+15. }
+16. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">[1, 2, 3, 5]</div>
+		<div><input type="checkbox">[2, 1, 3, 5]</div>
+		<div class="correcta"><input type="checkbox">[2, 5, 3, 1]</div>
+		<div><input type="checkbox">[5, 3, 2, 1]</div>
+		<div><input type="checkbox">[1, 3, 5, 2]</div>
+		<div><input type="checkbox">Compilation fails.</div>
+		<div><input type="checkbox">An exception is thrown at runtime.</div>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+3. import java.util.*;
+4. public class Mapit{
+5. public static void main(String [] args){
+6. Set &lt;Integer&gt; set = new HashSet&lt;Integer&gt;();
+7. Integer i1 = 45;
+8. Integer i2 = 46;
+9. set.add(i1);
+10. set.add(i1);
+11. set.add(i2); System.out.print(set.size() + &#x201c;&#x201d;);
+12. set.remove(i1); System.out.print(set.size() + &#x201c;&#x201d;);
+13. i2 = 47;
+14. set.remove(i2); System.out.print(set.size() + &#x201c;&#x201d;);
+15. }
+16. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">210</div>
+		<div class="correcta"><input type="checkbox">211</div>
+		<div><input type="checkbox">321</div>
+		<div><input type="checkbox">322</div>
+		<div><input type="checkbox">Compilation fails.</div>
+		<div><input type="checkbox">An exception is thrown at runtime.</div>
+	</div>
+
+
+	<div class="ex">
+	En un Set no puede haber valores repetidos.	
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+23. Object[] myObjects = {
+24. new Integer(12);
+25. new String(&#x201c;foo&#x201d;);
+26. new Integer(5);
+27. new Boolean(true);
+28. }
+29. Arrays.sort(myObjects);
+30. for(int I = 0; I &lt;myObjects[i].toString()){
+31. System.out.print(myObjects[i].toString());
+32. System.out.print(&#x201c; &#x201d;);
+33. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Compilation fails due to an error in line 23.</div>
+		<div><input type="checkbox">Compilation fails due to an error in line 29.</div>
+		<div class="correcta"><input type="checkbox">A ClassCastException occurs in line 29.</div>
+		<div><input type="checkbox">A ClassCastException occurs in line 31.</div>
+		<div><input type="checkbox">The value of all four objects prints in natural order.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+1. import java.util.*;
+2. public class WrappedString{
+3. private String s;
+4. public WrappedString(String s){this.s = s;}
+5. public static void main(String[]args){
+6. HashSet&lt;Object&gt;hs = new HashSet&lt;Object&gt;();
+7. WrappedString ws1 = new WrappedString(&#x201c;aardvark&#x201d;);
+8. WrappedString ws2 = new WrappedString(&#x201c;aardvark&#x201d;);
+9. String s1 = new String(&#x201c;aardvark&#x201d;);
+10. String s2 = new String(&#x201c;aardvark&#x201d;);
+11. hs.add(ws1); hs.add(ws2); hs.add(s1); hs.add(s2);
+12. System.out.println(hs.size());
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">0</div>
+		<div><input type="checkbox">1</div>
+		<div><input type="checkbox">2</div>
+		<div class="correcta"><input type="checkbox">3</div>
+		<div><input type="checkbox">4</div>
+		<div><input type="checkbox">Compilation fails.</div>
+		<div><input type="checkbox">An exception is thrown at runtime.</div>
+
+	</div>
+
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given a class whose instances, when found in a collection of objects, are sorted by using the compareTo() method,
+which two statements are true?(Choose two.)		
+	</pre>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">The class implements java.lang.Comparable</div>
+		<div><input type="checkbox">The class implements java.util.Comparator</div>
+		<div class="correcta"><input type="checkbox">The interface used to implement sorting allows this class to define only one sort sequence.</div>
+		<div><input type="checkbox">The interface used to implement sorting allows this class to define many different sort sequences.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+1. import java.util.*;
+2. public class Example{
+3. public static void main(String [] args){
+4. // insert code here
+5. set.add(new Integer(2));
+6. set.add(new Integer(1));
+7. System.out.println(set);
+8. }
+9. }
+Which code, inserted at line 4, guarantees that this program will output[1, 2]?		
+	</pre>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">Set set = new TreeSet();</div>
+		<div><input type="checkbox">Set set = new HashSet();</div>
+		<div><input type="checkbox">Set set = new SortedSet();</div>
+		<div><input type="checkbox">List set = new SortedList();</div>
+		<div><input type="checkbox">Set set = new LinkedHashSet();</div>
+	</div>
+
+
+	<div class="ex">
+		<p>El HashSet te ordena los datos como le parece.</p>
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+1. class TestException extends Exception{}
+2. class A{
+3. public String sayHello(Sring name) throws TestException{
+4. if(name == null)throw new TestException();5. return “Hello” + name;
+6. }
+7. }
+8. public class TestA{
+9. public static void main(String [] args){
+10. new A().sayHello(“Aiko”);
+11. }
+12. }
+Which statement is true?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Compilation succeeds.</div>
+		<div><input type="checkbox">Class A does not compile.</div>
+		<div><input type="checkbox">The method declared on line 9 cannot be modified to throw TestException.</div>
+		<div class="correcta"><input type="checkbox">TestA compiles if line 10 is enclosed in a try/catch block that catches TestException.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+34. HashMap props = new HashMap();
+35. props.put(“key45”, “some value”):
+36. props.put(“ley12”, “some other value”);
+37. props.put(“key39”, “yet another value”);
+38. Set s = props.keySet();
+39. //insert code here
+What, inserted at line 39, will sort the keys int the props HashMap?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Arrays.sort(s)</div>
+		<div class="correcta"><input type="checkbox">s = new TreeSet(s);</div>
+		<div><input type="checkbox">Collections.sort(s);</div>
+		<div><input type="checkbox">s = new SortedSet();</div>
+		<div><input type="checkbox"></div>
+	</div>
+
+
+	<div class="ex">
+<p>Collections.sort(list) debe recibir como parámetro una lista. Un Set es una colección de datos que no admite valores
+duplicados. En un Tree los datos estarán almacenados de acuerdo a lo establecido por el método compareTo. Un
+TreeSet tiene ambas características. </p>
+	</div>
+</article>
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+3. import java.util.*;
+4. public class Hancock{
+5. // insert code here
+6. list.add(“foo”);
+7. }
+8. }
+Which two code fragments, inserted independently at line 5, will compile without warnings?(Choose two. )		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">public void addStrings(List list);</div>
+		<div class="correcta"><input type="checkbox">public void addStrings(List&lt;String&gt;list)</div>
+		<div class="correcta"><input type="checkbox">public void addString(List&lt;? Super String &gt; list){</div>
+		<div><input type="checkbox">public void addStrings(List&lt;? Extends String &gt; list){</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+11. public void getNumbers(){
+12. ArrayList numbers = new ArrayList();
+13. for( int i=0; i&lt;10; i++){
+14. int value = i*((int)Math.random());
+15. Integer intObj = new Integer(value);
+16. numbers.add(intObj);
+17. }
+18. System.out.println(numbers);
+19. }
+Which line of code marks the earliest point that an object referenced by intObj becomes a candidate for garbage
+collection?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Line 16</div>
+		<div><input type="checkbox">Line 17</div>
+		<div ><input type="checkbox">Line 18</div>
+		<div class="correcta"><input type="checkbox">Line 19</div>
+		<div><input type="checkbox">The object is NOT a candidate for garbage collection.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+11. public static Iterator reverse(List list){
+12. Collections.reverse(list);
+13. return list.iterator();
+14. }
+15. public static void main(String [] args){
+16. List list = new ArrayList();
+17. list.add(“1”); list.add(“2”); list.add(“3”);
+18. for(Object obj: reverse(list))
+19. System.out.print(obj + “, ”);
+20. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">3, 2, 1</div>
+		<div><input type="checkbox">1, 2, 3</div>
+		<div class="correcta"><input type="checkbox">Compilation fails.</div>
+		<div><input type="checkbox">The code runs with no output.</div>
+		<div><input type="checkbox">An exception is thrown at runtime.</div>
+	</div>
+
+
+	<div class="ex">
+		<p>La línea 16 está mal. No es posible iterar sobre una instancia de la clase Iterator</p>
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+11. public static Collection get(){
+12. Collection sorted = new LinkedList();
+13. sorted.add(“B”); sorted.add(“C”); sorted.add(“A”);
+14. return sorted;
+15. }
+16. public static void main(String [] args){
+17. for(Object obj: get()) {
+18. System.out.print(obj + “,”);
+19. }
+20. }		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">A, B, C</div>
+		<div class="correcta"><input type="checkbox">B, C, A</div>
+		<div><input type="checkbox">Compilation fails.</div>
+		<div><input type="checkbox">The code runs with no output.</div>
+		<div><input type="checkbox">An exception is thrown at runtime.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given that the elements of a PriorityQueue are ordered according to natural ordering, and:
+2. import java.util.*;
+3. public class GetInLine{
+4. public static void main(String [] args){
+5. PriorityQueue <String> pq = new PriorityQueue<String>();
+6. pq.add(“banana”);
+7. pq.add(“pear”);
+8. pq.add(“apple”);
+9. System.out.println(pq.poll() + “” + pq.peek());
+10. }
+11. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">apple pear</div>
+		<div><input type="checkbox">banana pear</div>
+		<div><input type="checkbox">apple apple</div>
+		<div class="correcta"><input type="checkbox">apple banana</div>
+		<div><input type="checkbox">banana banana</div>
+	</div>
+
+
+	<div class="ex">
+	<p>PriorityQueue almacena elementos ordenándolos de acuerdo al método compareTo. Por tanto, los objetos quedarán
+almacenado en el siguiente orden alfabético: apple, banana, pear. El método peek devuelve el primer elemento de la
+lista y el método poll devuelve y elimina el primer elemento de la lista.</p>	
+	</div>
+</article>
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+A programmer must create a generic class MinMax and the type parameter of MinMax must implement Comparable.
+Which implementation of MinMax will compile?		
+	</pre>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">
+<pre><code>
+class MinMax&lt;E extends Comparable&lt;E&gt;&gt;{
+E min = null;
+E max = null;
+public MinMax(){}
+public void put(E value){/* store min or max */}
+</code></pre>
+		</div>
+		<div><input type="checkbox">
+<pre>
+	<code>
+class MinMax&lt;E implements Comparable&lt;E&gt;&gt;{
+E min = null;
+E max = null;
+public MinMax(){}
+public void void put(E value){/* store min or max*/}
+	</code>
+</pre>
+</div>
+		<div><input type="checkbox">
+<pre>
+	<code>
+class MinMax&lt;E extends Comparable&lt;E&gt;&gt;{
+&lt;E&gt;E min = null;
+&lt;E&gt;E max = null;
+public MinMax(){}
+public &lt;E&gt; void put(E value){/* store min or max */}
+	</code>
+</pre>
+		</div>
+		<div><input type="checkbox">
+<pre>
+	<code>
+class MinMax&lt;E extends Comparable&lt;E&gt;&gt;{
+&lt;E&gt;E min = null;
+&lt;E&gt;E max = null;
+public MinMax(){}
+public &lt;E&gt; void put(E value){/* store min or max */}
+	</code>
+</pre>
+</div>
+		<div><input type="checkbox">
+<pre>
+	<code>
+class MinMax&lt;E implements Comparable&lt;E&gt;&gt;{
+&lt;E&gt; E min = null;
+&lt;E&gt; E max = null;
+public MinMax(){}
+public &lt;E&gt; void put(E value){/* store min or max*/}
+	</code>
+</pre>
+		</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+3. import java.util.*;
+4. public class G1{
+5. public void takeList(List&lt;? extends String &gt; list ){
+6. // insert code here
+7. }
+8. }
+Which three code fragments, inserted independently at line 6, will compile? (Choose three. )		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">list.add(“foo”);</div>
+		<div class="correcta"><input type="checkbox">Object o = list;</div>
+		<div class="correcta"><input type="checkbox">String s = lig.get(0);</div>
+		<div class="correcta"><input type="checkbox">list = new ArrayList<String>();</div>
+		<div><input type="checkbox">list = new ArrayList&lt;Object&gt;();</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+1. public Drink implements Comparable{
+2. public String name;
+3. public int compareTo(Object o){
+4. return 0;
+5. }6. }
+and
+20. Drink one = new Drink();
+21. Drink two = new Drink();
+22. one.name = “Coffee”;
+23. two.name = “Tea”;
+24. TreeSet set = new TreeSet();
+25. set.add(one);
+26. set.add(two);
+A programmer iterates over the TreeSet and prints the name of each Drink object. What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Tea</div>
+		<div class="correcta"><input type="checkbox">Coffee</div>
+		<div><input type="checkbox">Coffee
+Tea</div>
+		<div><input type="checkbox">Compilation fails.</div>
+		<div><input type="checkbox">The code runs with no output.</div>
+		<div><input type="checkbox">An exception is thrown at runtime.</div>
+	</div>
+
+
+	<div class="ex">
+<p>Un Set no permite elementos duplicados y al sobreescribir el método compareTo siempre estamos devolviendo 0, por lo
+que la aplicación supone que todos los objetos de la clase Drink son iguales.</p>		
+	</div>
+</article>
+
+<!-- Hilos y paso de valores-->
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+13. public class Pass{
+14. public static void main(String [] args){
+15. int x = 5;
+16. Pass p = new Pass();
+17. p.doStuff(x);
+18. System.out.println(“ main x =” + x);
+19. }
+20.
+21. void doStuff(int x){
+22. System.out.print(“ do Stuff x =” + x++);
+23. }
+24. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Compilation fails.</div>
+		<div><input type="checkbox">An exception is thrown at runtime.</div>
+		<div><input type="checkbox">doStuff x = 6 main x = 6</div>
+		<div class="correcta"><input type="checkbox">doStuff x = 5 main x = 5</div>
+		<div><input type="checkbox">doStuff x = 5 main x = 6</div>
+				<div><input type="checkbox">doStuff x = 6 main x = 5</div>
+
+	</div>
+
+
+	<div class="ex">
+<p>En Java todos los valores se pasan por valor. En el caso de una primitiva, lo que le estoy pasando al método doStuff(int
+x) es el valor de la variable x, pero no la referencia a la primitiva x, luego el valor de la variable miembro x
+permanecerá inalterado.</p>		
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+1. public class GC{
+2. private Object o;
+3. private void doSomethingElse(Object obj){o = obj}
+4. public void doSomething(){
+5. Object o = new Object();
+6. doSomethingElse(o);
+7. o = new Object();
+8. doSomethingElse(null);
+9. o = null;
+10. }
+11. }
+When the doSomething method is called, after which line does the Object created in line 5 become avaiable for garbage
+collection?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Line 5</div>
+		<div><input type="checkbox">Line 6</div>
+		<div><input type="checkbox">Line 7</div>
+		<div class="correcta"><input type="checkbox">Line 8</div>
+		<div><input type="checkbox">Line 9</div>
+		<div><input type="checkbox">Line 10</div>
+	
+	</div>
+
+
+	<div class="ex">
+	<p>En Java todos los valores se pasan por valor. En el caso de un objeto, lo que esto pasando es el valor de una referencia,
+luego cuando dicha referencia se iguale a null, afectará a la correspondiente variable miembro.</p>	
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+1. public class TestOne implements Runnable{
+2. public static void main(String [] args) throws Exception{
+3. Thread t = new Thread(new TestOne());
+4. t.start();
+5. System.out.print(&#x201c;Started&#x201d;);
+6. t.join();
+7. System.out.print(&#x201c;Complete&#x201d;);
+8. }9. public void run(){
+10. for(int i = 0; I &lt; 4; i++){
+11. System.out.print(i);
+12. }
+13. }
+14. }
+What can be a result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Compilation fails.</div>
+		<div><input type="checkbox">An exception is thrown at runtime.</div>
+		<div><input type="checkbox">The code executes and prints “StartedComplete”.</div>
+		<div><input type="checkbox">The code executes and prints “StartedComplete0123”.</div>
+		<div class="correcta"><input type="checkbox">The code executes and prints “Started0123Complete”.</div>
+	</div>
+
+
+	<div class="ex">
+	<p>El método join espera a que el hilo muera.</p>	
+	</div>
+</article>
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+1. public class Threads5{
+2. public static void main (String [] args){
+3. new Thread(new Runnable(){
+4. public void run(){
+5. System.out.print(“bar”);
+6. }})start();
+7. }
+8. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Compilation fails.</div>
+		<div><input type="checkbox">An exception is thrown at runtime.</div>
+		<div class="correcta"><input type="checkbox">The code executes normally and prints “bar”.</div>
+		<div><input type="checkbox">The code executes normally, but nothing prints.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+What is the output if the main() method is run?
+10. public class Starter extends Thread{
+11. private int x = 2;
+12. public static void main(String [] args) throws Exception {
+13. new Starter().makeItSo();
+14. }
+15. public Starter(){
+16. x = 5;
+17. start();
+18. }
+19. public void makeItSo() throws Exception{
+20. join();
+21. x = x – 1;
+22. System.out.println(x);
+23. }
+24. public void run(){ x *= 2}
+25. }		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">4</div>
+		<div><input type="checkbox">5</div>
+		<div><input type="checkbox">6</div>
+		<div class="correcta"><input type="checkbox">8</div>
+		<div><input type="checkbox">Compilation fails.</div>
+		<div><input type="checkbox">An exception is thrown at runtime.</div>
+		<div><input type="checkbox">It is impossible to determine for certain.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:1. public class TestFive{
+2. private int x;
+3. public void foo(){
+4. int current = x;
+5. x = current + 1;
+6. }
+7. public void go(){
+8. for(int i = 0; i &lt;5; i++){
+9. new Thread(){
+10. public void run(){
+11. foo();
+12. System.out.println(x + &#x201c;, &#x201d;);
+13. }} start();
+14. }}
+Which two changes, taken together, would guarantee the output 1, 2, 3, 4, 5? (Choose two.)		
+	</pre>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">move the line 12 print statement into the foo() method</div>
+		<div><input type="checkbox">change line 7 to public synchronized void go(){</div>
+		<div><input type="checkbox">change the variable declaration on line 2 to private volatile int x;</div>
+		<div class="correcta"><input type="checkbox">wrap the code inside the foo() method with a synchronized (this ) block</div>
+		<div><input type="checkbox">wrap the for loop code inside the go() method with a synchronized block synchronized(this){
+// for loop code here
+}</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+1. public class Threads2 implements Runnable{
+2.
+3. public void run(){
+4. System.out.println(“run ”);
+5. throw new RuntimeException(“Problem”);
+6. }
+7. public static void main(String [] args){
+8. Thread t = new Thread(new Threads2());
+9. t.start();
+10. System.out.println(“End of method”);
+11. }
+12. }
+Which two can be results?(Choose two.)		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">java.lang.RuntimeException: Problem</div>
+		<div><input type="checkbox">run.
+java.lang.RuntimeException: Problem</div>
+		<div><input type="checkbox">End of method
+java.lang.RuntimeException: Problem</div>
+		<div class="correcta"><input type="checkbox">End of method.
+run.
+java.lang.RuntimeException:Problem</div>
+		<div class="correcta"><input type="checkbox">run.
+Java.lang.RuntimeException: Problem
+End of method</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given that t1 is a reference to a live thread, which is true?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">The Thread.sleep() method can take t1 as an argument.</div>
+		<div><input type="checkbox">The Object.notify() method can take t1 as an argument.</div>
+		<div><input type="checkbox">The thread yield() method can take t1 as an argument.</div>
+		<div><input type="checkbox">The Thread.setPriority() method can take t1 as an argument.</div>
+		<div class="correcta"><input type="checkbox">The Object.notify() method arbitrarily chooses which thread to notify.</div>
+	</div>
+
+
+	<div class="ex">
+		<p>Método notify(). Wakes up a single thread that is waiting on this object's monitor. If any threads are waiting on this
+object, one of them is chosen to be awakened. The choice is arbitrary and occurs at the discretion of the
+implementation. A thread waits on an object's monitor by calling one of the wait methods.</p>
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given that Triangle implements Runnable, and:
+31. void go() throws Exception {
+32. Thread t = new Thread(new Triangle());
+33. t.start();
+34. for(int x=1; x&lt;100000; x++){
+35. // insert code here
+36. if(x%100 == 0)System.out.print(&#x201c;g&#x201d;);
+37. }}
+38. public void run(){
+39. try{
+40. for(int x = 1; x &lt; 100000; x++){
+41. // insert the same code here
+42. if(x%100 == 0) System.out.print(&#x201c;t&#x201d;);
+43. }
+44. } catch(Exception e){}
+45. }
+Which two statements, inserted independently at both lines 35 nad 41, tend to allow both threads to temporarily pause
+and allow the other thread to execute? (Choose two.)		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Thread.wait();</div>
+		<div><input type="checkbox">Thread.join();</div>
+		<div class="correcta"><input type="checkbox">Thread.yield();</div>
+		<div class="correcta"><input type="checkbox">Thread.sleep(1);</div>
+		<div><input type="checkbox">Thread.notify();</div>
+	</div>
+
+
+	<div class="ex">
+<p>yield() → Causes the currently executing thread object to temporarily pause and allow other threads to execute. <br>
+Join() → Waits at most millis milliseconds for this thread to die. A timeout of 0 means to wait forever.
+sleep(long millis) → Causes the currently executing thread to sleep (temporarily cease execution) for the specified
+number of milliseconds. <br>
+Notify() → Wakes up a single thread that is waiting on this object's monitor. If any threads are waiting on this object,
+one of them is chosen to be awakened. The choice is arbitrary and occurs at the discretion of the implementation.</p>		
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+1. public class Threads3 implements Runnable{
+2. public void run(){
+3. System.out.print(“running”);
+4. }
+5. public static void main (String [] args){
+6. Thread t = new Thread(new Threads3());
+7. t.run();
+8. t.run();
+9. t.start();
+10. }
+11. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Compilation fails.</div>
+		<div><input type="checkbox">An exception is thrown at runtime.</div>
+		<div><input type="checkbox">The code executes and prints “running”.</div>
+		<div><input type="checkbox">The code executes and prints “runningrunning”.</div>
+		<div class="correcta"><input type="checkbox">The code executes and prints “runningrunningrunning”.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+11. public class PingPong implements Runnable{
+12. synchronized void hit(long n){
+13. for(int i = 1; i&lt;3; i++)
+14. System.out.print(n + &#x201c;-&#x201d; + i + &#x201c; &#x201d;);
+15. }
+16. public static void main(String [] args){
+17. new Thread(new PingPong()).start();
+18. new Thread(new PingPong()).start();
+19. }
+20. public void run(){
+21. hit(Thread.currentThread().getId());
+22. }
+23. }
+Which two statements are true?(Choose two.)		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">The output could be 8-1 7-2 8-2 7-1</div>
+		<div><input type="checkbox">The output could be 7-1 7-2 8-1 6-1</div>
+		<div class="correcta"><input type="checkbox">The output could be 8-1 7-1 7-2 8-2</div>
+		<div class="correcta"><input type="checkbox">The output could be 8-1 8-2 7-1 7-2</div>
+	</div>
+
+
+	<div class="ex">
+		<p>Para cada hilo, de acuerdo al código impuesto por el bucle for, los numeros irán aumentando de menos a más.</p>
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+1. public class TestOne{
+2. public static void main(String [] args) throws Exception{
+3. Thread.sleep(3000);
+4. System.out.println(“sleep”);
+5. }
+6. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Compilation fails.</div>
+		<div><input type="checkbox">An exception is thrown at runtime.</div>
+		<div class="correcta"><input type="checkbox">The code executes normally and prints “sleep”.</div>
+		<div><input type="checkbox">The code executes normally, but nothing is printed.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Which two stataments are true? (Choose two. )		
+	</pre>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">It is possible for more than two threads to deadlock at once.</div>
+		<div><input type="checkbox">The JVM implementation guarantees that multiple threads cannot enter into a deadlocked state.</div>
+		<div><input type="checkbox">Deadlocked threads release once their sleep() method's sleep duration has expired.</div>
+		<div><input type="checkbox">Deadlocking can occur only when the wait(), notify(), and notifyAll() methods are used incorrectly.</div>
+		<div><input type="checkbox">It is possible for a single-threaded application to deadlock if synchronized blocks are used incorrectly.</div>
+		<div class="correcta"><input type="checkbox">If a piece of code is capable of deadlocking, you cannot eliminate the posibility of deadlocking by inserting
+invocations of Thread.yield().</div>
+	
+	</div>
+
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+1. public class Threads4{
+2. public static void main(String [] args){
+3. new Threads4().go();
+4. }
+5. public void go(){
+6. Runnable r = new Runnable(){7. public void run(){
+8. System.out.print(“foo”);
+9. }
+10. };
+11. Thread t = new Thread(r);
+12. t.start();
+13, t.start();
+14. }
+15. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Compilation fails.</div>
+		<div class="correcta"><input type="checkbox">An exception is thrown at runtime</div>
+		<div><input type="checkbox">The code executes normally and prints “foo”</div>
+		<div><input type="checkbox">The code executes normally, but nothing is printed</div>
+	</div>
+
+
+	<div class="ex">
+<p>No se puede arrancar un hilo más de dos veces.</p>		
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+1. public class TestSeven extends Thread{
+2. private static int x;
+3. public synchronized void doThings(){
+4. int current = x;
+5. current ++;
+6. x = current;
+7. }
+8. public void run(){
+9. doThings();
+10. }
+11. }
+Which statement is true?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Compilation fails.</div>
+		<div><input type="checkbox">An exception is thrown at runtime.</div>
+		<div><input type="checkbox">Synchronizing the run() method would male the class thread-safe.</div>
+		<div><input type="checkbox">The data variable “x” are protected from concurrent access problems.</div>
+		<div class="correcta"><input type="checkbox">Declaring the doThings() method as static would make the class thread-safe.</div>
+		<div><input type="checkbox">Wrapping the statements within doThings()in a synchronized(new Object()) {} block would make the class thread-
+safe.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Which two code fragments will execute the method doStuff() in a seperate thread?(Choose two. )		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">
+<pre>
+	<code>
+new Thread(){
+	public void run(){ doStuff(); }
+};
+	</code>
+</pre>
+		</div>
+		<div><input type="checkbox">
+<pre>
+	<code>
+new Thread();{
+	public void start(){doStuff();}
+};
+	</code>
+</pre>
+		</div>
+		<div><input type="checkbox">
+<pre>
+	<code>
+new Thread() {
+	public void start(){doStuff();}
+}.run();
+	</code>
+</pre>
+		</div>
+		<div  class="correcta"><input type="checkbox">
+<pre>
+	<code>
+new Thread(){
+	public void run() {doStuff(); }
+}.start();
+	</code>
+</pre>
+		</div>
+		<div><input type="checkbox">
+<pre>
+	<code>
+new Thread(new Runnable(){
+	public void run(){doStuff(); }
+}).run();
+	</code>
+</pre>
+		</div>
+
+		<div class="correcta"><input type="checkbox">
+<pre>
+	<code>
+new Thread(new Runnable(){
+	public void run(){doStuff(); }
+}).start();
+	</code>
+</pre>
+		</div>		
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given: public class NamedCounter{
+private final String name;
+private int count;
+public NamedCounter(String name){this.name = name; }
+public String getName(){ return name;}
+public void increment(){count ++;}
+public int getCount(){ return count; }
+public void reset(){ count = 0;}
+}
+Which three changes should be made to adapt this class to be safely by multiple threads?(Choose three. )		
+	</pre>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">declare reset() using the synchronized keyword</div>
+		<div><input type="checkbox">declare getName() using synchronized keyword</div>
+		<div class="correcta"><input type="checkbox">declare getCount() using the synchronized keyword</div>
+		<div><input type="checkbox">delcare the constructor using the synchronized keyword</div>
+		<div class="correcta"><input type="checkbox">declare increment() using the synchronized keyword</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+What is the output if the main() method is run?
+Given:
+10. public class Starter extends Thread{
+11. private int x = 2;
+12. public static void main(String [] args) throws Excetpion{
+13. new Starter().makeItSo();
+14. }
+15. public Starter(){
+16. x = 5;
+17. start();
+18. }
+19. public void makeItSo() throws Exception{
+20. join();
+21. x = x -1;
+22. System.out.println(x);
+23. }
+24. public void run(){x*=2}
+25.}		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">4</div>
+		<div><input type="checkbox">5</div>
+		<div><input type="checkbox">8</div>
+		<div class="correcta"><input type="checkbox">9</div>
+		<div><input type="checkbox">Compilation fails.</div>
+		<div><input type="checkbox">An exception is thrown at runtime.</div>
+		<div><input type="checkbox">It is impossible to determine for certain.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+<!-- Parámetros de diseño-->
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+A company that makes Computer Assisted Design(CAD) software has, within its application, some
+utility classes that are used to perform 3D rendering tasks. The company's chief scientist has just
+improved the performance of one of the utility classes 'key rendering algorithms, and has assigned a
+programmer to replace the old algorithm with the new algorithm. When the programmer begins
+researching the utility classes, she is happy to discover that the algorithm to be replaced exists in only
+one class. The programmer reviews that class's API, and replaces the old algorithm with the new
+algorithm, being careful that her changes adhere strictly to the class's API. Once testing has begun, the
+programmer discovers that other classes that use the class she changed are no longer working properly.
+What design flaw is most likely the cause of these new bugs?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Inheritance</div>
+		<div class="correcta"><input type="checkbox">Tight coupling</div>
+		<div><input type="checkbox">Low cohesion</div>
+		<div><input type="checkbox">High cohesion</div>
+		<div><input type="checkbox">Loose coupling</div>
+		<div><input type="checkbox">Object immutability</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+A company has a business application that provides its users with many different reports: receivables
+reports, playables reports, revenue proyects, and so on. The company has just purchased some new,
+state-of-the-art, wireless printers, and a programmer has been assigned the task of enhancing all of the
+reports to use not only the company's old printers, but the new wireless printers as well. When the
+programmer starts looking into the application, the programmer discovers that because of the design of
+the application, it is necessary to make changes to each report to support the new printers. Which two
+design concepts most likely explain this situation?(Choose two. )		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">inheritance</div>
+		<div class="correcta"><input type="checkbox">Low cohesion</div>
+		<div class="correcta"><input type="checkbox">Tight coupling</div>
+		<div><input type="checkbox">High cohesion</div>
+		<div><input type="checkbox">Loose coupling</div>
+		<div><input type="checkbox">Object immutability</div>
+
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+A team of programmers is involved in reviewing a proposed design for a new utility class. After some
+discussion, they realize that the current design allows other classes to access methods in the utility class
+that should be accesible only to methods within the utility class itself. What design issue has the team
+discovered?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Tight coupling</div>
+		<div><input type="checkbox">Low cohesion</div>
+		<div><input type="checkbox">High cohesion</div>
+		<div><input type="checkbox">Loose coupling</div>
+		<div class="correcta"><input type="checkbox">Weak encapsulation</div>
+		<div><input type="checkbox">Strong encapsulation</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- Throwable-->
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+11. static void test() throws Error{
+12. if(true) throw new AssertionError();
+13. System.out.println(“test”);
+14. }
+15. public static void main(String []args){
+16. try{test();}
+17. catch(Exception ex){System.out.print(“exception”);}
+18. System.out.print(end);
+19. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">end</div>
+		<div><input type="checkbox">compilation fails</div>
+		<div><input type="checkbox">exception end</div>
+		<div><input type="checkbox">exception test end</div>
+		<div><input type="checkbox">A Throwable is thrown by main.</div>
+		<div class="correcta"><input type="checkbox">An Exception is thrown by main.</div>
+	</div>
+
+
+	<div class="ex">
+<p>El método void test() arroja Error. Error hereda de Throwable, luego arroja un Throwable también.	</p>	</div>
+</article>
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+10. public class Foo{
+11. static int[] a;
+12. static{a[0]=2;}
+13. public static void main(String [] args){}
+14. }
+Which exception or error will be thrown when a programmer attempts to run this code?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">java.lang.StackOverflowError</div>
+		<div><input type="checkbox">java.lang.IllegalStateException</div>
+		<div class="correcta"><input type="checkbox">java.lang.ExceptionInitializerError</div>
+		<div><input type="checkbox">java.lang.ArrayIndexOutOfBoundsException</div>
+	</div>
+
+
+	<div class="ex">
+	<p>You get an ExceptionInInitializerError if something goes wrong in the static initializer block. C</p>	
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+25. try{
+26. A a = new A();
+27. a.method1();
+28. }catch(Exception e){
+29. System.out.print(“an error ocurred”);
+30. }
+
+Which two statements are true if a NullPointerException is thrown on line 3 of class c? (Choose two.)		
+1. public class A{
+2. public void method1(){
+3. B b = new B();
+4. b.method2();
+5. //more code here
+6. }
+7. }
+
+1. public class B{
+2. public void method2(){
+3. C c = new C();
+4. c.method3();
+5. // more code here
+6. }
+7. }1. public class C{
+2. public void method3(){
+3. // more code here
+4. }
+5. }
+	</pre>
+
+
+	<div class="responses">
+
+		<div><input type="checkbox">The application will crash.</div>
+		<div class="correcta"><input type="checkbox">The code in line 29 will be executed.</div>
+		<div><input type="checkbox">The code on line 5 of class A will execute.</div>
+		<div><input type="checkbox">The code on line 5 of class B will execute.</div>
+		<div class="correcta"><input type="checkbox">The exception will be propagated back to line 27.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+11. Float pi = new Float(3.14f);
+12. if(pi > 3){
+13. System.out.println(“pi is bigger than 3.”);
+14. }
+15. else{
+16. System.out.print(“pi is not bigger than 3.”);
+17. }
+18. finally {
+19. System.out.println(“Have a nice day”);
+20. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">Compilation fails.</div>
+		<div><input type="checkbox">pi is bigger than 3.</div>
+		<div><input type="checkbox">An exception occurs at runtime.</div>
+		<div><input type="checkbox">pi is bigger than 3. Have a nice day</div>
+		<div><input type="checkbox">pi is not bigger than 3. Have a nice day.</div>
+	</div>
+
+
+	<div class="ex">
+<p>El método finally siempre va ligado a un try-catch.</p>		
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+11. public static void main(String[]args){
+12. try{
+13. args = null;
+14. args[0] = “test”;
+15. System.out.println(args[0]);
+16. }catch(Exception ex){
+17. System.out.println(“Exception”);
+18. }catch(NullPointerException npe){
+19. System.out.println(“NullPointerException”);
+20. }
+21. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">test</div>
+		<div><input type="checkbox">Exception</div>
+		<div class="correcta"><input type="checkbox">Compilation fails</div>
+		<div><input type="checkbox">NullPointerException</div>
+	</div>
+
+
+	<div class="ex">
+	<p>NullPoinerException hereda de Exception. Si tratamos de capturar una NullPointerException después de capturar una
+exception, nos encontraremos con que nunca llegaremos a ese punto.</p>	
+	</div>
+</article>
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+1. public class Boxer1{
+2. Integer i;
+3. int x;
+4. public Boxer1(int y){
+5. x = i + y;
+6. System.out.println(x);
+7. }
+8. public static void main(String [] args){
+9. new Boxer1(new Integer(4));
+10. }
+11. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">The value “4” is printed at the command line.</div>
+		<div><input type="checkbox">Compilation fails because of an error in line 5.</div>
+		<div><input type="checkbox">Compilation fails because of an error in line 9.</div>
+		<div class="correcta"><input type="checkbox">A NullPointerException occurs at runtime.</div>
+		<div><input type="checkbox">A NumberFormatException occurs at runtime.</div>
+		<div><input type="checkbox">An IllegalStateException occurs at runtime.</div>
+	</div>
+
+
+	<div class="ex">
+<p>i es una variable miembro, su valor es null por defecto.</p>
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+31. // some code here
+32. try {
+33. // some code here
+34. } catch(SomeException ser){
+35. // some code here
+36. } finally {
+37. // some code here
+38. }Under which three circunstances will the code on line 37 be executed ?(Choose three.)		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">The instance gets garbage collected.</div>
+		<div class="correcta"><input type="checkbox">The code on line 33 throws an exception.</div>
+		<div class="correcta"><input type="checkbox">The code on line 35 throws an exception.</div>
+		<div><input type="checkbox">The code on line 31 throws an exception.</div>
+		<div class="correcta"><input type="checkbox">The code on line 33 executes successfully.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+11. static void test(){
+12. try{
+13. String x = null;
+14. System.out.println(x.toString() + “”);
+15. }
+16. finally{ System.out.println(“finally”); }
+17. }
+18. public static void main(String [] args) {
+19. try { test(); }
+20. catch(Exception ex){System.out.println(“exception ”);}
+21. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">null</div>
+		<div><input type="checkbox">finally</div>
+		<div><input type="checkbox">null finally</div>
+		<div><input type="checkbox">Compilation fails.</div>
+		<div class="correcta"><input type="checkbox">finally exception</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+33. try{
+34. // some code here
+35. } catch(NullPointerException e1) {
+36. System.out.println(“a”);
+37. }catch(Exception e2){
+38. System.out.print(“b”);
+39. } finally {
+40. System.out.print(“c”);
+41. }
+If some sort exception is thrown at line 34, which output is possible?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">a</div>
+		<div><input type="checkbox">b</div>
+		<div><input type="checkbox">c</div>
+		<div class="correcta"><input type="checkbox">ac</div>
+		<div><input type="checkbox">abc</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+5. class A{
+6. void foo() throws Exception {throw new Exception();}
+7. }
+8. class SubB2 extends A{
+9. void foo(){ System.out.println(“B ”);}
+10. }
+11. class Tester {
+12. public static void main(String [] args){
+13. A a = new SubB2();
+14. a.foo();15. }
+16. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">B</div>
+		<div><input type="checkbox">B, followed by an Exception.</div>
+		<div><input type="checkbox">Compilation fails due to an error on line 9.</div>
+		<div class="correcta"><input type="checkbox">Compilation fails due to an error on line 14.</div>
+		<div><input type="checkbox">An Exception is thrown with no other output.</div>
+	</div>
+
+
+	<div class="ex">
+	<p>El método sobreescrito debe arrojar las mismas excepciones que el método sobreescribidor.</p>	
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given;
+11. static void test() throws RuntimeException{
+12. try {
+13. System.out.println(“test”);
+14. throw new RuntimeException();
+15. }
+16. catch(Exception ex){System.out.print(“exception”);}
+17. }
+18. public static void main(String [] args){
+19. try{test();}
+20. catch (RuntimeException ex){System.out.print(“runtime”);}
+21. System.out.print(“end”);
+22. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">test end</div>
+		<div><input type="checkbox">Compilation fails.</div>
+		<div><input type="checkbox">test runtime end.</div>
+		<div class="correcta"><input type="checkbox">test exception end</div>
+		<div><input type="checkbox">A Throwable is thrown by main at runtime.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given a valid DateFormat object named df, and
+16. Date d = new Date(0L);
+17. String ds = “December 15, 2004”;
+18. // insert code here
+What updates d's value with the date represented by ds?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">18.d = df.parse(ds);</div>
+		<div><input type="checkbox">18.d = df.getDate(ds);
+</div>
+		<div class="correcta"><input type="checkbox">18. try{
+19.d = df.parse(ds);
+20. } catch(Parse exception e){};</div>
+		<div><input type="checkbox">When you paln to reuse the StringBuffer to build more than one string.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+18. try{
+19. d = df.getDate(ds);
+20. } catch(ParseException e){};
+Which two scenarios are NOT safe to replace a StringBuffer object with a StringBuilder object? (Choose two.)		
+	</pre>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">When using versions of Java technology earlier than 5.0</div>
+		<div class="correcta"><input type="checkbox">When sharing a StringBuffer among multiple threads.</div>
+		<div><input type="checkbox">When using the java.io class StringBufferInputStream.</div>
+		<div><input type="checkbox">When you paln to reuse the StringBuffer to build more than one string.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+11. public static parse(String str){12. try{
+13. float f = Float.parseFloat(str);
+14. } catch(NumberFormatException nfe){
+15. f = 0;
+16. }finally {
+17. System.out.println(f);
+18. }
+19. }
+20. public static void main(String [] args){
+21. parse(“invalid”);
+22. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">0.0</div>
+		<div class="correcta"><input type="checkbox">Compilation fails.</div>
+		<div><input type="checkbox">A ParseException is thrown by the parse method at runtime.</div>
+		<div><input type="checkbox">A NumberFormatException is thrown by the parse method at runtime.</div>
+		<div><input type="checkbox"></div>
+	</div>
+
+
+	<div class="ex">
+<p>No es posible convertir la cadena de texto “invalid” en un número.</p>		
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+31. public void method(){
+32. A a = new A();
+33. a.method1();
+34. }
+Which statement is true if a TestException is thrown on line 3 of class B?
+1. public class A{
+2. public void method1(){
+3. try{
+4. B b = new B();
+5. b.method2();
+6. // more code here
+7. }catch (TestException te ){
+8. throw new RuntimeException(te);
+9. }
+10. }
+11. }
+1. public class B{
+2. public void method2() throws TestException{
+3. // more code here
+4. }
+5. }
+1. public class TestException extends Exception{
+2. }		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Line 33 must be called within a try block.</div>
+		<div class="correcta"><input type="checkbox">The exception thrown by method1 in class A is not required to be caught.</div>
+		<div><input type="checkbox">The method declared on line 31 must be declared to throw a RuntimeException.</div>
+		<div><input type="checkbox">On line 5 of class A, the call to method2 of class B does not need to be placed in a try/catch block.</div>
+		<div><input type="checkbox"></div>
+	</div>
+
+
+	<div class="ex">
+<p>No es necesario que una RuntimeException sea capturada.</p>		
+	</div>
+</article>
+
+
+<!-- is-a_has-a_herencia_interfaces -->
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+5. class Atom{
+6. Atom(){System.out.print(”atom”);}
+7. }
+8. class Rock extends Atom{
+9. Rock(String type){System.out.print(type);}
+10. }
+11. public class Mountain extends Rock{
+12. Mountain(){
+13. super(“granite”);
+14. new Rock(“granite”);
+15. }
+16. public static void main(String [] a){ new Mountain();}
+17. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Compilation fails</div>
+		<div><input type="checkbox">atom granite</div>
+		<div><input type="checkbox">granite granite</div>
+		<div><input type="checkbox">atom granite granite</div>
+		<div><input type="checkbox">An exception throw at runtime</div>
+		<div class="correcta"><input type="checkbox">atom granite atom granite</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Which statements are true?(Choose three)
+10. interface Foo{
+11. int bar();
+12. }
+13.
+14. public class Beta{
+15.
+16. class A implements Foo{
+17. public int bar(){ return 1; }
+18. }
+19.
+20. public int fubar(Foo foo){ return foo.bar(); }
+21.
+22. public void testFoo(){
+23.
+24. class A implements Foo{
+25. public int bar(){ return 2; }
+26. }
+27.
+28. System.out.println(fubar(new A()));
+29. }
+30.
+31. public static void main(String [] argv){
+32. new Beta().testFoo();
+33. }
+34. }
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Compilation fails.</div>
+		<div class="correcta"><input type="checkbox">The code compiles and the output is 2.</div>
+		<div><input type="checkbox">If lines 16, 17 and 18 were removed, compilation would fail.</div>
+		<div><input type="checkbox">If lines 24, 25 and 26 were removed, compilation would fail.</div>
+		<div class="correcta"><input type="checkbox">If lines 16, 17 and 18 were removed, the code would compile and the output would be 2.</div>
+		<div class="correcta"><input type="checkbox">If lines 24, 25 and 26 were removed the code would compile and the output would be 1.</div>
+	</div>
+
+
+	<div class="ex">
+		<p>El código es un ejemplo de uso de una anonimous inner class.</p>
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+10. class Line{
+11. public class Point{public int x, y;}
+12. public Point getPoint(){return new Point();}
+13. }
+14. class Triangle{
+15. public Triangle(){
+16. //insert code here
+17. }
+18. }
+Which code, inserted at line 16, correctly retrieves a local instance of a Point object?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Point p = Line.getPoint();</div>
+		<div><input type="checkbox">Line.Point p = Line.getPoint();</div>
+		<div><input type="checkbox">Point p = (new Line()).getPoint();</div>
+		<div class="correcta"><input type="checkbox">Line.Point p = (new Line()).getPoint();</div>
+	</div>
+
+
+	<div class="ex">
+<p>Ejemplo de uso de una inner class.</p>		
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+11. class Alpha{
+12. public void foo(){System.out.print(“Afoo”);}
+13. }
+14. public class Beta extends Alpha{
+15. public void foo(){System.out.print(“Bfoo”)}
+16. public static void main(String [] args){
+17. Alpha a = new Beta();
+18. Beta b = (Beta)a;
+19. a.foo();
+20. b.foo();
+21. }
+22. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Afoo Afoo</div>
+		<div><input type="checkbox">Afoo Bfoo</div>
+		<div><input type="checkbox">Bfoo Afoo</div>
+		<div class="correcta"><input type="checkbox">Bfoo Bfoo</div>
+		<div><input type="checkbox">Compilation fails</div>
+		<div><input type="checkbox">An exception is thrown at runtime</div>
+	</div>
+
+
+	<div class="ex">
+		<p>El casting castea también el objeto a.</p>
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Which statement is true about the classes and interfaces in the exhibit?
+1. public interface A{2. public void doSomething(String thing)
+3. }
+1. public class Aimpl implements A{
+2. public void doSomething(String msg){}
+3. }
+1. public class B{
+2. public A doit(){
+3. //more code here
+4. }
+5.
+6. public String execute(){
+7. // more code here
+8. }
+9. }
+1. public class C extends B{
+2. public Aimpl doit(){
+3. //more code here
+4. }
+5.
+6. public Object execute(){
+7. // more code here
+8. }
+9. }		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Compilation will succeed for all classes and interfaces.</div>
+		<div><input type="checkbox">Compilation of class C will fail because of an error in line 2.</div>
+		<div class="correcta"><input type="checkbox">Compilation of class C will fail because of an error in line 6.</div>
+		<div><input type="checkbox">Compilation of class Aimpl will fail because of an error in line 2.</div>
+	</div>
+
+
+	<div class="ex">
+	<p>En una sobreescritura el tipo de dato devuelto no debe cambiar.</p>	
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given a class Repetition:
+1. package util;
+2.
+3. public class Repetition{
+4. public static String twice(String s){return s + s;}
+5.}
+and given another class Demo:
+1 //insert code here
+2.
+3. public class Demo{
+4. public static void main(String args[]){
+5. System.out.println(twice(“pizza”));
+6. }
+7. }
+Which code should be inserted at line 1 of Demo.java to compile and run Demo to print “pizzapizza”?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">import utils.*;</div>
+		<div><input type="checkbox">static import utils.*;</div>
+		<div><input type="checkbox">import utils.Repetition.*;</div>
+		<div><input type="checkbox">static import utils.Repetition.*;</div>
+		<div><input type="checkbox">import utils.Repetition.twice();</div>
+		<div class="correcta"><input type="checkbox">import static utils.Repetition.twice;</div>
+		<div><input type="checkbox">static import utils.Repetition.twice;</div>
+		<div><input type="checkbox"></div>
+		<div><input type="checkbox"></div>
+	</div>
+
+
+	<div class="ex">
+<p>Es posible importar métodos estáticos de otras clases (aunque no es posible importar métodos no estáticos, para hacerlonecesitaríamos una instancia). Para importar un método estático, la importación deberá ir precedida del modificador
+static.</p>		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given classes defined in two differents file:
+1. package util;
+2. public class BitUtils{
+3. private static void process(byte[] b){}
+4. }
+1. package class SomeApp{
+2. public class SomeApp{
+3. public static void main(String args[]){
+4. byte[]bytes = new byte[256];
+5. //insert code here
+6. }
+7. }
+What is required at line 5 in class SomeApp to use the proccess method of BitUtils?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">process(bytes);</div>
+		<div><input type="checkbox">BitUtils.process(bytes);</div>
+		<div><input type="checkbox">app.BitUtils.process(bytes);</div>
+		<div><input type="checkbox">util.BitUtils.process(bytes);</div>
+		<div><input type="checkbox">import util.BitUtils.*; process(bytes);</div>
+		<div class="correcta"><input type="checkbox">SomeApp cannot use the process method in BitUtils</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given classes defined in two different files:
+1. package util;
+2. public class BitUtils{
+3. public static void process (byte [] b){/* more code here */}
+4. }
+1. package app;
+2. public class SomeApp{
+3. public static void main(String [] args){
+4. byte [] bytes = new byte[256];
+5. // insert code here
+6. }
+7. }		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">process(bytes);</div>
+		<div><input type="checkbox">BitUtils.process(bytes);</div>
+		<div class="correcta"><input type="checkbox">util.BitUtils.process(bytes);</div>
+		<div><input type="checkbox">SomeApp cannot use methods in BitUtils</div>
+		<div><input type="checkbox">import util.BitUtils.*; process(bytes);</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+11. public class ItemTest{
+12. private final int id;
+13. public ItemTest(int id){this.id = id; }
+14. public void updateId(int newId){id = newId;}
+15. }
+16. public static void main(String [] args){
+17. ItemTest fa = new ItemTest(42);
+18. fa.updateId(69);
+19. System.out.print(fa.id);
+20. }
+21. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">Compilation fails.</div>
+		<div><input type="checkbox">An exception is thrown at runtime.</div>
+		<div><input type="checkbox">The attribute id in the ItemTest object remains unchanged.</div>
+		<div><input type="checkbox">The attribute id in the ItemTest object is modified to the new value.</div>
+		<div><input type="checkbox">A new ItemTest object is created with the preferred value in the id attribute.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+1. interface A{public void aMethod();}
+2. interface B{public void bMethod();}
+3. interface C extends A, B{public void cMethod();}
+4. class D implements B{
+5. public void bMethod(){}
+6.}
+7. class E extends D implements C{
+8. public void aMethod(){}
+9. public void bMethod(){}
+10. public void cMethod(){}s
+11. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Compilation fails because of an error in line 3.</div>
+		<div><input type="checkbox">Compilation fails because of an error in line 7.</div>
+		<div><input type="checkbox">Compilation fails because of an error in line 9.</div>
+		<div><input type="checkbox">If you define D e = new E(), then e.bMethod() invokes the version of bMethod() defined in Line 5.</div>
+		<div><input type="checkbox">If you define D e = (D)(new E()), then e.bMethod() invokes the version of bMethod() defined in Line 5.</div>
+		<div class="correcta"><input type="checkbox">If you define D e = (D)(new E()), then e.bMethod() invokes the version of bMethod() defined in Line 9.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given that: Gadget has-a Sprocket and has-a Spring and Gadget is-a Widget and Widget has-a Sprocket . Which two
+code fragments represent these relationships?(Choose two.)		
+	</pre>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">
+<pre>
+	<code>
+class Widget{Sprocket s;}
+class Gadget extends Widget{Spring s;}
+	</code>
+</pre>
+		</div>
+		<div><input type="checkbox">
+<pre>
+	<code>
+class Widget{}
+class Gadget extends Widget{Spring s1; Sprocket s2;}
+	</code>
+</pre>
+		</div>
+		<div class="correcta"><input type="checkbox">
+<pre>
+	<code>
+class Widget{Sprocket s1; Spring s2;}
+class Gadget extends Widget{}
+	</code>
+</pre>
+		</div>
+		<div><input type="checkbox">
+<pre>
+	<code>
+class Gadget{Spring s;}
+class Widget extends Gadget{Sprocket s;}
+	</code>
+</pre>
+		</div>
+		<div><input type="checkbox">
+<pre>
+	<code>
+class Gadget{}
+class Widget extends Gadget{Sprocket s1; Spring s2;}
+	</code>
+</pre>
+		</div>
+<div><input type="checkbox">
+<pre>
+	<code>
+class Gadget{Spring s1; Sprocket s2;}
+class Widget extends Gadget{}
+	</code>
+</pre>
+</div>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Which Man class properly represents the relationships “Man has a best friend who is a Dog”?	
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">class Man extends Dog(){}</div>
+		<div><input type="checkbox">class Man implements Dog{}</div>
+		<div><input type="checkbox">class Man {private BestFriend dog;}</div>
+		<div class="correcta"><input type="checkbox">class Man {private Dog bestFriend; }</div>
+		<div><input type="checkbox">class Man {private Dog &lt;bestFriend&gt;;}</div>
+		<div><input type="checkbox">class Man {private BestFriend&lt;dog&gt;}</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+31. class Foo{
+32. public int a = 3;
+33. public void addFive(){a +=5; System.out.print(“f”);}
+34. }
+35. class Bar extends Foo{
+36. public int a = 8;
+37. public void addFive(){this.a +=5; System.out.print(“b ”);}
+38. }
+Invoked with: Foo f = new Bar(); f.addFive(); System.out.println(f.a);
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">b 3</div>
+		<div><input type="checkbox">b 8</div>
+		<div><input type="checkbox">b 13</div>
+		<div><input type="checkbox">f 3</div>
+		<div><input type="checkbox">f 8</div>
+		<div><input type="checkbox">f13</div>
+		<div><input type="checkbox">Compilation fails</div>
+		<div><input type="checkbox">An exception is thrown at runtime</div>
+
+	</div>
+
+
+	<div class="ex">
+<p>Al estar declarando un objeto de la clase Foo, sólo tendré disponibles las propiedades y métodos de la clase Foo (si hay
+sobreescritura, el código de los métodos es sobreescrito).</p>		
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+11. class Animal {public String noise(){return “peep”;}}
+12. class Dog extends Animal{
+13. public String noise(){return “bark”;}
+14. }
+15. class Cat extends Animal {
+16. public String noise(){return “meow”; }
+17. }...
+30. Animal animal = new Dog();
+31. Cat cat = (Cat)animal;
+32. System.out.println(cat.noise());
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">peep</div>
+		<div><input type="checkbox">bark</div>
+		<div><input type="checkbox">meow</div>
+		<div><input type="checkbox">Compilation fails.</div>
+		<div class="correcta"><input type="checkbox">An exception is thrown at runtime.</div>
+	</div>
+
+
+	<div class="ex">
+	<p>Animal es un Dog, y no puedo convertir un Dog en un Cat. Estos errores de conversión son arrojados en tiempo de
+ejecución.</p>	
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+1. class Super{
+2. private int a;
+3. protected Super(int a){this.a = a;}
+4. }...
+11. class Sub extends Super {
+12. public Sub(int a){super(a);}
+13. public Sub(){this.a = 5;}
+14. }
+Which two, independently, will allow Sub to compile? (Choose two.)		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">
+<pre>
+	<code>
+Change line 2 to:
+public int a;
+	</code>
+</pre>
+		</div>
+		<div><input type="checkbox">
+<pre>
+	<code>
+Change line 2 to:
+protected int a;
+	</code>
+</pre>
+		</div>
+		<div class="correcta"><input type="checkbox">
+<pre>
+	<code>
+Change line 13 to:
+public Sub(){this(5);}
+	</code>
+</pre>
+		</div>
+		<div class="correcta"><input type="checkbox">
+<pre>
+	<code>
+Change line 13 to:
+public Sub(){super(5);}
+	</code>
+</pre>
+		</div>
+		<div><input type="checkbox">
+<pre>
+	<code>
+Change line 13 to:
+public Sub(){super(a);}
+	</code>
+</pre>
+		</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+1. public class Base{
+2. public static final String FOO = “foo”;
+3. public static void main(String [] args){
+4. Base b = new Base();
+5. Sub s = new Sub();
+6. System.out.print(Base.FOO);
+7. System.out.print(Sub.FOO);
+8. System.out.print(b.FOO);
+9. System.out.print(s.FOO);
+10. System.out.print(((Base)s).FOO);
+11. }}
+12. class Sub extends Base{public static final String FOO =”bar”;}
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">foofoofoofoofoo</div>
+		<div><input type="checkbox">foobarfoobarbar</div>
+		<div><input type="checkbox">foobarfoofoofoo</div>
+		<div class="correcta"><input type="checkbox">foobarfoobarfoo</div>
+		<div><input type="checkbox">barbarbarbarbar</div>
+		<div><input type="checkbox">foofoofoobarbar</div>
+		<div><input type="checkbox">foofoofoobarfoo</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+1. package geometry;
+2. public class Hypotenuse{
+3. public InnerTriangle it = new InnerTriangle();
+4. class InnerTriangle{
+5. public int base;
+6. public int height;
+7. }
+8. }
+Which statement is true about the class of an object that can reference the variable base?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">It can be any class.</div>
+		<div><input type="checkbox">No class has access to base.</div>
+		<div class="correcta"><input type="checkbox">The class must belong to the geometry package.</div>
+		<div><input type="checkbox">The class must be a subclass of the class Hypotenuse.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+2. public class Hi{
+3. void m1(){}
+4. protected void() m2 {}
+5. }6. class Lois extends Hi{
+7. // insert code here
+8. }
+Which four code fragments, inserted independently at line 7, will compile? (Choose four. )		
+	</pre>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">public void m1(){}</div>
+		<div class="correcta"><input type="checkbox">protected void m1(){}</div>
+		<div><input type="checkbox">private void m1(){}</div>
+		<div><input type="checkbox">void m2(){}</div>
+		<div><input type="checkbox">public void m2(){}</div>
+		<div class="correcta"><input type="checkbox">protected void m2(){}</div>
+		<div class="correcta"><input type="checkbox">private void m2(){}</div>
+		<div><input type="checkbox"></div>
+	</div>
+
+
+	<div class="ex">
+		<p>En un método sobreescrito la accesibilidad no debe ser más restrictiva que en el método original, luego la respuesta C
+y D son incorrectas.</p>
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+11. class A{
+12. public void process(){System.out.println(“A,”);}
+13. class B extends A{
+14. public void process() throws IOException{
+15. super.process();
+16. System.out.print(“B”);
+17. throw new IOException();
+18. }
+19. public static void main(String [] args){
+20. try{new B().process();}
+21. catch(IOException e){System.out.println(“Exception”);}
+22. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Exception</div>
+		<div><input type="checkbox">A, B, Exception</div>
+		<div><input type="checkbox">Compilation fails because of an error in line 20.</div>
+		<div class="correcta"><input type="checkbox">Compilation fails because of an error in line 14.</div>
+		<div><input type="checkbox">A NullPointerException is thrown at runtime</div>
+	</div>
+
+
+	<div class="ex">
+<p>When you override a method, you can't start throwing any new checked exceptions that the method in the parent class
+didn't already throw.</p>		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+11. static class A{
+12. void process() throws Exception{ thrown new Exception(); }
+13. }
+14. static class B extends A {
+15. void process(){ System.out.println(“B”); }
+16. }
+17. public static void main(String [] args){
+18. new B().process();
+19. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">B</div>
+		<div><input type="checkbox">The code runs with no output.</div>
+		<div><input type="checkbox">Compilation fails because of an error in line 12.</div>
+		<div><input type="checkbox">Compilation fails because of an error in line 15.</div>
+		<div><input type="checkbox">Compilation fails because of an error in line 18.</div>
+	</div>
+
+
+	<div class="ex">
+<p>Llamar a un método estático a través de un objeto da un warning, pero el çodigo compila.</p>		
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+10. interface A{void x();}
+11. class B implements A{public void x() {}public void y(){}}12. class C extends B{public void x(){}}
+And:
+20. java.util.List<A> list = new java.util.ArrayList<A>();
+21. list.add(new B());
+22. list.add(new C());
+23. for(A a: list){
+24. a.x();
+25. a.y();
+26. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">The code runs with no output.</div>
+		<div><input type="checkbox">An exception is thrown at runtime.</div>
+		<div><input type="checkbox">Compilation fails because of an error in line 20.</div>
+		<div><input type="checkbox">Compilation fails because of an error in line 21.</div>
+		<div><input type="checkbox">Compilation fails because of an error in line 23.</div>
+		<div class="correcta"><input type="checkbox">Compilation fails because of an error in line 25.</div>
+	</div>
+
+
+	<div class="ex">
+<p>La lista sólo puede tener interfaces de A, y la interfaz A no tiene el método y().</p>		
+	</div>
+</article>
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+10. public class Hello{
+11. String title;
+12. int value;
+13. public Hello(){
+14. title += “World”;
+15. }
+16. public Hello(int value){
+17. this.value = value;
+18. title = “Hello”;
+19. Hello();
+20. }
+21. }
+and:
+30. Hello c = new Hello(5);
+31. System.out.println(c.title);
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Hello</div>
+		<div><input type="checkbox">Hello World</div>
+		<div class="correcta"><input type="checkbox">Compilation fails.</div>
+		<div><input type="checkbox">Hello World 5</div>
+		<div><input type="checkbox">The code runs with no output.</div>
+		<div><input type="checkbox">An exception is thrown at runtime.</div>
+	</div>
+
+
+	<div class="ex">
+	<p>Hello() es un constructor, no un método, por tanto no lo puedo llamar explícitamente.</p>	
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+1. public class Target{
+2. private int i = 0;
+3. public int addOne{
+4. return ++i;
+5. }
+6. }
+And:
+1. public class Client{
+2. public static void main (String [] args){
+3. System.out.println(new Target().addOne());
+4. }
+5. }Which change can you make to Target without affecting Client?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Line 4 of class Target can be changed to return i++.</div>
+		<div><input type="checkbox">Line 2 of class Target can be changed to private int i = 1;</div>
+		<div><input type="checkbox">Line 3 of class Target can be changed to private int addOne(){</div>
+		<div class="correcta"><input type="checkbox">Line 2 of class Target can be changed to private Integer i = 0;</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+1. public class Blip{
+2. protected int blipvert(int x){return 0; }
+3. }
+4. class Vert extends Blip{
+5. // insert code here
+6. }
+Which five methods, inserted independently at line 5, will compile?(Choose five.)		
+	</pre>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">public int blipvert(int x){return 0;}</div>
+		<div><input type="checkbox">private int blipbert(int x){return 0;}</div>
+		<div class="correcta"><input type="checkbox">private int blipvert(long x){return 0;}</div>
+		<div><input type="checkbox">protected long blipvert(int x){return 0;}</div>
+		<div class="correcta"><input type="checkbox">protected int blipvert(long x){return 0;}</div>
+		<div class="correcta"><input type="checkbox">protected long blipvert(long x){return 0;}</div>
+		<div><input type="checkbox">protexted long blipvert(int x, int y){return 0;}</div>
+	</div>
+
+
+	<div class="ex">
+<p>El método sobreescritor no puede tener un modificador más restrictivo que el método sobreescrito. En una
+sobreescritura el tipo de dato devuelto no puede cambiar</p>		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+1. class Pizza{
+2. java.util.ArrayList toppings;
+3. public final void addTopping(String topping){
+4. toppings.add(topping);
+5. }
+6. }
+7. public class PepperoniPizza extends Pizza{
+8. public void addTopping(String topping){
+9. System.out.println(“Cannot add Toppings”);
+10. }
+11. public static void main(String [] args){
+12. Pizza pizza = new PepperoniPizza();
+13. pizza.addTopping(“Mushrooms”);
+14. }
+15. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">Compilation fails.</div>
+		<div><input type="checkbox">Cannot add Toppings.</div>
+		<div><input type="checkbox">The code runs with no output.</div>
+		<div><input type="checkbox">A NullPointerException is thrown in Line 4.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+11. class ClassA{}
+12. class ClassB extends ClassA{}
+13. class ClassC extends ClassA {}
+and:
+21. ClassA p0 = new ClassA();
+22. ClassB p1 = new ClassB();
+23. ClassC p2 = new ClassC();
+24. ClassA p3 = new ClassB();25. ClassA p4 = new ClassC();
+Which three are valid? (Choose three.)		
+	</pre>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">p0 = p1;</div>
+		<div><input type="checkbox">p1 = p2;</div>
+		<div><input type="checkbox">p2 = p4;</div>
+		<div><input type="checkbox">p2 = (ClassC)p1;</div>
+		<div class="correcta"><input type="checkbox">p1 = (ClassB)p3;</div>
+		<div class="correcta"><input type="checkbox">p2 = (ClassC)p4;</div>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given two files, GrizzlyBear.java and Salmon.java:
+1. package animals.mammals;
+2.
+3. public class GrizzlyBear extends Bear{
+4. void hunt(){
+5. Salmon s = findSalmon();
+6. s.consume();
+7. }
+8. }
+1. package animals.fish;
+2.
+3. public class Salmon extends Fish{
+4. public void consume(){ /* do stuff */ }
+5. }
+If both classes are in the correct directories for their packages, and the Mammal class correctly defines the
+findSalmon() method, which change allows this code to compile?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">add import animals.mammals.*; at line 2 in Salmon.java</div>
+		<div class="correcta"><input type="checkbox">add import animals.fish.*; at line 2 in GrizzlyBear.java</div>
+		<div><input type="checkbox">add import animals.fish.Salmon.*; at line 2 in Salmon.java</div>
+		<div><input type="checkbox">add import animals mammals.GrizzlyBear.*; at line 2 in Salmon.java</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Which three code fragments, added individually at line 29, produce the output 100?(Choose three.)
+10. class Inner{
+11. private int x;
+12. public void setX(int x){this.x = x;}
+13. public int getX(){return x;}
+14. }
+15.
+16. class Outer{
+17. private Inner y;
+18. public void setY(Inner y){this.y = y;}
+19. public Inner getY(){return y; }
+20. }
+21.
+22. public class Gamma{
+23. public static void main(String [] args){
+24. Outer o = new Outer();
+25. Inner i = Inner();
+26. int n = 10;
+27. i.setX(n);
+28. o.setY(i);
+29. // insert code here
+30. System.out.println(o.getY().getX());
+31. }
+32. }		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">n = 100;</div>
+		<div class="correcta"><input type="checkbox">i.setX(100);</div>
+		<div class="correcta"><input type="checkbox">o.getY().setX(100);</div>
+		<div><input type="checkbox">i = new Inner(); i.setX(100);</div>
+		<div><input type="checkbox">o.setY(i); i = new Inner(); i.setX(100);</div>
+<div class="correcta"><input type="checkbox">i = new Inner(); i.setX(100); o.setY(i);</div>
+	</div>
+
+
+	<div class="ex">
+	<p>o has-a i.</p>	
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+11. interface DeclareStuff{
+12. public static final int EASY = 3;
+13. void doStuff(int i); }
+14. public class TestDeclare implements DeclareStuff{
+15. public static void main(String [] args){
+16. int x = 5;
+17. new TestDeclare().doStuff(++x);
+18. }
+19. void doStuff(int s){
+20. s += EASY +++ ;
+21. System.out.println(“s ” + s);
+22. }
+23. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">s14</div>
+		<div><input type="checkbox">s16</div>
+		<div><input type="checkbox">s10</div>
+		<div class="correcta"><input type="checkbox">Compilation fails.</div>
+		<div><input type="checkbox">An exception is thrown at runtime</div>
+	</div>
+
+
+	<div class="ex">
+<p>No es posible modificar una variable con el modificador de acceso final.</p>		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+1. public class Plant{
+2. private String name;
+3. public Plant(String name){this.name = name;}
+4. public String getName(){return name;}
+5. }
+1. public class Tree extends Plant {
+2. public void growFruit(){}
+3. public void dropLeaves(){}
+4. }
+Which statement is true?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">The code will compile without changes.</div>
+		<div><input type="checkbox">The code will compile if public Tree(){Plant(); } is added to the Tree class.</div>
+		<div><input type="checkbox">The code will compile if public Plant(){Tree();} is added to the Plant class.</div>
+		<div class="correcta"><input type="checkbox">The code will compile if public Plant(){this(“fem”);} is added to the Plant class.</div>
+		<div><input type="checkbox">The code will compile if public Plant(){Plant(“fem”); } is added to the Plant class.</div>
+	</div>
+
+
+	<div class="ex">
+<p>La clase Tree tratará de llamar al constructor vacío de la clase Plant. Por tanto para que el código funcione, la clase
+Plant deberá tener un constructor vacío. Desde este contructor llamaremos al constructor con argumento String de la
+propia clase Plant usando this(“fem”).</p>		
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+11. public interface A111{
+12. String s = “yo”;
+13. public void method1();
+14. }
+17. interface B{}
+20. interface C extends A111, B{21. public void method1();
+22. public void method1(int x);
+23. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">Compilation succeds.</div>
+		<div><input type="checkbox">Compilation fails due to multiple errors.</div>
+		<div><input type="checkbox">Compilation fails due to an error only on line 20.</div>
+		<div><input type="checkbox">Compilation fails due to an error only on line 21.</div>
+		<div><input type="checkbox">Compilation fails due to an error only on line 22.</div>
+		<div><input type="checkbox">Compilation fails due to an error only on line 12.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+1. interface TestA{String toString(); }
+2. public class Test{
+3. public static void main(String [] args){
+4. System.out.println(new TestA(){
+5. public String toString(){return “test”;}
+6. });
+7. }
+8. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">test</div>
+		<div><input type="checkbox">null</div>
+		<div><input type="checkbox">An exception is thrown at runtime.</div>
+		<div><input type="checkbox">Compilation fails because of an error in line 1.</div>
+		<div><input type="checkbox">Compilation fails because of an error in line 4.</div>
+		<div><input type="checkbox">Compilation fails because of an error in line 5.</div>
+	</div>
+
+
+	<div class="ex">
+<p>No estoy instanciando una interfaz (eso no es posible). Estoy instanciando una anonimous inner class.</p>		
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+11. class Alpha{
+12. public void foo(){System.out.print(“Afoo”);}
+13. }
+14. public class Beta extends Alpha{
+15. public void foo(){System.out. print(“Bfoo”);}
+16. public static void main(String [] args){
+17. Alpha a = new Beta();
+18. Beta b = (Beta)a;
+19. a.foo();
+20. b.foo();
+21. }
+22. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Afoo Afoo</div>
+		<div><input type="checkbox">Afoo Bfoo</div>
+		<div><input type="checkbox">Bfoo Afoo</div>
+		<div class="correcta"><input type="checkbox">Bfoo Bfoo</div>
+		<div><input type="checkbox">Compilation fails.</div>
+		<div><input type="checkbox">An exception is thrown at runtime.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+10. abstract public class Employee{
+11. protected abstract double getSalesAmount();
+12. public double getCommision(){
+13. return getSalesAmoun()*0.15;14. }
+15. }
+16. class Sales extends Employee{
+17. // insert method here
+18. }
+Which two methods, inserted independently at line 17, correctly complete the Sales class?(Choose two.)		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">double getSalesAmount(){return 1230.45}</div>
+		<div class="correcta"><input type="checkbox">public double getSalesAmount(){return 1230.45}</div>
+		<div><input type="checkbox">private double getSalesAmount(){return 1230.45}</div>
+		<div class="correcta"><input type="checkbox">protected double getSalesAmount(){return 1230.45}</div>
+		<div><input type="checkbox"></div>
+	</div>
+
+
+	<div class="ex">
+	<p>En una sobreescritura el tipo de dato devuelto debe coincidir con el tipo de dato devuelto por el método que estoy
+sobreescribiendo y el método sobreescritor no puede ser más reestrictivo que el método sobreescrito.</p>	
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+What is the result?
+11. class Person{
+12. String name = “No name”;
+13. public Person(String nm){name = nm;}
+14. }
+15.
+16. class Employee extends Person {
+17. String empID = “0000”;
+18. public Employee(String id){empID = id;}
+19. }
+20.
+21. public class EmployeeTest{
+22. public static void main(String [] args){
+23. Employee e = new Employee(“4321”);
+24. System.out.println(e.empID);
+25. }
+26. }		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">4321</div>
+		<div><input type="checkbox">0000</div>
+		<div><input type="checkbox">An excetpion is thrown at runtime.</div>
+		<div class="correcta"><input type="checkbox">Compilation fails because of an error in line 18,</div>
+	</div>
+
+
+	<div class="ex">
+	<p>La clase Employee llamará al constructor vacío de la clase Person, pero la clase Person no tiene constructor vacío.</p>	
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+11. class X{public void foo(); {System.out.print(“X ”); }}
+12.
+13. public class SubB extends X{
+14. public void foo() throws RuntimeException{
+15. super.foo();
+16. if(true)throw new RuntimeException();
+17. System.out.print(“B”);
+18. }
+19. public static void main(String args[]){
+20. new SubB().foo();
+21. }
+22. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">X, followed by an Exception.</div>
+		<div><input type="checkbox">No output, and an Exception is thrown.</div>
+		<div><input type="checkbox">Compilation fails due to an error on line 14.</div>
+		<div><input type="checkbox">Compilation fails due to an error on line 16.</div>
+		<div><input type="checkbox">Compilation fails due to an error on line 17.</div>
+		<div><input type="checkbox">X, followed by an Exception, followed by B.</div>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+2. public class Hi{
+3. void m1();
+4. protected void() m2{}
+5. }
+6. class Lois extends Hi{
+7. //insert code here
+8. }
+Which four code fragments, inserted independently at line 7, will compile?(Choose four. )		
+	</pre>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">public void m1(){}</div>
+		<div class="correcta"><input type="checkbox">protected void m1(){}</div>
+		<div><input type="checkbox">private void m1(){}</div>
+		<div><input type="checkbox">void m2(){}</div>
+		<div class="correcta"><input type="checkbox">public void m2(){}</div>
+		<div class="correcta"><input type="checkbox">protected void m2(){}</div>
+		<div><input type="checkbox">private void m2(){}</div>
+
+
+	</div>
+
+
+	<div class="ex">
+	<p>El modificador del método sobreescritor no puede ser menos genérico que el modificador del método sobreescrito.</p>	
+	</div>
+</article>
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+10. public class Hello{
+11. String title;
+12. int value;
+13. public Hello(){
+14. title += “World”;
+15. }
+16. public Hello(int value){
+17. this.value = value;
+18. title = “Hello”;
+19. Hello();
+20. }
+21. }
+and:
+30. Hello c = new Hello(5);
+31. System.out.println(c.title);
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Hello</div>
+		<div><input type="checkbox">Hello World</div>
+		<div class="correcta"><input type="checkbox">Compilation fails.</div>
+		<div><input type="checkbox">Hello World 5.</div>
+		<div><input type="checkbox">The code runs with no output.</div>
+<div><input type="checkbox">An exception is thrown at runtime.</div>
+	</div>
+
+
+	<div class="ex">
+<p>title es una variable miembro inicializada a null por defecto</p>		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+3. class Employee{
+4. String name; double baseSalary;
+5. Employee(String name, double baseSalary){
+6. this.name = name;
+7. this.baseSalary = baseSalary;
+8. }
+9. }
+10. public class SalesPerson extends Employee{
+11. double comission;
+12. public SalesPerson(String name, double baseSalary, double commission){13. // insert code here
+14. }
+15. }
+Which two code fragments, inserted independently at line 13, will compile?(Choose two.)		
+	</pre>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">super(name, baseSalary);</div>
+		<div><input type="checkbox">this.commision = commision;</div>
+		<div><input type="checkbox">
+<pre>
+	<code>
+super();
+this.commission = commission();
+	</code>
+</pre>
+		</div>
+		<div><input type="checkbox">
+<pre>
+	<code>
+this.commission = commission;
+super();
+	</code>
+</pre>
+		</div>
+		<div class="correcta"><input type="checkbox">
+<pre>
+	<code>
+super(name, baseSalary);
+this.commission = commission;
+	</code>
+</pre>
+		</div>
+
+<div><input type="checkbox">
+<pre>
+	<code>
+this.commission = commission;
+super(name, baseSalary);
+	</code>
+</pre>
+</div>
+
+<div><input type="checkbox">
+<pre>
+	<code>
+super(name, baseSalary, commission);
+	</code>
+</pre>
+</div>
+
+	</div>
+
+
+	<div class="ex">
+<p>Desde la clase hija se llamará al constructor de la clase padre, salvo que la clase padre tenga un constructor con
+argumentos, en cuyo caso habrá que llamar a dicho constructor explícitamente.</p>		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+1.class ClassA{
+2. public int numberOfInstances;
+3. protected ClassA(int numberOfInstances){
+4. this.numberOfInstances = numberOfInstances;
+5. }
+6. }
+7. public class ExtendedA extends ClassA{
+8. private Extended(int numberOfInstances){
+9. super(numberOfInstances);
+10. }
+11. public static void main(String [] args){
+12. ExtendedA ext = new ExtendedA(420);
+13. System.out.print(ext.numberOfInstances);
+14. }
+15. }
+Which statament is true?		
+	</pre>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">420 is the output.</div>
+		<div><input type="checkbox">An exception is thrown at runtime.</div>
+		<div><input type="checkbox">All constructors must be declared public.</div>
+		<div><input type="checkbox">Constructors CANNOT use the private modifier.</div>
+		<div><input type="checkbox">Constructors CANNOT use the protected modifer.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+5. class Building{}
+6. public class Barn extends Building{
+7. public static void main(String [] args){
+8. Building build1 = new Building();
+9. Barn barn1 = new Barn();
+10. Barn barn2 = new Barn();
+11. Object obj1 = (Object) build1;
+12. String str1 = (String) build1;13. Building build2 = (Building) barn1;
+14. }
+15. }
+Which is true?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox"> If line 10 is removed, the compilation succeeds.</div>
+		<div><input type="checkbox">If line 11 is removed, the compilation succeeds.</div>
+		<div class="correcta"><input type="checkbox">If line 12 is removed, the compilation succeeds.</div>
+		<div><input type="checkbox">If line 13 is removed, the compilation succeeds.</div>
+		<div><input type="checkbox">More than one line must be removed for compilation to succeed.</div>
+	</div>
+
+
+	<div class="ex">
+	<p>No es posible convertir un tipo de dato más genérico a uno más específico.</p>	
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+3. interface Fish{}
+4. class Perch implements Fish{}
+5. class Walleye extends Perch{}
+6. class Bluegill{}
+7. public class Fisherman{
+8. public static void main(String [] args){
+9. Fish f = new Walleye();
+10. Walleye w = new Walleye();
+11. Bluegill b = new Bluegill();
+12. if( f instanceof Perch) System.out.println(“f-p”);
+13. if( w instanceof Fish) System.out.println(“w-f”);
+14. if( b instanceof Fish) System.out.println(“b-f”);
+15. }
+16. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">w-f</div>
+		<div class="correcta"><input type="checkbox">f-p w-f</div>
+		<div><input type="checkbox">w-f b-f</div>
+		<div><input type="checkbox">f-p w-f b-f</div>
+		<div><input type="checkbox">Compilation fails.</div>
+		<div><input type="checkbox">An exception is thrown at runtime.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+10. interface Foo{}
+11. class Alpha implements Foo{}
+12. class Beta extends Alpha{}
+13. class Delta extends Beta{
+14. public static void main(String [] args){
+15. Beta x = new Beta();
+16. // insert code here
+17. }
+18. }
+Which code, inserted at line 16, will cause a java.lang.ClassCastException?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Alpha a = x;</div>
+		<div class="correcta"><input type="checkbox">Foo f = (Delta)x;</div>
+		<div><input type="checkbox">Foo f = (Alpha)x;</div>
+		<div><input type="checkbox">Beta b = (Beta)(Alpha)x;</div>
+	</div>
+
+
+	<div class="ex">
+	<p>No es posible convertir un tipo de dato más genérico en un tipo de dato más específico.</p>	
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+10.class One{
+11. void foo() {}
+12. {
+13. class Two extends One{14. // insert method here
+15. }
+Which three methods, inserted individually at line 14, will correctly complete class Two? (Choose three)		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">int foo (){/* more code here*/}</div>
+		<div class="correcta"><input type="checkbox">void foo(){/* more code here*/}</div>
+		<div class="correcta"><input type="checkbox">public void foo(){/* more code here*/}</div>
+		<div><input type="checkbox">private void foo(){/*more code here*/}</div>
+		<div class="correcta"><input type="checkbox">protected void foo(){/* more code here*/}</div>
+	</div>
+
+
+	<div class="ex">
+<p>El modificador de acceso del método sobreescritor no puede ser más reestrictivo que el modificador de acceso del
+método sobreescrito. Además, el tipo de dato devuelto debe ser el mismo para ambos.</p>		
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Which statement is true about the classes and interfaces in the exhibit?
+1. public interface A{
+2. public void doSomething(String thing);
+3. }
+1. public class Aimpl implements A{
+2. public doSomething(String msg){}
+3. }
+1. public class B{
+2. public A doit(){
+3. //insert code here
+4. }
+5.
+6. public String execute(){
+7. // more code here
+8. }
+9. }
+1. public class C extends B{
+2. public Aimpl doit(){
+3. // more code here
+4. }
+5.
+6. public Object execute(){
+7. // more code here
+8. }
+9. }		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Compilation will succeed for all classes and interfaces.</div>
+		<div><input type="checkbox">Compilation of class C will fail because of an error in line 2.</div>
+		<div><input type="checkbox">Compilation of class C will fail because of an error in line 6.</div>
+		<div class="correcta"><input type="checkbox">Compilation of class Aimpl will fail because of an error in line 2.</div>
+		<div><input type="checkbox"></div>
+	</div>
+
+
+	<div class="ex">
+<p>El tipo de dato devuelto por un método sobreescrito debe coincidir con el tipo de dato devuelto por el método
+sobreescribidor.</p>		
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+11. public interface A{public void m1();}
+12.
+13.class B implements A{}
+14. class C implements A{public void m1(){}}
+15. class D implements A{public void m1(int x){}}
+16. abstract class E implements A{}
+17. abstract class F implements A{public void m1(){}}
+18. abstract class G implements A{public void m1(int x){}}
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Compilation succeds.</div>
+		<div><input type="checkbox">Exactly one class does NOT compile.</div>
+		<div class="correcta"><input type="checkbox">Exactly two classes do NOT compile.</div>
+		<div><input type="checkbox">Exactly four classes do NOT compile.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+21. class Money{
+22. private String country = “Canada”;
+23. public String getC(){ return country;}
+24. }
+25. class Yen extends Money{
+26. public String getC();{return super.country;}
+27. }
+28. public class Euro extends Money{
+29. public String getC(int x){return super.getC(); }
+30. public static void main(String [] args){
+31. System.out.print(new Yen().getC() + “” + new Euro().getC());
+32. }
+33. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Canada</div>
+		<div><input type="checkbox">null Canada</div>
+		<div><input type="checkbox">Canada null</div>
+		<div><input type="checkbox">Canada Canada</div>
+		<div class="correcta"><input type="checkbox">Compilation fails due to an error on line 26.</div>
+		<div><input type="checkbox">Compilation fails due to an error on line 29.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Which three statements are true? (Choose three. )		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">A final method in class X can be abstract if and only if X is abstract.</div>
+		<div class="correcta"><input type="checkbox">A protected method in class X can be overriden by any subclass of X.</div>
+		<div><input type="checkbox">A private static method can be called only within other static methods in class X.</div>
+		<div><input type="checkbox">A non-static public final method in class X can be overriden in any subclass of X.</div>
+		<div class="correcta"><input type="checkbox">A public static method in class X can be called by a sublcass of X without explicity referencing the class X.</div>
+		<div class="correcta"><input type="checkbox">A method with the same signature as a private final method in class X can be implemented in a subclass of X.</div>
+		<div><input type="checkbox">A protected method in class X can be overriden by a subclass of X only if the sublclass is in the same package as X.</div>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+What two must the programmer do to correct the compilation error? (Choose two.)
+1. public class Car{
+2. private int wheelCount;
+3. private String vin;
+4. public Car(String vin){
+5. this.vin = vin;
+6. this.wheelCount = 4;
+7. }
+8. public String drive(){
+9. return “zoom-zoom”;
+10. }
+11. public String getInfo(){
+12. return “VIN : ” + vin + “wheels: ” + wheelCount;
+13. }
+14. }
+And:
+1. public class MeGo extends Car{
+2. public MeGo(String vin){3. this.wheelCount = 3;
+4. }
+5. }		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">insert a call to this() in the Car constructor</div>
+		<div><input type="checkbox">insert a call to this() int the MeGo constructor</div>
+		<div><input type="checkbox">insert a call super() in the MeGo constructor</div>
+		<div class="correcta"><input type="checkbox">insert a call to super(vin) in the MeGo constructor</div>
+		<div class="correcta"><input type="checkbox">change the wheelCount variable in Car to protected</div>
+	<div><input type="checkbox">change line 3 in the MeGo class to super.wheelCount = 3;</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+5. class Thingy{Meter m = new Meter();}
+6. class Component {void go(){System.out.print(“c”);}}
+7. class Meter extends Component{void go(){System.out.print(“m”);}}
+8.
+9. class Deluxe Thingy extends Thingy{
+10. public static void main(String [] args){
+11. DeluxeThingy dt = new DeluxeThingy();
+12. dt.m.go();
+13. Thingy t = new DeluxeThingy();
+14. t.m.go();
+15. }
+16. }
+Which two are true? (Choose two.)		
+	</pre>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">The output is mm.</div>
+		<div><input type="checkbox">The output is mc.</div>
+		<div><input type="checkbox">Component is-a Meter.</div>
+		<div><input type="checkbox">Component has-a Meter.</div>
+		<div><input type="checkbox">DeluxeThingy is-a Component.</div>
+		<div class="correcta"><input type="checkbox">DeluxeThingy has-a Component.</div>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+10. interface Jumper{public void jump(); }
+20. class Animal{}...
+30. class Dog extends Animal{
+31. Tail tail; 32 }...
+40. class Beagle extends Dog implements Jumper{
+41. public void jump(){}
+42. }...
+50. class Cat implements Jumper{
+51. public void jump(){}
+52. }
+Which three are true?(Choose three.)		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Cat is-a Animal</div>
+		<div class="correcta"><input type="checkbox">Cat is-a Jumper</div>
+		<div class="correcta"><input type="checkbox">Dog is-a Animal</div>
+		<div><input type="checkbox">Dog is-a Jumper</div>
+		<div><input type="checkbox">Cat has-a Animal</div>
+		<div class="correcta"><input type="checkbox">Beagle has-a Tail</div>
+		<div><input type="checkbox">Beagle has-a Jumper</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+What is the result?
+1. public class SimpleCal{
+2. public int value;
+3. public void calculate(){value +=7; }
+And:
+1. public class MultiCalc extends SimpleCalc{
+2. public void calculate(){value -= 3; }
+3. public void calculate(int multiplier){
+4. calculate();
+5. super.calculate();
+6. value *= multiplier;
+7. }
+8. public static void main(String [] args){
+9. MultiCalc calculator = new MultiCalc();
+10. calculator.calculate(2);
+11. System.out.println(“Value is” + calculator.value);
+12. }
+13. }		
+	</pre>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">Value is: 8</div>
+		<div><input type="checkbox">Compilation fails.</div>
+		<div class="correcta"><input type="checkbox">Value is 12</div>
+		<div><input type="checkbox">Value is -12</div>
+		<div><input type="checkbox">The code runs with no output.</div>
+		<div><input type="checkbox">An exception is thrown at runtime.</div>
+
+	</div>
+
+
+	<div class="ex">
+<p>Los valores que toma value son -3, 4 y 8.</p>		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+1. interface DoStuff2{
+2. float getRange(int low, int high); }
+3.
+4. interface DoMore{
+5. float getAvg(int a, int b, int c); }
+6.
+7. abstract class DoAbstract implements DoStuff2, DoMore{}
+8.
+9. class DoStuff implements DoStuff2{
+10. public float getRange(int x, int y ){return 3.14f;}}
+11.
+12. interface DoAll extends DoMore{
+13. float getAvg(int a, int b, int c, int d); }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">The file will compile withou error.</div>
+		<div><input type="checkbox">Compilation fails. Only line 7 contains error.</div>
+		<div><input type="checkbox">Compilation fails. Only line 12 contains error.</div>
+		<div><input type="checkbox">Compilation fails. Only line 13 contains an error.</div>
+		<div><input type="checkbox">Compilation fails. Only line 7 and 12 contain errors.</div>
+		<div>
+			<input type="checkbox">Compilation fails. Only line 7 and 13 contain errors.
+		</div>
+		<div><input type="checkbox">Compilation fails. Lines 7, 12, and 13 contain errors.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+11. public class Person{
+12. private String name;
+13. public Person(String name){
+14. this.name = name;
+15. }
+16. public boolean equals(Object o){
+17. if(!(o instanceof Person))retur n false;
+18. Person p = (Person) o;19. return p.name.equals(this.name);
+20. }
+21. }
+Which statement is true?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Compilation fails because the hashCode method is not overriding.</div>
+		<div class="correcta"><input type="checkbox">A HashSet could contain multiple Person objects with the same name.</div>
+		<div><input type="checkbox">All Person objects will have the same hash code because the hashCode method is not overriden.</div>
+		<div><input type="checkbox">If a HashSet contains more than one Person object with name=”Fred”, then removing another Person, also with
+name=”Fred”, will remove them all.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+10. interface Data { public void load(); }
+11. abstract class Info{public abstract void load(); }
+Which class correctly uses the Data interface and Info class?		
+	</pre>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">
+<pre>
+	<code>
+public class Employee extends Info implements Data{
+public void load(){/* do something */}
+	</code>
+</pre>
+		</div>
+<div><input type="checkbox">
+<pre>
+	<code>
+public class Employee implements Info extends Data{
+public void load(){ /* do something */}
+	</code>
+</pre>
+</div>		
+		<div><input type="checkbox">
+<pre>
+	<code>
+public class Employee extends Info implements Data{
+public void load(){/*do something*/}
+public void Info.load(){/*do something*/}
+}
+	</code>
+</pre>
+		</div>
+		<div><input type="checkbox">
+<pre>
+	<code>
+public class Employee implements Info extends Data{
+public void Data load(){/*do something*/}
+public void load(){/*do something*/}
+}
+	</code>
+</pre>
+		</div>
+		<div><input type="checkbox">
+<pre>
+	<code>
+public class Employee implements Info extends Data{
+public void load(){/*do something*/}
+public void Info.load(){/*do something*/}
+}
+	</code>
+</pre>
+		</div>
+		<div><input type="checkbox">
+<pre>
+	<code>
+public class Employee extends Info implements Data{
+public void Data.load(){/*do something*/}
+public void Info.load(){/*do something*/}
+}
+	</code>
+</pre>
+		</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+21. abstract class C1{
+22. public C1(){System.out.print(1);}
+23. }
+24. class C2 extends C1{
+25. public C2(){System.out.print(2); }
+26. }
+27. class C3 extends C2 {
+28. public C3(){System.out.println(3); }
+29. }
+30. public class Ctest{
+31. public static void main(String [] args){new C3(); }32. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">2</div>
+		<div><input type="checkbox">23</div>
+		<div><input type="checkbox">32</div>
+		<div class="correcta"><input type="checkbox">123</div>
+		<div><input type="checkbox">321</div>
+		<div><input type="checkbox">Compilation fails</div>
+		<div><input type="checkbox">An exception is thrown at runtime.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+10. class One{
+11. public One foo(){return this;}
+12. }
+13. class Two extends One{
+14. public One foo(){return this;}
+15. }
+16. class Three extends Two{
+17. // insert method here
+18. }
+Which two methods, inserted individually, correctly complete the Three class?(Choose two. )		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">public void foo(){}</div>
+		<div><input type="checkbox">public int foo(){return 3;}</div>
+		<div class="correcta"><input type="checkbox">public Two foo(){return this;}</div>
+		<div class="correcta"><input type="checkbox">public One foo(){ return this; }</div>
+		<div><input type="checkbox">public Object foo(){return this;}</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+5. class Payload{
+6. private int weight;
+7. public Payload(int w){weight = w; }
+8. public void setWeight(int w){weight = w;}
+9. public String toString(){return Integer.toString(weight);}
+10. }
+11. public class TestPayload{
+12. static void changePayload(Payload p){/* insert code*/}
+13. public static void main(String [] args){
+14. Pauload p = new Payload(200);
+15. p.setWeight(1024);
+16. changePayload(p);
+17. System.out.println(“p is ” + p);
+18. }}
+Which code fragment, inserted at the end of line 12, produces the output p is 420?		
+	</pre>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">p.setWeight(420);</div>
+		<div><input type="checkbox">p.changePayload(420);</div>
+		<div><input type="checkbox">p = new Payload(420);</div>
+		<div><input type="checkbox">Payload.setWeight(420);</div>
+		<div><input type="checkbox">p = Payload.setWeight(420);</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+1. interface DoStuff2{
+2. float getRange(int low, int high); }
+3.
+4. interface DoMore{5. float getAvg(int a, int b, int c); }
+6.
+7. abstract class DoAbstract implements DoStuff2, DoMore{}
+8.
+9. class DoStuff implements DoStuff2{
+10. public float getRange(int x, int y){return 3.14f}
+11.
+12. interface DoAll extends DoMore{
+13. float getAvg(int a, int b, int c, int d); }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">The file will compile without error.</div>
+		<div><input type="checkbox">Compilation fails. Only line 7 contains an error.</div>
+		<div><input type="checkbox">Compilation fails. Only line 12 contains an error.</div>
+		<div><input type="checkbox">Compilation fails. Only line 13 contains an error.</div>
+		<div><input type="checkbox">Compilation fails. Only lines 7 and 12 contain errors.</div>
+		<div><input type="checkbox">Compilation fails. Only lines 7 and 13 contain errors.</div>
+		<div><input type="checkbox">Compilation fails. Lines 7, 12 and 13 contain errors.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+1. class TestA{
+2. public void start(){System.out.println(“TestA”); }
+3. }
+4. public class TestB extends TestA{
+5. public void start(){System.out.println(“TestB”); }
+6. public static void main(String [] args){
+7. ((TestA)new TestB()).start();
+8. }
+9. }
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">TestA</div>
+		<div class="correcta"><input type="checkbox">TestB</div>
+		<div><input type="checkbox">Compilation fails.</div>
+		<div><input type="checkbox">An exception is thrown at runtime.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+11. public abstract class Shape{
+12. private int x;
+13. private int y;
+14. public abstract void draw();
+15. public void setAnchor(int x, int y){
+16. this.x = x;
+17. this.y = y;
+18. }
+19. }
+Which two classes use the Shape class correctly?(Choose two. )		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">
+<pre>
+	<code>
+public class Circle implements Shape{
+private int radius;
+}
+	</code>
+</pre>
+		</div>
+		<div class="correcta"><input type="checkbox">
+<pre>
+	<code>
+public abstract class Circle extends Shape{
+private int radius;
+}
+	</code>
+</pre>
+		</div>
+		<div><input type="checkbox">
+<pre>
+	<code>
+public class Circle extends Shape{
+private int radius;
+public void draw();
+}
+	</code>
+</pre>
+		</div>
+		<div><input type="checkbox">
+<pre>
+	<code>
+public abstract class Circle implements Shape{
+private int radius;
+public void draw();
+}			
+	</code>
+</pre>
+		</div>
+		<div class="correcta"><input type="checkbox">
+<pre>
+	<code>
+public class Circle extends Shape{
+private int radius;
+public void draw(){ /* code here*/}
+	</code>
+</pre>
+		</div>
+<div><input type="checkbox">
+<pre>
+	<code>
+public abstract class Circle implements Shape{
+private int radius;
+public void draw(){ /* code here*/}
+	</code>
+</pre>
+</div>
+
+	</div>
+
+
+	<div class="ex">
+<p>Una clase, aunque sea abstracta, no se implementa, se hereda.</p>		
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+11. abstract class Vehicle {public int speed{return 0;}}
+12. class Car extends Vehicle{public int speed(){return 60;}}
+13. class RaceCar extends Car{public int speed(){return 150; }...
+21. RaceCar racer = new RaceCar();
+22. Car car = new RaceCart();
+23. Vehicle vehicle = new RaceCar();
+24. System.out.println(racer.speed() + “,” + car.speed())
+25. + “,” + vehicle.speed());
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">0, 0, 0</div>
+		<div><input type="checkbox">150, 60, 0</div>
+		<div><input type="checkbox">Compilation fails.</div>
+		<div><input type="checkbox">150. 150, 150</div>
+		<div class="correcta"><input type="checkbox">An exception is thrown at runtime.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+11. class Mammal{}
+12.
+13. class Raccoon extends Mammal{
+14. Mammal m = new Mammal();
+15. }
+16.
+17. class BabyRaccoon extends Mammal{}
+Which four statements are true? (Choose four. )		
+	</pre>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">Raccoon is-a Mammal.</div>
+		<div class="correcta"><input type="checkbox">Raccoon has-a Mammal.</div>
+		<div class="correcta"><input type="checkbox">BabyRaccoon is-a Mammal.</div>
+		<div><input type="checkbox">BabyRaccoon is-a Raccoon.</div>
+		<div><input type="checkbox">BabyRaccoon has a Mammal.</div>
+		<div class="correcta"><input type="checkbox">BabyRaccoon is-a BabyRaccoon.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+Given:
+10. public class SuperCalc{
+11. protected static int multiply(int a, int b){return a*b;}
+12. }and:
+20. public class SubCalc extends SuperCalc{
+21. public static int multiply(int a, int b){
+22. int c = super.multiply(a, b);
+23. return c;
+24. }
+25. }
+and:
+30. SubCalc sc = new SubCalc();
+31. System.out.println(sc.multiply(3, 4));
+32. System.out.println(SubCalc.multiply(2, 2));
+What is the result?		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox">
+<pre>
+	<code>
+12
+4
+	</code>
+</pre>
+		</div>
+		<div><input type="checkbox">The code runs with no output.</div>
+		<div><input type="checkbox">An exception is thrown at runtime.</div>
+		<div><input type="checkbox">Compilation fails because of an error in line 21.</div>
+		<div class="correcta"><input type="checkbox">Compilation fails because of an error in line 22.</div>
+		<div><input type="checkbox">Compilation fails because of an error in line 31.</div>
+	</div>
+
+
+	<div class="ex">
+	<p>No puedo usar super en un contexto estático.</p>	
+	</div>
+</article>
+
+
+</body>
+</html>
+
+
+<!-- 
+
+<article>
+				<h2></h2>
+
+	<pre class="question">
+		
+	</pre>
+
+
+	<div class="responses">
+		<div><input type="checkbox"></div>
+		<div><input type="checkbox"></div>
+		<div><input type="checkbox"></div>
+		<div><input type="checkbox"></div>
+		<div><input type="checkbox"></div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+-->

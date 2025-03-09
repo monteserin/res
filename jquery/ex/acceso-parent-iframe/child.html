@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Acceso a parent iframe</title>
+    <meta name="robots" content="noindex, follow">
+    <script src="https://pablomonteserin.com/res/jquery/ex/jquery.js"></script>
+    <script type="text/javascript">
+        function show(url) {
+            $('#contenedor_pop', window.parent.document).html("<img src='" + url + "'>");
+
+        }
+    </script>
+    <a href="javascript:show('perro.png');">enlace
+    </a>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

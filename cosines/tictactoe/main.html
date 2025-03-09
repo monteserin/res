@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Tic Tac toe con Javascript | Pablo Monteserín</title>
+			    <meta name="description" content="El clásico juego del tres en raya, escrito con HTML, CSS y Javascript, tanto para jugar sólo como con una programación para jugar contra la máquina">
+
+	<style type="text/css">
+	.white{color:white;}
+	#initWrapper{
+		position:absolute;
+		width:100%;
+		height:90%;
+	}
+	#init{
+		width:60%;
+		height:70%;
+		margin:auto;
+		margin-top:10%;
+		padding-top:1%;
+		padding-left:5%;
+		padding-right:5%;
+		background:gray;
+		border-radius: 10px
+	}
+	body{
+		padding:0;
+		margin: 0
+	}
+	.cell{
+		float:left;
+		width:32%;
+		height:32%;
+		-webkit-tap-highlight-color: rgba(0,0,0,0);
+	}
+	.borderRight{
+		border-right: 3px solid black
+	}
+	.borderBottom{
+		border-bottom: 3px solid black
+	}
+	#board{
+
+	}
+	body{text-align: center}
+	</style>
+	<script src="jquery-1.9.1.js"></script>
+	<script src="cordova-2.5.0.js"></script>
+	<script >
+	var dimMin;
+//	var red_flowerArray = [];
+//	var yellow_flowerArray = [];
+var player1 = new Object();
+var player2 = new Object();
+
+var playerPositions = ["empty","empty","empty","empty","empty","empty","empty","empty","empty",]
+var player1Time;
+var player2Time;
+var turnCounter;
+var intervalo;
+var numJugadores;
+var startTimePlayer1;
+var startTimePlayer2;
+
+function startGame(){
+	player1.color = "amarillo";
+	player2.color = "rojo";
+	player1.time=0;
+	player2.time=0;
+	playerPositions = ["empty","empty","empty","empty","empty","empty","empty","empty","empty",];
+	//startTimePlayer1=0;
+	//startTimePlayer2=0;
+	//player1Time=0;
+	//player2Time=0;
+
+	turnCounter=0;
+	$(".cell").html("");
+	moverFicha("undefinied",dimMin, numJugadores);
+}
+$(function(){
+	if( /Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent) ){
+		document.addEventListener("deviceready", onDeviceReady, false);
+	}else{
+		onDeviceReady();
+	}
+});
+function onDeviceReady(){
+	var cellHeight = $("#cell0").height();
+	var cellWidth = $("#cell0").width();
+	if(cellHeight<cellWidth){
+		dimMin = cellHeight;
+	}else{
+		dimMin = cellWidth;
+	}
+
+
+	$("#jugador1").click(function(){
+		numJugadores=1;
+		$("#initWrapper").hide();
+		startGame();
+
+	});
+	$("#jugador2").click(function(){
+		startTimePlayer1 = new Date().getTime();
+		startTimePlayer2 = new Date().getTime();
+
+		numJugadores=2;
+		$("#initWrapper").hide();
+		startGame();
+
+	});
+	$(".cell").click(function(){		
+		moverFicha($(this),dimMin,numJugadores);
+	});
+
+
+}
+
+function moverFicha($this, dimMin, numJugadores ){
+	if($this!="undefinied" && $this.html()==""){
+	/*	if(turnCounter==9){
+			if(player1Time<player2Time){
+				showWinner(player);
+			}else{
+				showWinner(player);
+			}
+		}else{*/
+			var index = $this.prop("id");
+			index = index.substr(index.length-1, index.length);
+			if(numJugadores==1){
+				move($this, true, player2, dimMin, 0, index);
+				move($this, false, player1, dimMin, 0, index);
+
+			}else if(numJugadores==2){
+				if(turnCounter%2!=0){
+					startTimePlayer2 = new Date().getTime();
+
+					move($this, true, player1, dimMin, startTimePlayer1,index);
+
+				}else{
+					startTimePlayer1 = new Date().getTime();
+
+					move($this, true, player2, dimMin, startTimePlayer2,index);
+				}
+								///////////////////// IA
+							}/*else{
+								startTimePlayer1 = new Date().getTime();
+							}*/
+						//}
+					}
+					if($.inArray("empty", playerPositions)==-1){
+						alert("La partida ha terminado en tablas");
+						startGame();
+					}
+				}
+				function move($this, isHuman, player, dimMin, startTime,index){
+					++turnCounter;
+					if(isHuman){
+						var t2 = new Date();
+						var intervalo =  t2.getTime() -  startTime;
+						console.log("-----------------------------------");
+ 	
+						console.log("intervalo: " + intervalo);
+						console.log("t2.getTime(): " + t2.getTime());
+						console.log("startTime: " + startTime);
+
+						console.log(player.time +"player.time");
+						player.time =player.time + intervalo;
+						console.log(player.time +"player.time");
+						console.log("-----------------------------------");
+					}else{
+						index = getComputerMove();
+						$this = $("#cell"+index);
+					}
+					playerPositions[index] = player.color;
+					$this.html('<div style="width:'+dimMin+'px; height:'+dimMin+'px; background:url('+player.color+'.png);background-size: 100% 100%;margin: auto; "></div>');
+					if(evaluateIfPlayerIsWinner(player.color, playerPositions)){
+						showWinner(player.color);
+					}/*else if(isHuman){
+						startTimePlayer2 = new Date().getTime();
+					}*/
+				}
+
+				function getComputerMove(){
+					//1 - Comprobamos si la máquina puede hacer un movimiento y ganar la partida
+					for(var i=0 in playerPositions){
+						playerPositionsBIS = playerPositions.slice(0);
+
+
+						if(playerPositionsBIS[i]=="empty"){
+							playerPositionsBIS[i] = player1.color;
+							if(evaluateIfPlayerIsWinner(player1.color, playerPositionsBIS)){
+								console.log(i+" position es la winner");
+								return i;
+
+
+							}
+						}
+					}
+		//2 - Comprobamos si tras mover, el humano puede hacer un movimiento y ganar la partida
+		for(var i=0 in playerPositions){
+			playerPositionsBIS = playerPositions.slice(0);
+			if(playerPositionsBIS[i]=="empty"){
+				playerPositionsBIS[i] = player2.color;
+				if(evaluateIfPlayerIsWinner(player2.color, playerPositionsBIS)){
+					return i;
+
+
+				}
+			}
+		}
+			//3 - Comprueba si hay alguna esquina libre. Si lo está, la máquina mueve a la esquina.
+			corners = [0,2,6,8];
+			while(corners.length>0){
+				var randomIndex = getRandomPositionInArray(corners);
+				var randomCorner = corners[randomIndex];
+				if(playerPositions[randomCorner]=="empty"){
+					return randomCorner;
+				}else{
+					corners.splice(randomIndex, 1);
+				}
+			}
+			//4 - Comprueba si el centro está libre. Si lo está, la máquina mueve al centro
+			if(playerPositions[4]=="empty"){
+				return 4;
+			}
+
+			//5 - Mueve a cualquiera de las casillas restantes
+			var sides = [1, 3, 5,7];
+			while(sides.length>0){
+				var randomIndex = getRandomPositionInArray(sides);
+				var randomSide = sides[randomIndex];
+				if(playerPositions[randomSide]=="empty"){
+					return randomSide;
+				}else{
+					sides.splice(randomIndex, 1);
+				}
+			}
+
+		}
+		function getRandomPositionInArray(array){
+			var randomNumber = Math.floor(Math.random() * array.length);
+			return randomNumber
+		}
+		function showWinner(ganador){
+			if(numJugadores==2){
+				alert("GANA "+ganador+"\n"+player1.color+": " + player1.time + " segundos \n"+player2.color+": "+ player2.time+" segundos");
+			}else{
+				alert("GANA "+ganador);
+			}
+			startGame();
+
+		}
+		function evaluateIfPlayerIsWinner(player, playerPositions){
+			console.log(playerPositions);
+			if(playerPositions[0]==player && playerPositions[1]==player && playerPositions[2]==player){
+				return true;
+			}else if(playerPositions[3]==player && playerPositions[4]==player && playerPositions[5]==player){
+				return true;
+			}else if(playerPositions[6]==player && playerPositions[7]==player && playerPositions[8]==player){
+				return true;
+			}else if(playerPositions[0]==player && playerPositions[3]==player && playerPositions[6]==player){
+				return true;
+			}else if(playerPositions[1]==player && playerPositions[4]==player && playerPositions[7]==player){
+				return true;
+			}else if(playerPositions[2]==player && playerPositions[5]==player && playerPositions[8]==player){
+				return true;
+			}else if(playerPositions[0]==player && playerPositions[4]==player && playerPositions[8]==player){
+				return true;
+			}else if(playerPositions[2]==player && playerPositions[4]==player && playerPositions[6]==player){
+				return true;
+			}
+		}
+		</script>
+	</head>
+	<body>
+<h1>Juego del tres en raya programado con Javascript</h1>
+		<div id="board">
+			<div id="cell0" class="cell borderRight borderBottom"></div>
+			<div id="cell1" class="cell borderRight borderBottom"></div>
+			<div id="cell2" class="cell borderBottom"></div>
+			<div id="cell3" class="cell borderRight borderBottom"></div>
+			<div id="cell4" class="cell borderRight borderBottom"></div>
+			<div id="cell5" class="cell borderBottom"></div>
+			<div id="cell6" class="cell borderRight"></div>
+			<div id="cell7" class="cell borderRight"></div>
+			<div id="cell8" class="cell"></div>
+
+		</div>
+		<div id="initWrapper">
+			<div  id="init">
+				<p  class="white">¿Juegas sólo o contra un amigo?.</p>
+				<button  id="jugador1">sólo</button>
+				<button  id="jugador2">contra un amigo</button>
+			</div>
+		</div>
+	</body>
+	</html>

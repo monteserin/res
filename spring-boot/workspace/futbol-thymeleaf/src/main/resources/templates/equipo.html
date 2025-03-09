@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+
+<div class="equipos">
+<div>
+<img th:src="|/${equipo.fotoEscudo}|" />
+
+<img th:src="|/${equipo.fotoEquipo}|" />
+
+</div>
+<p th:each="jugador:${jugadores}" >
+			<span th:text="${jugador.nombre}" /> <br>
+		</div>
+	</div>
+</p>
+
+</div>
+
+
+</body>
+</html>

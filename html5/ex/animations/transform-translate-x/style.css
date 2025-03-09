@@ -1,0 +1,11 @@
+div.transform-translate-x {
+    background-color: pink;
+    width: 300px;
+    height: 300px;
+    transition: transform 2s;
+}
+
+div.transform-translate-x:hover {
+    /*transform: function()*/
+    transform: translateX(100px);
+}

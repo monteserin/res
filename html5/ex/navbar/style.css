@@ -1,0 +1,30 @@
+@import url("https://fonts.googleapis.com/css2?family=Ranchers&display=swap");
+
+ul.menu-animations {
+  display: flex;
+  list-style: none;
+}
+
+ul.menu-animations li {
+  margin: 7px;
+}
+
+ul.menu-animations a {
+  display: block;
+  padding: 20px;
+  color: black;
+  text-decoration: none;
+  background-image: url(https://pablomonteserin.com/res/html5/ex/navbar/indiana.png),
+    linear-gradient(to bottom, #006e2e 0%, #f90000 100%);
+  transition: 1s;
+  border: 2px solid red;
+  box-shadow: 3px 3px 3px black;
+  border-radius: 7px;
+  color: white;
+  font-family: "Ranchers", cursive;
+  text-shadow: 3px 3px 3px orange;
+}
+
+ul.menu-animations a:hover {
+  background-position: -60px center;
+}

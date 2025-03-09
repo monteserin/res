@@ -1,0 +1,64 @@
+.murphy-container{
+height:700px;
+}
+
+.murphy-container h1 {
+    text-align: center;
+}
+
+
+.murphy-container .p1 {
+    background-color: #DBC9A6;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #9B8F76;
+}
+
+
+
+.murphy-container .container {
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+}
+
+
+.murphy-container .container div:hover {
+    z-index: 2;
+}
+
+.murphy-container .murphybox {
+    width: 50%;
+    height: 200px;
+    background-color: red;
+    box-sizing: border-box;
+}
+
+.murphy-container .div1 {
+    background-color: #FFFFB3;
+    border: 2px solid #EBEBA5;
+}
+
+
+.murphy-container .div2 {
+    background-color: #C6FFFF;
+    border: 2px solid #98C4C4;
+}
+
+.murphy-container .div3 {
+    background-color: #91FF91;
+    border: 2px solid #64B064;
+}
+
+.murphy-container .div4 {
+    background-color: #FFE5FF;
+    border: 2px solid #BAA7BA;
+}
+
+.murphy-container .div5 {
+    background-color: #FFB4B4;
+    border: 2px solid #865F5F;
+    position: absolute;
+    top: 25%;
+    left: 25%;
+}

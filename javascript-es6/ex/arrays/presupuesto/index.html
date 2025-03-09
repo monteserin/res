@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            margin-bottom: 30px;
+            border: 1px solid black;
+            border-radius: 25px;
+            width: 350px;
+            padding: 30px;
+            display: table
+        }
+
+        .result {
+            font-size: 30px;
+            font-weight: bold;
+            color: red;
+            background-color: pink;
+            padding: 30px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">
+        <label for="op1"><input type="radio" name="design" value="0" checked> El cliente me suministra el
+            diseño</label><br>
+        <label for="op2"><input type="radio" name="design" value="300"> Yo me encargo del diseño</label>
+    </div>
+
+    <div class="box">
+        <label for="op3"> <input type="radio" name="cart" value="0" checked> La página no incorpora carrito de la
+            compra</label><br>
+        <label for="op4">
+            <input type="radio" name="cart" value="600"> La página incorpora un carrito de la compra</label>
+    </div>
+
+    <div class="box">
+        <label for="op5"> <input type="radio" name="membership" value="0" checked> La página no permite
+            suscripción</label><br>
+        <label for="op6"> <input type="radio" name="membership" value="400"> La página permite suscripción</label>
+    </div>
+
+    <p class="result"></p>
+
+    <script src="./javascript.js"></script>
+</body>
+
+</html>

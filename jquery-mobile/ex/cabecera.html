@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Primera página con jQuery Mobile</title>
+    <meta charset='utf-8'>
+    <meta name="description"
+        content="Ejemplo de página básica con jQuery Mobile que cuenta con los elementos típicos, botones, cabecera, footer y contenido asignados con el atributo data-role">
+    <meta name="robots" content="noindex, follow">
+    <link rel="stylesheet" type="text/css" href="https://pablomonteserin.com/res/jquery-mobile/ex/jquery.mobile.css">
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery-mobile/ex/jquery-1.11.js"></script>
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery-mobile/ex/jquery.mobile.js"></script>
+</head>
+
+<body>
+    <section id="firstpage" data-role="page">
+        <header data-role="header">
+            <h1>Primera página con jQuery Mobile</h1>
+        </header>
+        <div data-role="content">
+            <p>Esta es la primera página</p>
+            <a href="#secondpage" style="background:pink">Enlace (no va a ningún sitio)</a>
+            <a href="#secondpage" data-role="button" style="background:pink">Enlace con data-role="button" (no va a
+                ningún
+                sitio)</a>
+            <button style="background:pink">Button (no va a ningún sitio)</button>
+        </div>
+        <footer data-role="footer">El pie de la página</footer>
+    </section>
+</body>
+
+</html>

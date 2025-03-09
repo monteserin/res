@@ -1,0 +1,53 @@
+<style>
+  .container {
+    width: 800px;
+    height: 600px;
+    background-color: yellow;
+    margin: auto;
+    position: relative;
+  }
+
+  .box {
+    width: 50%;
+    height: 50%;
+    background-color: red;
+    position: absolute;
+  }
+  .p1 {
+    top: 0;
+    left: 0;
+    background-color: green;
+  }
+  .p2 {
+    top: 0;
+    right: 0;
+    background-color: blue;
+  }
+  .p3 {
+    bottom: 0;
+    left: 0;
+    background-color: pink;
+  }
+  .p4 {
+    bottom: 0;
+    right: 0;
+    background-color: purple;
+  }
+  .p5 {
+    top: 25%;
+    left: 25%;
+    background-color: orange;
+  }
+
+  .box:hover {
+    z-index: 1;
+  }
+</style>
+
+<div class="container">
+  <div class="box p1"></div>
+  <div class="box p2"></div>
+  <div class="box p3"></div>
+  <div class="box p4"></div>
+  <div class="box p5"></div>
+</div>

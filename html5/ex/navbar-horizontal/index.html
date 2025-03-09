@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Persistir el estilo de un menú desplegable con CSS</title>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Hacemos que el enlace padre de un submenú quede resaltado mientras navegamos por sus enlaces internos">
+    <meta name="robots" content="noindex, follow">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <ul class="menu-horizontal">
+        <li><a href="#" title="la pagina de inicio">home</a></li>
+        <li class="hasChildren"><a href="#" title="las fotos de mis viejes">fotos</a>
+            <ul>
+                <li><a href="#" title="la pagina de inicio">home</a></li>
+                <li><a href="#" title="las fotos de mis viejes">fotos</a>
+                </li>
+                <li><a href="#" title="los videos de mis viajes">videos</a></li>
+                <li><a href="#" title="ponte en contacto conmigo">contact</a></li>
+            </ul>
+        </li>
+        <li><a href="#" title="los videos de mis viajes">videos</a></li>
+        <li><a href="#" title="ponte en contacto conmigo">contact</a></li>
+    </ul>
+
+</body>
+
+</html>

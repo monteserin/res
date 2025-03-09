@@ -1,0 +1,421 @@
+/* BOTONERA COMUNES*/
+.fondoNegro {
+    background-color: black;
+    width: 100vw;
+    bottom: 0;
+    left: 0;
+    z-index: 9;
+    position: fixed;
+}
+
+.abajo {
+    bottom: 0;
+    height: 3vh;
+}
+
+.arriba {
+    top: 0;
+    height: 20vh;
+}
+
+.filaAsientos {
+    width: 100vw;
+    height: 8vh;
+    z-index: 180;
+    display: flex;
+    justify-content: center;
+    align-items: end;
+}
+
+#asientosNoInteractivosArriba {
+    bottom: 5vh;
+}
+
+#asientosNoInteractivosAbajo {
+    bottom: 0;
+}
+
+
+
+
+#asientoAudio {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/audio.png');
+    background-repeat: no-repeat;
+    background-position: bottom
+}
+
+#asientoAudio:hover {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/audioHover.png');
+}
+
+#a6 {
+    z-index: 180;
+    bottom: 20px
+}
+
+#a7 {
+    z-index: 180;
+    bottom: 20px
+}
+
+#asientosInteractivos {
+    bottom: 0px;
+    z-index: 200;
+    width: 85vw;
+    height: 3vh;
+}
+
+.asiento {
+    width: 10%;
+    height: 100%;
+    bottom: 0;
+    z-index: 200;
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/unAsiento.png');
+    background-size: 100% 100%;
+}
+
+.asientoDoble {
+    width: 10%;
+    height: 100%;
+    z-index: 180;
+    bottom: 4vh;
+    background-size: 100% 100%;
+}
+
+
+/* BOTONERA ES*/
+#asientoLinks {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoLinksDoble.png');
+}
+
+#asientoLinks:hover {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoLinksDobleHover.png')
+}
+
+#asientoMail {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoMailDoble.png')
+}
+
+#asientoMail:hover {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoMailDobleHover.png')
+}
+
+#asientoVisitas {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoVisitasDoble.png');
+}
+
+#asientoVisitas:hover {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoVisitasDobleHover.png')
+}
+
+#asientoIndependence {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoIndependenceDoble.png');
+}
+
+#asientoIndependence:hover {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoIndependenceDobleHover.png')
+}
+
+#asientoHome {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoHome.png');
+}
+
+#asientoHome:hover {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoHomeHover.png');
+}
+
+#asientoCurriculum {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoCurriculum.png');
+}
+
+#asientoCurriculum:hover {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoCurriculumHover.png');
+}
+
+#asientoFotos {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoFotos.png');
+}
+
+#asientoFotos:hover {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoFotosHover.png');
+}
+
+#asientoOrigami {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoOrigami.png');
+}
+
+#asientoOrigami:hover {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoOrigamiHover.png');
+}
+
+#asientoGloboflexia {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoGloboflexia.png');
+}
+
+#asientoGloboflexia:hover {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoGloboflexiaHover.png');
+}
+
+#asientoTextos {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoTextos.png');
+}
+
+#asientoTextos:hover {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoTextosHover.png');
+}
+
+#asientocurso {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientocurso.png');
+}
+
+#asientocurso:hover {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientocursoHover.png');
+}
+
+#asientoVideos {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoVideos.png');
+}
+
+#asientoVideos:hover {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoVideosHover.png');
+}
+
+/* BOTONERA JP*/
+/* 
+#asientoLinks {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoLinksDobleJP.png');
+}
+
+#asientoLinks:hover {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoLinksDobleJPHover.png')
+}
+
+#asientoMail {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoMailDoble.png')
+}
+
+#asientoMail:hover {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoMailDobleHover.png')
+}
+
+#asientoVisitas {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoVisitasDobleJP.png');
+}
+
+#asientoVisitas:hover {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoVisitasDobleJPHover.png')
+}
+
+#asientoIndependence {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoIndependenceDobleJP.png');
+}
+
+#asientoIndependence:hover {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoIndependenceDobleJPHover.png')
+}
+
+#asientoHome {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoHomeJP.png');
+}
+
+#asientoHome:hover {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoHomeJPHover.png');
+}
+
+#asientoCurriculum {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoCurriculumJP.png');
+}
+
+#asientoCurriculum:hover {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoCurriculumJPHover.png');
+}
+
+#asientoFotos {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoFotosJP.png');
+}
+
+#asientoFotos:hover {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoFotosJPHover.png');
+}
+
+#asientoOrigami {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoOrigamiJP.png');
+}
+
+#asientoOrigami:hover {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoOrigamiJPHover.png');
+}
+
+#asientoGloboflexia {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoGloboflexiaJP.png');
+}
+
+#asientoGloboflexia:hover {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoGloboflexiaJPHover.png');
+}
+
+#asientoTextos {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoTextosJP.png');
+}
+
+#asientoTextos:hover {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoTextosJPHover.png');
+}
+
+#asientocurso {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientocursoJP.png');
+}
+
+#asientocurso:hover {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/cursoJPHover.png');
+}
+
+#asientoVideos {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoVideosJP.png');
+}
+
+#asientoVideos:hover {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/asientos/asientoVideosJPHover.png');
+} */
+
+/*ESTILOS COMUNES*/
+
+.fixedHeight {
+    height: 150%;
+}
+
+table {
+    margin: auto;
+    border-style: none;
+    color: white;
+    font-family: Trebuchet;
+}
+
+#globoflexia {
+    margin-left: 40px;
+    border-style: none;
+}
+
+th,
+tr {
+    border-style: none;
+    font-weight: normal;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+a {
+    color: #FF6C6C;
+}
+
+a#enlace:hover {
+    background-color: yellow;
+}
+
+.logoMonty {
+    top: 8px;
+    right: 10px;
+    position: absolute;
+}
+
+#contenido {
+    color: white;
+    width: 85vw;
+    margin: auto;
+    font-family: Trebuchet;
+    padding-left: 10vw;
+    padding-right: 4vw;
+    padding-bottom: 10vh;
+    padding-top: 30vh;
+    background-color: #665647;
+    min-height: 70vh;
+    box-sizing: border-box;
+}
+
+.letraCapital {
+    font-size: 2em
+}
+
+.negrita {
+    font-weight: bold;
+}
+
+.cv td {
+    border: solid white
+}
+
+/*FIXED*/
+
+.titulo {
+    text-align: center;
+    width: 100%;
+    height: 85px;
+    background: black no-repeat center top;
+    left: 0;
+    top: 0px;
+}
+
+#palmaIzq {
+    width: 50vw;
+    height: 24vh;
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/mano/palmaIzq3.gif');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    top: 8vh;
+    left: 15vw;
+}
+
+#palmaDch {
+    width: 50vw;
+    height: 24vh;
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/mano/palmaDch3.gif');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    top: 8vh;
+    right: 10vw;
+}
+
+#brazoIzqArriba {
+    width: 15vw;
+    height: 90vh;
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/telon/telonIzq.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    left: 0;
+    top: 9vh;
+}
+
+
+#telonDchArriba {
+    width: 10vw;
+    height: 90vh;
+    right: 0;
+    top: 10vh;
+    background-image: url('https://pablomonteserin.com/res/html5/ex/super-teatro/img/telon/telonDch.png');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+.fixed {
+    position: fixed;
+    z-index: 100
+}
+
+#contenido2 {
+    top: 10px;
+    left: 170px;
+    width: 130px;
+}
+
+.btnLanguage {
+    width: 44px;
+    height: 42px;
+    top: 0px;
+    float: left
+}

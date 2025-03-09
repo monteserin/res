@@ -1,0 +1,10 @@
+div.with-transition-2 {
+    background-color: pink;
+    width: 300px;
+    height: 300px;
+    transition: 3s;
+}
+
+div.with-transition-2:hover {
+    background-color: black
+}

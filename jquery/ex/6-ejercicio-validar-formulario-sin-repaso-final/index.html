@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Validar formulario con jQuery sin repaso final</title>
+    <meta name="description"
+        content="Penultimo paso en la validación de un formulario html utilizando jQuery, pero sin utilizar un plugin">
+    <meta name="robots" content="noindex, follow">
+    <style>
+        span {
+            color: red
+        }
+    </style>
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery/ex/jquery.js"></script>
+    <script src="javascript.js"></script>
+
+
+</head>
+
+<body>
+
+    <h1>Validación de un formulario utilizando Jabascript nativo</h1>
+    <form name="formulario" id="pp">
+        <div name="rqr"></div>
+        <table>
+            <tr name="uuu">
+                <td name="psst">Nombre:</td>
+                <td id="pp">
+                    <input id="nombre" class="required" type="text" />
+                    <span></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Edad:</td>
+                <td>
+                    <input type="text" class="numero" />
+                    <span></span>
+                </td>
+            </tr>
+            <tr>
+                <td>CP:</td>
+                <td>
+                    <input type="text" maxlength="5" class="cincoNumeros" />
+                    <span></span>
+                </td>
+            </tr>
+            <tr>
+                <td>Fecha Nacimiento:</td>
+                <td>
+                    <input type="text" class="fecha" />
+                    <span></span>
+                </td>
+            </tr>
+            <tr>
+                <td>mail:</td>
+                <td>
+                    <input type="text" class="mail" />
+                    <span></span>
+                </td>
+            </tr>
+        </table>
+    </form>
+
+</body>
+
+</html>

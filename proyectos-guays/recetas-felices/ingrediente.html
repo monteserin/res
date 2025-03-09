@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>El Elixir del buen humor | Ingredientes</title>
+		<meta name="description" content="Esta aplicación calcula a partir de tu alimentación cuantos puntos de felicidad estás ingiriendo">
+
+	<meta charset="utf-8">
+	<meta name="robots" content="noindex">
+
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="css/ingrediente.css">
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+	<script src="JS/jquery-1.11.1.min.js"></script>
+	<script src="JS/jquery.cycle2.carousel.min.js"></script>
+	<script src="JS/jquery.cycle2.min.js"></script>
+	<script src="JS/ingrediente.js"></script>
+
+	<script>$.fn.cycle.defaults.autoSelector = '.galeria';</script>
+
+</head>
+<body>
+	<div id="wrapper">
+		<div class="navegacion">
+			<nav class="botonera">
+				<a href="index.html" class="icon-button home"><i class="icon-home"></i><span></span><p>Inicio</p></a>
+				<a href="ingrediente.html" class="icon-button food"><i class="icon-food"></i><span></span><p>Ingredientes</p></a>
+				<a href="recetas.html" class="icon-button book"><i class="icon-book"></i><span></span><p>Recetas</p></a>
+				<a href="#" class="icon-button comment"><i class="icon-comment"></i><span></span><p>Contacto</p></a>
+			</nav>
+		</div>
+		<header>
+			<h1><span>ELIGE LOS INGREDIENTES QUE TENDRÁ TU ELIXIR</span></h1><br>
+			<span>PODRÁS PREPARAR UN MENÚ EXCLUSIVO CON LOS INGREDIENTES ELEGIDOS</span>
+		</header>
+		<div class="superior">
+
+<!-- Primera proveta -->
+
+		<div class="proveta">
+
+			<div class="imatges">
+
+				<div class="inlineb prevnext">
+					<a href="#" id="prev1"><i class="icon-chevron-sign-left icon-2x"></i></a>
+				</div>
+
+				<div class="galeria inlineb"
+				data-cycle-fx=carousel
+				data-cycle-timeout=0 
+				data-cycle-carousel-visible=1
+				data-cycle-next="#next1"
+				data-cycle-prev="#prev1"
+				>
+					<img value="0" src="img/algas2.png" alt="algas">
+					<img value="1" src="img/salmon.png" alt="salmon">
+				</div>
+
+				<div class="inlineb prevnext">
+					<a href="#" id="next1"><i id="next1" class="icon-chevron-sign-right icon-2x"></i></a>
+				</div>
+	
+				<div id="escollir">
+					<a href="#" id="primer" nombreClass="tubo1" chuleta="chuleta1" class="afegir"><i class="icon-download-alt"></i> Añadir</a>
+				</div>
+			</div>
+
+			<div class="info">
+				<span id="chuleta1">Esencia de:</span>
+			</div>
+
+			<br>
+			<div class="tubo1"></div>
+			<h2>Primer Plat</h2>
+
+		</div>
+
+
+<!-- Segunda proveta -->
+
+		<div class="proveta">
+			<div class="imatges">
+
+				<div class="inlineb prevnext">
+					<a href="#" id="prev2"><i class="icon-chevron-sign-left icon-2x"></i></a>
+				</div>
+
+				<div class="galeria inlineb"
+				data-cycle-fx=carousel
+				data-cycle-timeout=0 
+				data-cycle-carousel-visible=1
+				data-cycle-next="#next2"
+				data-cycle-prev="#prev2"
+				>
+					<img value="0" src="img/cereales.png" alt="cereales">
+					<img value="1" src="img/salmon.png" alt="salmon">
+				</div>
+
+				<div class="inlineb prevnext">
+					<a href="#" id="next2"><i id="next1" class="icon-chevron-sign-right icon-2x"></i></a>
+				</div>
+				<div id="escollir">
+					<a href="#" id="segon" nombreClass="tubo2" chuleta="chuleta2" class="afegir" ><i class="icon-download-alt"></i> Añadir</a>
+				</div>
+			</div>
+			<div class="info">
+				<span id="chuleta2">Esencia de:</span>
+			</div>
+			<br>
+			<div class="tubo2"></div>
+			<h2>Segon Plat</h2>
+		</div>
+
+
+<!-- Tercera proveta -->
+
+		<div class="proveta">
+			<div class="imatges">
+
+				<div class="inlineb prevnext">
+					<a href="#" id="prev3"><i class="icon-chevron-sign-left icon-2x"></i></a>
+				</div>
+
+				<div class="galeria inlineb"
+				data-cycle-fx=carousel
+				data-cycle-timeout=0 
+				data-cycle-carousel-visible=1
+				data-cycle-next="#next3"
+				data-cycle-prev="#prev3"
+				>
+					<img value="0" src="img/gelat.png" alt="helado">
+					<img value="1" src="img/cereales.png" alt="cereales">
+					<img value="2" src="img/fruta.png" alt="fruta">
+				</div>
+
+				<div class="inlineb prevnext">
+					<a href="#" id="next3"><i id="next1" class="icon-chevron-sign-right icon-2x"></i></a>
+				</div>
+				<div id="escollir">
+					<a href="#" id="postre" nombreClass="tubo3" chuleta="chuleta3" class="afegir" ><i class="icon-download-alt"></i> Añadir</a>
+				</div>
+			</div>
+			<div class="info">
+				<span id="chuleta3">Esencia de:</span>
+			</div>
+			<br>
+			<div class="tubo3"></div>
+			<h2>Postre</h2>
+		</div>
+
+		</div>
+
+	<div class="total"><span class="btn" id="preparar">PREPARAR MENÚ</span></div>
+
+		<footer><br>
+			<p>tamara.huete.ilustracion@gmail.com</p>
+		</footer>
+
+	</div>
+
+
+</body>
+</html>

@@ -1,0 +1,10 @@
+.background-size-2 div {
+  width: 500px;
+  height: 500px;
+  padding: 200px;
+  background: url(https://pablomonteserin.com/res/html5/ex/img/mundo.svg);
+  background-size: 100% 100%;
+  /*Otra forma de escribirlo:
+    background: url(/apuntes/assets/mundo.svg) 0 0 / 100% 100%;
+    */
+}

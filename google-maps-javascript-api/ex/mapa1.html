@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Mapas con HTML5 | Pablo Monteserín</title>
+		<meta name="description" content="Ejemplo de integración de un mapa de Google Maps en una página web utilizando Javascript">
+
+	<!-- API 
+	http://code.google.com/apis/maps/documentation/javascript/tutorial.html
+-->
+<script src="https://maps.googleapis.com/maps/api/js?libraries=places&key= AIzaSyB1AJkz_m11zzXq4tj0s1tW0viLU6Ck-s4"></script>
+
+<script>
+
+	function init(){
+		var latlng = new google.maps.LatLng(43.5293101753168, -5.6773233792);
+		var myOptions = {
+			center:latlng,
+			zoom: 18,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		var map = new google.maps.Map(document.getElementById("mapa"), myOptions);
+	}
+	window.onload = init;
+
+</script>
+
+
+</head>
+<body>
+	<h1>Carga de un mapa de Google Maps</h1>
+	<div id="mapa" style="width:600px; height: 600px; background:red"></div>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+{
+	"info": {
+		"_postman_id": "78ddea17-ef1d-4ac7-81c7-efe9262d184e",
+		"name": "springbootJWT",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "528554",
+		"_collection_link": "https://cloudy-rocket-398797.postman.co/workspace/Team-Workspace~a3cb1724-fcf0-494a-8992-7b4af40f8d6c/collection/528554-78ddea17-ef1d-4ac7-81c7-efe9262d184e?action=share&source=collection_link&creator=528554"
+	},
+	"item": [
+		{
+			"name": "generarToken",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"username\": \"pmonteserin\",\r\n    \"password\": \"pmonteserin\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/authenticate",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"authenticate"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "usarToken",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJwbW9udGVzZXJpbiIsImV4cCI6MTY5MzQ5NTA5MiwiaWF0IjoxNjkzNDc3MDkyfQ.tvDu8XfYc3m1eG1aObHu0WRtSvcKLJHuNzY0wVGU_TbnWd_31gRbA3HUmnxpkrJ7D6CBWT5u2xcQ5M7hwqyJig",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/equipos",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"equipos"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

@@ -1,0 +1,19 @@
+div#box {
+  width: 104px;
+  height: 150px;
+  animation: gbwalk 1s steps(6) infinite;
+  background: url(https://pablomonteserin.com/res/html5/ex/animations/keyframes/animation-step/monkey-guybrush.png);
+}
+
+div#box:hover {
+  animation-name: move;
+}
+
+@keyframes gbwalk {
+  0% {
+    background-position: 0;
+  }
+  100% {
+    background-position: -624px;
+  }
+}

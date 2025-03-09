@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<ul>
+		<li th:each="hilo : ${hilos}">
+			<h2><a th:text="${hilo.titulo}" th:href="|/consulta-hilo/${hilo.id}|"></a> </h2>
+			<p th:text="${hilo.txt}"></p>
+		</li>
+	</ul>
+</body>
+
+</html>

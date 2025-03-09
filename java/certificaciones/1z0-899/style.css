@@ -1,0 +1,58 @@
+		.mostrarCorrecta{
+			background: paleGreen;
+		}
+		.mostrar{
+			display: block !important;
+		}
+		.ex{
+			display: none;
+			color: green;
+			background: #D0D0D0;
+			padding: 10px;
+		}
+
+		article{
+			border: 1px dotted black;
+			padding: 20px;
+			margin: 10px;
+			border-radius: 40px
+		}
+		.question{
+			width: 100%;
+			height: auto
+		}
+		pre{
+			overflow: auto
+		}
+.bold{
+	font-weight: bold;
+}
+.red{
+	color:red;
+}
+.purple{
+	color: purple
+}
+.blue{
+	color: blue
+}
+.orange{
+	color: orange
+}
+.pink{
+	color:pink;
+}
+.cyan{
+	color: cyan
+}
+.soluciones{
+	font-size: 0.8em
+}
+.parpadeoAzul{
+	color: white;
+animation: blink 1s step-end infinite
+}
+@keyframes blink {
+	0% {background-color: blue}
+	50% {background-color: black}
+}

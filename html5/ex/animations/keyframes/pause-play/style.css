@@ -1,0 +1,20 @@
+div.pause-play {
+    background: red;
+    width: 400px;
+    height: 400px;
+    animation: changeBackground 0.3s ease-in 1s infinite alternate;
+    animation-play-state: paused;
+}
+
+div.pause-play:hover {
+    animation-play-state: running;
+}
+
+@keyframes changeBackground {
+    0% {
+        background: red
+    }
+    100% {
+        background: black
+    }
+}

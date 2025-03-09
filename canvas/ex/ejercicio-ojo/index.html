@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Canvas - Ejercicio Ojo | Pablo Monteserín</title>
+<meta name="description" content="Ejercicio de Javascript en el que manipulamos el canvas para variar dinámicamente la posición y el tamaño de una circunferencia">
+
+</head>
+<body>
+<h1>Ejemplo sencillo de uso de Javascript para manipular la etiqueta canvas</h1>
+	<div id="imagen" style="float:left; width:1024px; height:768px">
+	<div style="background:url(images/monstruo.png); width:1024px; height:768px;position:absolute; z-index: 10"></div>
+	<div style="background:url(images/cornea.png);margin-left:470px; margin-top:130px;width:182px; height:192px; position:absolute; z-index: 3"></div>
+	<canvas id="canvas" width="400px" height="400px" style="position:absolute;z-index:6;  margin-left:350px; border: solid black 2px"></canvas>
+	<script type="text/javascript">
+		var c = document.getElementById("canvas");
+		var ctx = c.getContext("2d");
+
+		function init() {
+			cambia();
+		}
+
+		function cambia() {
+			blank();
+			var tamano = document.getElementById("cursorTamano").value;
+			var altura = document.getElementById("cursorAltura").value;
+			ctx.beginPath();
+
+			ctx.arc(210, altura, tamano, 0, Math.PI * 2, true);
+
+			ctx.fill();
+			ctx.closePath();
+
+			//ctx.drawImage(imageObj, 210-(nuevoAncho/1.7), altura-(nuevoAncho/0.9), nuevoAncho, 380*tamano);
+		}
+
+		function blank() {
+			ctx.clearRect(0, 0, ctx.canvas.width, ctx.canvas.height);
+		}
+
+
+		window.onload = init;
+
+	</script>
+</div>
+<input id="cursorAltura" type="range" min="-80" max="400" value="220" style="float:left" onchange="cambia()">
+<input id="cursorTamano" type="range" min="10" max="50" step="1" value="1" style="float:left" onchange="cambia()">
+
+</body>
+</html>

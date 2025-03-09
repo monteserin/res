@@ -1,0 +1,4 @@
+h1 {
+    /*text-shadow: desplazamiento x, desplazamiento y, blur, color*/
+    text-shadow: 20px 5px 5px red
+}

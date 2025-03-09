@@ -1,0 +1,61 @@
+<style>
+  .status {
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: red;
+  }
+</style>
+
+<div class="status"></div>
+<button onClick="connect()">Connect</button>
+<button onClick="sendName()">Send</button>
+
+<div id="conversation"></div>
+<script src="https://cdn.jsdelivr.net/npm/@stomp/stompjs@7.0.0/bundles/stomp.umd.min.js"></script>
+
+<script>
+  const stompClient = new StompJs.Client({
+    brokerURL: "ws://localhost:8080/gs-guide-websocket",
+  });
+
+  stompClient.onConnect = (frame) => {
+    console.log("Connected: " + frame);
+    stompClient.subscribe("/topic/greetings", (greeting) => {
+		console.log(greeting.body)
+		document.querySelector('#conversation').innerHTML+='<p>'+JSON.parse(greeting.body).content+'</p>';
+    });
+  };
+
+  stompClient.onWebSocketError = (error) => {
+    console.error("Error with websocket", error);
+  };
+
+  stompClient.onStompError = (frame) => {
+    console.error("Broker reported error: " + frame.headers["message"]);
+    console.error("Additional details: " + frame.body);
+  };
+
+  const status = document.querySelector(".status");
+
+  function connect() {
+    stompClient.activate();
+    status.style.backgroundColor = "green";
+  }
+
+  function disconnect() {
+    stompClient.deactivate();
+    status.style.backgroundColor = "red";
+  }
+
+  function sendName() {
+    stompClient.publish({
+      destination: "/app/hello",
+      body: JSON.stringify({ name: "daniel" }),
+    });
+  }
+  
+  function showGreeting(message) {
+      $("#greetings").append("<tr><td>" + message + "</td></tr>");
+  }
+</script>

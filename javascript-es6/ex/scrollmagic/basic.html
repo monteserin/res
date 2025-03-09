@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/ScrollMagic.min.js"></script>
+    <script src="./js//debug.addIndicators.min.js"></script>
+    <script src="./js/TweenMax.min.js"></script>
+    <script src="./js/animation.gsap.min.js"></script>
+
+    <style>
+        #animate {
+            background-color: red;
+            width: 100px;
+            height: 100px;
+        }
+
+        .extender {
+            min-width: 500px;
+        }
+
+        .box {
+            height: 100vh;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box"></div>
+
+    <div id="animate" class="trigger"></div>
+
+    <div class="box"></div>
+
+    <script>
+        const controller = new ScrollMagic.Controller();
+        const tween = TweenMax.to("#animate", 1, { className: "+=extender" });
+
+        // Cuando el objeto .trigger pasa por el trigger marcador se detona la animación tween
+        const scene = new ScrollMagic.Scene({ triggerElement: ".trigger", duration: 200, offset: -50 })
+            .setTween(tween)
+            .addIndicators({ name: "marcador" })
+            .addTo(controller);
+    </script>
+</body>
+
+</html>

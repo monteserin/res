@@ -1,0 +1,32 @@
+@charset "utf-8";
+.contenedor {
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.parallax {
+  height: 600px;
+  background-repeat: no-repeat;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.parallax h1 {
+  line-height: 600px;
+  font-size: 60px;
+  font-family: Georgia, "Times New Roman", Times, serif;
+  text-align: center;
+}
+
+.imagen1 {
+  background-image: url(https://pablomonteserin.com/res/html5/ex/parallax/img/black.jpg);
+}
+
+.imagen2 {
+  background-image: url(https://pablomonteserin.com/res/html5/ex/parallax/img/kids.jpg);
+}
+
+.imagen3 {
+  background-image: url(https://pablomonteserin.com/res/html5/ex/parallax/img/madera.jpg);
+}

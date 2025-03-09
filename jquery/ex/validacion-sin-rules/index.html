@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>validación de formulario usando plugin jQuery</title>
+    <meta name="description"
+        content="Ejemplo de validación de un formulario con un plugin de jQuery que utiliza los class de los inputs para decidir el tipo de validación que se aplicará">
+    <meta name="robots" content="noindex, follow">
+    <link rel="stylesheet" href="style.css">
+
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery/ex/jquery.js"></script>
+    <script src="https://pablomonteserin.com/res/assets/js/jquery.validate.js"></script>
+
+
+    <script src="javascript.js"></script>
+
+</head>
+
+<body>
+    <h1>Ejemplo de uso de un plugin de jQuery para validar un formulario</h1>
+    <form id="myform" method="post" action="rqr.html">
+
+        <label for="idFieldNombre">Nombre: </label>
+        <input class="required" id="idFieldNombre" name="fieldNombre" /><br />
+
+        <label for="idFieldApellidos">Apellidos: </label>
+        <input class="required" id="idFieldApellidos" name="fieldApellidos" /><br />
+
+
+        <label for="idFieldEdad">Edad: </label>
+        <input class="required number" id="idFieldEdad" name="fieldEdad" /><br />
+
+
+        <label for="idFieldDireccion">Dirección: </label>
+        <input class="required" id="idFieldDireccion" name="fieldDireccion" /><br />
+
+        <label for="idFieldCP">Código postal: </label>
+        <input class="required number" minlength="5" maxlength="5" id="idFieldCP" name="fieldCP" /><br />
+
+
+        <label for="idFieldCorreo">Correo electrónico: </label>
+        <input class="required email" id="idFieldCorreo" name="fieldCorreo" /><br />
+
+        <label for="idFieldPagina">Página web </label>
+        <input class="required url" id="idFieldPagina" name="fieldPagina" /><br>
+
+
+        <label for="idPassword">Password</label>
+        <input type="password" class="required" id="idPassword" name="fieldPassword" /><br>
+
+
+        <label for="idPassword2">Repite el password</label>
+        <input type="password" class="required" equalTo="#idPassword" id="idPassword2" name="fieldPasswordb" /><br>
+
+
+        <input type="submit" class="left" id="field" name="field" value="send" />
+
+    </form>
+
+</body>
+
+</html>

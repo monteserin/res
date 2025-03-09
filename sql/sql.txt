@@ -1,0 +1,48 @@
+
+create table ciudadano
+(
+DNI char(9),
+password varchar(50),
+nombre varchar(150),
+primary key (DNI)
+);
+
+create table parking
+(
+id integer,
+adresa varchar(250),
+maxBicis integer,
+primary key (id)
+);
+	
+create table bicicleta
+(
+id integer,
+kilometros integer, 
+DNIciudadano char(9),
+idParking integer,
+primary key (id),
+foreign key (DNIciudadano) references ciudadano(DNI),
+foreign key (idParking) references parking(id)
+);
+
+insert into parking values (1,"C/Angel Guimera 16", 10);
+insert into parking values (2,"Av/ Catalunya 5", 10);
+insert into parking values (3,"C/Verge de Nuria, 38", 6);
+insert into parking values (4,"C/Collformig 290", 15);
+
+insert into ciudadano values ('52111111A','joshua','Marta Costa Boix');
+insert into ciudadano values ('52222222B','rosebud','Pere Jonquera Boix');
+insert into ciudadano values ('52333333C','dadada','Marcos Sucre Montaña');
+insert into ciudadano values ('52444444D','0451','Laura Sentís Aguilar');
+
+insert into bicicleta values (1,128,null,1);
+insert into bicicleta values (2,256,null,1);
+insert into bicicleta values (3,64,null,1);
+insert into bicicleta values (4,1024,null,1);
+insert into bicicleta values (5,128,null,2);
+insert into bicicleta values (6,256,null,2);
+insert into bicicleta values (7,64,null,2);
+insert into bicicleta values (8,512,null,2);
+insert into bicicleta values (9,1024,null,2);
+insert into bicicleta values (10,64,null,4);

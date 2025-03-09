@@ -1,0 +1,17 @@
+<script>
+    function letraDni(numero) {
+        var letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+        var letra = "";
+        if (!isNaN(letra)) {
+            if (numero >= 0 && numero <= 99999999) {
+                indice = numero % 23;
+            }
+        }
+        letra = letras.charAt(indice);
+        return letra;
+    }
+
+    const v = prompt('Introduzca una letra del DNI');
+    const letraDNI = letraDni(v);
+    console.log(letraDNI);
+</script>

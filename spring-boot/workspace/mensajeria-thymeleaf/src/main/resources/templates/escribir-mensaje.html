@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<form action="/create-mensajes">
+
+
+		<textarea name="txt"></textarea>
+
+		<ul>
+			<li th:each="usuario : ${usuarios}">
+				<input  type="checkbox" name="mensajesIds[]" th:value="${usuario.id}">
+				<span th:text="${usuario.nombre}"></span>
+			</li>
+		</ul>
+
+		<input type="submit" value="enviar" />
+	</form>
+</body>
+</html>

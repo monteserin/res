@@ -1,0 +1,6 @@
+.background-size div {
+  width: 500px;
+  height: 500px;
+  background: url(https://pablomonteserin.com/res/html5/ex/img/mundo.svg),
+    url(https://pablomonteserin.com/res/html5/ex/img/tijeras.svg);
+}

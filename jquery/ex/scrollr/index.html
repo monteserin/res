@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="robots" content="noindex">
+    <meta name="robots" content="noindex, follow">
+    <title>Efecto parallax con skrollr | Pablo Monteserín</title>
+    <meta name="description"
+        content="Ejemplo con pocas líneas de código y por tanto fácilmente entendible de como utilizar esta librería jQuery para hacer efectos parallax">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #info {
+            padding: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 20%;
+            z-index: 101;
+        }
+
+        #tope {
+            background: lime;
+            height: 20px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 100;
+        }
+
+        #capa1,
+        #capa2 {
+            height: 1600px;
+            margin: auto;
+            position: relative;
+            width: 100%;
+        }
+
+        #capa1 {
+            background: rgb(255, 215, 0);
+        }
+
+        #capa2 {
+            background: rgb(255, 215, 0);
+        }
+    </style>
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery/ex/jquery.js"></script>
+    <script type="text/javascript" src="skrollr.js"></script>
+</head>
+
+<body>
+    <div id="info">
+        <h1>INFO</h1>
+        <h2>page Y</h2>
+    </div>
+    <div id="tope" data-start="width:0%;" data-end="width:100%"></div>
+    <div id="capa1" data-top="background: rgb(255, 0,0 ); width:5%" data-bottom="background: rgb(0,255,0); width:100%">
+    </div>
+
+
+    <div id="capa2">
+
+        <div style="background:red; width:200px; height:200px" data-bottom-top="transform:rotate(100deg)"
+            data-top="transform:rotate(900deg)">asdfasd
+        </div>
+
+    </div>
+
+
+</body>
+<script>
+    skrollr.init({
+        forceHeight: false
+    });
+    $(window).scroll(function () {
+        var coordenadaY = window.pageYOffset;
+        $('h1').text(coordenadaY);
+    });
+</script>
+
+</html>

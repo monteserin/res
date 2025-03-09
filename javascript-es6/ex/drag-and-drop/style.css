@@ -1,0 +1,41 @@
+
+body {
+    background-color: #F6C5AB;
+}
+
+h2 {
+    text-transform: uppercase;
+    color: #5B1DA7;
+    text-decoration: underline;
+    font-family: verdana;
+}
+
+#big_wrapper_1, #big_wrapper_2 {
+    width: 920px;
+    min-height: 350px;
+    margin: auto;
+    margin-bottom: 25px;
+}
+
+.wrapper {
+    width: 450px;
+    height: 350px;
+    display: inline-block;
+    border: 2px solid purple;
+    background-color: white;
+    vertical-align: top;
+}
+
+.instrucciones {
+    text-align: center;
+    font-size: 1.5em;
+    margin-top: 30%;
+}
+
+#by {
+    float: right;
+    font-size: 1em;
+    color: #D5612D;
+    font-family: verdana;
+}
+		

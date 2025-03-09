@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Añadir un Marker HTML5 con imagen</title>
+        <meta name="description" content="Ejemplo de como añadir un marker personalizado definiendo sus vértices a un un mapa de Google Maps utilizando Javascript">
+
+
+<!-- API
+	http://code.google.com/apis/maps/documentation/javascript/tutorial.html
+-->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRzpL0lfAREobXgI1yxvk8uKHkVXz8Mf4">
+</script>
+
+<script>
+	window.onload = init;
+
+	function init(){
+		var myOptions = {
+			center: new google.maps.LatLng(43.5293101753168, -5.6773233792),
+			zoom: 18,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		map = new google.maps.Map(document.getElementById("mapa"), myOptions);
+		addMarker(43.5293101753168, -5.6773233792);
+	}
+
+	var goldStar = {
+		path: 'M 125,5 155,90 245,90 175,145 200,230 125,180 50,230 75,145 5,90 95,90 z',
+		fillColor: "yellow",
+		fillOpacity: 0.8,
+		scale: 0.2,
+		strokeColor: "gold",
+		strokeWeight: 14
+	};
+
+
+
+	function addMarker(lat, lng){
+		var mapMarker = new google.maps.Marker({
+			position:new google.maps.LatLng(lat, lng),
+			title: "Estás aquí.",
+			icon:goldStar
+		});
+		mapMarker.setMap(map);
+	}
+
+</script>
+
+</head>
+<body>
+<h1>Mapa de google Maps con markers personalizados</h1>
+	<div id="mapa" style="width:100%; height:500px; background: red"></div>
+	
+</body>
+</html>
+
+

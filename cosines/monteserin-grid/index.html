@@ -1,0 +1,121 @@
+<link rel="stylesheet" type="text/css" href="css/monteserinGrid.css">
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript">
+	var dataNameArray=[];
+	var selectedRowValuesArray = [];
+
+	$(function(){
+		loadTable();
+		$("div.innerTable table td input").click(function(){
+			//alert("pulsado");			
+		});
+		$("a.monteserinAddButton").click(function(){
+			showModalWindow("add");
+		});
+		$("a.monteserinUpdateButton").click(function(){
+			showModalWindow("update");
+		});
+		$("div.innerTable table.monteserinGridTable tr").click(function(){
+			$this=$(this);
+			var $rows = $this.closest("table").find("tr");
+			$rows.css("background", "white");
+			$this.css("background", "#2e6e9e")
+			$inputs=$this.find("td");
+			selectedRowValuesArray = [];
+			$.each($inputs, function() {
+				selectedRowValuesArray.push($(this).html());
+			});	
+		});
+	});
+	function showModalWindow(action){
+		var valuesArray=[];
+		var buttonTxt="";
+		if(action=="add")buttonTxt="Añadir";
+		else{
+			buttonTxt="Actualizar";
+		} 
+		var win = '<div class="monteserinGridModalWrapper" style="text-align:center;position:absolute;width:100%; top:70px"><div id="addUpdateDiv" style="background:#dfeffc;border: 1px solid #2e6e9e; border-radius:15px; display:inline-block;margin:auto;padding:5px 15px 20px 15px">';
+		win+='<a href="#" style="float:right; display:block;" class="ui-icon ui-icon-close monteserinGridCloseModal"></a>'
+		for(var i in dataNameArray){
+			win+='<p><label style="text-align:left;float:left; width:120px; padding:5px">'+dataNameArray[i]+'</label>';
+			if(action=="update"){
+				win+='<input type="text" class="addUpdateField" name="'+dataNameArray[i]+'" value="'+selectedRowValuesArray[i]+'"/></p><br/>';
+			}else{
+				win+='<input type="text" class="addUpdateField" name="'+dataNameArray[i]+'"/></p><br/>';
+			}
+		}
+		win+='<input type="button" class="addUpdateButton" style="float:right; margin-top:20px" value="'+buttonTxt+'">';
+		win+='</div></div>';
+		$("#monteserinModal").html(win);
+		$("a.monteserinGridCloseModal").unbind('click').click(function(){
+			$("div.monteserinGridModalWrapper").remove();
+		});
+		$(".addUpdateButton").unbind('click').click(function(){
+			var $values = $("div#addUpdateDiv input.addUpdateField");
+			$values.each(function() {
+				valuesArray.push($(this).val());
+			});
+			if(action=="add"){
+				alert(valuesArray.length);
+				$.post("controladorAdd",valuesArray, function(){
+
+				});
+			}else{
+				$.post("controladorUpdate",valuesArray, function(){
+
+				});
+			}
+		});
+	}
+	function loadTable(){
+		var table='<div class="monteserinGrid"><table class="monteserinGridHeader"><tr><th>id</th><th>Nombre</th><th>age</th><th class="lastCell"></th></tr></table>';
+		table+='<div class="innerTable"><table class="monteserinGridTable">';
+		table+=loadData();
+		table+='</table></div>';
+		table+='<div class="footer" >'+
+		'<div style="position:absolute;"><table><tr><td><a href="#" class="monteserinAddButton"><div class="ui-pg-div"><span class="ui-icon ui-icon-plus"></span></div></a></td><td><a href="#" class="monteserinUpdateButton"><span class="ui-icon ui-icon-pencil"></span></a></td></tr></table></div>'+
+		'<span class="pad ui-icon ui-icon-seek-first"></span>'+
+		'<span class="pad ui-icon ui-icon-seek-prev"></span>'+
+		'<span class="pad ui-separator"></span>'+
+		'<span class="pad left5" >Page </span>'+
+		'<input class="pad left5 ui-pg-input" size="2" maxlength="7" value="0" role="textbox" type="text">'+
+		' <span class="pad left5" >of</span>'+
+		' <span id="sp_1_pager" class="pad left5">84</span>'+
+		'<span class="pad ui-separator"></span>'+
+		'<span class="pad ui-icon ui-icon-seek-next"></span>'+
+		'<span class="pad ui-icon ui-icon-seek-end"></span>'+
+		'<select class="pad ui-pg-selbox" role="listbox"><option role="option" value="10" selected="selected">10</option><option role="option" value="20">20</option><option role="option" value="30">30</option></select>'+
+		'</div>';
+		$("#tabla").html(table);
+	}
+	function loadData(){
+		data = [{"id":"856","name":"India","age":"32"},
+		{"id":"1035","name":"Chennai","age":"32"},
+		{"id":"1048","name":"Delhi","age":"32"},
+		{"id":"1113","name":"Lucknow","age":"32"},
+		{"id":"1114","name":"Bangalore","age":"32"},
+		{"id":"1115","name":"Ahmedabad","age":"32"},
+		{"id":"1116","name":"Cochin","age":"32"},
+		{"id":"1117","name":"London","age":"32"},
+		{"id":"1118","name":"New York","age":"32"},
+		{"id":"1119","name":"California","age":"32"}];
+		var tbl="";
+		var i=0;
+		$.each(data, function(i, obj) {
+			tbl+='<tr>';
+			for (var key in obj) {
+				if (obj.hasOwnProperty(key)) {
+					tbl+='<td>'+obj[key]+'</td>'
+					if(i==0)dataNameArray.push(key);
+				}
+			}
+			i=1;
+
+			tbl+='</tr>';
+		});
+		return tbl;
+	}
+	</script>
+
+	<div id="tabla"></div>
+	<div id="monteserinModal"></div>

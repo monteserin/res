@@ -1,0 +1,203 @@
+<style>
+    .bet,
+    .betcolor {
+        display: flex;
+    }
+
+    [data-role=chip],
+    .betcolor div {
+        width: 100px;
+        height: 100px;
+        border: 2px solid black;
+        border-radius: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-size: 1.8rem;
+    }
+
+    [data-bet-spot-id="red"] {
+        background-color: red;
+    }
+
+    [data-bet-spot-id="black"] {
+        background-color: black;
+    }
+
+    .big {
+        font-size: 1.6rem;
+    }
+</style>
+
+
+
+
+<div class="bet">
+
+    <div data-role="chip" data-value="0.5">
+        0.5
+    </div>
+
+    <div data-role="chip" data-value="1">
+        1
+    </div>
+    <div data-role="chip" data-value="5">
+        5
+    </div>
+
+    <div data-role="chip" data-value="25">
+        25
+    </div>
+    <div data-role="chip" data-value="100">
+        100
+    </div>
+    <div data-role="chip" data-value="500">
+        500
+    </div>
+
+</div>
+
+<div class="betcolor">
+    <div data-bet-spot-id="red"></div>
+    <div data-bet-spot-id="black"></div>
+</div>
+
+<div class="big">
+    <span data-role="status-text"></span>: <span class="cantidadAApostarP"></span>, <span class="ultimaApuestaP"></span>
+</div>
+
+<p>Dinero acumulado <span class="balanceSimulacionP"></span></p>
+
+<p>Número máximo de veces seguidas que ha salido el... rojo: <span class="nRojoP"></span>, negro: <span
+        class="nNegroP"></span></p>
+<p>Cantidad a apostar max: <span class="cantidadAApostarMaxP"></span></p>
+<p>Cantidad máxima perdida debido a perder sucesivamente: <span
+        class="maximaCantidadPerdidaDebidoALasSucesivasApuestasP"></span></p>
+<p>Valores máximos del array de apuestas: <span class="baseArrayMax"></span></p>
+
+<hr>
+
+<p>Veces que hemos perdido 2 veces seguidas: <span class="vecesQueHemosPerdido2VecesSeguidasP"></span></p>
+<p>Veces que hemos perdido 3 veces seguidas: <span class="vecesQueHemosPerdido3VecesSeguidasP"></span></p>
+<p>Veces que hemos perdido 4 veces seguidas: <span class="vecesQueHemosPerdido4VecesSeguidasP"></span></p>
+<p>Veces que hemos perdido 5 veces seguidas: <span class="vecesQueHemosPerdido5VecesSeguidasP"></span></p>
+<p>Veces que hemos perdido 6 veces seguidas: <span class="vecesQueHemosPerdido6VecesSeguidasP"></span></p>
+<p>Veces que hemos perdido 7 veces seguidas: <span class="vecesQueHemosPerdido7VecesSeguidasP"></span></p>
+<p>Veces que hemos perdido 8 veces seguidas: <span class="vecesQueHemosPerdido8VecesSeguidasP"></span></p>
+<p>Veces que hemos perdido 9 veces seguidas: <span class="vecesQueHemosPerdido9VecesSeguidasP"></span></p>
+<p>Veces que hemos perdido 10 veces seguidas: <span class="vecesQueHemosPerdido10VecesSeguidasP"></span></p>
+<p>Veces que hemos perdido 11 veces seguidas: <span class="vecesQueHemosPerdido11VecesSeguidasP"></span></p>
+<p>Veces que hemos perdido 12 veces seguidas: <span class="vecesQueHemosPerdido12VecesSeguidasP"></span></p>
+<p>Veces que hemos perdido 13 veces seguidas: <span class="vecesQueHemosPerdido13VecesSeguidasP"></span></p>
+<p>Veces que hemos perdido 14 veces seguidas: <span class="vecesQueHemosPerdido14VecesSeguidasP"></span></p>
+<p>Veces que hemos perdido 15 veces seguidas: <span class="vecesQueHemosPerdido15VecesSeguidasP"></span></p>
+
+<script>
+    const balance_actual = document.querySelector("[data-role=balance-label__value]");
+    const btnParaApostar_red = document.querySelector('[data-bet-spot-id=red]');
+    const btnParaApostar_black = document.querySelector('[data-bet-spot-id=black]');
+
+    const btnParaApostar_col1 = document.querySelector('.dddStandard-wrapper :nth-of-type(43)');
+    const btnParaApostar_col2 = document.querySelector('.dddStandard-wrapper :nth-of-type(44)');
+    const btnParaApostar_col3 = document.querySelector('.dddStandard-wrapper :nth-of-type(45)');
+
+    const btnParaApostar_50Centimos = document.querySelector('[data-role="chip"][data-value="0.5"]');
+    const btnParaApostar_1Euro = document.querySelector('[data-role="chip"][data-value="1"]');
+    const btnParaApostar_5Euros = document.querySelector('[data-role="chip"][data-value="5"]');
+    const btnParaApostar_25Euros = document.querySelector('[data-role="chip"][data-value="25"]');
+    //console.log(btnParaApostar_25Euros);
+    const btnParaApostar_100Euros = document.querySelector('[data-role="chip"][data-value="100"]');
+    const btnParaApostar_500Euros = document.querySelector('[data-role="chip"][data-value="500"]');
+
+    const letrero = document.querySelector('[data-role=status-text]');
+
+    const dineroGanadoP = document.querySelector('.dineroGanadoP');
+    const cantidadAApostarP = document.querySelector('.cantidadAApostarP');
+    const ultimaApuestaP = document.querySelector('.ultimaApuestaP');
+    const balanceSimulacionP = document.querySelector('.balanceSimulacionP');
+    const nRojoP = document.querySelector('.nRojoP');
+    const nNegroP = document.querySelector('.nNegroP');
+    const tiradasPerdidasMaxP = document.querySelector('.tiradasPerdidasMaxP');
+    const cantidadAApostarMaxP = document.querySelector('.cantidadAApostarMaxP');
+    const maximaCantidadPerdidaDebidoALasSucesivasApuestasP = document.querySelector('.maximaCantidadPerdidaDebidoALasSucesivasApuestasP');
+    const baseArrayMax = document.querySelector('.baseArrayMax');
+
+    const vecesQueHemosPerdido2VecesSeguidasP = document.querySelector('.vecesQueHemosPerdido2VecesSeguidasP');
+    const vecesQueHemosPerdido3VecesSeguidasP = document.querySelector('.vecesQueHemosPerdido3VecesSeguidasP');
+    const vecesQueHemosPerdido4VecesSeguidasP = document.querySelector('.vecesQueHemosPerdido4VecesSeguidasP');
+    const vecesQueHemosPerdido5VecesSeguidasP = document.querySelector('.vecesQueHemosPerdido5VecesSeguidasP');
+    const vecesQueHemosPerdido6VecesSeguidasP = document.querySelector('.vecesQueHemosPerdido6VecesSeguidasP');
+    const vecesQueHemosPerdido7VecesSeguidasP = document.querySelector('.vecesQueHemosPerdido7VecesSeguidasP');
+    const vecesQueHemosPerdido8VecesSeguidasP = document.querySelector('.vecesQueHemosPerdido8VecesSeguidasP');
+    const vecesQueHemosPerdido9VecesSeguidasP = document.querySelector('.vecesQueHemosPerdido9VecesSeguidasP');
+    const vecesQueHemosPerdido10VecesSeguidasP = document.querySelector('.vecesQueHemosPerdido10VecesSeguidasP');
+    const vecesQueHemosPerdido11VecesSeguidasP = document.querySelector('.vecesQueHemosPerdido11VecesSeguidasP');
+    const vecesQueHemosPerdido12VecesSeguidasP = document.querySelector('.vecesQueHemosPerdido12VecesSeguidasP');
+    const vecesQueHemosPerdido13VecesSeguidasP = document.querySelector('.vecesQueHemosPerdido13VecesSeguidasP');
+    const vecesQueHemosPerdido14VecesSeguidasP = document.querySelector('.vecesQueHemosPerdido14VecesSeguidasP');
+    const vecesQueHemosPerdido15VecesSeguidasP = document.querySelector('.vecesQueHemosPerdido15VecesSeguidasP');
+    const vecesQueHemosPerdido16VecesSeguidasP = document.querySelector('.vecesQueHemosPerdido16VecesSeguidasP');
+
+    const intervaloLeerLoQueEstaPasando = 20;
+    const intervalorCambiarLoQueEstaPasando = 100;
+</script>
+
+
+<script src="./casino.js"></script>
+
+<script>
+    let step = 0;
+    let letreroTxt = "";
+    let redCounter = 0;
+    let blackCounter = 0;
+    let redRecord = 0;
+    let blackRecord = 0;
+    const changeLetrero = () => {
+        if (step === 0) {
+            ultimaApuestaP.textContent = "";
+            letreroTxt = "HAGA SUS APUESTAS";
+        } else if (step === 1) {
+            letreroTxt = 'NO HAY MÁS APUESTAS';
+        } else if (step === 2) {
+            const r = Math.random();
+            if (r < 0.48) {
+                letreroTxt = '33 ROJO';
+                redCounter++;
+                blackCounter = 0;
+                if (redRecord < redCounter) {
+                    redRecord = redCounter;
+                    nRojoP.textContent = redRecord;
+                }
+            } else if (r < 0.96) {
+                letreroTxt = '33 NEGRO';
+                blackCounter++;
+                redCounter = 0;
+                if (blackRecord < blackCounter) {
+                    blackRecord = blackCounter;
+                    nNegroP.textContent = blackRecord;
+                }
+            } else {
+                letreroTxt = '33 VERDE'
+            }
+        }
+        step++;
+        if (step === 3) step = 0;
+        letrero.textContent = letreroTxt;
+        setTimeout(changeLetrero, intervalorCambiarLoQueEstaPasando);
+    }
+    changeLetrero();
+
+
+    /*
+    1 - 1       0.4
+    2 - 2       0.8
+    3 - 4       1.6
+    4 - 8       3.2
+    5 - 16      6.4
+    6 - 32      12.8
+    7 - 64      25.6
+    8 - 128     51.2
+    9 - 256     102.4
+
+    */
+</script>

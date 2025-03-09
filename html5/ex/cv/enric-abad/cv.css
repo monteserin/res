@@ -1,0 +1,535 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font: 16px Helvetica, Sans-Serif;
+    line-height: 24px;
+    background: url(images/noise.jpg);
+}
+
+.clear {
+    clear: both;
+}
+
+#page-wrap {
+    width: 800px;
+    margin: 40px auto 60px;
+}
+
+#pic {
+    float: right;
+    margin: -30px 0 0 0;
+    z-index: 5;
+    margin-right: -10px !important
+}
+
+h1 {
+    margin: 0 0 16px 0;
+    z-index: -5;
+    padding: 0 0 16px 0;
+    font-size: 42px;
+    font-weight: bold;
+    letter-spacing: -2px;
+    border-bottom: 1px solid #999;
+    transition: 3s;
+}
+
+h2 {
+    font-size: 20px;
+    margin: 0 0 6px 0;
+    position: relative;
+}
+
+h2 span {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    font-style: italic;
+    font-family: Georgia, Serif;
+    font-size: 16px;
+    color: #999;
+    font-weight: normal;
+}
+
+p {
+    margin: 0 0 16px 0;
+}
+
+a {
+    color: #999;
+    text-decoration: none;
+    border-bottom: 1px dotted #999;
+}
+
+a:hover {
+    border-bottom-style: solid;
+    color: black;
+}
+
+ul {
+    margin: 0 0 32px 17px;
+}
+
+#objective {
+    width: 500px;
+    float: left;
+}
+
+#objective p {
+    font-family: Georgia, Serif;
+    font-style: italic;
+    color: #666;
+}
+
+dt {
+    font-style: italic;
+    font-weight: bold;
+    font-size: 18px;
+    text-align: right;
+    padding: 0 26px 0 0;
+    width: 150px;
+    height: 100px;
+    border-right: 1px solid #999;
+    float: left;
+    margin-right: 20px;
+}
+
+dd {
+    width: 600px;
+    float: left;
+}
+
+dd.clear {
+    float: none;
+    margin: 0;
+    height: 15px;
+}
+
+dd h2 {
+    animation-duration: 2s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+
+12
+
+to {
+    transform: translateX(0px);
+
+}
+
+}
+
+dt {
+    animation-duration: 3s;
+    animation-name: derizq;
+}
+
+@keyframes derizq {
+
+    to {
+        transform: translateX(0px);
+    }
+}
+
+dl dt {
+    transform: translateX(-1200px) translateY(-300px);
+    animation-fill-mode: forwards
+}
+
+#dt1 {
+    animation-delay: 0s;
+}
+
+#dt2 {
+    animation-delay: 0.5s;
+}
+
+#dt3 {
+    animation-delay: 1s;
+}
+
+#dt4 {
+    animation-delay: 1.5s;
+}
+
+dl dd p {
+    transform: translateX(1200px);
+    animation-fill-mode: forwards
+}
+
+#dd1 p {
+    animation-delay: 0s;
+}
+
+#dd2 p {
+    animation-delay: 0.5s;
+}
+
+#dd3 p {
+    animation-delay: 1s;
+}
+
+dd h2 {
+    transform: translateX(1600px);
+    animation-fill-mode: forwards
+}
+
+#dd1 h2 {
+    animation-delay: 0s;
+}
+
+#dd2 h2 {
+    animation-delay: 0.5s;
+}
+
+#dd3 h2 {
+    animation-delay: 1s;
+}
+
+#dd3 ul li {
+    transform: translateX(1200px);
+    animation-fill-mode: forwards
+}
+
+#li1 {
+    animation-delay: 2s;
+}
+
+#li2 {
+    animation-delay: 2.2s;
+}
+
+#li3 {
+    animation-delay: 2.4s;
+}
+
+#li4 {
+    animation-delay: 2.6s;
+}
+
+#li5 {
+    animation-delay: 2.8s;
+}
+
+#li6 {
+    animation-delay: 3s;
+}
+
+#li7 {
+    animation-delay: 3.2s;
+}
+
+#li8 {
+    animation-delay: 3.4s;
+}
+
+#li9 {
+    animation-delay: 3.6s;
+}
+
+#li10 {
+    animation-delay: 3.8s;
+}
+
+#li11 {
+    animation-delay: 4s;
+}
+
+dd p {
+    animation-duration: 3s;
+    animation-name: slidein;
+}
+
+@keyframes slidein {
+
+    to {
+        transform: translateX(0px);
+        width: 100%;
+    }
+}
+
+h1 {
+    animation-duration: 2s;
+    animation-name: titul;
+}
+
+@keyframes titul {
+    from {
+        transform: translateX(1150px);
+
+    }
+
+    to {
+        transform: translateX(0px);
+
+    }
+}
+
+#pic {
+    animation-duration: 2s;
+    animation-name: foto;
+}
+
+@keyframes foto {
+    from {
+        transform: scale(4, 4) translateX(-200px) translateY(400px);
+
+    }
+
+    to {
+        transform: scale(1, 1) translateX(0px) translateY(0px);
+
+    }
+}
+
+#dd3 ul li {
+    animation-duration: 2s;
+    animation-name: lista;
+}
+
+@keyframes lista {
+    from {
+        transform: translateX(1150px);
+
+    }
+
+    to {
+        transform: translateX(0px);
+
+    }
+}
+
+#dd4 {
+    animation-duration: 2s;
+    animation-name: lista;
+}
+
+@keyframes lista {
+
+    to {
+        transform: translateX(0px);
+
+    }
+}
+
+#dd5 {
+    animation-duration: 2s;
+    animation-name: lista;
+}
+
+@keyframes lista {
+
+    to {
+        transform: translateX(0px);
+
+    }
+}
+
+.vcard p {
+    animation-duration: 2s;
+    animation-name: subtitul;
+}
+
+@keyframes subtitul {
+    from {
+        transform: translateX(-1150px);
+
+    }
+
+    to {
+        transform: translateX(0px);
+
+    }
+}
+
+#objective {
+    animation-duration: 2s;
+    animation-name: arraba;
+}
+
+@keyframes arraba {
+    from {
+        transform: translateY(-300px);
+
+    }
+
+    to {
+        transform: translateY(0px);
+
+    }
+}
+
+/*texto*/
+
+p.progtxt {
+    opacity: 0;
+    animation-fill-mode: forwards;
+    position: absolute;
+    font-weight: bold;
+    margin-left: 3px;
+    color: black;;
+    font-size: 10px;
+    animation-name: progtxt;
+    animation-duration: 2s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+
+/*Barras PHOTOSHOP Y ILLUSTRATOR*/
+
+/*el rectangulo azul*/
+
+div.ps {
+    animation-duration: 5s;
+    width: 35px;
+    opacity: 0;
+    animation-fill-mode: forwards;
+    position: relative;
+    height: 150px;
+    background-color: black;
+    display: inline-block;
+    margin-right: 3px;
+    border: 1px solid black;
+    animation-delay: 2s;
+    animation-name: barragraf;
+}
+
+/*la animacion*/
+
+@keyframes barragraf {
+
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes progtxt {
+
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes photoshop {
+
+    from {
+        height: 0px;
+    }
+    to {
+        height: 140px;
+    }
+}
+
+@keyframes indesign {
+
+    from {
+        height: 0px;
+    }
+    to {
+        height: 100px;
+    }
+}
+
+@keyframes ilustrator {
+
+    from {
+        height: 0px;
+    }
+    to {
+        height: 120px;
+    }
+}
+
+@keyframes htmlp {
+
+    from {
+        height: 0px;
+    }
+    to {
+        height: 140px;
+    }
+}
+
+@keyframes css {
+
+    from {
+        height: 0px;
+    }
+    to {
+        height: 130px;
+    }
+}
+
+@keyframes tresd {
+
+    from {
+        height: 0px;
+    }
+    to {
+        height: 80px;
+    }
+}
+
+@keyframes js {
+
+    from {
+        height: 0px;
+    }
+    to {
+        height: 60px;
+    }
+}
+
+/*el naranja de dentro*/
+
+div.psdentro {
+    background: -moz-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    background: -webkit-linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    background: linear-gradient(top, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 100%);
+    position: absolute;
+    bottom: 0;
+    width: 35px;
+    border-top: 1px solid black;
+    animation-name: photoshop;
+    animation-duration: 4s;
+    animation-delay: 4s;
+    animation-fill-mode: forwards;
+}
+
+.psdentro.txtid {
+    animation-name: ilustrator;
+}
+
+.psdentro.txtai {
+    animation-name: indesign;
+}
+
+.psdentro.txthtml {
+    animation-name: htmlp;
+}
+
+.psdentro.txtcss {
+    animation-name: css;
+}
+
+.psdentro.txt3d {
+    animation-name: tresd;
+}
+
+.psdentro.txtjs {
+    animation-name: js;
+}
+
+.grafico {
+    text-align: center;
+}

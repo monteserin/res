@@ -1,0 +1,9 @@
+@keyframes ilusion {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+img.cool-animation {
+  animation: ilusion 2s infinite linear;
+}

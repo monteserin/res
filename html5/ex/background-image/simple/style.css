@@ -1,0 +1,8 @@
+div {
+    background-color: blue;
+    width: 200px;
+    height: 200px;
+    float: left;
+    border: none;
+    background-image: url('/res/html5/ex/background-image/logo.gif');
+}

@@ -1,0 +1,34 @@
+#wrapper {
+  width: 500px;
+  height: 500px;
+  overflow: hidden;
+}
+
+#layers {
+  height: 500px;
+  transition: 1s;
+  display: flex;
+}
+
+.capa1 {
+  background: url(https://pablomonteserin.com/res/jquery/img/tuxes/tux1.png);
+}
+
+.capa2 {
+  background: url(https://pablomonteserin.com/res/jquery/img/tuxes/tux2.png);
+}
+
+.capa3 {
+  background: url(https://pablomonteserin.com/res/jquery/img/tuxes/tux3.png);
+}
+
+.capa {
+  width: 500px;
+  height: 500px;
+  transition: 1s;
+}
+
+.capa:not(:first-child) {
+  opacity: 0;
+  transform: scale(0);
+}

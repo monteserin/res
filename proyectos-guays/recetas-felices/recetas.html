@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>El Elixir del buen humor | Recetas</title>
+	<meta name="description" content="Aplicación con la que obtendrás cuantos puntos de felicidad estas ingiriendo a partir de las recetas que has cocinado">
+	<meta name="robots" content="noindex">
+
+	<script src="JS/jquery-1.11.1.min.js"></script>
+	<script src="JS/recetas.js"></script>
+
+	<link rel="stylesheet" href="css/font-awesome.css">
+	<link rel="stylesheet" type="text/css" href="css/recetas.css">
+
+	<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon">
+	<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+
+
+
+</head>
+<body>
+	<div id="wrapper">
+		<div class="navegacion">
+			<nav class="botonera">
+				<a href="index.html" class="icon-button home"><i class="icon-home"></i><span></span><p>Inicio</p></a>
+				<a href="ingrediente.html" class="icon-button food"><i class="icon-food"></i><span></span><p>Ingredientes</p></a>
+				<a href="recetas.html" class="icon-button book"><i class="icon-book"></i><span></span><p>Recetas</p></a>
+				<a href="#" class="icon-button comment"><i class="icon-comment"></i><span></span><p>Contacto</p></a>
+			</nav>
+		</div>
+		<header>
+			<h1><span>A COCINAR!</span></h1><br>
+			<span>PUEDES HACER EL MENÚ PROPUESTO O ELEGIR OTRAS RECETAS</span>
+		</header>
+		<div>
+			<section class="menu">
+				<div>
+					<article>
+						<img src="img/plat.png" alt="primer plato"><br>
+						<div class="otrapag menuprimero"></div>
+					</article>
+					<article>
+						<img src="img/plat2.png" alt="segundo plato"><br>
+						<div class="otrapag menusegundo"></div>
+					</article>
+					<article>
+						<img src="img/plat3.png" alt="tercer plato"><br>
+						<div class="otrapag menupostre"></div>
+					</article>
+				</div>
+			</section>
+
+			<section class="recetas">
+				<div class="listado">
+					<ul>
+						<h3 style="color:#C03926">Recetas</h3>
+						<li><span class="btn" value="0">Ensalada de alga wakame con sésamo</span></li>
+						<li><span class="btn" value="1">Makis de salmón</span></li>
+						<li><span class="btn" value="2">Arroz Negro</span></li>
+						<li><span class="btn" value="3">Pollo a la cerveza</span></li>
+						<li><span class="btn" value="4">Macedonia de frutas</span></li>
+						<li><span class="btn" value="5">Fondue de chocolate</span></li>
+					</ul>
+				</div>
+				<div id="descripcion">
+					<div  class="receta inici">
+						<div class="titulo">
+							<h2>Clica en la lista de la izquierda <br>para ver las recetas</h2>
+						</div>
+					</div>
+					<div id="receta0" class="receta" style="display:none">
+						<h2>Ensalada de alga wakame con sésamo</h2>
+						<div class="titulo">
+							<img style="margin:auto; width:50%" alt="ensalada wakame" src="http://img.directoalpaladar.com/2013/09/ensalada-wakame.jpg">
+							<h3>Ingredientes para dos personas</h3>
+							<p>15 g de algas wakame deshidratada<br>1 pepino pequeño<br>1 cucharada de vinagre de arroz<br>1 cucharada de salsa de soja<br>1-2 cucharaditas de semillas de sésamo<br>1 pizca de azúcar<br>1 guindilla pequeña<br>unas gotas de zumo de limón.</p>
+							<h3>Cómo hacer la ensalada de algas wakame con sésamo</h3>
+							<p>Cubrir las algas wakame deshidratadas con agua tibia. Dejar a remojo entre 10 y 20 minutos, hasta que se hayan reconstituido. Escurrir y enjuagar.<br><br>Pelar el pepino y cortarlo en bastoncitos finos. Tostar ligeramente las semillas de sésamo. Picar la guindilla, desechando las semillas.<br><br>Batir en un cuenco el vinagre de arroz, la salsa de soja, el azúcar y el zumo de limón. Añadir el sésamo y la guindilla. Mezclar las algas con el pepino y aliñar.</p>
+							<h3>Degustación</h3>
+							<p>Teniendo todavía el último calor del verano, lo mejor es dejar reposar la ensalada de alga wakame con sésamo un tiempo en la nevera para servirla bien fresquita. Puede ser parte de una cena ligera, o como refrescante plato dentro de un menú asiático casero. </p>
+						</div>
+					</div>
+					<div id="receta1" class="receta" style="display:none">
+						<h2>Makis de salmón</h2>
+						<div class="titulo">
+							<img style="margin:auto; width:50%" alt="sushi " src="http://sushiworld.info/wp-content/uploads/2013/12/MAKI-DE-SALMON.jpg">
+							<h3>Ingredientes para dos personas</h3>
+							<p>200 gr. de arroz <br>Hojas de alga nori <br>50 gr. de salmón <br>1 pepino <br>1 zanahoria <br>2 cucharadas de vinagre de arroz <br>1 cucharada de azúcar <br>1 cucharada de sal.</p>
+							<h3>Cómo hacer maki de salmón</h3>
+							<p>Lavar el arroz varias veces (lo recomendado son seis) cambiando el agua, para que vaya soltando el almidón, hasta que el agua salga clara. <br><br>Poner agua (unos 300 ml.) a hervir y echar en ella el arroz, tapa la cazuela y deja que hierva durante unos 15 minutos. Apagar el fuego y dejar que repose durante otros 10 minutos, sin levantar la tapa en el proceso. <br><br>Calentar el vinagre ligeramente y mezclar con el azúcar y la sal, y echar sobre el arroz, moviéndolo para que se mezcle. Dejar que se temple. <br><br>Lavar y pelar las verduras. Cortar el pepino y la zanahoria en bastones a lo largo, para que al cortarlo quede en taquitos. <br><br>Extiende la hoja de alga, con la cara lisa y brillante hacia abajo, sobre una esterilla. Pon una capa de arroz sobre el alga, dejando un borde sin cubrir para que sea más fácil enrollarlo. Dispón las verduras sobre el arroz, en la parte inferior del alga. <br><br>Enrolla en sushi, comenzando por el extremo sin cubrir, y ayudándote con la esterilla de bambú, hasta formar un rollo bien apretado. <br><br> Corta el sushi con un cuchillo afilado en trozos del tamaño que prefieras , lo habitual son unos 3 cm. <br></p>
+							<h3>Degustación</h3>
+								<p>Lo ideal es que lo sirvamos en un plato grande, acompañado de un cuenco con soja y otro para el wasabi y el gari. El sushi no debe comerse con tenedor (a no ser que no te quede otra), y no es de mala educación comerlo con la mano si no lo sabemos hacer con palillos.</p>
+							</div>
+						</div>
+
+						<div id="receta2" class="receta" style="display:none">
+						<h2>Arroz negro</h2>
+						<div class="titulo">
+							<img style="margin:auto; width:50%" alt="arroz negro con calamar" src="http://www.emujer.com/files/article/view/a/arroz-negro-con-calamar_bd1f8.jpg">
+							<h3>Ingredientes para cuatro personas</h3>
+							<p>400 g de arroz<br>2 sepias o calamares de tamaño mediano<br>1 pimiento<br>2 cebollas<br>5 tomates<br>3 dientes de ajo<br>1 litro de caldo de pescado<br>aceite<br>tinta de calamar o sepia</p>
+							<h3>Cómo hacer arroz negro</h3>
+							<p>Cortar el pimiento y la cebolla a trozosbr><br>
+								Limpiad la sepia y cortadla a trocitos<br>
+								En una cassola amb un raig d'oli poseu la ceba a sofregir a foc mitjà<br>
+								Al cap de 5 minuts hi afegiu el pebrot<br>
+								Al cap de 5 minuts mes, hi afegiu la sèpia<br>
+								Deixeu-ho confitar 10 minuts mes, a foc mitja i remenant de tant en tant.<br>
+								Aquest es el secret de la recepta: ha de quedat ben confitat. Paciència doncs.<br><br>
+								Afegiu l'arròs i la tinta de calamar i la de la sèpia: remeneu-ho i deixeu-ho 2 minuts que l'arròs agafi aroma
+								Afegiu el brou de peix, calent o fred, com vulgueu.<br><br>
+								Ompliu un got amb una mica del brou, podeu-hi la salsa de la sèpia i talleu-la a trossets i remeneu.<br><br>
+								Coleu el líquid d'aquest got sobre la cassola, per no arrastrar trossos de sèpia amb salsa
+								La idea es desfer la salsa en el brou.<br><br>
+								Deixeu-ho coure fins que l'arròs sigui al vostre gust.</p>
+							<h3>Degustación</h3>
+							<p>Servir con alioli</p>
+							</div>
+						</div>
+
+						<div id="receta3" class="receta" style="display:none">
+						<h2>Pollo a la cerveza</h2>
+						<div class="titulo">
+							<img style="margin:auto; width:50%" alt="pollo a la cerveza" src="http://cupon.es/magazin/wp-content/uploads/2012/09/pollo-a-la-cerveza.jpeg">
+							<h3>Ingredientes para dos personas</h3>
+							<p>1 pollo troceado<br>1 zanahoria<br>1 cebolla<br>2 dientes de ajo<br>Cilantro<br>Cerveza, un vaso<br>Pimienta negra<br>Aceite de oliva<br></p>
+							<h3>Cómo hacer pollo a la cerveza</h3>
+							<p>Salpimenta el pollo. Fríe los trozos que vayas a usar para esta receta en una sartén con aceite, intenta dejar el pollo dorado sin quemarlo.<br><br>Cuando termines de freir los trozos de pollo, se pelan y trocean tanto los dientes de ajo como la cebolla. Los echas a sofreir en el mismo aceite, cuando tomen un color dorado añade los trozos de zanahoria, y si quieres alguna verdura más, y lo rehogas todo junto varios minutos.<br><br>Vierte un vasito de cerveza y espera que se evapore un poco el alcohol mientras remueves. Añade un par de vasos de agua y lo dejamos cocer durante unos veinte minutos. Comprueba el punto de sal y si es necesario se echa un poco más. </p>
+							<h3>Acompañamiento</h3>
+							<p>Se puede acompañar con arroz hervido o patatas fritas</p>
+							</div>
+						</div>
+
+						<div id="receta4" class="receta" style="display:none">
+							<h2>Macedonia de frutas</h2>
+							<div class="titulo">
+								<img style="margin:auto; width:50%" alt="macedonia de frutas" src="http://lacocinadebender.com/wp-content/uploads/2010/07/macedonia-frutas-fruit-salad.jpg">
+								<h3>Ingredientes para dos personas</h3>
+								<p>2 manzanas<br>2 peras de agua<br>2 plátanos<br>2 naranjas<br>1 limón<br>50 gr. de azúcar o miel<br>100 gr. de algún fruto seco (optativo)</p>
+								<h3>Cómo hacer macedonia de frutas</h3>
+								<p>Pelamos las manzanas y las peras eliminado el corazón, partimos en dados y ponemos en la fuente o cuenco donde se vayan a servir.<br><br>Pelamos el plátano, cortamos en rodajas y añadimos a la fuente.<br><br>Rociamos estas frutas con abundante zumo de limón.<br><br>Pelamos y cortamos las naranjas en rodajas, dividiéndolas en cuatro. Las incorporamos a la macedonia.<br><br>Diluimos en un poco de agua el azúcar o la miel y vertemos por encima de las frutas.<br><br>Dejamos en la nevera en maceración hasta el momento de servir.<br><br>Sacamos y decoramos con piñones, nueces o almendras troceadas (u otro fruto seco)</p>
+								<h3>Degustación</h3>
+								<p>Otra forma de presentar este postre es acompañándolo con una crema de yogur. <br><br>Rociar las frutas con zumo de limón es muy importante para que no se ennegrezcan. <br><br>La macedonia saldrá ganando si todos sus ingredientes son naturales. No obstante, se puede añadir melocotón o piña en almíbar troceada completando la preparación con un chorrito de licor
+								</p>
+							</div>
+						</div>
+
+						<div id="receta5" class="receta" style="display:none">
+							<h2>Fondue de chocolate</h2>
+							<div class="titulo">
+								<img style="margin:auto; width:50%" alt="foundue de chocolate" src="http://www.mercadoaltoextremadura.com/wp-content/uploads/2014/05/fondue-de-chocolate.jpg">
+								<h3>Ingredientes para cuatro personas</h3>
+								<p>100gr de chocolate negro para fundir<br>100gr de chocolate con leche para fundir<br>150ml de leche semi desnatada<br>Un bizcocho cortado en dados<br>Uvas<br>Fresas<br>Platano<br>Mango, papaya</p>
+								<h3>Cómo hacer el fondue de chocolate</h3>
+								<p>En una olla poner a hervir la leche. Una vez empieze a hervir, echamos los trozos de chocolate para que se funda todo.<br><br>Una vez tengamos lista la crema de chocolate, troceamos la fruta con la que queremos acompañarla; nosotros hemos seleccionado frutas de todo tipo: fresas, plátano, mango, papaya; y mango. <br><br>Mojar la fruta en la crema de chocolate</p>
+								<h3>Degustación</h3>
+								<p>También podemos utilizar golosinas, para mojar en la crema de chocolate; además de los trozos de bizcocho.</p>
+							</div>
+						</div>
+					</div>
+				</section>
+
+			</div>
+
+			<footer><br>
+				<p>tamara.huete.ilustracion@gmail.com</p>
+			</footer>
+
+		</div>
+
+	</body>
+	</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>context save en canvas de HTML5 | Pablo Monteserín</title>
+			<meta name="description" content="Ejemplo de como salvar el contexto para reusar una configuración utilizando la etiqueta canvas de html">
+
+	</head>
+	<body>
+	<h1>Salvando el contexto de un canvas con Javascript</h1>
+		<canvas id="canvas" width="400px" height="400px" style="border:2px solid black" />
+		<script>
+			var c = document.getElementById("canvas");
+			var ctx = c.getContext("2d");
+
+			//Rectángulo sin borde
+			ctx.fillStyle = "red";
+			ctx.fillRect(10, 10, 50, 50);
+			ctx.save();
+			
+			ctx.fillStyle = "blue";
+			ctx.fillRect(60, 60, 150, 150);
+
+			//Si comento la siguiente línea el rectángulo se pinta en azul
+			ctx.restore();
+			ctx.fillRect(160, 160, 250, 250);
+
+
+		</script>
+	</body>
+</html>

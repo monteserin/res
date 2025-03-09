@@ -1,0 +1,11 @@
+div.transform-skew {
+    background-color: pink;
+    width: 300px;
+    height: 300px;
+    transition: 2s;
+}
+
+div.transform-skew:hover {
+    /*transform: function()*/
+    transform: skewX(-25deg);
+}

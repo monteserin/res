@@ -1,0 +1,5 @@
+input:not([type=checkbox]) {
+    width: 570px;
+    display: block;
+    border-radius: 15px;
+}

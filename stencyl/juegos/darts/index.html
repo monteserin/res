@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Juego de dardos con Stencyl | Pablo Monteserín</title>
+		<meta name="description" content="Este videojuego simula una partida de dardos y está programado utilizando la herramienta Stencyl, para desarrollo de juegos 2D">
+
+		<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+		<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/swfobject/2.2/swfobject.js"></script>
+		<script type="text/javascript">
+			var flashvars = {};
+			var params = {};
+			var attributes = {};
+					
+			
+			params.bgcolor="#FFFFFF"; 
+			
+			attributes.name = "";
+			attributes.styleclass = "";
+			attributes.align = "";			
+			swfobject.embedSWF("darts.swf", "flashContent", "640", "480", "9.0.0", false, flashvars, params, attributes);
+		</script>
+	</head>
+	<body>
+		<h1>Juego de dardos con Stencyl</h1>
+		<div id="flashContent">
+			Get <a href="http://www.adobe.com/go/getflash">Adobe Flash Player</a>. Embedded with the help of <a href="http://embed-swf.org">embed-swf.org</a>.
+		</div>
+	</body>
+</html>

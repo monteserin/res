@@ -1,0 +1,61 @@
+create table PROGRAMADOR
+(
+DNI char(9),
+nomComplet varchar(150),
+sou numeric(6,2),
+primary key (dni)
+)engine=Innodb;
+
+create table PROGRAMADOR
+(
+DNI char(9) primary key,
+nomComplet varchar(150),
+sou numeric(6,2)
+)engine=Innodb;
+
+
+create table LLENGUATGE
+(
+nom varchar(50),
+tipus varchar (50),
+primary key (nom)
+)engine=Innodb;
+
+
+create table LLENGUATGE
+(
+nom varchar(50) primary key,
+tipus varchar (50)
+)engine=Innodb;
+
+
+create table CONEIX
+(
+DNI char(9),
+nomLlenguatge varchar(50),
+grauConeixement int,
+primary key (DNI, nomLlenguatge),
+foreign key (DNI) references PROGRAMADOR (DNI),
+foreign key (nomLlenguatge) references LLENGUATGE (nom)
+)engine=Innodb;
+
+
+insert into programador values ('52111111A','Marta Costa Boix',2500.00);
+insert into programador values ('52222222B','Pere Jonquera Flix',2300.00);
+insert into programador values ('52333333C','Martí Castro Cors',2500.00);
+insert into programador values ('52444444D','Laura Sentís Aguilar',1900.00);
+
+insert into llenguatge values ('SQL','Bases de dades');
+insert into llenguatge values ('PHP','Servidor');
+insert into llenguatge values ('ASP','Servidor');
+insert into llenguatge values ('Javascript','Client');
+insert into llenguatge values ('UML','Disseny');
+
+insert into coneix values ('52111111A','SQL',7);
+insert into coneix values ('52111111A','PHP',8);
+insert into coneix values ('52111111A','Javascript',6);
+insert into coneix values ('52222222B','SQL',9);
+insert into coneix values ('52222222B','UML',5);
+insert into coneix values ('52333333C','ASP',8);
+insert into coneix values ('52333333C','PHP',8);
+insert into coneix values ('52333333C','SQL',9);

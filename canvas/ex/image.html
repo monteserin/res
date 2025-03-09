@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>image en canvas de HTML5 | Pablo Monteserín</title>
+			<meta name="description" content="Ejemplo de como cargar una imagen dentro de la etiqueta canvas de html utilizando Javascript">
+
+	</head>
+	<body>
+	<h1>Carga de una imagen dentro de la etiqueta canvas utilizando Javascript</h1>
+		<canvas id="canvas" width="400px" height="400px" style="border:2px solid black" />
+		<script>
+			var c = document.getElementById("canvas");
+			var ctx = c.getContext("2d");
+
+			var imageObj = new Image();
+			imageObj.src = "logo.png";
+			imageObj.onload = function() {
+				//VARIAS FORMAS DE INSECION:
+				
+				//Poner la imagen:
+				//(objetoImagen, posicion x, posicion y)
+				ctx.drawImage(imageObj, 0, 0);
+				
+				//Poner la imagen redimensionando:
+				//(objetoImagen, posicion x, posicion y, ancho, alto)
+				ctx.drawImage(imageObj, 300, 0, 50, 50);
+				
+				//Poner la imagen redimensionando y recortando:
+				//ctx.drawImage(imageObj, sourceX, sourceY, sourceWidth, sourceHeight, destX, destY, destWidth, destHeight);
+        		 ctx.drawImage(imageObj, 100, 100, 180, 180,200,200, 200,200) 
+			};
+		</script>
+	</body>
+</html>

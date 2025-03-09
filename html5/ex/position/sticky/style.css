@@ -1,0 +1,11 @@
+.overflow{
+overflow:auto;
+height:300px
+}
+
+.navbar {
+    background-color: red;
+    height: 70px;
+    position: sticky;
+    top: 30px;
+}

@@ -1,0 +1,29 @@
+body {
+    margin: 0px;
+    padding: 0px;
+}
+
+ul {
+    width: 187px;
+    padding: 0px;
+    margin: 0px;
+    list-style: none
+}
+
+.boton {
+    width: 187px;
+    height: 32px;
+    float: left;
+    background-image: url('/res/html5/ex/navbar1/sinActivar.png');
+    text-align: center;
+    padding-top: 15px;
+    color: white;
+    text-decoration: none
+}
+
+.boton:hover {
+    background-image: url('/res/html5/ex/navbar1/activado.png');
+    color: black
+}
+
+

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>juego con HTML5 canvas - enemigos se mueven</title>
+            <meta name="description" content="Pintamos en pantalla los enemigos del cangrejo, que se irán moviendo verticalmente con el fin de no dejarle atravesar la playa">
+
+</head>
+<body>
+<h1>Varias animaciones verticales programadas en Javascript usando la etiqueta canvas</h1>
+	<canvas id="canvas" width="400" height="400"></canvas>
+
+<script>
+var c = document.getElementById("canvas");
+var ctx = c.getContext("2d");
+
+   var enemies = [
+      {
+        x: 100, //x coordinate
+        y: 100, //y coordinate
+        speedY: 1, //speed in Y
+        w: 40, //width
+        h: 40 //heght
+      },
+      {
+        x: 260,
+        y: 100,
+        speedY: 2,
+        w: 40,
+        h: 40
+      },
+      {
+        x: 380,
+        y: 100,
+        speedY: 3,
+        w: 40,
+        h: 40
+      },
+      {
+        x: 450,
+        y: 100,
+        speedY: 7,
+        w: 40,
+        h: 40
+      }
+    ];
+
+
+var update = function(){
+	var n = enemies.length;
+	for (var i =0; i < n; i++) {
+		enemies[i].y+=enemies[i].speedY;
+		if(enemies[i].y>400 || enemies[i].y<0)enemies[i].speedY=-enemies[i].speedY;
+
+	};
+}
+var draw = function(){
+	ctx.clearRect(0,0,400,400);
+	ctx.fillStyle = "rgb(200, 0, 100)";
+		var n = enemies.length;
+
+		for (var i =0; i < n; i++) {
+				ctx.fillRect(enemies[i].x, enemies[i].y, enemies[i].w, enemies[i].h);
+
+		}
+
+}
+var step = function(){
+	update();
+	draw();
+	window.requestAnimationFrame(step);
+};
+
+step();
+
+</script>
+	
+</body>
+</html>

@@ -1,0 +1,36 @@
+{
+  "files": {
+    "main.js": "/res/react/ex/build/static/js/main.be789d93.chunk.js",
+    "main.js.map": "/res/react/ex/build/static/js/main.be789d93.chunk.js.map",
+    "runtime-main.js": "/res/react/ex/build/static/js/runtime-main.5318dbec.js",
+    "runtime-main.js.map": "/res/react/ex/build/static/js/runtime-main.5318dbec.js.map",
+    "static/css/2.b652baee.chunk.css": "/res/react/ex/build/static/css/2.b652baee.chunk.css",
+    "static/js/2.fd60e0b8.chunk.js": "/res/react/ex/build/static/js/2.fd60e0b8.chunk.js",
+    "static/js/2.fd60e0b8.chunk.js.map": "/res/react/ex/build/static/js/2.fd60e0b8.chunk.js.map",
+    "index.html": "/res/react/ex/build/index.html",
+    "static/css/2.b652baee.chunk.css.map": "/res/react/ex/build/static/css/2.b652baee.chunk.css.map",
+    "static/js/2.fd60e0b8.chunk.js.LICENSE.txt": "/res/react/ex/build/static/js/2.fd60e0b8.chunk.js.LICENSE.txt",
+    "static/media/Iconos_info_gris.4d7992e5.svg": "/res/react/ex/build/static/media/Iconos_info_gris.4d7992e5.svg",
+    "static/media/america.a86b78c1.png": "/res/react/ex/build/static/media/america.a86b78c1.png",
+    "static/media/america.dcf85e70.mp3": "/res/react/ex/build/static/media/america.dcf85e70.mp3",
+    "static/media/back-extensions.986db67f.png": "/res/react/ex/build/static/media/back-extensions.986db67f.png",
+    "static/media/birds.e4320e0d.png": "/res/react/ex/build/static/media/birds.e4320e0d.png",
+    "static/media/bridge.a3bfb315.png": "/res/react/ex/build/static/media/bridge.a3bfb315.png",
+    "static/media/espacio.7e7a855b.jpg": "/res/react/ex/build/static/media/espacio.7e7a855b.jpg",
+    "static/media/flecha.791b29b8.png": "/res/react/ex/build/static/media/flecha.791b29b8.png",
+    "static/media/heroe.d4201ca6.png": "/res/react/ex/build/static/media/heroe.d4201ca6.png",
+    "static/media/hip-openers.13285732.png": "/res/react/ex/build/static/media/hip-openers.13285732.png",
+    "static/media/home.bb53871c.jpg": "/res/react/ex/build/static/media/home.bb53871c.jpg",
+    "static/media/monstruo.2995f9ca.jpg": "/res/react/ex/build/static/media/monstruo.2995f9ca.jpg",
+    "static/media/nave.a53acf76.jpg": "/res/react/ex/build/static/media/nave.a53acf76.jpg",
+    "static/media/pajaros.2a47c82f.mp3": "/res/react/ex/build/static/media/pajaros.2a47c82f.mp3",
+    "static/media/parchis.cd45a0ab.svg": "/res/react/ex/build/static/media/parchis.cd45a0ab.svg",
+    "static/media/superheroe.4c2d0e2a.mp3": "/res/react/ex/build/static/media/superheroe.4c2d0e2a.mp3"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.5318dbec.js",
+    "static/css/2.b652baee.chunk.css",
+    "static/js/2.fd60e0b8.chunk.js",
+    "static/js/main.be789d93.chunk.js"
+  ]
+}

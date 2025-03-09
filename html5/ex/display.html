@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Uso de los estilos display, display: inline-block, display:inline</title>
+    <meta charset="UTF-8">
+    <meta name="robots" content="noindex">
+    <meta name="description"
+        content="Uso de los estilos display, display: inline-block, display:inline para colocar capas en horizontal">
+    <meta name="robots" content="noindex, follow">
+
+    <style>
+        .container {
+            text-align: left;
+        }
+
+        .colKhaki {
+            background: Khaki;
+
+        }
+
+        .colSalmon {
+            background: salmon;
+        }
+
+        .col {
+            display: block;
+            width: 300px;
+            margin: 0;
+            float: none;
+            vertical-align: baseline;
+        }
+
+        pre {
+            background: #D8D8D8;
+            border: 1px solid #00a9ff;
+            padding: 20px;
+        }
+
+        code {
+            background: #eaeaea;
+            padding: 15px;
+            display: block;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Uso del estilo 'display'</h1>
+    <pre><code>&lt;style&gt;
+	.container{
+			text-align: left;
+	}
+	.colKhaki{
+		background: Khaki;
+	}
+	.colSalmon{
+		background: salmon;		
+	}
+	.col{
+		width:300px;
+		display: <select id="col_display"><option value="block">block</option><option value="inline">inline</option><option
+            value="inline-block">inline-block</option></select>;
+		vertical-align: <select id="col_vertical_align"><option value="baseline">baseline</option><option value="top">top</option></select>;
+	}
+&lt;/style&gt;</code></pre>
+    <div class="container">
+        <div class="col colKhaki">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum recusandae autem
+            sapiente
+            veritatis, perferendis ea fugiat, provident repellendus, vitae a iusto animi tenetur, rem tempore neque.
+            Atque
+            suscipit dolorem, ea!
+        </div>
+        <div class="col colSalmon">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates iure, a ad,
+            voluptas
+            beatae obcaecati dolorem asperiores libero nesciunt dignissimos.
+        </div>
+    </div>
+
+
+    <script>
+        document.getElementById("col_display").onchange = function () {
+            document.getElementsByClassName("col")[0].style.display = this.value;
+            document.getElementsByClassName("col")[1].style.display = this.value;
+        }
+        document.getElementById("col_vertical_align").onchange = function () {
+            document.getElementsByClassName("col")[0].style.verticalAlign = this.value;
+            document.getElementsByClassName("col")[1].style.verticalAlign = this.value;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>display:grid | Pablo Monteserín</title>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Ejemplo práctico de como usar el estilo display:grid para montar una regilla de capas">
+    <meta name="robots" content="noindex, follow">
+
+    <style>
+        .container {
+            display: grid;
+            grid-template-columns: 200px 200px;
+            grid-template-areas: "c2 c1"
+                "c4 c3";
+        }
+
+        .c1 {
+            background: Khaki;
+            grid-area: c1;
+        }
+
+        .c2 {
+            background: paleGreen;
+            grid-area: c2;
+        }
+
+        .c3 {
+            grid-area: c3;
+        }
+
+        .c4 {
+            grid-area: c4;
+        }
+
+        pre {
+            background: #D8D8D8;
+            border: 1px solid #00a9ff;
+            padding: 20px;
+        }
+
+        code {
+            background: #eaeaea;
+            padding: 15px;
+            display: block;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Uso del estilo 'display:grid'</h1>
+    <pre><code>&lt;style&gt;
+	.container{
+            display: grid; 
+            grid-template-rows: 200px 200px;
+            grid-template-areas:    "<select id="c1"><option value="c1">c1</option><option value="c2" selected>c2</option><option value="c3">c3</option><option value="c4">c4</option></select> <select id="c2"><option value="c1">c1</option><option value="c2">c2</option><option value="c3">c3</option><option value="c4">c4</option></select>"
+                                    "<select id="c3"><option value="c1">c1</option><option value="c2">c2</option><option value="c3">c3</option><option value="c4" selected>c4</option></select> <select id="c4"><option value="c1">c1</option><option value="c2">c2</option><option value="c3" selected>c3</option><option value="c4">c4</option></select>"
+	}
+&lt;/style&gt;</code></pre>
+    <div class="container">
+        <div class="box c1">Texto de la primera celda</div>
+        <div class="box c2">
+            <h1>Texto de la segunda celda</h1>
+        </div>
+        <div class="box c3">Texto de la tercera celda</div>
+        <div class="box c4">Texto de la cuarta celda</div>
+    </div>
+
+
+    <script>
+        const setGridAreas = () => {
+            const val = '"' + document.getElementById("c1").value + ' ' + document.getElementById("c2").value + '" ' + '"' + document.getElementById("c3").value + '  ' + document.getElementById("c4").value + '"';
+
+            document.querySelector(".container").style.gridTemplateAreas = val;
+            console.log(val)
+        }
+
+        document.querySelector("#c1").onchange = () => {
+            setGridAreas();
+        }
+        document.querySelector("#c2").onchange = () => {
+            setGridAreas();
+        }
+        document.querySelector("#c3").onchange = () => {
+            setGridAreas();
+        }
+        document.querySelector("#c4").onchange = () => {
+            setGridAreas();
+        }
+
+        setGridAreas();
+    </script>
+</body>
+
+</html>

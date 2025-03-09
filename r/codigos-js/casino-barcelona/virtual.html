@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <textarea id="data" placeholder="pega aquí los datos"></textarea>
+    <div class="result"></div>
+
+    <script>
+      const plantillaArray = [0.5];
+      const stoploss = 300;
+      const longitudMaxArray = 5;
+
+      let opcionEscogida = "";
+      let apuestas = plantillaArray.slice(0);
+      let dineroGanado = 0;
+      let totalTiradas = 0;
+      let numeroDeTiradasPerdidasSeguidas = 0;
+      let maximasApuestasDeLaSesion = [];
+      let totalAciertos = 0;
+      let maximaApuestaDeLaTirada = 0;
+        let intentos = 0;
+
+
+      const dataField = document.querySelector("#data");
+      dataField.addEventListener("input", () => {
+
+        opcionEscogida = "";
+      apuestas = plantillaArray.slice(0);
+      dineroGanado = 0;
+      totalTiradas = 0;
+      numeroDeTiradasPerdidasSeguidas = 0;
+      maximasApuestasDeLaSesion = [];
+      totalAciertos = 0;
+      maximaApuestaDeLaTirada = 0;
+      intentos = 0;
+
+
+        const data = dataField.value;
+
+        const dataArray = data.split("");
+        let result = "";
+        dataArray.map((opcionQueSalio, i) => {
+          if (
+            opcionQueSalio.toUpperCase() == "B" ||
+            opcionQueSalio.toUpperCase() == "R" ||
+            opcionQueSalio.toUpperCase() == "G"
+          ) {
+
+            if (i != 0) {
+                cantidadAApostar = getCantidadAApostar(apuestas);
+              if (
+                cantidadAApostar > stoploss ||
+                apuestas.length > longitudMaxArray
+              ) {
+                ++numeroDeTiradasPerdidasSeguidas;
+                if (numeroDeTiradasPerdidasSeguidas >= 1) {
+                  result +='apuestas: ' + apuestas + '<br>';
+                  var dineroPerdidoEnElArray = apuestas.reduce(
+                    (acc, obj) => acc + obj,
+                    0
+                  );
+                  console.log(
+                    'Dinero perdido en el Array: ' + dineroPerdidoEnElArray
+                  );
+                  dineroGanado -= dineroPerdidoEnElArray;
+
+                  result +=
+                    "*****************FIN DE JUEGO. Dinero acumulado: " +
+                      dineroGanado;
+                  
+
+                  finGrupoTiradas();
+                  ++intentos;
+                  result += 'NÚMERO DE INTENTOS FALLIDOS: ' + intentos + '<br>';
+                  if (intentos >= 2) {
+                    result +=
+                      'HAS PERDIDO 2 VECES. DESCANSA UN POCO POR HOY.<br>';
+                    
+                    juegoActivo = false;
+                  }
+                }
+              } else {
+                if (evaluarApuesta(opcionQueSalio, opcionEscogida)) {
+                  result +=
+                    'APUESTA GANADA. Salió: ' +
+                      opcionQueSalio +
+                      ', Aposté por: ' +
+                      opcionEscogida +
+                      ' Cantidad ganada: ' +
+                      cantidadAApostar +
+                      ' €<br>';
+                  
+                  if (apuestas.length == 0) {
+                      result += plantillaArray+'<br>';
+                      dineroGanado = dineroGanado +
+                      plantillaArray.reduce(
+                        (dineroAcc, obj) => dineroAcc + obj,
+                        0
+                      );
+                    result+=
+                      'ARRAY DE APUESTAS COMPLETADO - VOLVEMOS A EMPEZAR. Dinero ganado = ' +
+                        dineroGanado+ '<br>';
+                    
+
+                    finGrupoTiradas();
+                  }
+                } else {
+                  result +=
+                    "APUESTA PERDIDA. Salió: " +
+                    opcionQueSalio +
+                    ", Aposté por: " +
+                    opcionEscogida +
+                    ". Cantidad Perdida: " +
+                    cantidadAApostar +
+                    " €<br>";
+                }
+                ++totalTiradas;
+              }
+              opcionEscogida = opcionQueSalio;
+            }else{
+                opcionEscogida = opcionQueSalio;
+
+            }
+          } else {
+            result =
+              "Los datos introducidos son incorrectos. Hay algo que no es una B, una R o una G";
+          }
+        });
+
+        document.querySelector(".result").innerHTML = result;
+      });
+
+      var evaluarApuesta = (opcionQueSalio, opcionEscogida) => {
+        if (
+          opcionQueSalio.toLowerCase() == opcionEscogida.toLocaleLowerCase()
+        ) {
+          if (apuestas.length >= 2) {
+            apuestas.splice(0, 1);
+            apuestas.splice(apuestas.length - 1, 1);
+          } else if (apuestas.length == 1) {
+            apuestas.splice(0, 1);
+          }
+          ++totalAciertos;
+          return true;
+        } else {
+          apuestas.push(cantidadAApostar);
+          return false;
+        }
+      };
+
+      var finGrupoTiradas = _ => {
+        maximasApuestasDeLaSesion.push(maximaApuestaDeLaTirada);
+        var valorMax = 0;
+        maximasApuestasDeLaSesion.map(n => {
+          if (n > valorMax) {
+            valorMax = n;
+          }
+        });
+        console.log("Valor máximo: " + valorMax);
+        console.log(
+          "MAXIMAS APUESTAS DE LA SESION: " + maximasApuestasDeLaSesion.join()
+        );
+        maximaApuestaDeLaTirada = 0;
+        apuestas = plantillaArray.slice(0);
+      };
+
+      
+var getCantidadAApostar = apuestas => {
+	if (apuestas.length >= 2) {
+		return apuestas[0] + apuestas[apuestas.length - 1];
+	} else if (apuestas.length == 1) {
+		return apuestas[0];
+	}
+}
+    </script>
+  </body>
+</html>
+
+
+
+<!-- 
+SCRIPT PARA COGER DATOS DE LA RULETA
+
+    valores = '';
+document.querySelectorAll('.numbers--3CyTT.statistics--1s-l6.fadeable--1SHS1 [data-role^=number]').forEach( obj => {
+    if(obj.classList.toString().indexOf('red') >= 0){
+        valores+='R';
+
+    }else if (obj.classList.toString().indexOf('black') >= 0){
+        valores+='B';
+    }else{
+        console.log(obj.classList)
+
+        valores+='G';
+    }
+});
+
+console.log(valores)
+-->

@@ -1,0 +1,36 @@
+.verticalnavwrapper .menu a {
+    display: block;
+    padding: 15px;
+    background: paleGreen;
+    border-radius: 20px;
+    color: black;
+    text-decoration: none;
+    transition: 1s;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.verticalnavwrapper .menu a:hover {
+    background: pink;
+    width: 300px;
+}
+
+.verticalnavwrapper .menu {
+    list-style: none;
+    width: 250px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+    z-index: 9;
+}
+
+.verticalnavwrapper {
+    width: 1000px;
+    z-index: -1
+}
+
+.verticalnavwrapper .col_right {
+    width: 600px;
+    display: inline-block;
+    vertical-align: top
+}

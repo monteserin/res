@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>método css en jQuery | Pablo Monteserín</title>
+    <meta name="description"
+        content="Ejemplo de uso del método css de jQuery para manipular los estilos de un elemento de un documento HTML">
+    <meta name="robots" content="noindex, follow">
+    <script src="https://pablomonteserin.com/res/assets/jquery.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#boton1").click(function () {
+                $(".resaltado").css("background-color", "red");
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+    <p>Cuales de los siguientes lenguajes son orientados a objetos:
+        <span class="resaltado">Java</span>, VB6, <span class="resaltado">C++</span>,C,
+        <span class="resaltado">C#</span>, Cobol ?
+    </p>
+    <input type="button" id="boton1" value="ver resultado">
+
+</body>
+
+</html>

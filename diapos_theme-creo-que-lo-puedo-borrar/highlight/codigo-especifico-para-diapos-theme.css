@@ -1,0 +1,95 @@
+#monteserin_iframe_wrapper iframe {
+  height: 100vh;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  text-align: center;
+  margin: 0;
+}
+
+.codigos {
+  display: flex;
+  flex-direction: row;
+  height: 50%;
+}
+
+.codigos code {
+  overflow: auto;
+  height: 100%;
+  text-wrap: auto;
+}
+
+.codigos * {
+  width: 100%;
+  overflow: auto;
+  outline: none;
+  font-family: Courier, sans-serif;
+  font-size: 14px;
+  text-align: left;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.codigos {
+  overflow: hidden;
+  max-height: 0;
+  transition: 0.5s;
+}
+
+.codigos.visible {
+  max-height: 50%;
+}
+
+#monteserin_iframe_wrapper {
+  display: flex;
+}
+
+iframe#code {
+  border: none;
+}
+
+#monteserin_iframe_wrapper iframe {
+  width: 100%;
+}
+
+.codigos.visible + #monteserin_iframe_wrapper iframe {
+  height: 50vh;
+}
+
+#btn_ver_codigo_Wrapper {
+  text-align: right;
+  position: fixed;
+  right: 20px;
+  top: 10px;
+}
+
+#btn_ver_codigo {
+  padding: 12px 32px;
+  transition: 0.8s;
+  border-radius: 30px;
+  box-shadow: inset 0 0 0 0 #f77754;
+  background-color: white;
+  text-align: center;
+  text-decoration: none !important;
+  cursor: pointer;
+
+  color: white;
+  background-color: #f77754;
+  border-color: #f77754;
+}
+
+#btn_ver_codigo:hover {
+  border-color: #537d91;
+  box-shadow: inset 0 0 0 50px #537d91;
+  color: white !important;
+}
+
+#pm {
+  color: #f77754;
+  text-decoration: none;
+  padding: 5px;
+}

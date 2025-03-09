@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Ejemplo de uso del objeto localStorage para almacenar los cambios que hago en una lista de HTML editable (porque usamos el atributo contentEditable=true)">
+    <meta name="robots" content="noindex, follow">
+    <title>localStorage con HTML5 - con boton de borrado</title>
+</head>
+
+<body>
+    <h1>Ejemplo de uso de localStorage con Javascript</h1>
+
+    <div id="lista">
+        <ul contentEditable="true">
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+            <li>item 4</li>
+        </ul>
+    </div>
+
+    <p>
+        <input type="button" id="salvarCambios" value="Salvar cambios" />
+        <input type="button" id="borrarCambios" value="Borrar cambios" />
+    </p>
+
+    <script src="javascript.js"></script>
+</body>
+
+</html>

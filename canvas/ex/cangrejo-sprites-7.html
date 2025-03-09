@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>juego con HTML5 canvas - uso de sprites</title>
+            <meta name="description" content="Ejemplo uso de sprites en un videojuego consistente en un pollo que quiere atravesar la pantalla utilizando la etiqueta canvas de html">
+
+</head>
+<body>
+<h1>Ejemplo de uso de sprites con la etiqueta Canvas</h1>
+	<canvas id="canvas" width="400" height="400"></canvas>
+
+<script>
+var c = document.getElementById("canvas");
+var ctx = c.getContext("2d");
+var gameLive = true;
+var sprites = {};
+   var enemies = [
+      {
+        x: 100, //x coordinate
+        y: 100, //y coordinate
+        speedY: 1, //speed in Y
+        w: 40, //width
+        h: 40 //heght
+      },
+      {
+        x: 260,
+        y: 100,
+        speedY: 2,
+        w: 40,
+        h: 40
+      },
+      {
+        x: 380,
+        y: 100,
+        speedY: 3,
+        w: 40,
+        h: 40
+      },
+      {
+        x: 450,
+        y: 100,
+        speedY: 7,
+        w: 40,
+        h: 40
+      }
+    ];
+
+var player ={
+         x: 40,
+        y: 200,
+        speedX: 2,
+        w: 40,
+        h: 40,
+        isMoving:false
+}
+var tesoro = {
+      x: 350,
+        y: 200,
+        speedX: 2,
+        w: 40,
+        h: 40,
+}
+
+var load = function(){
+  sprites.player = new Image();
+  sprites.player.src = "images/hero.png";
+
+  sprites.background = new Image();
+  sprites.background.src = "images/floor.png";
+
+  sprites.enemy = new Image();
+  sprites.enemy.src = "images/enemy.png";
+
+  sprites.tesoro = new Image();
+  sprites.tesoro.src = "images/chest.png";
+
+}
+var movePlayer = function(){
+  player.isMoving = true;
+
+}
+var stopPlayer = function(){
+    player.isMoving = false;
+
+}
+canvas.addEventListener('mousedown', movePlayer);
+canvas.addEventListener('mouseup', stopPlayer);
+
+canvas.addEventListener('touchstart', movePlayer);
+canvas.addEventListener('touchend', stopPlayer);
+
+var checkCollision = function(rect1, rect2){
+  var closeOnWidth = Math.abs(rect1.x -rect2.x)<=Math.max(rect1.w, rect2.w);
+  var closeOnHeight = Math.abs(rect1.y - rect2.y)<=Math.max(rect1.h, rect2.h);
+  return closeOnHeight && closeOnWidth;
+}
+
+var update = function(){
+	var n = enemies.length;
+	for (var i =0; i < n; i++) {
+		enemies[i].y+=enemies[i].speedY;
+		if(enemies[i].y>400 || enemies[i].y<0)enemies[i].speedY=-enemies[i].speedY;
+  if(checkCollision(player, enemies[i])){
+    gameLive = false;
+    alert("Game Over");
+  }
+	};
+  if(player.isMoving==true){
+      player.x += player.speedX;
+  }
+  if(checkCollision(player, tesoro)){
+  gameLive= false;
+    alert("Ganaste");
+    //Recarga la página
+    window.location="";
+  }
+
+}
+var draw = function(){
+	ctx.clearRect(0,0,400,400);
+	
+    ctx.fillRect(player.x, player.y, player.w, player.h);
+        ctx.fillRect(tesoro.x, tesoro.y, tesoro.w, tesoro.h);
+
+        ctx.drawImage(sprites.background, 0, 0);
+        ctx.drawImage(sprites.player, player.x, player.y);
+
+        enemies.forEach(function(element, index){
+          ctx.drawImage(sprites.enemy, element.x, element.y);
+        });
+        ctx.drawImage(sprites.tesoro, tesoro.x, tesoro.y);
+
+}
+var step = function(){
+	update();
+	draw();
+	if(gameLive){
+    window.requestAnimationFrame(step);
+  }
+};
+load();
+step();
+
+</script>
+	
+</body>
+</html>

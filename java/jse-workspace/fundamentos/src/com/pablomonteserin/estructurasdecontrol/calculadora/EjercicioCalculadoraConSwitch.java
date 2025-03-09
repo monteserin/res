@@ -1,0 +1,36 @@
+package com.pablomonteserin.estructurasdecontrol.calculadora;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+
+public class EjercicioCalculadoraConSwitch {
+	public static void main(String [] args) throws IOException{
+        BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
+
+		System.out.println("Introduzca el primer operando, por favor:");
+		
+		
+		float n1 = Float.parseFloat(br.readLine());
+		System.out.println("Introduzca el segundo operando, por favor:");
+		float n2 = Float.parseFloat(br.readLine());
+		System.out.println("Introduzca el operador, por favor:");
+		char op =br.readLine().charAt(0);
+		float resultado = 0;
+		switch(op){
+		case '+':
+			resultado = n1 + n2;
+			break;
+		case '-':
+			resultado = n1 - n2;
+			break;
+		case '*':
+			resultado = n1 * n2;
+			break;
+		case '/':
+			resultado = n1 / n2;
+			break;
+		}
+		System.out.println(resultado);
+	}
+}

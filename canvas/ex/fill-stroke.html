@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>fill, stroke en canvas de HTML5 | Pablo Monteserín</title>
+			<meta name="description" content="Ejemplo de como contornear y rellenar un rectángulo creado con el canvas de html utilizando Javascript">
+
+</head>
+	<body>
+	<h1>Ejemplo de creación de un rectángulo con relleno y bordei con el canvas de HTML</h1>
+		<canvas id="canvas" width="400px" height="400px" style="border:2px solid black" />
+		<script>
+			var c = document.getElementById("canvas");
+			var ctx = c.getContext("2d");
+
+			//Rectángulo sin borde
+			ctx.fillStyle = "red";
+			ctx.fillRect(10, 10, 50, 50);
+
+			ctx.lineWidth = 5;
+			ctx.strokeStyle = "rgba(0, 0, 255, 1)";
+			ctx.strokeRect(70, 70, 140, 140);
+			
+			//Bora la pantalla entera
+			//ctx.clearRect(0,0,400,400);
+		</script>
+	</body>
+</html>

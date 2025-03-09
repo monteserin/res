@@ -1,0 +1,276 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)https://alexfox.dev/lax.js/ -->
+<html lang="en">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=0.5, maximum-scale=0.5, minimum-scale=0.5">
+
+
+  <script type="text/javascript">
+    /* window.scrollTo(0, 0)
+
+     window.onload = function () {
+
+       lax.init()
+
+       lax.addDriver(
+         "scrollY",
+         function () {
+           return document.documentElement.scrollTop;
+         },
+         { frameStep: 1 }
+       );
+
+     }*/
+  </script>
+
+
+
+  <style>
+    .blue {
+      height: 500px;
+      background-color: blue;
+      width: 900px;
+      margin: auto
+    }
+
+    .red {
+      height: 500px;
+      background-color: red;
+      width: 900px;
+      margin: auto
+    }
+
+    .brown {
+      height: 500px;
+      background-color: brown;
+      width: 900px;
+      margin: auto
+    }
+
+    .orange {
+      height: 500px;
+      background-color: orange;
+      width: 900px;
+      margin: auto
+    }
+
+    /*******************************/
+    body {
+      margin: 0;
+    }
+
+    .container {
+      margin: auto;
+    }
+
+    .box {
+      position: relative;
+      width: 1200px;
+      /* 1709 */
+      height: 1100px;
+      /* 1605*/
+
+
+    }
+
+    .box .back {
+      width: 100%;
+    }
+
+    .flecha1 {
+      position: absolute;
+      width: 15%;
+      height: 5%;
+      top: 20%;
+      left: 20%;
+    }
+
+    .flecha2 {
+      position: absolute;
+      width: 15%;
+      height: 5%;
+      top: 30%;
+      left: 15%;
+    }
+
+    .flecha3 {
+      position: absolute;
+      width: 15%;
+      height: 5%;
+      top: 40%;
+      left: 18%;
+    }
+
+    .sol {
+      position: absolute;
+      top: 50%;
+    }
+
+    .cielo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 110%;
+      height: 110%;
+    }
+
+    .arbustos {
+      position: absolute;
+      bottom: 20%;
+      left: 0;
+      width: 110%;
+      height: 40%;
+    }
+
+    .arquera {
+      position: absolute;
+      bottom: 10%;
+      left: 75%;
+      width: 35%;
+      height: 45%;
+    }
+
+    .arbol {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 40%;
+      height: 30%;
+    }
+
+    .sol {
+      position: absolute;
+      top: 40%;
+      left: 50%;
+    }
+
+    .suelo {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      height: 40%;
+      width: 110%;
+    }
+
+    .montana {
+      position: absolute;
+      width: 70%;
+      height: 30%;
+      bottom: 20%;
+      left: 25%;
+    }
+
+    .tortuga {
+      top: 30%;
+      left: 10%;
+      width: 20%;
+      height: 20%;
+      transform-origin: 200% center;
+      position: absolute;
+      animation: myOrbit 2s linear infinite;
+    }
+
+    .tortuga:before {
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      background: blue;
+      animation: rotate 3s linear infinite;
+    }
+
+    @keyframes myOrbit {
+      from {
+        transform: rotate(0deg) translateX(15px) rotate(0deg);
+      }
+
+      to {
+        transform: rotate(360deg) translateX(15px) rotate(-360deg);
+      }
+    }
+  </style>
+
+
+</head>
+
+
+<body>
+
+  <div class="container" data-scroll-container>
+
+    <h1>Docu: https://alexfox.dev/lax.js/preset-explorer</h1>
+    <div class="box1 lax lax_preset_fadeIn:50:100 lax_preset_spin blue">
+    </div>
+
+    <div class="box2 lax lax_preset_seesaw:500:40 red">
+    </div>
+
+    <div class="lax lax_preset_slideX:1230.5:500  orange">
+      jola
+    </div>
+
+
+
+
+
+
+    <div class="box">
+      <img class="cielo" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-0.2"
+        src="./img/history/3/cielo.png" alt="">
+      <img class="montana" data-scroll data-scroll-direction="vertical" data-scroll-speed="1"
+        src="./img/history/3/montana.png" alt="">
+      <img class="suelo" data-scroll data-scroll-direction="horizontal" data-scroll-speed=".2"
+        src="./img/history/3/suelo.png" alt="">
+
+      <img class="arbustos" data-scroll data-scroll-direction="horizontal" data-scroll-speed="0.2"
+        src="./img/history/3/arbustos.png" alt="">
+
+
+
+      <img class="arbol" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-0.1"
+        src="./img/history/3/arbol.png" alt="">
+      <img class="arquera" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-0.1"
+        src="./img/history/3/arquera.png" alt="">
+      <img class="sol" data-scroll data-scroll-direction="horizontal" data-scroll-speed="-1"
+        src="./img/history/3/sol.png" alt="">
+      <img class="flecha1" data-scroll data-scroll-direction="horizontal" data-scroll-speed="10"
+        src="./img/history/3/flecha1.png" alt="">
+      <img class="flecha2" data-scroll data-scroll-direction="horizontal" data-scroll-speed="8"
+        src="./img/history/3/flecha2.png" alt="">
+      <img class="flecha3" data-scroll data-scroll-direction="horizontal" data-scroll-speed="4"
+        src="./img/history/3/flecha3.png" alt="">
+      <div class="tortugaWrapper">
+        <img class="tortuga" src="./img/history/3/tortuga.png" alt="">
+      </div>
+    </div>
+    <div
+      class="lax lax_preset_fadeInOut:230.5:0 lax_preset_slideX:230.5:500 lax_preset_zigzag:170:200 lax_preset_scaleOut:230.5:0.6 orange">
+    </div>
+
+    <div class="blue">
+
+
+    </div>
+
+    <script src="./js/locomotive-scroll.min.js"></script>
+    <link rel="stylesheet" href="./locomotive-experiments/locomotive-scroll.min.css">
+
+    <script>
+      const scroller = new LocomotiveScroll({
+        el: document.querySelector('[data-scroll-container]'),
+        smooth: true
+      });
+
+      scroller.on('call', (func) => {
+        if (func === 'f1') {
+          console.log('change things')
+        }
+      });
+
+    </script>
+
+</body>
+
+</html>

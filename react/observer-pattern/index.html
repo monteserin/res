@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="state"></div>
+
+    <button onClick="callToObserverUpdateState()">Suscribirse</button>
+    <script>
+
+        const createObserver = (initialState) => {
+            let state = initialState, nextSubscriberIndex = 0;
+
+            const subscribers = {};
+
+            const subscribe = (listener) => {
+                if (typeof listener !== 'function') return;
+                // suscriberIndex almacena la posición en la que nos estamos suscribiendo ( dentro de la colección de listeners que ya tenía el objeto)
+                const subscriberIndex = nextSubscriberIndex;
+                subscribers[subscriberIndex] = listener;
+                nextSubscriberIndex++;
+                listener(state);
+
+                // Devolvemos una función con la que nos podemos desuscribir
+                return () => delete subscribers[subscriberIndex]
+            }
+
+            const notifyChanges = () => {
+                for (const key in subscribers) {
+                    const subscriber = subscribers[key];
+                    subscriber(state);
+                }
+            }
+
+            // Cuando actualizamos el state evaluamos si su nuevo valor coincide con el anterior. Si coinciden, no hacemos nada. Si no coinciden, notificamos a todos los suscribers que el state ha cambiado.
+            const updateState = (nextState) => {
+                if (state === nextState) return
+                state = nextState;
+                notifyChanges();
+            }
+
+            return {
+                subscribe,
+                updateState,
+                getState: () => state
+            }
+        }
+
+        const observer = createObserver(0);
+
+        const firstSuscriber = (state) => {
+            console.log("FIRST_LISTENER:", state)
+        }
+
+
+        observer.subscribe(firstSuscriber);
+
+        const callToObserverUpdateState = () => {
+            const state = observer.getState();
+            const newState = state + 1;
+            observer.updateState(newState);
+            document.querySelector('.state').innerHTML = newState;
+        }
+
+    </script>
+
+</body>
+
+</html>

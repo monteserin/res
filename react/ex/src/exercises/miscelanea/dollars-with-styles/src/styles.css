@@ -1,0 +1,33 @@
+.container {
+  margin: auto;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: gray;
+}
+
+.content {
+  background-color: white;
+  max-width: 500px;
+  padding: 50px;
+  border-radius: 15px;
+}
+
+input {
+  padding: 15px;
+  border-radius: 7px;
+  font-size: 2rem;
+}
+
+button {
+  font-size: 2rem;
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+.output {
+  font-size: 5rem;
+}

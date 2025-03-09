@@ -1,0 +1,420 @@
+@font-face{
+    font-family: 	app;
+    src: 			url(fonts/Mochary_PERSONAL_USE_ONLY.ttf);
+}
+
+body{
+	background-image: 		url(fotos/backapp.png);
+	background-attachment: 	fixed;
+}
+
+.sujeta{
+	
+  	background-image: 		url(fotos/backapp-blur.png);
+	background-attachment: 	fixed;
+ 
+  	width: 	60%;
+  	height: 200px;
+	text-align: center;
+  	margin: 		0 auto;
+  	margin-bottom: 	10px;
+
+  	border-radius: 			30px 30px 30px 30px;
+	-moz-border-radius: 	30px 30px 30px 30px;
+	-webkit-border-radius: 	30px 30px 30px 30px;
+}
+
+.texto{
+  	left: 			0;
+  	right: 			0;
+  	z-index: 		9999;
+  	margin-left: 	20px;
+  	margin-right: 	10px;
+  	margin-top: 	10px;
+  	display: inline-block;
+  	vertical-align: top;
+  	text-align: center;
+}
+
+label{
+	font-family: 	app;
+	font-size: 		1.5em;
+	margin-top: 	2px;
+	text-align: 	left;
+}
+
+select#momento {
+   -webkit-appearance: 		button;
+   -webkit-border-radius: 	2px;
+   -webkit-box-shadow: 		0px 1px 3px rgba(0, 0, 0, 0.1);
+   -webkit-padding-end: 	20px;
+   -webkit-padding-start: 	2px;
+   -webkit-user-select: 	none;
+
+   background-image:        url(http://i62.tinypic.com/15xvbd5.png), -webkit-linear-gradient(#FAFAFA, #F4F4F4 40%, #E5E5E5);
+
+   background-position: 	97% center;
+   background-repeat: 		no-repeat;
+   border: 					1px solid #AAA;
+   color: 					#555;
+   font-size: 				1em;
+   margin: 					5px;
+   margin-top: 				10px;
+   overflow: 				hidden;
+   padding: 				5px 5px;
+   text-overflow: 			ellipsis;
+   white-space: 			nowrap;
+   width: 					230px;
+}
+
+#ropaArriba{
+	width: 					30%; 
+	display: 				inline-block;
+	vertical-align: 		top;
+	margin-top: 			5px;
+	display: 				none;
+}
+
+#chaquet{
+	width: 					30%; 	
+	display: 				inline-block;
+	vertical-align: 		top;
+	margin-top: 			5px;
+	display: 				none;
+}
+
+#ropaAbajo{
+	width:           30%; 
+	margin-top:  			5px;
+	display: 				none;
+}
+
+input[type=checkbox]{
+	display: 		inline-block;
+	margin-bottom: 	7px;
+	margin-top: 	7px;
+}
+
+p{
+	display: 		inline-block;
+	font-weight: 	bold;
+}
+
+.sujeta2{
+	width: 		80%;
+	height: 	430px;
+	position: 	relative;
+	margin: 	0 auto;
+}
+
+.ropa{
+	width: 	80%;
+	height: 430px;
+	
+  border-radius: 			50px 50px 50px 50px;
+	-moz-border-radius: 	50px 50px 50px 50px;
+	-webkit-border-radius: 	50px 50px 50px 50px;
+
+	background-image: 		url(fotos/backapp-blur.png);
+	background-attachment: 	fixed;
+	display: block;
+  
+ 	display: 		none;
+	margin: 		0 auto;
+	text-align: 	center;
+}
+
+.etiqueta{
+	
+	top: 			10px;
+	background-image:   url(fotos/etiqueta.png);
+    background-size:         100% auto;
+    background-position:    center top;
+    background-repeat:      no-repeat;
+	margin-right: 	0;
+
+    width:              20%;
+    max-width:          250px;
+    height:             400px;
+    display:            inline-block;
+}
+
+/* -------------- boton -------------- */
+
+.boton {
+    text-decoration: 		none;
+    font: 					30px/1em app, sans-serif;
+    text-shadow: 			rgba(0,0,0,1) 0 2px 1;
+    -webkit-user-select: 	none;
+    -moz-user-select: 		none;
+    user-select: 			none;
+    padding: 				.4em .4em .4em .4em;
+   	color: 					rgba(0,0,0,1) !important;
+    
+    display: 	block;
+    margin: 	0 auto;
+    width: 		90px;
+    text-align: center;
+
+    -webkit-border-radius: 	8px;
+    -moz-border-radius: 	8px;
+    border-radius: 			8px;
+    border-top: 			1px solid rgba(90,92,93,0.8);
+    border-bottom: 			1px solid rgba(0,0,0,0.1);
+    background-image: 		-webkit-gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(51,61,90,0) ), to( rgba(51,61,90,0.7) ));
+    background-image: 		-moz-radial-gradient(top, ellipse cover, rgba(51,61,90,0.7) 0%, rgba(51,61,90,0) 100%);
+    background-image: 		gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(51,61,90,0) ), to( rgba(51,61,90,0.7) ));
+    -webkit-transition: 	background .2s ease-in-out;
+    -moz-transition: 		background .2s ease-in-out;
+    transition: 			background .2s ease-in-out;
+}
+
+.xs { font-size: 20px; }
+.xl { font-size: 32px; }
+
+.boton:hover {
+    background-color:   hsl(0, 0%, 83%);
+    text-shadow: rgba(0,0,0,0.5) 0 1px 2px;
+}
+
+.boton:active {
+    background-image:   -webkit-gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(90,92,93,0) ), to( rgba(90,92,93,0.5) ));
+    background-image:   -moz-gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(90,92,93,0) ), to( rgba(90,92,93,0.5) ));
+    background-image:   gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(90,92,93,0) ), to( rgba(90,92,93,0.5) ));
+   
+    -webkit-transform:  translateY(.1em);
+    -moz-transform:     translateY(.1em);
+    transform:          translateY(.1em);
+}
+
+.boton:focus {
+    outline: none;
+    color: rgba(0,0,0,1) !important;
+    text-shadow: rgba(0,0,0,0.5) 0 1px 2px;
+}
+
+.boton[disabled], .boton[disabled]:hover, .boton.disabled, .boton.disabled:hover {
+    opacity:            1;
+    cursor:             default;
+    color:              rgba(0,0,0,1) !important;
+    text-shadow:        none !important;
+    background-color:   rgba(90,92,93,0.05);
+    background-image:   none;
+    border-top:         none;
+
+    -webkit-transform:  translateY(5px);
+    -moz-transform:     translateY(5px);
+    transform:          translateY(5px);
+}
+
+
+
+@media screen and (max-width:800px) {
+
+.sujeta{
+  	width: 	80%;
+  	height: 150px;
+  
+  	text-align: center;
+  	margin: 0 auto;	
+}
+
+select#momento {
+  
+   width: 	120px;
+}
+
+p{
+	font-size: 0.75em;
+}
+
+label{
+	
+	font-size: 		1.2em;
+	
+}
+
+.sujeta2{
+	width: 		90%;
+	height: 	300px;
+	display: 	block;
+	margin: 	0 auto;
+	margin-top: 10px;
+	text-align: center;
+}
+
+.ropa{
+	width: 	90%;
+	height: 300px;	
+ }
+
+.etiqueta{
+	margin-top:             20px;
+    width:                  70%;
+    max-width:              150px;
+    height:                 110px;
+
+    display:                inline-block;
+    margin:                 0 auto;
+    background-image:       url(fotos/etiquetahorizontal.png);
+    background-size:        100% auto;
+    background-position:    center top;
+    background-repeat:      no-repeat;
+    margin-bottom:          0;
+    padding:                0;
+}
+
+.boton{
+        font:       20px/.5em app, sans-serif;
+        width:      130px;
+    }
+#ropaArriba{
+  width:          30%; 
+  
+}
+
+#chaquet{
+  width:          30%;  
+  
+}
+
+#ropaAbajo{
+  width:          30%; 
+ 
+}
+
+}
+
+@media screen and (max-width:523px) {
+
+.sujeta{
+	margin-top: 30px;
+    width:  100%;
+    height: 185px;
+}
+
+.etiqueta{
+  top: 						0;
+  display:             	   inline-block;
+    margin:                 0 auto;
+    background-image:       url(fotos/etiqueta1.png);
+    width:                  25%;
+    max-width:              200px;
+    height:                 200px;
+    margin-top: 5px;
+    
+}
+
+#ropaArriba{
+  width:          30%; 
+}
+
+#chaquet{
+  width:          30%;  
+ 
+}
+
+#ropaAbajo{
+  width:          30%; 
+ 
+}
+
+.sujeta2{
+  width:    100%;
+  height:   250px;
+}
+
+.ropa{
+  width:  100%;
+  height: 250px;
+}
+
+.boton{
+        font:       20px/.4em app, sans-serif;
+        width:      80px;
+    }
+
+p{
+	font-size: 0.5em;
+}
+
+label{
+	
+	font-size: 		1.2em;
+	
+}
+
+}
+
+@media screen and (max-width:335px) {
+
+.sujeta{
+    height: 200px;
+
+}
+
+.texto {
+	margin-left: 	0px;
+  	margin-right: 	0px;
+}
+
+.sujeta2{
+  margin-top: 20px;
+  height: 300px;
+}
+.ropa{
+  height: 300px;
+}
+
+.boton{
+        font:       10px/.3em app, sans-serif;
+        width:      110px;
+    }
+
+}
+
+@media screen and (max-width:261px) {
+
+.sujeta{
+    height: 200px;
+
+}
+
+.etiqueta{
+	width:                  25%;
+    max-width:              100px;
+    height:                 100px;
+    margin-left: 0px;
+}
+.texto {
+	vertical-align: top;
+}
+
+select#momento {
+  
+   width: 	80px;
+}
+
+p{
+	font-size: 0.5em;
+}
+
+label{
+	
+	font-size: 		0.75em;
+	
+}
+.sujeta2{
+  margin-top: 20px;
+  height: 300px;
+}
+.ropa{
+  height: 300px;
+}
+
+.boton{
+        font:       10px/.3em app, sans-serif;
+        width:      110px;
+    }
+
+}

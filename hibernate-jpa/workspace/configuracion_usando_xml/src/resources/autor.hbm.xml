@@ -1,0 +1,30 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC 
+"-//Hibernate/Hibernate Mapping DTD//EN"
+"
+http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd
+">
+
+<hibernate-mapping>
+
+	<class name="com.hibernate.entities.Autor">
+		<meta attribute="class-description">
+			This class contains the autor detail.
+		</meta>
+
+		<id name="id" type="int" column="id">
+			<generator class="native" />
+		</id>
+
+		<property name="nombre" column="titulo" type="string" />
+
+		<set name="libros" table="LIBRO" inverse="true" lazy="true"
+			fetch="select" cascade="all">
+			<key>
+				<column name="autor_id" not-null="true" />
+			</key>
+			<one-to-many class="com.hibernate.entities.Libro" />
+		</set>
+	</class>
+
+</hibernate-mapping>

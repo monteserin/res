@@ -1,0 +1,23 @@
+.container {
+    width: 1200px;
+    margin: auto;
+}
+
+.container img {
+    max-width: 100%;
+}
+
+.invisible {
+    max-height: 0;
+    opacity: 0;
+}
+
+
+.loading {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: center;
+    transition: 0.5s;
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Text Overflow | Pablo Monteserín</title>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Ejemplo de uso del estilo text-overflow para hacer que un texto sea visualizado al pasar el cursor por encima">
+    <meta name="robots" content="noindex, follow">
+</head>
+
+<body>
+    <h1>Ejemplo de uso del estilo 'text-overflow'</h1>
+
+    <style>
+        .menu {
+            display: inline-flex;
+            list-style: none;
+            width: 100%;
+            background-color: red;
+            box-sizing: border-box;
+        }
+
+
+        .menu a {
+            display: block;
+            text-decoration: none;
+            padding: 20px;
+            border: 1px solid black;
+            width: 100%;
+            margin-right: 20px;
+            box-sizing: border-box;
+            white-space: nowrap;
+            /* Prevents the text from wrapping initially */
+            overflow: hidden;
+            /* Hides the overflow text */
+            text-overflow: ellipsis;
+
+        }
+    </style>
+    <ul class="menu">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">About us</a></li>
+        <li><a href="#">Contact</a></li>
+    </ul>
+</body>
+
+</html>

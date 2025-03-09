@@ -1,0 +1,38 @@
+
+input {
+    width: 100px;
+}
+
+.checkbox {
+    width: 1em;
+}
+
+label {
+    display: inline-block;
+    width: 150px;
+    margin-left: 10px;
+
+}
+
+fieldset {
+    display: inline-block;
+    vertical-align: top;
+    width: 330px;
+    box-sizing: border-box;
+    margin-left: 10px;
+    margin-right: 10px;
+    padding: 20px; /*no poner padding a los fieldset por problemas de compatibilidad con IE*/
+    border: solid black 1px; /*Habrá que especificar explícitamente el borde del fieldset para que haya compatibilidad con IE*/
+}
+
+.fieldSetArriba {
+    height: 150px;
+}
+
+.fieldSetAbajo {
+    width: 684px;
+}
+
+legend {
+    margin-left: 10px
+}

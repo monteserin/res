@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ejercicio ampliación Formulario HTML5| Pablo Monteserín</title>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Ejemplo de maquetación formulario HTML y CSS con validación que colorea los campos inválidos de color rojo y los válidos de color verde">
+    <meta name="robots" content="noindex, follow">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <h1>Validación de un formulario con HTML y CSS - ejercicio resuelto</h1>
+    <form>
+        <label for="nombre">Nombre:</label>
+        <!-- No le pongo el atributo autofocus para que la página que tiene el iframe que carga está página no se vaya a la ubicación de esta-->
+        <input type="text" id="nombre" required="required" /> <img
+            src="https://pablomonteserin.com/res/html5/ex/formularios/ejercicio-formulario-2/success.png" alt=""><br><br>
+        <label for="edad">Edad:</label>
+        <input type="number" id="edad" required="required" min="0" max="100" /><img
+            src="https://pablomonteserin.com/res/html5/ex/formularios/ejercicio-formulario-2/success.png" alt=""><br><br>
+        <label for="cp">C&oacute;digo postal:</label>
+        <input type="text" pattern="^[0-9]{5}$" id="cp" required="required" /><img
+            src="https://pablomonteserin.com/res/html5/ex/formularios/ejercicio-formulario-2/success.png" alt=""><br><br>
+        <label for="mail">Email:</label>
+        <input type="email" id="mail" /><img src="https://pablomonteserin.com/res/html5/ex/formularios/ejercicio-formulario-2/success.png"
+            alt=""><br><br>
+        <label for="fecha">Fecha de reserva:</label>
+        <input type="date" id="fecha" required="required" /><img
+            src="https://pablomonteserin.com/res/html5/ex/formularios/ejercicio-formulario-2/success.png" alt=""><br><br>
+        <label for="nota">Nota:</label>
+        <input type="range" id="nota" max="10" min="0" value="7" step="1" /><img
+            src="https://pablomonteserin.com/res/html5/ex/formularios/ejercicio-formulario-2/success.png" alt=""><br><br>
+        <input type="submit">
+    </form>
+
+</body>
+
+</html>

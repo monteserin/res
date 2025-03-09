@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Audio en HTML5 | Pablo Monteserín</title>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Ejemplo de como cargar ficheros de sonido en un documento HTML utilizando la etiqueta audio y asignándo al atributo 'src' la ubicación del fichero de audio">
+    <meta name="robots" content="noindex, follow">
+</head>
+
+<body>
+    <audio src="https://pablomonteserin.com/res/html5/ex/img/HakunaMatataItMeansNoWorries.mp3" controls="controls">
+        Su navegador no soporta HTML5
+    </audio>
+    <!-- El atributo preload hace que el recurso se vaya descargando al ingresar en la pÃ¡gina-->
+    <audio controls="controls" preload="preload" loop="loop">
+        <source src="https://pablomonteserin.com/res/html5/ex/img/HakunaMatataItMeansNoWorries.mp3" type="audio/mp3" />
+        <source src="https://pablomonteserin.com/res/html5/ex/img/HakunaMatataItMeansNoWorries.wav" type="audio/wav" />
+        Su navegador no soporta HTML5
+    </audio>
+
+</body>
+
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Componente accordion de jQuery Mobile | Pablo Monteserín</title>
+    <meta charset='utf-8'>
+    <meta name="description"
+        content="Ejemplo de página hecha con jQuery Mobile que implementa un efecto accordion que muestra el contenido de una capa cuando hacemos click en su encabezado">
+    <meta name="robots" content="noindex, follow">
+    <link rel="stylesheet" type="text/css" href="https://pablomonteserin.com/res/jquery-mobile/ex/jquery.mobile.css">
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery-mobile/ex/jquery-1.11.js"></script>
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery-mobile/ex/jquery.mobile.js"></script>
+    <style type="text/css">
+        .ui-collapsible-heading-toggle {
+            background: salmon
+        }
+    </style>
+</head>
+
+<body>
+    <section id="firstpage" data-role="page">
+        <header data-role="header">
+            <h1>Componente accordion de jQuery Mobile</h1>
+        </header>
+
+        <div data-role="collapsible-set">
+
+            <div data-role="collapsible" data-collapsed="false">
+                <h3>Section 1</h3>
+                <p>I'm the collapsible set content for section 1.</p>
+            </div>
+
+            <div data-role="collapsible">
+                <h3>Section 2</h3>
+                <p>I'm the collapsible set content for section 2.</p>
+            </div>
+
+        </div>
+
+        <footer data-role="footer">El pie de la página</footer>
+    </section>
+</body>
+
+</html>

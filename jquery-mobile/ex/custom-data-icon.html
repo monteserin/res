@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Custom data icon pequeño con jQuery Mobile </title>
+    <meta charset='utf-8'>
+    <meta name="description" content="Ejemplo de creación de un botón con icono personalizado utilizando jQuery Mobile">
+    <meta name="robots" content="noindex, follow">
+    <link rel="stylesheet" type="text/css" href="https://pablomonteserin.com/res/jquery-mobile/ex/jquery.mobile.css">
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery-mobile/ex/jquery-1.11.js"></script>
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery-mobile/ex/jquery.mobile.js"></script>
+    <style type="text/css">
+        .ui-icon-twitter:after {
+            background-image: url(/curso/assets/twitter.png);
+            background-color: red;
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <section id="firstpage" data-role="page">
+        <div data-role="content">
+            <h1>Custom data icon pequeño con jQuery Mobile</h1>
+            <button data-icon="twitter" data-iconpos="bottom"></button>
+        </div>
+    </section>
+</body>
+
+</html>

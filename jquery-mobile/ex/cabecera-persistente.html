@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Cabecera persistente con jQuery Mobile | Pablo Monteserín</title>
+    <meta charset='utf-8'>
+    <meta name="description"
+        content="Ejemplo de como maquetar una cabecera que está presente en todas las pantallas de una aplicación hecha con jQuery Mobile">
+    <meta name="robots" content="noindex, follow">
+    <link rel="stylesheet" type="text/css" href="https://pablomonteserin.com/res/jquery-mobile/ex/jquery.mobile.css">
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery-mobile/ex/jquery-1.11.js"></script>
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery-mobile/ex/jquery.mobile.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("[data-role='header'], [data-role='footer']").toolbar();
+        });
+
+    </script>
+</head>
+
+<body>
+
+    <header data-role="header" data-theme="a">
+        <h1>Cabecera persistente con jQuery Mobile</h1>
+        <nav data-role="navbar">
+            <ul>
+                <li><a href="#firstpage">1</a></li>
+                <li><a href="#secondpage">2</a></li>
+                <li><a href="#thirdpage">3</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <section id="firstpage" data-role="page">
+        <div data-role="content">
+            <p>Esta es la primera página</p>
+        </div>
+    </section>
+
+    <section id="secondpage" data-role="page">
+        <div data-role="content">
+            <p>Esta es la segunda página</p>
+        </div>
+    </section>
+
+    <section id="thirdpage" data-role="page">
+        <div data-role="content">
+            <p>Esta es la tercera página</p>
+        </div>
+    </section>
+</body>
+
+</html>

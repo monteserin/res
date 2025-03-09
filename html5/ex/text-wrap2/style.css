@@ -1,0 +1,18 @@
+.menu {
+    display: inline-flex;
+    list-style: none;
+    width: 100%;
+    background-color: red;
+    box-sizing: border-box;
+}
+
+
+.menu a {
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    border: 1px solid black;
+    width: 100%;
+    margin-right: 20px;
+    box-sizing: border-box;
+}

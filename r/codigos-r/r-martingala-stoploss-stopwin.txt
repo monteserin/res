@@ -1,0 +1,36 @@
+dinero<-16
+apuestaInicial<-1
+stopLoss <- 300000
+stopWin <- 36
+probabilidadGanar<-0.66
+
+
+apuesta<-apuestaInicial
+apuestaMax <- 0  
+tiempo<-1
+historialdinero<-c(dinero, rep(NA, 99))
+
+while(historialdinero[tiempo] > 0 & tiempo < 10000){
+  tiempo<-tiempo+1
+  ruleta<-runif(1)
+  if(ruleta<probabilidadGanar){
+    historialdinero[tiempo]<-historialdinero[(tiempo-1)] + apuesta
+    if(historialdinero[tiempo] > stopWin + dinero){
+      print(paste("OBJETIVO DE GANAR ", stopWin, ", cumplido"))
+      break
+    }
+    apuesta<-1
+  }else{
+    historialdinero[tiempo]<-historialdinero[(tiempo-1)] - apuesta
+    if(apuesta < stopLoss){
+      apuesta<-apuesta*2
+    }else{
+      apuesta <-1
+    }
+  }
+  if(apuestaMax < apuesta){
+    apuestaMax = apuesta
+  }
+}
+print(paste("APUESTA MAX:", apuestaMax))
+plot.ts(historialdinero, lwd=3)

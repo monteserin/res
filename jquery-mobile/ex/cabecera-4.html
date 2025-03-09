@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>jQuery Mobile link transition| Pablo Monteserín</title>
+    <meta charset='utf-8'>
+    <meta name="description"
+        content="Ejemplo de los distintos tipos de transiciones disponibles que hay para ir de una activity a otra utilizando el plugin de Javascript jQuery Mobile">
+    <meta name="robots" content="noindex, follow">
+    <link rel="stylesheet" type="text/css" href="https://pablomonteserin.com/res/jquery-mobile/ex/jquery.mobile.css">
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery-mobile/ex/jquery-1.11.js"></script>
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery-mobile/ex/jquery.mobile.js"></script>
+</head>
+
+<body>
+    <section id="firstpage" data-role="page">
+        <header data-role="header">
+            <h1>jQuery Mobile link transition</h1>
+        </header>
+        <div data-role="content">
+            <p>Esta es la primera página</p>
+            <p><a href="#secondpage" data-transition="fade">fade</a></p>
+            <p><a href="#secondpage" data-transition="flip">flip</a></p>
+            <p><a href="#secondpage" data-transition="pop">pop</a></p>
+            <p><a href="#secondpage" data-transition="slide">slide</a></p>
+            <p><a href="#secondpage" data-transition="slidedown">slidedown</a></p>
+            <p><a href="#secondpage" data-transition="slideup">slideup</a></p>
+        </div>
+        <footer data-role="footer"></footer>
+    </section>
+    <section id="secondpage" data-role="page">
+        <header data-role="header">
+            <h2>Cabecera</h2>
+        </header>
+        <div data-role="content">
+            <p>Esta es la segunda página</p>
+        </div>
+        <footer data-role="footer">El pie de la página 2</footer>
+    </section>
+</body>
+
+</html>

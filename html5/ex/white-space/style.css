@@ -1,0 +1,14 @@
+.white-space p {
+    width: 300px;
+    /*Recorta la capa para evitar visualizar lo que exceda sus dimensiones*/
+    overflow: hidden;
+    /*tras haber recortado, añade unos puntos al final para indicar que el texto continua*/
+    text-overflow: ellipsis;
+    /*si el texto no cabe en el ancho de la capa el comportamiento normal es saltar a la siguiente línea. Este estilo lo evita el salto de línea*/
+    white-space: nowrap;
+}
+
+.white-space p:hover {
+    overflow: visible;
+    white-space: wrap;
+}

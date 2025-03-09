@@ -1,0 +1,12 @@
+[gd_scene load_steps=2 format=3 uid="uid://c26cwsd2gi850"]
+
+[ext_resource type="Texture2D" uid="uid://ch5h446agw53v" path="res://assets/lose.jpg" id="1_pnmkr"]
+
+[node name="Lose" type="Node2D"]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_pnmkr")

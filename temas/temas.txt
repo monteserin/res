@@ -1,0 +1,80 @@
+
+===========================================
+Estrategia de links
+Poner comentarios en foros:
+
+wordpress.com, fooplugins.com, wptarvern.com
+- nice, sweet, felicitaciones y esa mierda
+- OMG! Great idea. Thanks so much, this is gonna be a very helpful resource. I’m really excited!
+- Wow, congratulations, Pippin. And thanks for sharing. We really, really appreciate your transparency. I wish you a great 2015, it will be the year that Pippin’s Pages, LLC will become a 7 figure business. 🙂
+- Great, great, great resource. Adrew is a great speaker. This video is very helpful.
+- Nice! It should be in core!
+- Nice filter, pretty convenient! Thanks for sharing and the update in your plugin! 🙂
+
+
+Definir mi dominio en mi perfil de usuariod de wordpress.com
+
+Conseguir un enlace entrante en las páginas que hago o de mis clientes
+meetups
+Subir plugins a wordpress.com
+colaboraciones
+anunciar cursos en domestika
+=============================
+Páginas dónde boluda dice cosas:
+wptavern.com
+https://pippinsplugins.com/blog/
+https://poststatus.com
+webdevstudios.com
+wordpress.com
+
+
+podcasting
+
+ivoox.com
+https://podtail.com
+https://www.spreaker.com
+https://www.podbean.com/site/EpisodeDownload/DIR4515165BMAPZ
+https://player.fm/podcasts/Markets
+https://www.podomatic.com/landing/listen
+https://www.blubrry.com/programs/
+https://www.learnoutloud.com/
+
+================================
+Enlaces que no entiendo:
+https://kilianvalkhof.com/2009/css-html/combining-cufon-and-font-face/ 
+(tiene varios enlaces aquí)
+
+Se la han metido doblada?
+https://reskyt.com/es/internet/clientes/aviso-legal/76535.html
+
+qué es esto?
+https://www.comunicae.es/nota/5-podcast-en-espanol-para-emprendedores-en-el-1162273/
+https://www.scoop.it/t/formacion-y-recuros-para-formacion
+https://www.vozpopuli.com/memesis/Joan_Boluda-xx-Twitter-1000euros-twitter_0_859714082.html
+http://www.tusmedios.es/economia_y_negocios/marketing/74423-el-80-de-los-negocios-preparan-su-campana-de-navidad-en-el-mes-de-diciembre.html
+https://www.que.es/curiosas/201511061113-experimento-sortea-1000-euros-revoluciona.html
+https://mixx.io/2018/06/11/no-se-puede-confiar-en-facebook/
+https://www.desafiodigital.es/video/curso-de-video/
+https://www.domestika.org/en/courses/80-creacion-de-una-tienda-online-en-wordpress/units/351-gestion/lessons/1259-informes
+https://tecnosoluciones.com/article/print/274/una-pagina-web-perfecta-para-seo
+http://www.dirde.com/web/consultor-de-marketing-online/26944/
+https://www.estrelladigital.es/articulo/comunicados/80-negocios-preparan-campana-navidad-mes-diciembre/20161205131856306755.html
+https://www.diariocritico.com/el-82-de-las-visitas-que-recibe-una-web-no-son-potenciales-clientes
+https://neliosoftware.com/es/blog/joan-boluda-el-wprofesional-del-mes/
+
+Escuchar a ver: https://wpradio.es
+http://directory.libsyn.com/episode/index/show/librosparaemprendedores/id/6110974
+
+
+
+dr -> domain rate -> autoridad del dominio (en lo que más me debo fijar, si es superior a 30 ya es bueno)
+ur -> url rate -> autoridad de la url
+
+
+
+https://minimalismo.com/ropa/
+https://www.spreaker.com/user/emilcar/1083-adios-movistar-hola-cableworld
+https://www.spreaker.com/user/emilcar/1085-mis-fracasos-con-gestion-de-tiempo-
+https://www.spreaker.com/user/emilcar/54-formacion-y-monetizacion-con-kike-sil
+https://www.emilcar.es/2017/10/26/empezar-un-podcast-en-frio-o-en-caliente/
+https://www.domestika.org/es/projects/414580-mi-proyecto-del-curso-creacion-de-una-tienda-online-en-wordpress-alabama-banana

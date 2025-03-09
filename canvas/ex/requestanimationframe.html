@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>simple animation con requestAnimationFrame</title>
+			<meta name="description" content="Ejemplo de como hacer una animación simple en la etiqueta canvas de html utilizando Javascript">
+
+</head>
+<body>
+<h1>Animación de un rectángulo dentro del canvas</h1>
+	<canvas id="canvas" width="400" height="400"></canvas>
+
+<script>
+var c = document.getElementById("canvas");
+var ctx = c.getContext("2d");
+var posX = 100;
+
+requestAnimationFrame(pintaCuadrado)
+function pintaCuadrado(){
+	console.log("aaaaaa");
+	ctx.save();
+	ctx.clearRect(0,0,ctx.canvas.width,ctx.canvas.height);
+	ctx.restore();	
+	posX = posX + 5;
+	ctx.beginPath();
+	ctx.rect(posX,0,200,200);
+	ctx.fill();
+	ctx.closePath();
+	requestAnimationFrame(pintaCuadrado)
+}
+</script>
+	
+</body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let characters;
+        let collectedCharacters = [];
+        let collectedCharacters2 = [];
+
+        const getWomansName = () => {
+            const womansNames = characters.filter(character => character.gender === 'female').map(character => character.name);
+            console.log('womansNames:', womansNames)
+        }
+
+        const getSmallerPeople = () => {
+            const smallerPeople = characters.map(character => ({
+                ...character,
+                height: character.height - 10
+            }));
+            console.log('smallerPeople: ', smallerPeople);
+        }
+
+        const sumaDePeso = () => {
+            const mass = characters.reduce((acc, character) => acc + parseInt(character.mass), 0);
+            console.log('mass: ', mass);
+        }
+
+        const mediaDeAltura = () => {
+            const average = characters.reduce((acc, character) => acc + parseInt(character.height), 0) / characters.length;
+            console.log('average: ', average);
+        }
+
+        const collectByIndex = (index) => {
+            collectedCharacters.push(characters[index]);
+            console.log('collectedCharacters: ', collectedCharacters);
+        }
+
+        const collectByName = (characterName) => {
+            const char = characters.find(character => character.name === characterName);
+            collectedCharacters.push(char);
+            console.log('collectedCharacters: ', collectedCharacters)
+        }
+
+        const removeByName = (characterName) => {
+            collectedCharacters = collectedCharacters.filter(character => character.name !== characterName);
+            console.log('collectedCharacters: ', collectedCharacters);
+        }
+
+        const getCharacterFilms = (characterName) => {
+            const films = characters.find(character => character.name === characterName).films;
+            console.log('films: ', films);
+        }
+
+        const collectByName2 = (characterName) => {
+            const char = characters.find(character => character.name === characterName);
+            const char2 = collectedCharacters2.find(character => character.name === characterName);
+            if (char2) {
+                char2.cantidad++;
+            } else {
+                collectedCharacters2.push({ ...char, cantidad: 1 });
+            }
+            console.log('collectedCharacters2: ', collectedCharacters2)
+        }
+
+        const mediaDeAltura2 = () => {
+            const average = collectedCharacters2.reduce((acc, character) => acc + character.height, 0) / collectedCharacters2.length;
+            console.log('Media de altura: ', average);
+        }
+
+        const removeByName2 = (characterName) => {
+            collectedCharacters2 = collectedCharacters2.filter(character => character.name !== characterName);
+            console.log('collectedCharacters2: ', collectedCharacters2);
+        }
+
+        fetch('https://swapi.dev/api/people')
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                characters = data.results;
+
+                getWomansName();
+                getSmallerPeople();
+                sumaDePeso();
+                mediaDeAltura();
+                collectByIndex(3);
+                collectByName('Luke Skywalker');
+                removeByName('Luke Skywalker');
+                getCharacterFilms('Luke Skywalker');
+                collectByName2('Luke Skywalker');
+                collectByName2('Luke Skywalker');
+                mediaDeAltura2();
+                removeByName2('Luke Skywalker');
+            });
+    </script>
+</body>
+
+</html>

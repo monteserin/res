@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Barra de navegación con HTML y CSS</title>
+		  <meta name="description" content="Ejemplo de como crear una barra de navegación con submenus que se despliegan con una animación utilizando CSS">
+
+<style>
+*{
+	margin: 0;
+	padding: 0
+}	
+
+.menu li{
+	display: inline-block;
+
+}
+.menu a{
+	padding: 20px;
+	background: pink;
+	display: block;
+	text-decoration: none;
+	transition:1s
+}
+
+.menu a:hover{
+	background: red
+}
+
+.menu ul{
+	position: absolute;
+}
+
+.menu ul li{
+	display: block;
+}
+.tieneHijos ul{
+	opacity: 0;
+	max-height: 0;
+	overflow: hidden;
+	transition:1s;
+}
+
+.tieneHijos:hover ul{
+	opacity: 1;
+	max-height: 300px
+}
+</style>
+
+</head>
+<body>
+	<h1>Barra de  navegación con submenús animados</h1>
+<ul class="menu">
+	<li><a href="#">enlace</a></li>
+	<li><a href="#">enlace</a></li>
+	<li class="tieneHijos"><a href="#">enlace</a>
+		<ul>
+			<li><a href="#">submenu</a></li>
+			<li><a href="#">submenu</a></li>
+			<li><a href="#">submenu</a></li>
+		</ul>
+	</li>
+	<li><a href="#">enlace</a></li>
+	<li class="tieneHijos"><a href="#">enlace</a>
+
+	<ul>
+			<li><a href="#">submenu</a></li>
+			<li><a href="#">submenu</a></li>
+			<li><a href="#">submenu</a></li>
+		</ul>
+
+		</li>
+</ul>
+
+</body>
+</html>

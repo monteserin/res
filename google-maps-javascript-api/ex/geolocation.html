@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Geolocalización HTML5 | Pablo Monteserín</title>
+        <meta name="description" content="Sencillo algoritmo de Javascript que nos informa de si el navegador del usuario soporta o no geolocalización">
+
+	<script>
+		var geo;
+
+		function showCoords(position){
+			var lat = position.coords.latitude;
+			var lon = position.coords.longitude;
+			alert("latitude:" + lat);
+			alert("longitude: " + lon);
+		}
+
+		function getGeoLocation(){
+			try{
+				if(navigator.geolocation)return navigator.geolocation;
+				else return undefined;
+			}	catch(e){
+				return undefined;
+			}
+		}
+
+		function init(){
+			if(geo = getGeoLocation()){
+				alert("Geolocalización soportada");
+			//El método showCoords tomará el valor de su parámetro position del objeto geo
+			geo.getCurrentPosition(showCoords);
+			
+		}else{
+			alert("Geolocalización no soportada");
+		}
+	}
+	window.onload = init;
+	
+</script>
+
+</head>
+<body>
+	<h1>Evaluación con Javascript de si el navegador soporta geolocalización</h1>
+</body>
+</html>

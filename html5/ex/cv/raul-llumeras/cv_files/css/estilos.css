@@ -1,0 +1,812 @@
+/* CABECERA DEL CURRICULUM EN LAVANDERIA */
+@font-face {
+    font-family: lavanderia;
+    src: url(../type/Lavanderia Regular.otf)
+}
+
+@font-face {
+    font-family: lavanderia-del;
+    src: url(../type/Lavanderia-Delicate.otf)
+}
+
+@font-face {
+    font-family: rotis-extra-bold;
+    src: url(../type/atrsseb0.TTF)
+}
+
+@font-face {
+    font-family: rotis;
+    src: url(../type/atrss__2.TTF)
+}
+
+@font-face {
+    font-family: rotis-bold;
+    src: url(../type/atrssb_2.TTF)
+}
+
+h1 {
+    margin: 0px;
+}
+
+.titulo {
+    margin-top: 10px;
+    margin-left: 90px;
+    position: absolute;
+    font-size: 80px;
+    font-family: lavanderia;
+    text-align: center;
+    color: black;
+}
+
+/* CABECERA DEL CURRICULUM EN LAVANDERIA */
+body {
+    margin: auto;
+    background: url(../imgs/dark_low_contrast_linen.png);
+}
+
+.central {
+    margin-top: 40px !important;
+    margin: auto;
+    width: 960px;
+    height: 1740px;
+    position: relative;
+    background-color: white;
+    background: url(../imgs/light_noise_diagonal.png);
+    box-shadow: 0px 0px 50px #000;
+    overflow: visible;
+}
+
+.separator-150 {
+    height: 150px !important;
+}
+
+.separator-90 {
+    height: 90px !important;
+}
+
+.separator-margin {
+    height: 90px !important;
+    margin-top: 40px;
+}
+
+.contenedor {
+    vertical-align: top;
+    text-align: center;
+    width: 940px;
+    height: 2000px;
+    margin-top: 0px;
+    background-color: white;
+    margin-left: 10px;
+    display: inline-block;
+    -moz-box-shadow: 1px 1px 3px #aaa, inset 0px 1px 1px rgba(0, 0, 0, 0.5);
+    -webkit-box-shadow: 1px 1px 3px #aaa, inset 0px 1px 1px rgba(0, 0, 0, 0.5);
+    box-shadow: inset 1px 1px 3px #aaa, inset 0px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.left_ball, .right_ball {
+    width: 50px !important;
+    margin: auto;
+    text-align: center;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.center {
+    width: 700px;
+    height: 100%;
+
+    display: inline-block;
+}
+
+.blue {
+    background-color: rgba(105, 174, 152, 1);
+}
+
+.orange {
+    background-color: rgba(247, 94, 17, 1);
+}
+
+/* INICIO DE LAS BARRAS */
+
+@-moz-keyframes sonar-blue {
+    0% {
+        /*-moz-transform: scale(1,1);*/
+        width: 5px;
+        height: 5px;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        /*-moz-transform: scale(2,2);*/
+        width: 25px;
+        height: 25px;
+        background-color: rgba(105, 174, 152, 1);
+    }
+}
+
+@-webkit-keyframes sonar-blue {
+    0% {
+        -webkit-transform: scale(1, 1);
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        /*-webkit-transform: scale(2,2);*/
+        width: 5px;
+        height: 5px;
+        background-color: rgba(105, 174, 152, 1);
+    }
+}
+
+.sonar-blue {
+    display: visible;
+    opacity: .9;
+    border-radius: 100%;
+    margin: 0 auto;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 101;
+    animation-name: sonar-blue;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+}
+
+@-moz-keyframes sonar-orange {
+    0% {
+        /*-moz-transform: scale(1,1);*/
+        width: 5px;
+        height: 5px;
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        /*-moz-transform: scale(2,2);*/
+        width: 25px;
+        height: 25px;
+        background-color: rgba(247, 94, 17, 1);
+    }
+}
+
+@-webkit-keyframes sonar-orange {
+    0% {
+        -webkit-transform: scale(1, 1);
+        background-color: rgba(0, 0, 0, 0);
+    }
+
+    100% {
+        /*-webkit-transform: scale(2,2);*/
+        width: 5px;
+        height: 5px;
+        background-color: rgba(247, 94, 17, 1);
+    }
+}
+
+.sonar-orange {
+    display: visible;
+    opacity: .9;
+    border-radius: 100%;
+    margin: 0 auto;
+    position: relative;
+    top: 0px;
+    left: 0px;
+    z-index: 101;
+    animation-name: sonar-orange;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-delay: 0s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+}
+
+/* INICIO DE LAS BARRAS */
+.rallita {
+    width: 5px;
+    height: 0px;
+    margin-top: 0px;
+    position: relative;
+    display: inherit;
+    /* Standard syntax */
+    animation-name: rallita;
+    animation-duration: 4s;
+    animation-timing-function: linear;
+    animation-delay: 0.5s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes rallita {
+    0% {
+        height: 0px;
+        top: 0px;
+    }
+    25% {
+        height: 250px;
+        top: 0px;
+    }
+    50% {
+        height: 500px;
+        top: 0px;
+    }
+    75% {
+        height: 750px;
+        top: 0px;
+    }
+    100% {
+        height: 1000px;
+        top: 0px;
+    }
+}
+
+/* Standard syntax */
+@keyframes rallita {
+    0% {
+        height: 0px;
+        top: 0px;
+    }
+    25% {
+        height: 250px;
+        top: 0px;
+    }
+    50% {
+        height: 500px;
+        top: 0px;
+    }
+    75% {
+        height: 750px;
+        top: 0px;
+    }
+    100% {
+        height: 1000px;
+        top: 0px;
+    }
+}
+
+.triangulito-personales-left {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 10px 10px 0;
+    border-color: transparent transparent transparent transparent;
+    margin-left: 13px;
+    margin-top: 80px;
+    position: absolute;
+    display: inline-block;
+    /* Standard syntax */
+    animation-name: triangulitos-left;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-play-state: pause;
+    animation-fill-mode: forwards;
+}
+
+.triangulito-personales-right {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 10px 10px 0 0;
+    border-color: transparent transparent transparent transparent;
+    margin-left: 785px;
+    margin-top: 80px;
+    position: absolute;
+    display: inline-block;
+    /* Standard syntax */
+    animation-name: triangulitos-right;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-play-state: pause;
+    animation-fill-mode: forwards;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes triangulitos-right {
+    0% {
+        border-color: transparent transparent transparent transparent;
+    }
+    100% {
+        border-color: #000 transparent transparent transparent;
+    }
+}
+
+/* Standard syntax */
+@keyframes triangulitos-right {
+    0% {
+        border-color: transparent transparent transparent transparent;
+    }
+    100% {
+        border-color: #000 transparent transparent transparent;
+    }
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes triangulitos-left {
+    0% {
+        border-color: transparent transparent transparent transparent;
+    }
+    100% {
+        border-color: transparent #000 transparent transparent;
+    }
+}
+
+/* Standard syntax */
+@keyframes triangulitos-left {
+    0% {
+        border-color: transparent transparent transparent transparent;
+    }
+    100% {
+        border-color: transparent #000 transparent transparent;
+    }
+}
+
+.titulo-personales {
+    margin-left: 100px;
+    margin-top: 35px;
+    position: absolute;
+    z-index: 10;
+}
+
+.titulo-personales h2 {
+    color: white;
+    font-family: rotis;
+    display: inline-block;
+}
+
+.titulo-personales img {
+    width: auto;
+    height: 25px;
+    display: inline-block;
+}
+
+.bandera-personales {
+    width: 0px;
+    height: 30px;
+    margin-left: 13px;
+    margin-top: 50px;
+    background: rgba(105, 174, 152, 1);
+    position: absolute;
+    display: inline-block;
+    z-index: 10;
+    /* Standard syntax */
+    animation-name: bandera-personales;
+    animation-duration: 1s;
+    animation-timing-function: linear;
+    animation-delay: 1s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-play-state: pause;
+    animation-fill-mode: forwards;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes bandera-personales {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 784px;
+    }
+}
+
+/* Standard syntax */
+@keyframes bandera-personales {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 784px;
+    }
+}
+
+/**********************************************************************************
+/**********************************************************************************
+/*********************************************************************************/
+.datos-personales {
+    width: 700px;
+    background-color: white;
+    height: 100px;
+    position: absolute;
+    margin: 90px 0 0 0px;
+}
+
+.datos {
+    width: 700px;
+    background-color: white;
+    height: 600px;
+    position: absolute;
+    margin: 235px 0 0 0px;
+    display: block;
+}
+
+.datos-formacion {
+    z-index: 10;
+    width: 345px;
+    background-color: white;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+}
+
+.datos-trabajo {
+
+    width: 345px;
+    background-color: white;
+    height: 100%;
+    position: relative;
+    display: inline-block;
+
+}
+
+.triangulito-formacion-left {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 10px 10px 0;
+    border-color: transparent transparent transparent transparent;
+    margin-left: 13px;
+    margin-top: 230px;
+    position: absolute;
+    display: inline-block;
+    /* Standard syntax */
+    animation-name: triangulitos-left;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-play-state: pause;
+    animation-fill-mode: forwards;
+}
+
+.titulo-formacion {
+    margin-left: 100px;
+    margin-top: 185px;
+    position: absolute;
+    z-index: 10;
+}
+
+.titulo-formacion h2 {
+    color: white;
+    font-family: rotis;
+    display: inline-block;
+}
+
+.titulo-formacion img {
+    width: auto;
+    height: 25px;
+    display: inline-block;
+}
+
+.bandera-formacion {
+    width: 0px;
+    height: 30px;
+    margin-left: 13px;
+    margin-top: 200px;
+    position: absolute;
+    display: inline-block;
+    z-index: 10;
+    /* Standard syntax */
+    animation-name: bandera-formacion;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-play-state: pause;
+    animation-fill-mode: forwards;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes bandera-formacion {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 390px;
+    }
+}
+
+/* Standard syntax */
+@keyframes bandera-formacion {
+    0% {
+        width: 0px;
+    }
+    100% {
+        width: 390px;
+    }
+}
+
+.titulo-trabajo {
+    margin-left: 535px;
+    margin-top: 185px;
+    position: absolute;
+    z-index: 10;
+}
+
+.titulo-trabajo h2 {
+    color: white;
+    font-family: rotis;
+    display: inline-block;
+}
+
+.titulo-trabajo img {
+    width: auto;
+    height: 25px;
+    display: inline-block;
+}
+
+.bandera-trabajo {
+    height: 30px;
+    margin-top: 200px;
+    position: absolute;
+    display: inline-block;
+    z-index: 10;
+    /* Standard syntax */
+    animation-name: bandera-trabajo;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+}
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes bandera-trabajo {
+    0% {
+        width: 0px;
+        margin-left: 795px;
+    }
+    100% {
+        width: 390px;
+        margin-left: 412px;
+    }
+}
+
+/* Standard syntax */
+@keyframes bandera-trabajo {
+    0% {
+        width: 0px;
+        margin-left: 795px;
+    }
+    100% {
+        width: 390px;
+        margin-left: 407px;
+    }
+}
+
+.triangulito-trabajo-right {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 10px 10px 0 0;
+    border-color: transparent transparent transparent transparent;
+    margin-left: 785px;
+    margin-top: 230px;
+    position: absolute;
+    display: inline-block;
+    animation-name: triangulitos-right;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-delay: 2s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-play-state: pause;
+    animation-fill-mode: forwards;
+}
+
+.triangulito-premios-left {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 0 10px 10px 0;
+    border-color: transparent transparent transparent transparent;
+    margin-left: 13px;
+    margin-top: 870px;
+    position: absolute;
+    display: inline-block;
+    animation-name: triangulitos-left;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-delay: 3s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-play-state: pause;
+    animation-fill-mode: forwards;
+}
+
+.bandera-premios {
+    width: 0px;
+    height: 30px;
+    margin-left: 13px;
+    margin-top: 840px;
+    position: absolute;
+    display: inline-block;
+    z-index: 10;
+    /* Standard syntax*/
+    animation-name: bandera-formacion;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-delay: 3.5s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+}
+
+.titulo-premio {
+    margin-left: 100px;
+    margin-top: 825px;
+    position: absolute;
+    z-index: 10;
+}
+
+.titulo-premio h2 {
+    color: white;
+    font-family: rotis;
+    display: inline-block;
+}
+
+.titulo-premio img {
+    width: auto;
+    height: 25px;
+    display: inline-block;
+}
+
+.bandera-idioma {
+    height: 30px;
+    margin-top: 840px;
+    position: absolute;
+    display: inline-block;
+    z-index: 10;
+    /* Standard syntax */
+    animation-name: bandera-trabajo;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-delay: 3.5s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-play-state: running;
+    animation-fill-mode: forwards;
+}
+
+.triangulito-idioma-right {
+    width: 0px;
+    height: 0px;
+    border-style: solid;
+    border-width: 10px 10px 0 0;
+    border-color: transparent transparent transparent transparent;
+    margin-left: 785px;
+    margin-top: 870px;
+    position: absolute;
+    display: inline-block;
+    animation-name: triangulitos-right;
+    animation-duration: 0.5s;
+    animation-timing-function: linear;
+    animation-delay: 3s;
+    animation-iteration-count: 1;
+    animation-direction: alternate;
+    animation-play-state: pause;
+    animation-fill-mode: forwards;
+}
+
+.titulo-idioma {
+    margin-left: 720px;
+    margin-top: 825px;
+    position: absolute;
+    z-index: 10;
+}
+
+.titulo-idioma h2 {
+    color: white;
+    font-family: rotis;
+    display: inline-block;
+}
+
+.titulo-idioma img {
+    width: auto;
+    height: 25px;
+    display: inline-block;
+}
+
+.skills {
+    width: inherit;
+    height: 500px;
+    background-color: rgba(235, 247, 165, 1);
+    position: absolute;
+    margin-top: 1000px;
+    float: left;
+}
+
+.skills-area {
+    width: 35%;
+    height: 400px;
+    background-color: rgba(204, 222, 221, 1);
+    position: relative;
+    float: left;
+}
+
+.skills-SW {
+    width: 35%;
+    height: 400px;
+    background-color: rgba(204, 222, 221, 1);
+    position: relative;
+    float: left;
+}
+
+.social {
+    width: 30%;
+    height: 400px;
+    background-color: rgba(204, 222, 221, 1);
+    position: relative;
+    float: left;
+}
+
+/*
+.cajita{
+    width: 200px!important;
+    height: 400px!important;
+}*/
+.pri {
+    margin-top: 40px;
+    background-color: blue;
+    width: 200px;
+    height: 350px;
+    z-index: 100;
+}
+
+.ce- {
+    border-style: solid;
+    border-width: 50px 100px 0 0;
+    border-color: blue transparent transparent transparent;
+    float: left;
+    z-index: 100;
+}
+
+.tag {
+    border-style: solid;
+    border-width: 0 100px 55px 0;
+    border-color: transparent blue transparent transparent;
+    z-index: 100;
+    float: left;
+}
+
+/*
+.end{
+    width: inherit;
+    height: 100px;
+    background-color: rgba(235,247,165,1);
+    margin-top: 1400px;
+
+    z-index: 1;
+}*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+

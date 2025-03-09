@@ -1,0 +1,21 @@
+.panteon.container {
+    background-image: url('https://pablomonteserin.com/res/html5/ex/flexbox/panteon/panteon.jpg');
+    width: 722px;
+    height: 480px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.panteon .row {
+    display: flex;
+    justify-content: center;
+    margin-top: 200px;
+    gap: 68px;
+    margin-left: 22px;
+}
+
+.panteon .col {
+    overflow: auto;
+    width: 70px;
+    height: 186px;
+}

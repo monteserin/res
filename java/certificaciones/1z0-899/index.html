@@ -1,0 +1,3599 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Certificación Java 1z0-899 | Pablo Monteserín</title>
+	<meta name="description" content="Estas son las preguntas que varios alumnos y yo utilizamos para obtener la certificación de Java 1z0-899">
+
+	<link rel="stylesheet" href="style.css">
+
+	<script src="jquery.js"></script>
+<script src="js.js"></script>
+</head>
+<body>
+	<h1>1z0-899</h1>
+	<input type="button" id="ver_soluciones" value="Ver soluciones">
+	<input type="button" id="ver_explicaciones" value="Ver explicaciones">
+	<input type="button" id="siguiente" value="siguiente">
+	<input type="button" id="atras" value="atrás">
+
+
+
+<div id="resultado">
+	
+
+</div>
+
+
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Given the element from the web application deployment descriptor:
+<jsp – property – group>
+<url – pattern>/main/page1.jsp</url – pattern>
+<scripting – invalid>true</scripting – invalid>
+</jsp—property—group>
+And given that /main/page1.jsp contains:
+<% int i = 12; %>
+<b> <%= i %> </b>
+What is the result?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer"><b> <b></textarea>
+		<textarea class="answer"><b> l2 </b</textarea>
+		<textarea class="correcta answer">The JSP fails to execute.</textarea>
+		<textarea class="answer"><% int i = 12 %></textarea>
+		<textarea class="answer"><%= i % > < b></textarea>
+
+	</div>
+
+
+	<div class="ex">
+	 <p>When scripting is invalid, it means that scriptlets, scripting expressions, and declarations will produce a translation error if present in any of the pages in the group.<p>
+	</div>
+</article>
+
+<!-- --------------------------- -->
+
+
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+A web application allows the HTML title banner to be set using a context initialization parameter
+called titlestr.
+Which two properly set the title in the scenario? (Choose two)
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer"><title> $ {titlestr} </title></textarea>
+		<textarea class="correcta answer"><title> $ {initParam.titlestr}</title></textarea>
+		<textarea class="answer"><title> $ {param [0]. titlestr} </title></textarea>
+		<textarea class="answer"><title> $ {paramValues.titleStr} </title></textarea>
+		<textarea class="correcta answer"><title> $ {initParam [‘titleStr’] } </title></textarea>
+		<textarea class="answer"><title> $ {servletParams.titleStr} </title></textarea>
+		<textarea class="answer"><title> $ {request.get (“titleStr”) } </title></textarea>
+
+	</div>
+
+
+	<div class="ex">
+	<pre>
+	<textarea class="answer">
+<web-app>
+  ...
+  <context-param>
+    <param-name>titleStr</param-name>
+    <param-value>QUE</param-value>
+  </context-param>
+  ...
+</web-app>
+	</textarea>
+	</pre>
+	<a href="#67">Pregunta relacionada</a>
+	</div>
+</article>
+<!-- --------------------------- -->
+
+
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Given:
+11. <%
+12. request.setAttribute (“vals”, new String[] {“1”, “2”, “3”, “4”});
+13. request.setAttribute (“index”, “2”);
+14. %>
+15. <% - - insert code here - - %>
+Which three EL expressions, inserted at line 15, are valid and evaluate to “3”? (Choose three)
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">${vals.2}</textarea>
+		<textarea class="correcta answer">${vals [“2”] }</textarea>
+		<textarea class="answer">${vals.index}</textarea>
+		<textarea class="correcta answer">${vals[index] }</textarea>
+		<textarea class="answer">${vals} [index]</textarea>
+		<textarea class="answer">${vals. (vals.index) }</textarea>
+		<textarea class="correcta answer">${vals [vals[index-1]] }</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		<p>Para acceder a un elemento de un array usando EL, no vale utilizar el punto.</p>
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Given:
+<%
+	java.util.Map map = new Java.util.HashMap();
+	request.setAttribute("map", map);
+	map.put("a", "b");
+	map.put("b", "c");
+	map.put("c", "d");
+
+%>
+<%-- insert code here --%>
+
+Which three EL expressions, inserted at line 16, are valid and evaluate to “d”? (Choose three)
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer">${map.c}</textarea>
+		<textarea class="answer">${map.[c]}</textarea>
+		<textarea class="correcta answer">${map.[“c”]}</textarea>
+		<textarea class="answer">${map.map.b}</textarea>
+		<textarea class="correcta answer">${map.[map.b]}</textarea>
+		<textarea class="answer">${map. (map.b)}</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+You are building a dating service web site. Part of the form to submit a client's profile is a group of
+radio buttons for the person's hobbies:
+20. <input type = ‘radio’ name = ‘hobbyEnum’ value = ‘HIKING’> Hiking <br>
+21. <input type = ‘radio’ name = ‘hobbyEnum’ value = ‘SKING’> Sking <br>
+22. <input type = ‘radio’ name = ‘hobbyEnum’ value = ‘SCUBA’> SCUBA <br>
+23. <! - - and more options - - >>
+After the user submits this form, a confirmation screen is displayed with these hobbies listed.
+Assume that an application-scoped hobbies, holds a map between the hobby enumerated type
+and the display name.
+Which EL code snippet will display Nth element of the user's selected hobbles?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">${hobbies [hobbyEnum[N]}</textarea>
+		<textarea class="correcta answer">${hobbies [paramValues.hobbyEnum[N]]}</textarea>
+		<textarea class="answer">${hobbies [paramValues @ ‘hobbyEnum’ @N]</textarea>
+		<textarea class="answer">${hobbies.get(paramValues.hobbyEnum[N]) }</textarea>
+		<textarea class="answer">${hobbies [paramValues.hobbyEnum.get(N)] }</textarea>
+	</div>
+
+
+	<div class="ex">
+
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+QUESTION NO: 6
+Given:
+1. <% int[] nums = {42,420,4200};
+2. request.setAttribute("foo", nums); %>
+3. ${5 + 3 lt 6}
+4. $(requestScope['foo'][0] ne 10 div 0>
+5. ${10 div 0}
+What is the result?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">true true</textarea>
+		<textarea class="answer">false true</textarea>
+		<textarea class="answer">false true 0</textarea>
+		<textarea class="answer">true true Infinity</textarea>
+		<textarea class="correcta answer">false true Infinity</textarea>
+		<textarea class="answer">An exception is thrown</textarea>
+		<textarea class="answer">Compilation or translation fails</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+
+
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+You are building a web application with a scheduling component. On the JSP, you need to show
+the current date, the date of the previous week, and the date of the next week.
+To help you present this information, you have created the following EL functions in the ‘d’
+namespace:
+- Name : curDate; signature: java.util.utilDate CurrentDate()
+- Name : addWeek; signature: java.util.utilDate addweek (java.util.Date, int)
+- Name: dateString; signature: java.util.String getDataString (jave.util.Date)
+Which EL code snippet will generate the string for the previous week?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">${d:dateString(affWeek(curDate(), -1)) }</textarea>
+		<textarea class="answer">${d:dateString [addWeek[curDate[], - ]] }</textarea>
+		<textarea class="answer">${d:dateString [d:addWeek[d:curDate[], - 1]] }</textarea>
+		<textarea class="correcta answer">${d:dateString (d:addWeek(d:curDate(), -1)) }</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		<a href="#70" class="link">Pregunta relacionada</a>
+
+
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Given a header in an HTTP request:
+X-Retries: 4
+A Which two retrieve the value of the header from a given HttpServletRequest request? (Choose
+two)
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer">request.getHeader("X-Retries")</textarea>
+		<textarea class="correcta answer">request.getIntHeader("X-Retries")</textarea>
+		<textarea class="answer">request.getRequestHeader("X-Retries")</textarea>
+		<textarea class="answer">request.getHeaders{"X-Retries").get(0)</textarea>
+		<textarea class="answer">request.getRequestHeaders("X-Retries").get(0)</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Given an HttpServletRequestrequest and HttpResponseresponse, which sets a cookie “username”
+with the value “joe” in a servlet?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">request.addCookie("username", "joe")</textarea>
+		<textarea class="answer">request.setCookie("username", "joe")</textarea>
+		<textarea class="answer">response.addCookie("username", "joe")</textarea>
+		<textarea class="answer">request.addHeader(new Cookie("username", "joe"))</textarea>
+		<textarea class="answer">request.addCookie(new Cookie("username", "joe"))</textarea>
+		<textarea class="correcta 
+		answer">response.addCookie(new Cookie("username", "joe"))</textarea>
+<textarea class="answer">response.addHeader(new Cookie("username", "joe"))</textarea>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Which annotation enables a servlet to efficiently process requests of typo multipart/form-data that
+involve large files being uploaded by the client?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">@AcceptMultipart</textarea>
+		<textarea class="correcta answer">@MultiPartConfig</textarea>
+		<textarea class="answer">@MultiPartFormData</textarea>
+		<textarea class="answer">@WebServlet (multipart = true)</textarea>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+APIs for dynamically registering servlets and filters can be called at:
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer">Context initialization time</textarea>
+		<textarea class="answer">Any time</textarea>
+		<textarea class="answer">There is no way to dynamically register servlets and filters</textarea>
+		<textarea class="answer">Context destruction time</textarea>
+		<textarea class="answer">Injected into a servlet context</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		<p>Sólo es posible añadir un servlet dinámicamente antes de terminar la inicialización del contexto.
+</p>
+<a class="link" href="#12">Preguntas relacionadas</a>
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+ServletRegistration.Dynamic can be used to configure (Choose two)
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer">Filter mappings</textarea>
+		<textarea class="correcta answer">add init params</textarea>
+		<textarea class="answer">set asyncSupported to true</textarea>
+		<textarea class="answer">add Listeners</textarea>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+A web application wants to register a new servlet at runtime using one of the
+servletContext.addServlet methods.
+In the implementation of which method is it legal to perform this operation?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">AsyncListner.oncomplete</textarea>
+		<textarea class="answer">Servlet.init</textarea>
+		<textarea class="correcta answer">ServletContextListener.contextInitialize</textarea>
+		<textarea class="answer">ServletrequestListener.contextInitialize</textarea>
+
+
+	</div>
+
+
+	<div class="ex">
+	<p>Sólo es posible añadir un servlet dinámicamente antes de terminar la inicialización del contexto.</p>
+	<a class="link" href="#10">Pregunta relacionada</a>	
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+You want to create a filter for your web application and your filter will implement
+.servlet.Filter.
+Which two statements are true? (Choose two)
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer">Your filter class must implement an init method and a destroy method.</textarea>
+		<textarea class="answer">Your filter class must also implement javax.sarvlat.FilterChain.</textarea>
+		<textarea class="answer">When your filter chains to the next filter, it should pass the same arguments it received in its
+doFilter method.</textarea>
+		<textarea class="correcta answer">The method that your filter invokes on the object it received that implements
+javax – servlet.FilterChain can invoke either another filter or a servlet.</textarea>
+		<textarea class="answer">Your filter class must implement a doFilter method that takes, among other things, an
+HttpServletRequest object and an HttpServletresponse object.</textarea>
+
+	</div>
+
+
+	<div class="ex">
+<pre>
+public class ParamAdder implements Filter{
+	public <span class="bold">doFilter</span>(ServletRequest request, ServletResponse response, FilterChain chain) throws ServletException IOException{
+		request.setAttribute("FilterAdded", "addedByFilter");
+		chain.doFilter(request, response);
+	}
+}	
+</pre>		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+You have a simple wpb application that has a single Front Controller servlet that dispatches to
+JSPs generate a variety of views. Several of these views require further database processing to
+retrieve the necessary order object using the orderID request parameter. To do this additional
+processing, you pass the request first to a servlet that is mapped to the URL pattern /WEB – INF /
+retrieveOrder.do. in the deployment descriptor. This servlet takes two request parameters, the
+ordered and the jspID and the jspURL. It handles the database calls to retrieve and build the
+complex order objects and then it dispatches to the jspURL.
+Which code snippet in the Front Controller servlet dispatches the request to the order retrieval
+servlet?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">
+request.setAttribute (“orderID”, orderIS);
+request.setAttribute(“jspURL”, jspURL);
+RequestDispatcher view = context.getRequestDispathcher (“/WEB – INF / retrieveOrder.do”);
+view.forward(request, response)</textarea>
+		<textarea class="answer">request.setAttribute (“orderID”, orderIS);
+request.setAttribute(“jspURL”, jspURL);
+Dispatcher view = request.getDispatcher (“.WEB – INF / retrieveOrder.do”);
+View.forwardRequest (request, response);</textarea>
+		<textarea class="answer correcta">String T= “/WEB – INF / retrieveOrder.do?orderID = %d&jspURl = %s”;
+String url = String.format (T, ordered, jspURL);
+RequestDispatcher view = context.getRequestDispatcher (url);
+View.forward (request, response) ;</textarea>
+		<textarea class="answer">String T= “/WEB – INF / retrieveOrder.do?orderID = %d&jspURl = %s”;
+String url = String.format (T, ordered, jspURL);
+Dispatcher view = context.getRequestDispatcher (url);
+view.forwardRequest (request, response) ;</textarea>
+
+	</div>
+
+
+	<div class="ex">
+	<p>En el enunciado se hace mención expresamente a parámetros, no a atributos: "takes two request parameters"</p>	
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+In ServletContext.getNamedDispatcher(string arg0) arg0 is the
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">url of a servlet relative to the ServletRequest</textarea>
+		<textarea class="answer">url of a servlet relative to the Context</textarea>
+		<textarea class="correcta answer">name of a servlet</textarea>
+		<textarea class="answer">absolute url to any servlet in any Context</textarea>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+When using Servlet asynchronous API if you want to dispatch the request back to a particular url -
+"/url" within the same Servlet Context which of the following API would you use?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">ASyncContext.dispatch();</textarea>
+		<textarea class="answer">AsyncContext.dispatch("/url");</textarea>
+		<textarea class="correcta answer">AsyncContext.dispatch(servletContext, "/url");</textarea>
+		<textarea class="answer">AsyncContext.start(runnable);</textarea>
+		<textarea class="answer">RequestDispatcher.fotward("/url");</textarea>
+		<textarea class="answer">RequestDispatcher.forward(servletContext, "/url");</textarea>
+		<textarea class="answer">RequestDispatcher.include("/url");</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Which describes a trigger that causes a call to an AsyncListener?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">Completion of processing</textarea>
+		<textarea class="correcta answer">Receipt of a new request from the same client</textarea>
+		<textarea class="answer">Addition of a new filter to the processing stream for this request</textarea>
+		<textarea class="answer">Completion of each timer interval</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+
+<img src="img/foto2.png" alt="foto certificación Java">
+
+	<textarea class="question">
+A servlet sets a session-scoped attribute product with an instance of com.example.product an
+forward to a JSP. Which two output the name of the product in the response? (Choose two)	</textarea>
+
+	<div class="responses">
+		<textarea class="answer"><%= product.getName() %></textarea>
+		<textarea class="correcta answer"><jsp:useBean id="product" class="com.example.Product" />
+<%= product.getName() %></textarea>
+		<textarea class="answer"><jsp:useBean id="com.example.Product" scope="page">
+<%= product.getName() %>
+</jsp:useBean></textarea>
+		<textarea class="correcta answer"><jsp:useBean id="product" type="com.example.Product"
+scope="page" />
+<%= product.getName() %></textarea>
+		<textarea class="answer"><jsp:useBean id="product" type="com.example.Product">
+<%= product.getName() %>
+</jsp:useBean></textarea>
+
+	</div>
+
+
+	<div class="ex">
+<p>Es obligatorio usar id.</p>
+			<p>Sólo una de estas 4 combinaciones es posible:</p>
+			<ul>
+				<li>class</li>
+
+				<li>type</li>
+
+				<li>class and type</li>
+
+				<li>beanName and type</li>
+
+			</ul>		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Given the HTML form:
+1. <html>
+2. <body>
+3. <form action="submit.jsp">
+4. Name: <input type="text" name="i1"><br>
+5. Price: <input type="text" name="i2"><br>
+6. <input type="submit">
+7. </form>
+8. </body>
+9. </html>
+Assume the product attribute does NOT yet exist in any scope.
+Which code snippet, in submit.jsp, instantiates an instance of com.example.Product that contains
+the results of the form submission?
+	</textarea>
+<img src="img/foto3.png" alt="foto certificación Java">
+	<div class="responses">
+<textarea class="answer"><jsp:useBean id="com.example.Product" />
+	<jsp:setProperty name="product" property="*" /></textarea>
+<textarea class="answer"><jsp:useBean id="product" class="com.example.Product" />
+${product.name = param.i1}
+${product.price = param.i2}</textarea>
+<textarea class="correcta answer"><jsp:useBean id="product" class="com.example.Product">
+	<jsp:setProperty name="product" property="name" param="i1" />
+	<jsp:setProperty name="product" property="price" param="i2" />
+</jsp:useBean></textarea>
+		<textarea class="answer">
+<jsp:useBean id="product" type="com.example.Product">
+	<jsp:setProperty name="product" property="name" value="<%= request.getParameter( "i1" ) %>" />
+	<jsp:setProperty name="product" property="price" value="<%= request.getParameter( "i2" ) %>" />
+</jsp:useBean></textarea>
+
+	</div>
+
+
+	<div class="ex">
+	<p>Para dar valor a una propiedad usando &lt;jsp:setProperty, usamos el atributo param, no el atributo value</p>	
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+You need to create a JavaBean object that is used only within the current JSP page. It must NOT
+be accessible to any other page including those that this page might import.
+Which JSP standard action < .in accomplish this goal?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer"><jsp:useBean id = ‘pageBean’ type = ‘com.example.MyBean’ /></textarea>
+		<textarea class="correcta answer"><jsp:useBean id = ‘pageBean’ class = ‘com.example.MyBean’ /></textarea>
+		<textarea class="answer"><jsp:makeBean id = ‘pageBean’ type = ‘com.example.MyBean’ /></textarea>
+		<textarea class="answer"><jsp:makeBean id = ‘pageBean’ class = ‘com.example.MyBean’ /></textarea>
+		<textarea class="answer"><jsp:makeBean id = ‘pageBean’ class = ‘com.example.MyBean’ /></textarea>
+
+	</div>
+
+
+	<div class="ex">
+	<p>Es obligatorio usar id.</p>
+			<p>Sólo una de estas 4 combinaciones es posible:</p>
+			<ul>
+				<li>class</li>
+
+				<li>type</li>
+
+				<li>class and type</li>
+
+				<li>beanName and type</li>
+
+			</ul>		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Given the JavaBean class:
+public class MyBean {
+private Boolean roasted = false;
+public MyBean () {}
+public Boolean isRoasted () { returned roasted }
+public void setRoasted (Boolean roasted) { this.roasted = roasted; ]
+}
+Assume a controller has created an instance of this bean, called setRoasted (true), and inserted
+the bean into the application scope using the name “myBean”.
+A JSP contains these two tags:
+<jsp: useBean id = “aBean” class = “MyBean” scope = “page” \ />
+<jsp: getProperty name = “aBean” property = “roasted” \ />
+Which is true?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">the page will include the output false</textarea>
+		<textarea class="answer">the page will include the output</textarea>
+		<textarea class="answer">the page will report that the property roasted does not exist</textarea>
+		<textarea class="answer">the page will report that the syntax of the useBean tag is incorrect</textarea>
+		<textarea class="correcta answer">the page will report that the syntax of the getProperty tag is incorrect</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		<p>useBean está cerrado en la propia etiqueta. Debería estar cerrado después de la etiqueta getProperty</p>
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+A developer chooses to avoid using singieThreadModel but wants to ensure that data If; updated
+in a thread safe manner.
+Which two can support this design goal? (Choose two)
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer">Store the data in a local variable.</textarea>
+		<textarea class="answer">Store the data in an instance variable.</textarea>
+		<textarea class="answer">Store the data in the Httpsession object.</textarea>
+		<textarea class="answer">Store the data in the servletContext object.</textarea>
+		<textarea class="correcta answer">Store the data in the ServletRequest object.</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+You have a use in your web application that adds several session-scoped attributes. At the end of
+the use case, one of these objects, the manage attribute, is removed and then it needs to decide
+which of the other session-scoped attributes to remove.
+How can this goal be accomplished?
+
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer">The object of the manager attribute should implement the HttpSessionBindingListener and it
+should call the removeAttribute method on the appropriate session attributes.</textarea>
+		<textarea class="answer">The object of the manager attribute should implement the HttpSessionListener and it should call
+the removeAttribute method on the appropriate session attributes.</textarea>
+		<textarea class="answer">The object of the manager attribute should implement the HttpSessionBindingListener rind it
+should call the deleteAttribute method on the appropriate session attributes.</textarea>
+		<textarea class="answer">The object of the manager attribute should implement the HttpsessionListener and it should call
+the deleteAttribute method on the appropriate session attributes.</textarea>
+
+
+	</div>
+
+
+	<div class="ex">
+		<a class="link" href="#27">Acceso a una pregunta parecida</a>
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+The Squeaky Beans Inc. shopping application was initially developed for a non-distributed
+environment. The company recently purchased the Acme Application Server, which supports
+distributed Httpsession objects. When deploying the application to the server, the doployer marks
+it as distributable in the web application deployment descriptor to take advantage of this feature.
+Given this scenario, which two must be true? (Choose two)
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer">The J2EE web container must support migration of objects that implement serializable.</textarea>
+		<textarea class="answer">The J2EE web container must use the native JVM Serialization mechanism for distributing
+HttpSesaion objects.</textarea>
+		<textarea class="answer">As per the specification, the J2EE web container ensures that distributed Httpsassion objects
+will be stored in a database.</textarea>
+		<textarea class="correcta answer">Storing references to Enterprise JavaBeans components in the HttpSession object might NOT
+supported by J2EE web contain.</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Given an HttpServletRequest request and an httpServletResponse response:
+41. HttpSession session = null;
+42. / / insert code here
+43. if (session = = null) {
+44. / / do something if session does not exist
+45. } else {
+46. / / do something if session exists
+47. }
+To implement the design intent, which statement must be inserted at line 42?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">session = response.getSession ();</textarea>
+		<textarea class="answer">session = request.getSession ();</textarea>
+		<textarea class="answer">session = request.getSession (true);</textarea>
+		<textarea class="correcta answer">session = request.getSession (false);</textarea>
+		<textarea class="answer">session = request.getSession (“jsessionid”);</textarea>
+
+	</div>
+
+
+	<div class="ex">
+	<p>Si el acceso a la sesión no existe, 'true' lo crea, mientras que 'false' devuelve null.</p>
+			<a href="#88" class="link">Pregunta relacionada</a>
+
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Users of your web application have requested that they should be able to set the duration of their
+sessions. So for example, one user might want a webapp to stay connected for an hour rather
+than the webapp's default of fifteen minutes; another user might want to stay connected for a
+whole day.
+Furthermore, you have a special login servlet that performs user authentication and retrieves the
+object from the database. You want to augment this code to set up the user's specified session
+duration.
+Which code snippet in the login servlet will accomplish this goal?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">User user = / / retrieves the user objects object from the database
+session.setDurationInterval (user.getSessionDuration());</textarea>
+		<textarea class="answer">User user = / / retrieves the User objects from the database
+session.setInactiveInterval (user.getSessionDuration());</textarea>
+		<textarea class="answer">User user = / / retrieves the user objects object from the database
+session.setInactiveInterval (user.get.SessionDuration());</textarea>
+		<textarea class="answer">User user = / / retrieves the user objects object from the database
+session.setDuration (user.getSessionDuration());</textarea>
+		<textarea class="correcta answer">User user = / / retrieves the user objects object from the database
+session.setMaxInactiveInterval (user.getSessionDuration());</textarea>
+		<textarea class="answer">User user = / / retrieves the user objects object from the  database
+session.setMaxDurationInterval (user.getSessionDuration());</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Which interface must a class implement so that instances of the class are notified after any object
+added to a session?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">javax.servlet.http.HttpSessionListener</textarea>
+		<textarea class="answer">javax.servlet.http.HttpSessionValueListener</textarea>
+		<textarea class="answer">javax.servlet.http.HttpSessionBindingListener</textarea>
+		<textarea class="correcta answer">javax.servlet.http.HttpSessionAttributeListener</textarea>
+
+
+	</div>
+
+
+	<div class="ex">
+		<a class="link" href="#23">Pregunta relacionada</a>
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Which statement is true about web container session management?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">Access to session-scoped attributes is guaranteed to be thread-safe by the web container.</textarea>
+		<textarea class="answer">To activate URL rewriting, the developer must use the HttpServletResponse.setURLRewriting
+method.</textarea>
+		<textarea class="correcta answer">If the web application uses HTTPS, then the web container may use the data on the HTTPS
+request stream to identify the client.</textarea>
+		<textarea class="answer">The JSESSIONID cookie is stored permanently on the client so that a user may return to the
+web application and the web container will rejoin that session.</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+A method call inside your servlet has thrown an IOException resulting from a lost network
+connection to a necessary resource. The servlet has determined that it will be unable to operate
+successfully for few minutes, but expects to be able to resume operation after that period. How
+should this situation handled?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">The servlet should re-throw the exception to the web container.</textarea>
+		<textarea class="answer">The servlet should throw a servletException to the web container.</textarea>
+		<textarea class="correcta answer">The servlet should throw an UnavailableException to the web container.</textarea>
+		<textarea class="answer">The servlet should redirect to an error page that reports the exception message.</textarea>
+		<textarea class="answer">The servlet should retry the request until the method returns successfully.</textarea>
+
+	</div>
+
+
+	<div class="ex">
+				<p>Un servlet puede lanzar UnavailableException para indicar que no puede atender las peticiones. En este caso el container dejará de enviarle peticiones a este Servlet, pero no afectará al resto. </p>
+			<p>UnavailableException hereda de ServletException</p>
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+During initialization, a servlet finds that the database connection it requires is unavailable. As the
+system designer, you know that the database start up completes several minutes after the web-
+container initializes the servlet. How should this be handled?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">Retry the connection until it is successful, then allow the init() method to complete.</textarea>
+		<textarea class="answer">Throw a ServletException</textarea>
+		<textarea class="answer">Throw the IOException</textarea>
+		<textarea class="correcta answer">Throw an UnavailableException</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+A servlet wishes to indicate that it is unable to initialize at the present time, but that the initialization
+might succeed at some future time. Which is true?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">This cannot be expressed. A servlet either initializes correctly or fails.</textarea>
+		<textarea class="answer">This expression is not necessary. If a servlet fails to initialize, the container will try again later
+each time a request is received that attempts to invoke that servlet.</textarea>
+		<textarea class="answer">The servlet should delay until it is ready to complete initialization successfully.</textarea>
+		<textarea class="answer">The servlet should throw an UnavailableException</textarea>
+		<textarea class="correcta answer">The servlet should throw a ServletException</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		<p>En este caso, el problema lo tiene el servlet, no un recurso al que quiera acceder el servlet.</p>
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+You are implementing a model component. You realize that an IOException might arise if you lose
+connection to the database. How should you address this?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">Implement multipathing to provide redundant connectivity to the database, thereby avoiding that
+risk of connection failure.</textarea>
+		<textarea class="answer">Provide an error handler page, and use the page directive in the invoking ISP to redirect to that
+page if the error arises.</textarea>
+		<textarea class="correcta answer">Use the JSTL <c:catch> tag to take control if the exception arises.</textarea>
+		<textarea class="answer">Surround the problem area with a try/catch block and implement appropriate recovery or
+fallback behavior.</textarea>
+
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Which is a valid value for the enum EmptyRoleSemantic in
+Javax.servlet.annotation.ServletSecurity?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">ADMIT</textarea>
+		<textarea class="correcta answer">PERMIT</textarea>
+		<textarea class="answer">EXCLUDE</textarea>
+		<textarea class="answer">DENYALL</textarea>
+		<textarea class="answer">ALLOWALL</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		<p>PERMIT y DENY</p>
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Given the annotation for MyServlet:
+@WebServlet{"/abc")
+@ServletSecurity (value=@HttpConstraint)
+public class Myservlet extends Httpservlet {
+Which two are true? (Choose two)
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">No protection of user data must be performed by the transport.</textarea>
+		<textarea class="correcta answer">All user data must be encrypted by the transport.</textarea>
+		<textarea class="correcta answer">Access is to be denied independent of authentication state and identity.</textarea>
+		<textarea class="answer">Only authenticated users are to be permitted.</textarea>
+		<textarea class="answer">Access is to be permitted independent of authentication state and identity.</textarea>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Which of the following annotations relate to security in a servlet?
+(i) @WebSecurity
+(ii) @RolesAllowed
+(iii) @WebConstraint
+(iv) @HttpConstraint
+(v) @Servletsecurity
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">(i) only</textarea>
+		<textarea class="answer">(i) and (iii)</textarea>
+		<textarea class="correcta answer">(iv) and (v)</textarea>
+		<textarea class="answer">(iii) and (v)</textarea>
+		<textarea class="answer">(ii) and (iv)</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Which element of a web application deployment descriptor <web-resource-collection> 
+element is used to specify a HTTP method to which the corresponding <security-constraint> will not apply?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer"><exclude-http-method></textarea>
+		<textarea class="answer"><neglect-http-method></textarea>
+		<textarea class="correcta answer"><http-method-omission></textarea>
+		<textarea class="answer"><http-method-excluded></textarea>
+		<textarea class="answer"><exceptional-http-method></textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Which two statements are true about the security-related tags in a valid Java EE deployment
+descriptor? (Choose two)
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">Every <security-constraint> tag must have at least one <http-method> tag.</textarea>
+		<textarea class="correcta answer">A <security-constraint> tag can have many <web-resource-collection> tags.</textarea>
+		<textarea class="answer">A given <auth-constraint> tag can apply to only one <web-resource-collection> tag.</textarea>
+		<textarea class="answer">A given <web-resource-collection> tag can contain from zero to many <url-pattern> tags.</textarea>
+		<textarea class="correcta answer">It is possible to construct a valid <security-constraint> tag such that, for a given resource user
+roles can access that resource.</textarea>
+
+	</div>
+
+
+	<div class="ex">
+<pre>
+&lt;web-app&gt;
+	&lt;security-constraint&gt;
+		&lt;web-resource-collection&gt;
+				&lt;web-resource-name&gt;User Auth&lt;/web-resource-name&gt;
+				&lt;url-pattern&gt;/auth/*&lt;/url-pattern&gt;
+				&lt;/web-resource-collection&gt;
+				&lt;auth-constraint&gt;
+				&lt;role-name&gt;admin&lt;/role-name&gt;
+				&lt;role-name&gt;manager&lt;/role-name&gt;
+				&lt;/auth-constraint&gt;
+				&lt;/security-constraint&gt;
+</pre>		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+A cookie may be set to be an HttpOnly cookie. Setting a cookie to be HttpOnly results in (Choose
+two)
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer">Client to not expose the cookie to client side scripting code</textarea>
+		<textarea class="answer">Does not work with https protocol</textarea>
+		<textarea class="correcta answer">prevent certain types of cross-site scripting attacks</textarea>
+		<textarea class="answer">There is no such thing as an HttpOnly cookie</textarea>
+
+	</div>
+
+
+	<div class="ex">
+			<p>HttpOnly cookies are not supposed to be exposed to client-side scripting code, and may therefore help mitigate certain kinds of cross-site scripting attacks. </p>	
+			<a href="#100" class="link">Pregunta relacionada</a>
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+A popular Ajax framework and its companion widget library contain several hundreds of files of
+different types (.js, .ess, .html). Your company has mandated that all its web applications use only
+specific versions of this framework approved by IT and repackaged internally as jar files.
+Furthermore, web applications should only include the entire jar, without subsetting or
+modification.
+Where should the framework's files be placed inside a jar file to enable this kind of reuse?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">under resources</textarea>
+		<textarea class="correcta answer">under META-INF/resources</textarea>
+		<textarea class="answer">under META-INF/web-contents</textarea>
+		<textarea class="answer">under WEB-INF/resources</textarea>
+
+	</div>
+
+
+	<div class="ex">
+			<p>Los ficheros de presentación de un jar deben estar en su carpeta META-INF/resources del jar. Por otra parte, los ficheros jar se almacenan en la carpeta WEB-INF/lib.</p>
+			<a class="link" href="#42">Pregunta relacionada</a>	
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Which two actions protect a resource file from direct HTTP access within a web application?
+(Choose two)
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">placing it in the /secure directory</textarea>
+		<textarea class="correcta answer">placing it in the /WEB-INF directory</textarea>
+		<textarea class="correcta answer">placing it in the /META-INF/secure directory</textarea>
+		<textarea class="answer">creating a <web-resource> element within the deployment descriptor</textarea>
+		<textarea class="answer">creating a <secure-resource> element within the deployment descriptor</textarea>
+
+	</div>
+
+
+	<div class="ex">
+			<p>The WEB-INF node is not part of the public document tree of the application</p>
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+In which two locations can library dependencies be defined for a web application? (Choose two)
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">the web application deployment descriptor</textarea>
+		<textarea class="answer">the /META-INF/dependencies.xml file</textarea>
+		<textarea class="correcta answer">the /META-INF/MANIFEST.MF manifest file</textarea>
+		<textarea class="correcta answer">the /META-INF/MANIFEST.MF manifest of a JAR in the web application classpath</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+The jquery_1_3_2.jar file contains the JQuery Ajax framework in its META-INF/ resources
+directory. Where should the jar file be placed inside the web application to ensure the resources it
+contains are accessible by clients?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">WEB-INF/classes</textarea>
+		<textarea class="answer">WEB-INF/jar</textarea>
+		<textarea class="correcta answer">WEB-INF/lib</textarea>
+		<textarea class="answer">WEB INF/resources</textarea>
+
+	</div>
+
+
+	<div class="ex">
+	<p>Los ficheros de presentación de un jar deben estar en su carpeta META-INF/resources del jar. Por otra parte, los ficheros jar se almacenan en la carpeta WEB-INF/lib. </p>
+		<a class="link" href="#39">Pregunta relacionada</a>
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Given a jar file packaged with three web fragments with names X, Y and Z respectively.
+Which of the following deployment descriptor, web.xml, snippets correspond to the web fragment
+processing orders of X, Y, Z?
+(i) <absolute-ordering>
+<name>X</name>
+<name>Y</name>
+<name>Z</name>
+</absolute-ordering>
+(ii) <absolute-ordering>
+<name>X</name>
+<name>Y</name>
+</absolute-ordering>
+(iii) <absolute-ordering>
+</others>
+<name>Y</name>
+<name>Z</name>
+</absolute-ordering>
+(iv) <absolute-ordering>
+<name>X</name>
+</others>
+<name>Z</name>
+</absolute-ordering>
+(v) <absolute-ordering>
+<name>X</name>
+<name>Y</name>
+</others>
+</absolute-ordering>
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">(i) only</textarea>
+		<textarea class="answer">(i) and (ii)</textarea>
+		<textarea class="correcta answer">(i) and (iv)</textarea>
+		<textarea class="answer">(i), (iii), (iv) and (v)</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Which defines the welcome files in a web application deployment descriptor?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">
+<welcome>
+<welcome- file >/ welcome - jsp</welcome-file>
+</welcome>
+<welcome>
+<welcome-file>/index-html</welcome-file>
+</welcome>
+		</textarea>
+		<textarea class="correcta answer">
+<we1come-file-list>
+<welcome-file> welcome .jsp</welcome-file>
+<welcome-file>index.html</welcome-file>
+</welcome-file-list>
+		</textarea>
+		<textarea class="answer">
+<welcome>
+<welcome-file>welcome.jsp</welcome </we1come >
+</welcome >
+<welcome-file>index.html<//welcome-file>
+</we1come >
+		</textarea>
+		<textarea class="answer">
+<we1come-file-list>
+<welcome-file> welcome .jsp</welcome-file>
+<welcome-file>/index.html</welcome-file>
+</welcome-file-list>
+		</textarea>
+		<textarea class="answer">
+<welcome>
+<welcome-file>
+<welcome-name> welcome </welcome-name>
+<location> welcome.jsp </location>
+</welcome-file>
+<welcome-file>
+<welcome-name>index</welcome-name>
+<location> index </location>
+</welcome-file>
+</welcome>
+		</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Which code snippet specifies the metadata for a servlet with:
+(i) url mapping “/mytest”’
+(ii) Initial parameter with name “debug” and value “10”’
+(iii) Support asynchronous operation?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">
+@WebServlet("/mytest")
+@InitParam(name-"debug" va1ue = "10")
+@Asynchronous
+public class TestServlet extends HttpServlet {}
+		</textarea>
+		<textarea class="answer">
+@WebServlet (“/myset”)
+@WebParam(name = “debug” value = “10”)
+Public class testServlet {}
+		</textarea>
+		<textarea class="answer">
+@WebServlet (urlPatterns = { “/mytest”},
+Initparams = {@InitParam (name = “debug”, value = “10”) }, supportAsync = true)
+public class TestServlet extends HttpServlet {}
+		</textarea>
+		<textarea class="correcta answer">
+@WebServlet (urlPatterns = { “/mytest”},
+Initparams = {@InitParam (name = “debug”, value = “10”) }, asyncSupported = true)
+public class TestServlet extends HttpServlet {}
+		</textarea>
+		<textarea class="answer">
+@WebServlet (urlPatterns = { “/mytest”},
+Initparam = @WebInitParam (name = “debug”, value = “10”), supportAsync = true)
+public class testServlet {}
+		</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Which annotation specifies the metadata as a javax.servlet.http.HttpSessionListener?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">@Listener</textarea>
+		<textarea class="correcta answer">@WebListener</textarea>
+		<textarea class="answer">@WebSessionListener</textarea>
+		<textarea class="answer">@HttpSessionListener</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+You are creating a new JSP page and you need to execute some code that acts when the- page is
+first executed, but only once. Which three are possible mechanisms for performing this
+initialization code? (Choose three)
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">In the init method.</textarea>
+		<textarea class="correcta answer">In the jspInit method.</textarea>
+		<textarea class="answer">In the constructor of the JSP's Java code.</textarea>
+		<textarea class="correcta answer">In a JSP declaration, which includes an initializer block</textarea>
+		<textarea class="correcta answer">In a JSP declaration, which includes a static initializer block.</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+You are creating a web form with this HTML:
+11. <form action="sendOrder.jsp">
+12. <input type="text" name="creditCard">
+13. <input type="text" name="expirationDate">
+14. <input type="submit">
+15. </form>
+Which HTTP method is used when sending this request from the browser?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer">GET</textarea>
+		<textarea class="answer">PUT</textarea>
+		<textarea class="answer">POST</textarea>
+		<textarea class="answer">SEND</textarea>
+		<textarea class="answer">FORM</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		<p>El method de un formulario por defecto, si no especificamos nada, es GET.</p>
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Your web application requires the ability to load and remove web files dynamically to the web
+container’s file system. Which two HTTP methods are used to perform these actions? (Choose
+two)
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer">PUT</textarea>
+		<textarea class="answer">POST</textarea>
+		<textarea class="answer">SEND</textarea>
+		<textarea class="correcta answer">DELETE</textarea>
+		<textarea class="answer">REMOVE</textarea>
+		<textarea class="answer">DESTROY</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+A web application wants to expose to its clients an operation that results in a transaction being
+performed across several systems, for example the transfer of money from one bank account to
+another
+Which HTTP method should it use?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">GET</textarea>
+		<textarea class="answer">HEAD</textarea>
+		<textarea class="answer">OPTIONS</textarea>
+		<textarea class="correcta answer">POST</textarea>
+
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+A Client wants to retrieve a representation of a resource, e.g. an XML document, localized
+according to the preferences of the user. Each user is allowed to specify one or more languages,
+in order of preference. Such preferences are application independent. How can the Client send
+language preference Information to the Server using a standard HTTP facility?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">In the request body</textarea>
+		<textarea class="correcta answer">In a request header</textarea>
+		<textarea class="answer">In the request line</textarea>
+		<textarea class="answer">In the request URL</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Which JSTL code snippet can be used to import content from another web resource?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta 	answer"><c:import url = “foo.jsp”/></textarea>
+		<textarea class="answer"><c:import page = “foo.jsp”/></textarea>
+		<textarea class="answer"><c:include url = “foo.jsp”/></textarea>
+		<textarea class="answer"><c:include page = “foo.jsp”/></textarea>
+		<textarea class="answer">Importing cannot be done in JSTL. A standard action must be used instead.</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		<a class="link" href="#55">Pregunta relacionada</a>
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+In a jsp-centric shopping cart application cart application to move a client’s home address of
+Customer object into the shipping address of the order object. The address data is stored in a
+value object class called Address with properties for: street address, city, province, country, and
+postal code.
+Which two code snippets can be used to accomplish this goal?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">
+<c:set var='order' property='shipAddress'
+value='${client.homeAddress}' />
+		</textarea>
+		<textarea class="correcta answer">
+<c:set target='${order}' property='shipAddress'
+value='${client.homeAddress}' />
+		</textarea>
+		<textarea class="answer">
+<jsp:setProperty name='${order}' property='shipAddress'
+value='${client.homeAddress}' />
+		</textarea>
+		<textarea class="answer">
+<c:set var='order' property='shipAddress'>
+<jsp:getProperty name='client' property='homeAddress' />
+</c:store>
+		</textarea>
+		<textarea class="correcta answer">
+<c:set target='${order}' property='shipAddress'>
+<jsp:getProperty name='client' property='homeAddress' />
+</c:set>
+		</textarea>
+		<textarea class="answer">
+<c:setProperty name='${order}' property='shipAddress'>
+<jsp:getProperty name='client' property='homeAddress' />
+</c:setProperty>
+		</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		<a href="#61">Pregunta relacionada</a>
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+You are creating a JSP page to display a collection of data. This data can be displayed in several
+different ways so the architect on your project decided to create a generic servlet that generates a
+comma delimited string so that various pages can render the data in different ways. This servlet
+takes on request parameter: objoctID. Assume that this servlet is mapped to the URL pattern:
+/WEB-INF/data.
+In the JSP you are creating, you need to split this string into its elements separated by commas
+and generate an HTML <ul> list from the data.
+Which JSTL code snippet will accomplish this goal?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">
+<c:import varReader='dataString' url='/WEB-INF/data'>
+	<c:param name='objectID' value='${currentOID}' />
+</c:import>
+<ul>
+	<c:forTokens items='${dataString.split(",")}' var='item'>
+		<li>${item}</li>
+	</c:forTokens>
+</ul>
+		</textarea>
+		<textarea class="answer">
+<c:import varReader='dataString' url='/WEB-INF/data'>
+<c:param name='objectID' value='${currentOID}' />
+</c:import>
+<ul>
+	<c:forTokens items='${dataString}' delims=',' var='item'>
+		<li>${item}</li>
+	</c:forTokens>
+</ul>
+		</textarea>
+		<textarea class="answer">
+<c:import var='dataString' url='/WEB-INF/data'>
+	<c:param name='objectID' value='${currentOID}' />
+</c:import>
+<ul>
+	<c:forTokens items='${dataString.split(",")}' var='item'>
+	<li>${item}</li>
+</c:forTokens>
+</ul>
+		</textarea>
+		<textarea class="correcta answer">
+<c:import var='dataString' url='/WEB-INF/data'>
+	<c:param name='objectID' value='${currentOID}' />
+</c:import>
+<ul>
+	<c:forTokens items='${dataString}' delims=',' var='item'>
+		<li>${item}</li>
+	</c:forTokens>
+</ul>
+		</textarea>
+		
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Which JSP standard action can be used to import content from a resource called foo.jsp?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer"><jsp:import file='foo.jsp' /></textarea>
+		<textarea class="answer"><jsp:import page='foo.jsp' /></textarea>
+		<textarea class="correcta answer"><jsp:include page='foo.jsp' /></textarea>
+		<textarea class="answer"><jsp:include file='foo.jsp' /></textarea>
+		<textarea class="answer"><jsp:import>foo.jsp</jsp:import></textarea>
+		<textarea class="answer"><jsp:include>foo.jsp</jsp:include></textarea>
+
+	</div>
+
+
+	<div class="ex">
+				<a class="link" href="#52">Pregunta relacionada</a>
+
+	</div>
+</article>
+<!-- --------------------------- -->
+
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+<img src="img/foto4.png" alt="foto certificación Java">
+	<textarea class="question">
+Assuming the tag library in the exhibit is imported with the prefix forum, which custom tag
+invocation procedures a transaction error in a jsp page?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer"><forum:message from="My Name" subject="My Subject" /></textarea>
+		<textarea class="answer"><forum:message subject="My Subject">
+My message body.
+</forum:message></textarea>
+		<textarea class="answer"><forum:message from="My Name" subject="${param.subject}">
+${param.body}
+</forum:message></textarea>
+		<textarea class="correcta answer"><forum:message from="My Name" subject="My Subject">
+<%= request.getParameter( "body" ) %>
+</forum:message></textarea>
+		<textarea class="answer"><forum:message from="My Name"
+subject="<%= request.getParameter( "subject" ) %>">
+My message body.
+</forum:message></textarea>
+
+	</div>
+
+
+	<div class="ex">
+		<p>En el taglib se especifica que la etiqueta es scriptless. La respuesta correcta tiene scriplet.</p>
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Which is a benefit of precompiling a JSP page?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">It avoids initialization on the first request.</textarea>
+		<textarea class="answer">It provides the ability to debug runtime errors in the application.</textarea>
+		<textarea class="correcta answer">It provides better performance on the first request for the JSP page.</textarea>
+		<textarea class="answer">It avoids execution of the _jspService method on the first request.</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+A web browser need NOT always perform a complete request for a particular page that it suspects
+might NOT have changed. The HTTP specification provides a mechanism for the browser to
+retrieve only a partial response from the web server; this response includes information, such as
+the Last-Modified date but NOT the body of the page.
+Which HTTP method will the browser use to retrieve such a partial response?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">GET</textarea>
+		<textarea class="answer">ASK</textarea>
+		<textarea class="answer">SEND</textarea>
+		<textarea class="correcta answer">HEAD</textarea>
+		<textarea class="answer">TRACE</textarea>
+		<textarea class="answer">OPTIONS</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		<p>con HEAD sólo refrescas la información de la cabecera, no la página entera. Al principio del enunciado se dice que no es necesario refrescar la página entera.</p>
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+A Client wants to retrieve a representation of a resource, for example an HTML page, allowing a
+cached version to be returning by an intermediary such a proxy server.
+Which HTTP method should it use?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer">GET</textarea>
+		<textarea class="answer">PUT</textarea>
+		<textarea class="answer">POST</textarea>
+		<textarea class="answer">DELETE</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Which two are true about the JSTL core iteration custom tags? (Choose two.)
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer">It may iterate over arrays, collections, maps, and strings.</textarea>
+		<textarea class="answer">The body of the tag may contain EL code, but not scripting code.</textarea>
+		<textarea class="correcta answer">When looping over collections, a loop status object may be used in the tag body.</textarea>
+		<textarea class="answer">It may iterate over map, but only the key of the mapping may be used in the tag body.</textarea>
+		<textarea class="answer">When looping over integers (for example begin= ‘1’ end= ‘10’), a loop status object may not be
+used in the tag body.</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Assume a JavaBean com.example.GradedTestBean exists and has two attributes. The attribute
+name of type java.lang.string and the attribute score is of type jave.lang.Integer.
+An array of com.example.GradedTestBean objects is exposed to the page in a request-scoped
+attribute called results. Additionally, an empty java.util.HashMap called resultMap is placed in the
+page scope.
+A JSP page needs to add the first entry in results to resultMap, storing the name attribute of the bean as the key and the score attribute of the bean as the value.
+Which code snippet of JSTL code satisfies this requirement?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">${resultMap[results[0].name] = results[0].score}</textarea>
+		<textarea class="answer"><c:set var=“${resultMap}” key=“{results[0].name}”
+value=“${results[0].score}” /></textarea>
+		<textarea class="answer"><c:set var=“resultMap” property=“${results[0].name}”>
+${results[0].value}
+</c:set></textarea>
+		<textarea class="answer"><c:set var=“resultMap” property=“${results[0].name}”>
+value=“${results[0].score}” /></textarea>
+		<textarea class="correcta answer"><c:set target=“${resultMap}” property=“${results[0].name}”>
+value=“${results[0].score}” /></textarea>
+
+	</div>
+
+
+	<div class="ex">
+	<p>Esta información es clave: "storing the name attribute of the bean as the key and the score attribute of the bean as the value". Esto significa que el nombre del bean será una variable, y no podré escribirlo directamente. Por tanto, descarto C y D. </p>
+
+			<a href="#61">Pregunta relacionada</a>
+	
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+For manageability purposes, you have been told to add a “count” instance variable to a critical JSP
+Document so that a JMX MBean can track how frequent this JSP is being invoked.
+Which JSP code snippet must you use to declare this instance variable in the JSP Document?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer">
+<jsp:declaration>
+int count = 0;
+<jsp:declaration>
+		</textarea>
+		<textarea class="answer"><%! int count = 0; %></textarea>
+		<textarea class="answer">
+<jsp:declaration.instance>
+int count = 0;
+<jsp:declaration.instance>
+		</textarea>
+		<textarea class="answer">
+<jsp:scriptlet.declaration>
+int count = 0;
+<jsp:scriptlet.declaration>
+		</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		<p>En un documento JSP document debe estar todo formateado en XML.</p>
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+To take advantage of the capabilities of modern browsers that use web standards, such as
+XHTML and CSS, your web application is being converted from simple JS pages to JSP
+Document format. However, one of your JSPs, /scripts/screenFunctions.jsp, generates a
+JavaScript file. This file is included in several web forms to create screen-specific validation
+functions and are included in these pages with the following statement:
+
+10. &lt;head&gt;
+11. &lt;script src=&quot;scripts/screenFunctions.jsp&quot;
+12. 	language=&quot;javascript&quot;
+13.		type=&quot;application/javascript&quot;&gt;&lt;/script&gt;
+14. &lt;/head&gt;
+15. &lt;!-- body of the web form --&gt;
+
+Which JSP code snippet declares that this JSP Document is a JavaScript file?	
+</textarea>
+	<div class="responses">
+		<textarea class="answer"><%@ page contentType=‘application/javascript’ %></textarea>
+		<textarea class="answer"><jsp:page contentType=‘application/javascript’ /></textarea>
+		<textarea class="answer"><jsp:document contentType=‘application/javascript’ /></textarea>
+		<textarea class="correcta answer"><jsp:directive.page contentType=‘application/javascript’ /></textarea>
+		<textarea class="answer">No declaration is needed because the web form XHTML page already declares the MIME type
+of the /scripts/screenFunctions.jsp file in the &lt;script&gt; tag.</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+You are building your own layout mechanism by including dynamic content for the page’s header
+and footer sections. The footer is always static, but the header generates the <title> tag that
+requests the page name to be specified dynamically when the header is imported.
+Which JSP code snippet performs the import of the header content?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer">
+<jsp:include page=‘/WEB-INF/jsp/header.jsp’>
+<jsp:param name=‘pageName’ value=‘Welcome Page’ />
+</jsp:include>
+	</textarea>
+		<textarea class="answer">
+<jsp:import page=‘/WEB-INF/jsp/header.jsp’>
+<jsp:param name=‘pageName’ value=‘Welcome Page’ />
+</jsp:import>
+	</textarea>
+		<textarea class="answer">
+<jsp:include page=‘/WEB-INF/jsp/header.jsp’>
+<jsp:attribute name=‘pageName’ value=‘Welcome Page’ />
+</jsp:include>
+	</textarea>
+		<textarea class="answer">
+<jsp:import page=‘/WEB-INF/jsp/header.jsp’>
+<jsp:attribute name=‘pageName’ value=‘Welcome Page’ />
+</jsp:import>
+		</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+<img src="img/foto6.png" alt="foto certificación Java">
+	<textarea class="question">
+Assume the tag library in the exhibit is placed in a web application in the path /WEB-
+INF/tld/example.tld.
+1.
+2. <ex:hello />
+Which JSP code, inserted at line 1, completes the JSP code to invoke the hello tag?
+
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer"><%@ taglib prefix=“ex” uri=“/WEB-INF/tld” %></textarea>
+		<textarea class="answer"><%@ taglib uri=“/WEB-INF/tld/example.tld” %></textarea>
+		<textarea class="answer"><%@ taglib prefix=“ex”
+uri:=“http://localhost:8080/tld/example.tld” %></textarea>
+		<textarea class="correcta answer"><%@ taglib prefix=“ex”
+uri:=“http://example.com/tld/example” %></textarea>
+		
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+You are working on a JSP that is intended to inform users about critical errors in the system. The
+JSP code is attempting to access the exception that represents the cause of the problem, but your
+IDE is telling you that the variable does not exist. What should you do to address this problem?
+
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer">Add a page directive stating that this page is an error handler</textarea>
+		<textarea class="answer">Add scriptlet code to create a variable that refer to the exception</textarea>
+		<textarea class="answer">Add a <jsp:useBean tag to declare the and access the exception></textarea>
+		<textarea class="answer">Perform the error handling in a servlet rather than in the JSP</textarea>
+		<textarea class="answer">Edit the page that caused the error to ensure that it specifies this page as its error handler</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+All of your JSPs need to have a link that permits users to email the web master. This web
+application is licensed to many small businesses, each of which have a different email address for
+the web master. You have decided to use a context parameter that you specify in the deployment
+descriptor, like this:
+42. <context-param>
+43. <param-name>webmasterEmail</param-name>
+44. <param-value>master@example.com</param-value>
+45. </context-param>
+Which JSP code snippet creates this email link?
+
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">&lt;a href=&#x2018;mailto:${contextParam.webmaterEmail}&#x2019;&gt;contact us&lt;/a&gt;</textarea>
+		<textarea class="answer">&lt;a href=&#x2018;mailto:${applicationScope.webmaterEmail}&#x2019;&gt;contact us&lt;/a&gt;</textarea>
+		<textarea class="answer">&lt;a href=&#x2018;mailto:${contextInitParam.webmaterEmail}&#x2019;&gt;contact us&lt;/a&gt;</textarea>
+		<textarea class="correcta answer">&lt;a href=&#x2018;mailto:${initParam.webmaterEmail}&#x2019;&gt;contact us&lt;/a&gt;</textarea>
+	</div>
+
+
+	<div class="ex">
+			<a class="link" href="#1">Pregunta relacionada</a>
+
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Which EL expression evaluates to the request URI?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">${requestURI}</textarea>
+		<textarea class="answer">${request.URI}</textarea>
+		<textarea class="answer">${request.getURI}</textarea>
+		<textarea class="answer">${request.requestURI}</textarea>
+		<textarea class="answer">${requestScope.requestURI}</textarea>
+		<textarea class="correcta answer">${pageContext.request.requestURI}</textarea>
+		<textarea class="answer">${requestScope.request.requestDRI}</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+You are building a dating web site. The client’s date of birth is collected along with lots of other
+information. The Person class has a derived method, getAge() :int, which returns the person’s age
+calculated from the date of birth and today’s date. In one of your JSPs you need to print a special
+message to clients within the age group of 25 through 35.
+Which two EL code snippets will return true for this condition? (Choose two.)
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">${client.age in [25,35]}</textarea>
+		<textarea class="answer">${client.age between [25,35]}</textarea>
+		<textarea class="answer">${client.age between 25,35}</textarea>
+		<textarea class="correcta answer">${client.age <= 35 && client.age >= 25}</textarea>
+		<textarea class="correcta answer">${client.age le 35 and client.age ge 25}</textarea>
+		<textarea class="answer">${client.age > 35 && client.age < 25}</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Given an EL function declared with:
+
+11. <function>
+12. 	<name>spin</name>
+13. 	<function-class>com.example.Spinner</function-class>
+14. 	<function-signature>
+15. 		java.lang.String spinlt()
+16. 	</function-signature>
+17. </function>
+
+	
+Which two are true? (Choose two)
+</textarea>
+	<div class="responses">
+		<textarea class="answer">The function method must have the signature:
+public String spin().</textarea>
+		<textarea class="answer">The method must be mapped to the logical name “spin” in the web.xml file.</textarea>
+		<textarea class="answer">The function method must have the signature:
+public String spinIt().</textarea>
+		<textarea class="answer">The function method must have the signature:
+public static String spin().</textarea>
+		<textarea class="correcta answer">The function method must have the signature:
+public static String spinIt().</textarea>
+		<textarea class="correcta answer">The function class must be named Spinner, and must be in the package com.example</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		<a href="#6" class="link">Pregunta relacionada</a>
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Which EL expression returns true if no session has been established with current client?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer">${not(pageContext.session)}</textarea>
+		<textarea class="answer">${not(requestScope.session)}</textarea>
+		<textarea class="answer">${requestScope.sessions.this}</textarea>
+		<textarea class="answer">${sessionScope.empty}</textarea>
+
+	</div>
+
+
+	<div class="ex"> 
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Your web application uses a simple architecture in which servlets handle requests and then
+forward to a JSP using a request dispatcher. You need to pass information calculated in the
+servlet to the JSP for view generation. This information must NOT be accessible to any other
+servlet, JSP or session in the webapp. Which two techniques can you use to accomplish this goal?
+(Choose two)
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">Add attributes to the session object.</textarea>
+		<textarea class="correcta answer">Add attributes on the request object.</textarea>
+		<textarea class="answer">Add parameters on the request object.</textarea>
+		<textarea class="answer">Use the pageContext object to add request attributes.</textarea>
+		<textarea class="correcta answer">Add parameters to the JSP’s URL when generating the request dispatcher.</textarea>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+A web application for business expense reporting allows uploading expense receipts. Multiple
+receipts can be uploaded single step using one HTTP request. The servlet that processes the request has been marked with the @MultipartConfig annotation.
+Which method should the servlet use to access the uploaded files?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer">HttpServletRequest.getParts()</textarea>
+		<textarea class="answer">HttpServletRequest.getData()</textarea>
+		<textarea class="answer">servletRequest.getParts()</textarea>
+		<textarea class="answer">servletRequest.getAllParts()</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+For which three events can web application event listeners be registered? (Choose three.)
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer">when a session is created</textarea>
+		<textarea class="answer">after a servlet is destroyed</textarea>
+		<textarea class="correcta answer">when a session has timed out</textarea>
+		<textarea class="answer">when a cookie has been created</textarea>
+		<textarea class="answer">when a servlet has forwarded a request</textarea>
+		<textarea class="correcta answer">when a session attribute value is changed</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+To add a servlet to a context that has not been declared either via annotation or via the descriptor,
+during context initialization time the following API can be used (Choose three.)
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer">servletContext.addServlet(“myServletName”, “MyServlet”);</textarea>
+		<textarea class="answer">servletContext.addServlet( (<Class extends
+Servlet>)getClass().getClassLoader().getClassLoader().loaderClass(“MyServlet”));</textarea>
+		<textarea class="answer">servletContext.addServlet(myServlet);</textarea>
+		<textarea class="correcta answer">servletContext.addServlet( (“myServletName”, <Class extends
+Servlet>)gerClass().getClassLoader().loaderClass(“myServlet”));</textarea>
+		<textarea class="correcta answer">servletContext.addServlet(“myServletName”, MyServlet);</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+ServletContextListeners are invoked in
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">Random order</textarea>
+		<textarea class="answer">contextInitialized and contextDestroyed are invoked in the order in which they are declared in
+the web.xml</textarea>
+		<textarea class="correcta answer">contextInitialized method are invoked in the order in which they are declared in the web.xml and
+the contextDestroyed method is invoked in the reverse order in which they are declared in the
+web.xml</textarea>
+		<textarea class="answer">contextInitialized and contextDestroyed are invoked in the reverse order of which they are
+declared in the web.xml</textarea>
+
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+A servlet class is injected with a JDBC data source. After injection has occurred, the servlet needs
+to create a cache out of some of the data in the database, so as to improve responsiveness.
+Which two methods can host the cache creation code? (Choose two)
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer">Servlet.init()</textarea>
+		<textarea class="answer">Servlet.destroy()</textarea>
+		<textarea class="answer">A method annotated with @Init</textarea>
+		<textarea class="correcta answer">A method annotated with @PostConstruct</textarea>
+		<textarea class="answer">A method annotated with @PreDestroy</textarea>
+		<textarea class="answer">A method annotated with @Resource</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+<img src="img/foto8.png" alt="foto certificación Java">
+
+	<textarea class="question">
+	Which two technologies would be suitable for use as Front Controller elements? (Choose two)
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer">JSP</textarea>
+		<textarea class="correcta answer">Servlet</textarea>
+		<textarea class="answer">Filter</textarea>
+		<textarea class="answer">POJO</textarea>
+		<textarea class="answer">Custom Tag</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<article>
+
+				<h2></h2>
+<img src="img/foto9.png" alt="foto certificación  Java">
+	<textarea class="question">
+Given the web application deployment descriptor elements:
+11. <filter>
+12. <filter-name>ParamAdder</filter-name>
+13. <filter-class>com.example.ParamAdder</filter-class>
+14. </filter>
+...
+31. <filter-mapping>
+32. <filter-name>ParamAdder</filter-name>
+33. <servlet-name>Destination</servlet-name>
+34. </filter-mapping>
+...
+55. <servlet-mapping>
+56. <servlet-name>Destination</servlet-name>
+57. <url-pattern>/dest/Destination</url-pattern>
+58. </servlet-mapping>
+What is the result of a client request of the Source servlet with no query string?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer">The output “filterAdded = null” is written to the response stream.</textarea>
+		<textarea class="answer">The output “filterAdded = addedByFilter” is written to the response stream.</textarea>
+		<textarea class="answer">An exception is thrown at runtime within the service method of the Source servlet.</textarea>
+		<textarea class="answer">An exception is thrown at runtime within the service method of the Destination servlet.</textarea>
+	</div>
+
+
+	<div class="ex">
+		<p>Llamada al servlet Source -> llamada al servlet Destination -> se lanza el filtro asociado ParamAdder que añade el atributo filterAdded-addedByFilter -> Llegamos al Servlet Destination que no imprime nada, porque...</p>
+		<p>Un filtro no se invoca cuando cuando recibe una petición a través del <span class="parpadeoAzul">request dispatcher</span>.</p>
+<p>Para que el SimpleFilter fuese invocado, habría que haber definido el filtro de la siguiente forma:</p>
+<pre>
+	<code>
+&#x00a0;&lt;filter-mapping&gt;
+	&lt;filter-name&gt;SimpleFilter&lt;/filter-name&gt;
+	&lt;servlet-name&gt;DestinationServlet&lt;/servlet-name&gt;
+	&lt;dispatcher&gt;FORWARD&lt;/dispatcher&gt;
+	&lt;dispatcher&gt;REQUEST&lt;/dispatcher&gt;
+&lt;/filter-mapping&gt;
+	</code>
+</pre>
+	</div>
+</article>
+<!-- --------------------------- -->
+
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Which three are true about the HttpServletRequestWrapper class? (Choose three.)
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer">The HttpServletRequestWrapper is an example of the Decorator pattern.</textarea>
+		<textarea class="correcta answer">The HttpServletRequestWrapper can be used to extend the functionality of a servlet request.</textarea>
+		<textarea class="answer">A subclass of HttpServletRequestWrapper CANNOT modify the behavior of the getReader
+method.</textarea>
+		<textarea class="answer">An HttpServletRequestWrapper may be used only by a class implement the javax.servlet.Filter
+interface.</textarea>
+		<textarea class="answer">An HttpServletRequestWrapper CANNOT be used on the request passed to the
+RequestDispatcher.interface.</textarea>
+		<textarea class="correcta answer">An HttpServletRequestWrapper may modify the header of a request within an object
+implementing the javax.servlet.Filter interface.</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Given a war file with the following structure
+| - WEB-INF/classes/Myservlet.class
+| - WEB-INF/lib/wf.jaf
+Where wf.jar contains a valid web-fragment.xml and the following two classes: MyFilter1.class and
+MyFiler2.class.
+The web-fragment.xml is as follows:
+
+
+<web-fragment metadata-complete="true">
+	<filter>
+		<filter-name>MyFilter2</filter-name>
+		<filter-class>MyFilter2</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>MyFilter2</filter-name>
+		<url-pattern>/</url-pattern>
+	</filter-mapping>
+</web-fragment>
+
+
+	The following are some code snippets:
+
+(i) @WebServlet("/")
+	public class MyServlet extends HttpServlet{}
+(ii) @WebFilter(urlPatterns={"/"}) 
+	public class MyFilter1 implements Filter{}
+(iii) @WebFilter(urlPatterns={"/abc"})
+	public class MyFilter2 implements Filter {}
+
+</textarea>
+<textarea class="question">
+When one access “/” of the above web application, which filters will be executed?
+</textarea>>
+	<div class="responses">
+		<textarea class="answer">No filters will be executed.</textarea>
+		<textarea class="answer">MyFilter1</textarea>
+		<textarea class="correcta answer">MyFilter2</textarea>
+		<textarea class="answer">MyFilter1 and MyFilter2</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Servlet A forwarded a request to servlet B using the forward method of RequestDispatcher. What
+attribute in B’s request object contains the URI of the original request received by servlet A?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">REQUEST_URI</textarea>
+		<textarea class="correcta answer">javax.servlet.forward.request_uri</textarea>
+		<textarea class="answer">javax.servlet.forward.REQUEST_URI</textarea>
+		<textarea class="answer">javax.servlet.request_dispatcher.request_uri</textarea>
+		<textarea class="answer">javax.servlet.request_dispatcher.REQUEST_URI</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+<img src="img/foto12.png" alt="foto certificación Java">
+	<textarea class="question">
+Assume the product attribute does NOT yet exist in any scope.
+Which two create an instance of com.example.Product and initialize the name and price properties
+to the name and price request parameters? (Choose two)
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer"><jsp:useBean id="product" class="com.example.Product" />
+<jsp:setProperty name="product" property="*" /></textarea>
+		<textarea class="answer"><jsp:useBean id="product" class="com.example.Product" />
+<% product.setName( request.getParameter( "name" ) ); %>
+<% product.setPrice( request.getParameter( "price" ) ); %></textarea>
+		<textarea class="correcta answer"><jsp:useBean id="product" class="com.example.Product" />
+<jsp:setProperty name="product" property="name"
+value="${param.name}" />
+<jsp:setProperty name="product" property="price"
+value="${param.price}" /></textarea>
+		<textarea class="answer"><jsp:useBean id="product" class="com.example.Product">
+<jsp:setProperty name="product" property="name"
+value="${name}" />
+<jsp:setProperty name="product" property="price"
+value="${price}" />
+</jsp:useBean></textarea>
+
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+A session-scoped attribute is stored by a servlet, and then servlet forwards to a JSP page. Which
+three jsp:useBean attributes must be used to access this attribute in the JSP page? (Choose
+three.)
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer">id</textarea>
+		<textarea class="answer">name</textarea>
+		<textarea class="answer">bean</textarea>
+		<textarea class="correcta answer">type</textarea>
+		<textarea class="correcta answer">scope</textarea>
+		<textarea class="answer">beanName</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+<img src="img/foto13.png" alt="foto certificación Java">
+	<textarea class="question">
+Given:
+10. <form action=‘create_product.jsp’>
+11. Product Name: <input type= ‘text’ name=‘productName’/><br/>
+12. Product Price: <input type= ‘text’ name=‘productPrice’/><br/>
+13. </form>
+For a given product instance, which three jsp:setProperty attributes must be used to initialize its
+properties from the HTML form? (Choose three.)
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">id</textarea>
+		<textarea class="correcta answer">name</textarea>
+		<textarea class="answer">type</textarea>
+		<textarea class="correcta answer">param</textarea>
+		<textarea class="correcta answer">property</textarea>
+		<textarea class="answer">reqParam</textarea>
+		<textarea class="answer">attribute</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+A developer wants to make a name attribute available to all servlets associated with a particular
+user, across multiple requests from that user, from the same browser instance.
+Which two provide this capability from within a tag handler? (Choose two)
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">pageContext.setAttribute(“name”, theValue);</textarea>
+		<textarea class="answer">pageContext.setAttribute(“name”, getSession() );</textarea>
+		<textarea class="answer">pageContext.getRequest().setAttribute(“name”, theValue);</textarea>
+		<textarea class="correcta answer">pageContext.getSession().setAttribute(“name”, theValue);</textarea>
+		<textarea class="answer">pageContext.setAttribute(“name”, theValue, PageContext.PAGE_SCOPE);</textarea>
+		<textarea class="correcta answer">pageContext.setAttribute(“name”, theValue, PageContext.SESSION_SCOPE);</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Given that a web application consists of two HttpServlet classes, ServletA and ServletB, and the
+ServerletA.service method:
+20. String key = “com.example.data”;
+21. session.setAttribute(key, “Hello”);
+22. object value = session.getAttribute(key);
+23.
+Assume session is an HttpSession, and is not referenced anywhere else in ServletA.
+Which two changes, taken together, ensure that value is equal to “Hello” on line 23? (Choose two)
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">ensure that the ServletB.service method is synchronized</textarea>
+		<textarea class="answer">ensure that the ServletB.service method is synchronized</textarea>
+		<textarea class="correcta answer">ensure that ServletB synchronizes on the session object when setting session attributes</textarea>
+		<textarea class="answer">enclose lines 21-22 in synchronized block:
+synchronized(this) (
+session.setAttribute(key, “Hello”);
+value = session.getAttribute(key);
+)</textarea>
+		<textarea class="correcta answer">
+enclose lines 21-22 in synchronized block:
+synchronized(session) (
+session.setAttribute(key, “Hello”);
+value = session.getAttribute(key);
+)
+		</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Given an HttpServletRequest request:
+22. String id = request.getParameter(“jsessionid”);
+23. // insert code here
+24. String name = (String) session.getAttribute(“name”)
+Which three can be placed at line 23 to retrieve an existing HttpSession object? (Choose three)
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer">HttpSession session = request.getSession();</textarea>
+		<textarea class="answer">HttpSession session = request.getSession(id);</textarea>
+		<textarea class="correcta answer">HttpSession session = request.getSession(true);</textarea>
+		<textarea class="correcta answer">HttpSession session = request.getSession(false);</textarea>
+		<textarea class="answer">HttpSession session = request.getSession(“jsessionid”);</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		<a href="#25" class="link">Pregunta relacionada</a>
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+As a convenience feature, your web pages include an Ajax request every five minutes to a special servlet that monitors the age of the user’s session. The client-side JavaScript that handles the
+Ajax callback displays a message on the screen as the session ages. The Ajax call does NOT
+pass any cookies, but it passes the session ID in a request parameter called sessionID. In
+addition, assume that your webapp keeps a hasmap of session objects by the ID. Here is a partial
+implementation of this servlet:
+10. public class SessionAgeServlet extends HttpServlet {
+11. public void service(HttpServletRequest request, HttpServletResponse) throws IOException {
+12. String sessionID = request.getParameter("sessionID");
+13. HttpSession session = getSession(sessionID);
+14. long age = // your code here
+15. response.getWriter().print(age);
+16. }
+... // more code here
+47. }
+Which code snippet on line 14, will determine the age of the session?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">session.getMaxInactiveInterval();</textarea>
+		<textarea class="answer">session.getLastAccessed().getTime() – session.getCreationTime().getTime();</textarea>
+		<textarea class="answer">session.getLastAccessedTime().getTime() – session.getCreationTime().getTime();</textarea>
+		<textarea class="answer">session.getLastAccessed() - session.getCreationTime();</textarea>
+		<textarea class="answer">session.getMaxInactiveInterval() – session.getCreationTime();</textarea>
+		<textarea class=" correcta answer">session.getLastAccessedTime() – session.getCreationTime();</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Given the definition of Myobject and that an instance of Myobject is bound as a session attribute:
+8. package com.example;
+9. public class Myobject implements
+10. javax.servlet.http.HttpSessionBindingListener {
+11. // class body code here
+12. }
+Which is true?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">Only a single instance of Myobject may exist within a session</textarea>
+		<textarea class="answer">The unbound method of the Myobject instance is called when the session to which it is bound
+times out</textarea>
+		<textarea class="answer">The com.example.MyObject must be declared as a servlet event listener in the web application
+deployment descriptor</textarea>
+		<textarea class="correcta answer">The valueUnbound method of the Myobject instance is called when the session to which it is
+bound times out</textarea>
+
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Your web application requires the adding and deleting of many session attributes during a
+complex use case. A bug report has come in that indicates that an important session attribute is
+being deleted too soon and a NullPointerException is being thrown several interactions after the
+fact. You have decided to create a session event listener that will log when attributes are being
+deleted so you can track down when the attribute is erroneously being deleted.
+Which listener class will accomplish this debugging goal?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">Create an HttpSessionAttributeListener class and implement the attributeDeleted method and
+log the attribute name using the getName method on the event object.</textarea>
+		<textarea class="correcta answer">Create an HttpSessionAttributeListener class and implement the attributeRemoved method and
+log the attribute name using the getName method on the event object.</textarea>
+		<textarea class="answer">Create an SessionAttributeListener class and implement the attributeRemoved method and log
+the attribute name using the getAttributeName method on the event object.</textarea>
+		<textarea class="answer">Create an SessionAttributeListener class and implement the attributeDeleted method and log
+the attribute name using the getAttributeName method on the event object.</textarea>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Which method must be used to encode a URL passed as an argument to HttpServletResponse. sendRedirect when using URL rewriting for session tracking?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">ServletResponse.encodeURL</textarea>
+		<textarea class="answer">HttpServletResponse.encodeURL</textarea>
+		<textarea class="answer">ServletResponse.encodeRedirectURL</textarea>
+		<textarea class="correcta answer">HttpServletResponse.encodeRedirectURL</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Which Java expression can be used to check whether the web container is currently configured to
+track sessions via URL rewriting?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">servletContext.getSessionCookiesConfiq() .isHttpOnly()</textarea>
+		<textarea class="answer">servletContext.getSessionCookiesConfiq() .isSecure()</textarea>
+		<textarea class="answer">servletContext.getDefaultSessionTrackingModes() .contains(SessionTrackingMode.URL)</textarea>
+		<textarea class="correcta answer">servletContext.getEffectiveSessionTrackingModes() .contains (SessionTrackingMode.URL)</textarea>
+		
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Which security mechanism uses the concept of a realm?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">authorization</textarea>
+		<textarea class="answer">data integrity</textarea>
+		<textarea class="answer">confidentiality</textarea>
+		<textarea class="correcta answer">authentication</textarea>
+
+
+	</div>
+
+
+	<div class="ex">
+<p>Páginas en el mismo realm comparten credenciales. Si te logueas en un servidor con ciertas credenciales, podrás acceder al contenido de otro servidor con las mismas credenciales, siempre que compartan el mismo realm.</p>
+		
+		
+		<h3>Basic</h3>
+		<p>Se basa en usuario y contraseña. El navegador recoge estos datos y se los envía al servidor. El servidor autentifica al usuario en el realm (string) correspondiente </p>
+
+		<h3>Digest</h3>
+		<p>Se basa en usuario y contraseña. La password se envía encriptada en este caso.</p>
+
+		<h3>Client Certificate</h3>
+		<p>Utiliza certificado.</p>
+		<h3>Form</h3>
+		<p>Esta especificación permite al desarrollador controlar la apariencia del formulario de registro. Son los formularios de toda la vida.</p>
+
+		<pre>
+			<code>
+				&lt;web-app&gt;
+				&lt;security-constraint&gt;
+				&lt;web-resource-collection&gt;
+				&lt;web-resource-name&gt;User Auth&lt;/web-resource-name&gt;
+				&lt;url-pattern&gt;/auth/*&lt;/url-pattern&gt;
+				&lt;/web-resource-collection&gt;
+				&lt;auth-constraint&gt;
+				&lt;role-name&gt;admin&lt;/role-name&gt;
+				&lt;role-name&gt;manager&lt;/role-name&gt;
+				&lt;/auth-constraint&gt;
+				&lt;/security-constraint&gt;
+
+				&lt;login-config&gt;
+				&lt;auth-method&gt;BASIC&lt;/auth-method&gt;
+				&lt;realm-name&gt;User Auth&lt;/realm-name&gt;
+				&lt;/login-config&gt;
+
+				&lt;security-role&gt;
+				&lt;role-name&gt;admin&lt;/role-name&gt;
+				&lt;/security-role&gt;
+				&lt;security-role&gt;
+				&lt;role-name&gt;manager&lt;/role-name&gt;
+				&lt;/security-role&gt;
+				&lt;/web-app&gt;
+			</code>
+		</pre>		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Which java code snippet roles “MANAGER” and “EMPLOYEE” in a given application?
+@DeclareRole(“EMPLOYEE”)
+public class MyServlet extends HttpServlet {}
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer">@DeclareRoles({ “MANAGER”, “EMPLOYEE” })public class MyServlet extends HttpServlet {}</textarea>
+		<textarea class="answer">@SecurityRoles({ “MANAGER”, “EMPLOYEE” })public class MyServlet extends HttpServlet {}</textarea>
+		<textarea class="answer">@DeclareRoles(“MANAGER”)@DeclareRoles(“EMPLOYEE”)public class MyServlet extends
+HttpServlet {}</textarea>
+		<textarea class="answer">@DeclareRole(“MANAGER”)</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Given the java code snippet in contextInitialized method of a ServletContextListner:
+ServletRegistration.Dynamic sr = (ServletRegistration.Dynamic)sc.addServlet
+(“myServlet”, myServletClass);
+sr.addMapping(“/abc”);
+sr.setServletSecurityElement(servletSecurityElement);
+sr.addMapping(“/def”);
+Which statement is true?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">“/abc” is mapped to “myservlet”. The servletSecurityElementy applies to both “/abc” and “/def”.</textarea>
+		<textarea class="answer">Both “/abc” and “/def” are mapped to “myservlet”. The servletSecurityElementy applies to
+“/abc”.</textarea>
+		<textarea class="answer">Both “/abc” and “/def” are mapped to “myservlet”. The servletSecurityElementy applies to “/def”.</textarea>
+		<textarea class="answer">Both “/abc” and “/def” are mapped to “myservlet”. The servletSecurityElementy applies to both
+“/abc” and “/def”.</textarea>
+		<textarea class="correcta answer">Both “/abc” and “/def” are mapped to “myservlet”. The servletSecurityElementy applies to “/abc”,
+but the behavior for “/def” is not specified.</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Given:
+3. class MyServlet extends HttpServlet {
+4. public void doPut(HttpServletRequest req,
+HttpServletResponse resp)
+throws ServletException, IOException {
+5. // servlet code here
+...
+26. }
+27. }
+If the DD contains a single security constraint associated with MyServlet and its only <http-
+method> tags and <auth-constraint> tags are:
+<http-method>GET</http-method>
+<http-method>PUT</http-method>
+<auth-constrain>Admin</auth-constrain>
+Which four requests would be allowed by the container? (Choose four)
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer">A user whose role is Admin can perform a PUT.</textarea>
+		<textarea class="correcta answer">A user whose role is Admin can perform a GET.</textarea>
+		<textarea class="correcta answer">A user whose role is Admin can perform a POST.</textarea>
+		<textarea class="answer">A user whose role is Member can perform a PUT.</textarea>
+		<textarea class="correcta answer">A user whose role is Member can perform a POST.</textarea>
+		<textarea class="answer">A user whose role is Member can perform a GET.</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Given this fragment in a servlet:
+23. if(reg.isUserInRole(“Admin”)) {
+24. // do stuff
+25. }
+And the following fragment from the related Java EE deployment descriptor:
+812. <security-role-ref>
+813. <role-name>Admin</role-name>
+814. <role-link>Administrator</role-link>
+815. </security-role-ref>
+900. <security-role>
+901. <role-name>Admin</role-name>
+902. <role-name>Administrator</role-name>
+903. </security-role>
+What is the result?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">Line 24 can never be reached.</textarea>
+		<textarea class="answer">The deployment descriptor is NOT valid.</textarea>
+		<textarea class="answer">If line 24 executes, the user’s role will be Admin.</textarea>
+		<textarea class="correcta answer">If line 24 executes, the user’s role will be Administrator.</textarea>
+		<textarea class="answer">If line 24 executes, the user’s role will NOT be predictable.</textarea>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Which java code snippet checks whether the user is of the role “MANAGER” for a given
+HttpServRequest, httpServletRequest?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer">httpServletRequest.isUserInRole(“MANAGER”);</textarea>
+		<textarea class="answer">httpServletRequest.isCallerInRole(“MANAGER”);</textarea>
+		<textarea class="answer">httpServletRequest.isPrincipalInRole(“MANAGER”);</textarea>
+		<textarea class="answer">httpServletRequest.isAuthnticatedUserInRole(“MANAGER”);</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+A web application uses a cookies to track a client as it navigates through the pages that
+constitutes the application. Which code snippet can be used by the web application to reduce the
+chance of a cross-site scripting attack by setting some property of the cookie before returning it to
+the client?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer">cookie.setHttpOnly(true)</textarea>
+		<textarea class="answer">cookie.setMaxAge(3600)</textarea>
+		<textarea class="answer">cookie.setPath(“/”)</textarea>
+		<textarea class="answer">cookie.setSecure(true)</textarea>
+
+
+	</div>
+
+
+	<div class="ex">
+					<a href="#39" class="link">Pregunta relacionada</a>
+
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Given the portion of a valid Java EE web application’s directory structure:
+	</textarea>
+<img src="img/foto14.png" alt="foto certificación Java">
+<textarea class="question">
+You want to know whether File1.html, File2.html, and/or File3.html is protected from direct access
+by your web client’s browsers. What statement is true?	
+</textarea>
+	<div class="responses">
+		<textarea class="answer">All three files are directly accessible.</textarea>
+		<textarea class="correcta answer">Only File1.html is directly accessible.</textarea>
+		<textarea class="answer">Only File2.html is directly accessible.</textarea>
+		<textarea class="answer">Only File3.html is directly accessible.</textarea>
+		<textarea class="answer">Only File1.html and File2.html are directly accessible.</textarea>
+		<textarea class="answer">Only File1.html and File3.html are directly accessible.</textarea>
+		<textarea class="answer">Only File2.html and File3.html are directly accessible.</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Given a web fragment jar file, where should we put the web fragment.xml inside the jar file?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">WEB-INF</textarea>
+		<textarea class="answer">META-INF</textarea>
+		<textarea class="correcta answer">WEB-INF/lib</textarea>
+		<textarea class="answer">WEB-INF/classes</textarea>
+		<textarea class="answer">META-INF/services</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Given the fragment from Java EE deployment descriptor:
+341. <error-page>
+342. <exception-type>java.lang.Throwable</exception-type>
+343. <location>/mainError.jsp</location>
+344. </error-page>
+345. <error-page>
+346. <exception-type>java.lang.ClassCastException</exception-type>
+347. <location>/castError.jsp</location>
+348. </error-page>
+If the web application associated with the fragment above throws a ClassCastException.
+Which statement is true?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">The deployment descriptor is invalid.</textarea>
+		<textarea class="answer">The container invokes mainError.jsp</textarea>
+		<textarea class="correcta answer">The container invokes castError.jsp</textarea>
+		<textarea class="answer">Neither mainError.jsp nor castError.jsp is invoked.</textarea>
+
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+You have built a web application that you license to small businesses. The webapp uses a context
+parameter, called licenseExtension, which enables certain advanced features based on your
+client’s license package. When a client pays for a specific service, you provide them with a license
+extension key that they insert into the <context-param> of the deployment descriptor. Not every
+client will have this context parameter so you need to create a context listener to set up a default
+value in the licenseExtension parameter.
+Which code snippet will accomplish this goal?
+	</textarea>
+
+	<div class="responses">
+		<textarea class="correcta answer">You cannot do this because context parameters CANNOT be altered programmatically.</textarea>
+		<textarea class="answer">String ext = context.getParameter(‘licenseExtension’);if ( ext == null ) {
+context.setParameter(‘licenseExtension’ DEFAULT);}</textarea>
+		<textarea class="answer">String ext = context.getAttribute(‘licenseExtension’);if ( ext == null ) {
+context.setAttribute(‘licenseExtension’ DEFAULT);}</textarea>
+		<textarea class="answer">String ext = context.getInitParameter(‘licenseExtension’)if ( ext == null ) {
+context.resetInitParameter(‘licenseExtension’ DEFAULT);}</textarea>
+		<textarea class="answer">String ext = context.getInitParameter(‘licenseExtension’)if ( ext == null ) {
+context.setInitParameter(‘licenseExtension’ DEFAULT);}</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Which of the following are attributes of the annotation javax.servlet.annotation.WebFiler?
+- Name
+- servletNames
+- urlPatterns
+- dispatcherTypes
+- supportAsync
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">(iii) only</textarea>
+		<textarea class="correcta answer">(iii) and (iv)</textarea>
+		<textarea class="answer">(ii), (iii) and (iv)</textarea>
+		<textarea class="answer">(iii), (iv) and (v)</textarea>
+		<textarea class="answer">(ii), (iii), (iv) and (v)</textarea>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+Which of following annotations can be used in a servlet class?
+- @javax.annotation.Resource
+- @javax.annotation.PreDestroy
+- @javax.annotation.security.RunAs
+- @javax.annotation.security.RolesAllowed
+- @javax.servlet.annotation.WebServlet
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">(v) only</textarea>
+		<textarea class="correcta answer">(i) and (v)</textarea>
+		<textarea class="answer">(i), (ii), (iii) and (v)</textarea>
+		<textarea class="answer">(i), (ii), (iv) and (v)</textarea>
+		<textarea class="answer">(i), (ii), (iii), (iv) and (v)</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+<!-- --------------------------- -->
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+When using the @WebListener annotation, the class on which the annotation is applied to must
+also implement at least one o the following interfaces – (Choose two):
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer">RequestListener</textarea>
+		<textarea class="answer">AttributeListener</textarea>
+		<textarea class="correcta answer">ServletContextListener</textarea>
+		<textarea class="correcta answer">HttpSessionListener</textarea>
+		<textarea class="answer">SessionAttributeListener</textarea>
+		<textarea class="answer">AsyncListener</textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<!-- --------------------------- -->
+
+
+
+
+
+
+
+
+
+
+
+</body>
+</html>
+
+
+
+<!-- 
+<article>
+
+				<h2></h2>
+
+	<textarea class="question">
+
+	</textarea>
+
+	<div class="responses">
+		<textarea class="answer"></textarea>
+		<textarea class="answer"></textarea>
+		<textarea class="answer"></textarea>
+		<textarea class="answer"></textarea>
+		<textarea class="answer"></textarea>
+		<textarea class="answer"></textarea>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+ -->
+
+

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Detectar soporte geolocalización HTML5 | Pablo Monteserín</title>
+	<meta name="description" content="Ejemplo del código Javascript para detectar si un navegador soporta geolocalización">
+
+	<script type="text/javascript">
+		var geo;
+		function getGeoLocation(){
+			try{
+				if(navigator.geolocation)return navigator.geolocation;
+				else return undefined;
+			}	catch(e){
+				return undefined;
+			}
+		}
+
+		function init(){
+			if(geo = getGeoLocation()){
+				alert("Geolocalización soportada");
+
+			}else{
+				alert("Geolocalización no soportada");
+			}
+		}
+		window.onload = init;	
+	</script>
+
+</head>
+<body>
+	<h1>Ejemplo del código Javascript para detectar si un navegador soporta geolocalización</h1>
+</body>
+</html>
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="#">
+        <label for="clientName">Nombre del cliente:</label><br />
+        <input type="text" id="clientName"><br /><br />
+
+        <label for="material">Material de la caja:</label><br />
+        <select id="material">
+            <option value="madera">Madera</option>
+            <option value="hierro">Hierro</option>
+            <option value="plástico">Plástico</option>
+        </select>
+
+        <p>Seleccione unas dimensiones para la caja:</p>
+        <input type="radio" name="material" id="smaller" value="dimunutas"><label for="smaller">Diminutas</label><br />
+        <input type="radio" name="material" id="medium" value="medianas"><label for="medium">Medianas</label><br />
+        <input type="radio" name="material" id="bigger" value="grandes"><label for="bigger">Grandes</label> <br /><br />
+
+        <label for="comments">Comentarios:</label> <br />
+        <textarea id="comments"></textarea><br />
+
+        <button type="button">Enviar</button><br /><br />
+
+        <output></output>
+    </form>
+
+
+    <script>
+        const send = () => {
+            const clientName = document.querySelector('#clientName').value;
+            const material = document.querySelector('#material').value;
+            const size = document.querySelector('[name=material]:checked').value;
+            const comments = document.querySelector('#comments').value;
+
+            const sentence = clientName + ' ha pedido una caja de ' + material + ' con unas dimensiones ' + size + '. ' + comments;
+
+            document.querySelector('output').value = sentence;
+
+        }
+
+
+        document.querySelector('button').addEventListener('click', send);
+    </script>
+</body>
+
+</html>

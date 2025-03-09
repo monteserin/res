@@ -1,0 +1,27 @@
+div.border-image-2 {
+  border-width: 35px;
+  padding: 20px;
+  border-style: solid;
+}
+
+#stretch {
+  -webkit-border-image: url(https://pablomonteserin.com/res/html5/ex/border-image/border-image-2/border.png)
+    30 30 stretch; /* Safari 5 */
+  -moz-border-image: url(https://pablomonteserin.com/res/html5/ex/border-image/border-image-2/border.png)
+    30 30 stretch; /* Safari 5 */
+  -o-border-image: url(https://pablomonteserin.com/res/html5/ex/border-image/border-image-2/border.png)
+    30 30 stretch; /* Opera */
+  border-image: url(https://pablomonteserin.com/res/html5/ex/border-image/border-image-2/border.png)
+    30 30 stretch;
+}
+
+#round {
+  -webkit-border-image: url(https://pablomonteserin.com/res/html5/ex/border-image/border-image-2/border.png)
+    30 30 round; /* Safari 5 */
+  -moz-border-image: url(https://pablomonteserin.com/res/html5/ex/border-image/border-image-2/border.png)
+    30 30 stretch; /* Safari 5 */
+  -o-border-image: url(https://pablomonteserin.com/res/html5/ex/border-image/border-image-2/border.png)
+    30 30 round; /* Opera */
+  border-image: url(https://pablomonteserin.com/res/html5/ex/border-image/border-image-2/border.png)
+    30 30 round;
+}

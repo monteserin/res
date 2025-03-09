@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Botones en jQuery Mobile | Pablo Monteserín</title>
+    <meta charset='utf-8'>
+    <meta name="description"
+        content="Ejemplo de uso de botones (enlaces con el atributo data-role=button) en jQuery Mobile, alineados tanto en horizontal como en vertical">
+    <meta name="robots" content="noindex, follow">
+    <link rel="stylesheet" type="text/css" href="https://pablomonteserin.com/res/jquery-mobile/ex/jquery.mobile.css">
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery-mobile/ex/jquery-1.11.js"></script>
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery-mobile/ex/jquery.mobile.js"></script>
+</head>
+
+<body>
+    <section id="firstpage" data-role="page">
+        <header data-role="header">
+            <h1>Botones en jQuery Mobile</h1>
+        </header>
+        <div data-role="content">
+
+            <button data-inline="true">Botón</button>
+
+            <div data-role="controlgroup">
+                <button>Botón</button>
+                <input type="button" value="Botón" />
+                <a href="#" data-role="button">Button</a>
+            </div>
+
+            <div data-role="controlgroup" data-type="horizontal">
+                <button>Botón</button>
+                <input type="button" value="Botón" />
+                <a href="#" data-role="button">Button</a>
+            </div>
+        </div>
+        <footer data-role="footer">El pie de la página</footer>
+    </section>
+</body>
+
+</html>

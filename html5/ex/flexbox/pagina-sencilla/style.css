@@ -1,0 +1,27 @@
+.container {
+  width: 900px;
+  margin: auto;
+  display: flex;
+}
+
+.menu {
+  list-style: none;
+  border-top: 1px solid gray;
+  padding-top: 20px;
+}
+
+.menu a {
+  text-decoration: none;
+  color: black;
+}
+
+.col_left {
+  width: 200px;
+}
+
+.col_right {
+  width: 696px;
+  border-left: 1px solid gray;
+  padding-left: 20px;
+  box-sizing: border-box;
+}

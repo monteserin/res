@@ -1,0 +1,22 @@
+.barra-habilidad-wrapper {
+    width: 500px;
+    height: 30px;
+    border: 1px solid black
+}
+
+.barra-habilidad-wrapper .barrita {
+    height: 100%;
+    background: green;
+    width:0;
+}
+
+.barra-habilidad-wrapper:hover .barrita{
+    animation: muevete 1s forwards;
+
+}
+
+@keyframes muevete {
+    to {
+        width: 80%
+    }
+}

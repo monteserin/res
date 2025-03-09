@@ -1,0 +1,14 @@
+a .capaFlotante {
+  background-image: url(https://pablomonteserin.com/res/html5/ex/opacidad/back2.jpg);
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  margin-left: 20px;
+  margin-top: 20px;
+  display: none;
+}
+
+a:hover .capaFlotante {
+  color: black;
+  display: block;
+}

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="robots" content="noindex, follow">
+	<title>Document</title>
+</head>
+
+<body>
+	<form name="formularioName">
+		Escribe tu nombre, por favor:
+		<input type="text" id="campoNombre">
+		<input type="button" id="btn" value="Enviar formulario">
+		<input type="text" id="campoNombre2">
+	</form>
+
+	<script>
+		const saludar = () => {
+			const info = document.querySelector('#campoNombre').value;
+			document.querySelector('#campoNombre2').value = info;
+		}
+
+		document.querySelector('#btn').addEventListener('click', saludar);
+	</script>
+</body>
+
+</html>

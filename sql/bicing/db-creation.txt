@@ -1,0 +1,27 @@
+create table ciudadano
+(
+id INTEGER,
+dni VARCHAR(9),
+password VARCHAR(50),
+nombre VARCHAR(150),
+primary key (id)
+);
+
+create table parking
+(
+id INTEGER,
+direccion VARCHAR(250),
+maxBicis INTEGER,
+PRIMARY KEY (id)
+);
+	
+create table bicicleta
+(
+id INTEGER,
+kilometros INTEGER, 
+id_ciudadano INTEGER,
+id_parking INTEGER,
+PRIMARY KEY (id),
+FOREIGN KEY (id_ciudadano) references ciudadano(id),
+FOREIGN KEY (id_Parking) references parking(id)
+);

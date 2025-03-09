@@ -1,0 +1,61 @@
+[gd_scene load_steps=9 format=3 uid="uid://hrivbbhykrnf"]
+
+[ext_resource type="Texture2D" uid="uid://bgvo5jbhw1r5w" path="res://assets/back.jpg" id="1_ds743"]
+[ext_resource type="Script" path="res://scenes/main/main.gd" id="1_n675l"]
+[ext_resource type="Texture2D" uid="uid://od0gftigcfjb" path="res://assets/face0.png" id="2_m8w52"]
+[ext_resource type="Texture2D" uid="uid://coflagdppcd3s" path="res://assets/face1.png" id="2_uia13"]
+[ext_resource type="Texture2D" uid="uid://vpkyety3iqud" path="res://assets/face2.png" id="4_jav1g"]
+[ext_resource type="Texture2D" uid="uid://c0f15xy3mxevo" path="res://assets/face3.png" id="5_7ypiw"]
+[ext_resource type="Texture2D" uid="uid://cc8qg3q64xkh5" path="res://assets/face4.png" id="6_y8fo0"]
+[ext_resource type="Texture2D" uid="uid://c3rn6gelme5a8" path="res://assets/face5.png" id="7_ahswo"]
+
+[node name="Main" type="Control" node_paths=PackedStringArray("btns")]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_n675l")
+btns = [NodePath("Container/TextureRect/Button1"), NodePath("Container/TextureRect/Button2"), NodePath("Container/TextureRect/Button3")]
+imgs = Array[Texture2D]([ExtResource("2_m8w52"), ExtResource("2_uia13"), ExtResource("4_jav1g"), ExtResource("5_7ypiw"), ExtResource("6_y8fo0"), ExtResource("7_ahswo")])
+
+[node name="Container" type="Container" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Container"]
+layout_mode = 2
+texture = ExtResource("1_ds743")
+
+[node name="Button1" type="Button" parent="Container/TextureRect"]
+layout_mode = 0
+offset_left = 132.0
+offset_top = 346.0
+offset_right = 308.0
+offset_bottom = 512.0
+
+[node name="Button2" type="Button" parent="Container/TextureRect"]
+layout_mode = 0
+offset_left = 394.0
+offset_top = 372.0
+offset_right = 578.0
+offset_bottom = 542.0
+
+[node name="Button3" type="Button" parent="Container/TextureRect"]
+layout_mode = 0
+offset_left = 662.0
+offset_top = 354.0
+offset_right = 814.0
+offset_bottom = 502.0
+
+[node name="SolutionImg" type="TextureRect" parent="Container/TextureRect"]
+layout_mode = 0
+offset_left = 292.0
+offset_top = 50.0
+offset_right = 676.0
+offset_bottom = 334.0

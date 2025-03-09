@@ -1,0 +1,30 @@
+<body>
+  <script>
+    function letraDni(numero) {
+      //String con las letras del dni
+      var letras = "TRWAGMYFPDXBNJZSQVHLCKE";
+      var letra = "";
+      if (!isNaN(letra)) {
+        //Si el número tiene 8 cifras
+        if (numero >= 0 && numero <= 99999999) {
+          //El resto de dividir el número por 23 lo guardamos en indice
+          var indice = numero % 23;
+          //Ese indice coincide con la posición en el String
+          //La función charAt() coge el caracter de la posición indice
+          letra = letras.charAt(indice);
+        }
+      }
+      return letra;
+    }
+
+    while (confirm("Quieres obtener la letra de tu dni?")) {
+      var numero = Number(prompt("Introduce tu dni"));
+      var letra = letraDni(numero);
+      if (letra != "") {
+        document.write("La letra es " + letra);
+      } else {
+        alert("Número erróneo");
+      }
+    }
+  </script>
+</body>

@@ -1,0 +1,2025 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1z0-899</title>
+	<link rel="stylesheet" href="style.css">
+
+	<script src="jquery.js"></script>
+
+	
+<script src="js.js"></script>
+</head>
+<body>
+	<h1>1z0-899. Test 4</h1>
+	<input type="button" id="ver_soluciones" value="Ver soluciones">
+	<input type="button" id="ver_explicaciones" value="Ver explicaciones">
+	<input type="button" id="siguiente" value="siguiente">
+	<input type="button" id="atras" value="atrás">
+	<article>
+		<div class="question">
+			<h2></h2>
+			<p>During the initialization of your servlet, you have determined that the due to an unresponsive resource (for example, a web service), <span class="bold">the servlet cannot service any requests</span>. What should you do if <span class="bold">you do not want this to affect</span> requests for <span class="bold">other servlets</span> or resources?</p>
+		</div>
+		<div class="responses">
+			<div class="correcta"><input type="checkbox">Throw UnavailableException from the init method.</div>
+			<div class="correcta"><input type="checkbox">Throw ServletException from the init method.</div>
+			<div><input type="checkbox">Throw a RuntimeException from the init() method.</div>
+			<div><input type="checkbox">Do not throw any exception from the init method but throw ServletException from the service method if any request comes to this servlet.</div>
+			<div><input type="checkbox">Do not throw any exception from the init method but throw UnavailableException from the service method if any request comes to this servlet.</div>
+		</div>
+		<div class="ex">
+			<p>Un servlet puede lanzar UnavailableException para indicar que no puede atender las peticiones. En este caso el container dejará de enviarle peticiones a este Servlet, pero no afectará al resto. </p>
+			<p>UnavailableException hereda de ServletException</p>
+		</div>
+	</article>
+
+	<article>
+		<div class="question">
+					<h2></h2>
+
+			<p>Which statements regarding the WEB-INF directory of a web application are correct?</p>
+			<div><input type="checkbox">Files under this directory can be successfully requested from a browser.</div>
+			<div><input type="checkbox">It is a good place to keep images.</div>
+			<div class="correcta"><input type="checkbox">The deployment descriptor of the application resides directly under this directory.</div>
+			<div class="correcta"><input type="checkbox">Third party JARs and utility classes are kept in sub-directories under this directory.</div>
+			<div class="correcta"><input type="checkbox">All the files that are needed by the application but are not to be served directly to clients reside in this directory.</div>
+		</div>
+		<div class="ex">
+			<p>The WEB-INF node is not part of the <span class="bold">public</span> document tree of the application</p>
+		</div>
+	</article>
+
+	<article>
+				<h2></h2>
+
+		<div class="question">
+			<p>Which of the following statements regarding &lt;jsp:useBean&gt; action are correct?</p>
+		</div>
+		<div class="responses">
+			<div><input type="checkbox">&lt;jsp:useBean id=&quot;bean1&quot; beanName=&quot;bean1&quot; /&gt; is a valid usage of useBean action.</div>
+			<p class="correcta"><input type="checkbox">&lt;jsp:useBean id=&quot;bean1&quot; scope=&quot;session&quot; class=&quot;com.abc.SubclassOfMyBean&quot; type=&quot;com.abc.MyBean&quot;/&gt; is a valid usage of useBean action. (Given that SubclassOfMyBean is a subclass of MyBean.</div>
+			<div><input type="checkbox">&lt;jsp:useBean id=&quot;bean1&quot; scope=&quot;session&quot; class=&quot;com.abc.MyBean&quot; type=&quot;com.abc.SubclassOfMyBean&quot;/&gt; is a valid usage of useBean action.</div>
+			<div><input type="checkbox">&lt;jsp:useBean id=&quot;bean1&quot; /&gt; is a valid usage of useBean action.</div>
+			<p class="correcta"><input type="checkbox">&lt;jsp:useBean id=&quot;bean1&quot; type=&quot;com.abc.MyBean&quot; /&gt; is a valid usage of useBean action.</div>
+		</div>
+		<div class="ex">
+			<p>Es obligatorio usar id.</p>
+			<p>Sólo una de estas 4 combinaciones es posible:</p>
+			<ul>
+				<li>class</li>
+
+				<li>type</li>
+
+				<li>class and type</li>
+
+				<li>beanName and type</li>
+
+			</ul>
+		</div>
+	</article>
+
+
+	<article>
+				<h2></h2>
+
+		<div class="question">
+			<p>Consider the following web.xml code snippet:</p>
+			<pre>
+				<code>
+&lt;servlet&gt;
+	&lt;servlet-name&gt;BankServlet&lt;/servlet-name&gt;
+	&lt;servlet-class&gt;com.abc.bankapp.BankServlet&lt;/servlet-class&gt;
+	&lt;security-role-ref&gt;
+		&lt;role-name&gt;manager&lt;/role-name&gt;
+		&lt;role-link&gt;supervisor&lt;/role-link&gt;
+	&lt;/security-role-ref&gt;
+&lt;/servlet&gt;
+				</code>
+			</pre>
+			<p>Which of the following statements are correct?</p>
+		</div>
+		<div class="responses">
+			<p class="correcta"><input type="checkbox">The servlet code should use manager as a parameter in request.isUserInRole() method.</div>
+			<p class="correcta bold"><input type="checkbox">The servlet code may use manager or supervisor as a parameter in request.isUserInRole() method but using supervisor is not recommended.</div>
+			<div><input type="checkbox">The servlet code should use supervisor as a parameter in request.isUserInRole() method.</div>
+			<div><input type="checkbox">The role of manager must be defined in the servlet container.</div>
+		</div>
+		<div class="ex">
+			<p>The value specified in the &lt;role-name&gt; element should be used in the servlet code ( isUserInRole("manager")) and the value specified in the &lt;role-link&gt; element is the actual role configured in the servlet container, in &lt;tomcat-home&gt;/conf/tomcat-users.xml in Tomcat.</p>
+		</div>
+	</article>
+
+
+
+	<article>
+			<h2></h2>
+
+		<div class="question">
+			<p>Identify the correct statements about the request processing model for a filter.</p>
+		</div>
+
+
+		<div class="responses">
+			<p class="correcta"><input type="checkbox">The init method of the filter is called at most once in the life time of the filter.</div>
+			<div><input type="checkbox">In the doFilter() method, the filter must pass the control to the associated resource.</div>
+			<p class="correcta"><input type="checkbox">If multiple filters are associated with a resource using &lt;servlet-name&gt; element (i.e. associated with a named servlet instead of url patterns), they are invoked in the order they are defined in the deployment descriptor.</div>
+			<div><input type="checkbox">If a filter throws UnavailableException from the init method, it will never be invoked again.</div>
+			<p class="correcta"><input type="checkbox">Only one instance of the filter class is instantiated per &lt;filter&gt; declaration in web.xml.</div>
+			<div><input type="checkbox">A filter can either modify a request object or a response object but not both.</div>
+		</div>
+
+
+		<div class="ex">
+			<p>Las tres respuestas son para memorizar mecanicamente.</p>
+		</div>
+	</article>
+
+
+
+	<article>
+			<h2></h2>
+
+		<div class="question">
+			<p>Consider the following code for the web.xml for a web application.</p>
+			<pre>
+				<code>
+&lt;?xml version=&quot;1.0&quot; encoding=&quot;ISO-8859-1&quot;?&gt; 
+&lt;!-- Assume that DOCTYPE is valid --&gt;
+&lt;!DOCTYPE web-app
+	PUBLIC &quot;-//Sun Microsystems, Inc.//DTD Web Application 2.4//EN&quot;
+	&quot;http://java.sun.com/dtd/web-app_2_4.dtd&quot;&gt; 
+&lt;web-app&gt;
+	&lt;servlet&gt;
+		&lt;servlet-name&gt;TestServlet&lt;/servlet-name&gt;
+		&lt;jsp-file&gt;/requestinfo.jsp&lt;/jsp-file&gt;
+	&lt;/servlet&gt;
+	&lt;servlet-mapping&gt;
+		&lt;servlet-name&gt;TestServlet&lt;/servlet-name&gt;
+		&lt;url-pattern&gt;*.a&lt;/url-pattern&gt;
+	&lt;/servlet-mapping&gt;
+&lt;/web-app&gt;
+				</code>
+			</pre>
+			<p>Assume that a request: http://localhost:8080/test/aaa/abc.a is sent to this web application named test.</p>
+			<p>Which of the following statements are correct?</p>
+		</div>
+
+
+		<div class="responses">
+			<div><input type="checkbox">Path Info of the request will be /aaa/abc.a</div>
+			<div><input type="checkbox">RequestPath of this request will be /test/aaa/abc.a <span class="ex">El requestPath es /aaa/abc.a</span></div>
+			<div><input type="checkbox">ContextPath of this request will be /test/aaa <span class="ex">El ContextPath es test</span></div>
+			<div class="correcta"><input type="checkbox">This request will be serviced by requestinfo.jsp</div>
+			<div><input type="checkbox">None of these.</div>
+
+		</div>
+
+
+		<div class="ex">
+		</div>
+	</article>
+
+
+	<article>
+			<h2></h2>
+
+		<div class="question">
+			<p>Your servlet code expects a cookie named lastUserAction with a request. Based on its value, the servlet needs to take appropriate action. Which of the following code snippets correctly retrieve this cookie?</p>
+		</div>
+
+
+		<div class="responses">
+			<div><input type="checkbox">
+				<pre>
+					<code>
+Cookie c = request.getCookie("lastUserAction");
+String value = c.getValue(); //do something basthe value.
+					</code>
+				</pre>
+			</div>
+			<div class="correcta"><input type="checkbox">
+				<pre>
+					<code>
+Cookie[] cs = request.getCookies();
+for(Cookie c :  cs){
+if(c.getName().equals("lastUserAction")){
+	String value = c.getValue();
+	//do something based on the value.            
+	} 
+}
+			</code>
+		</pre>
+	</div>
+	<div><input type="checkbox">
+		<pre>
+			<code>
+String value = request.getCookie("lastUserAction"); 
+//do something based on the value.
+			</code>
+		</pre>
+	</div>
+	<div><input type="checkbox">
+		<pre>
+			<code>
+String[] cs = request.getCookies();
+for(String c :  cs){
+	if(c.equals("lastUserAction")){
+		String value = request.getCookie(c);
+		//do something based on the value.            
+	}
+}
+	</code>
+</pre>
+</div>
+</div>
+
+
+<div class="ex">
+	<p>La única forma posible de recuperar las Cookies es utilizando: 
+		Cookie[] getCookies(). No puedes acceder a una cookie en concreto.
+	</p>
+</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Which of the following methods of HttpServletRequest can be used to retrieve the parameter values sent from the browser?</p>
+	</div>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">getParameter(String name);</div>
+		<div><input type="checkbox">getParameter(String name, String defaultValue); <span class="ex">No existe este método</span></div>
+		<div><input type="checkbox">getParameterNames();</div>
+		<div class="correcta"><input type="checkbox">getParameterValues(String name);</div>
+		<div><input type="checkbox">getParameters(String name); <span class="ex">No existe este método</span></div>
+	</div>
+
+
+	<div class="ex">
+		<p>Simplemente, memoriza las dos respuestas correctas.</p>
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Which of the following are valid values for the <auth-method> element of the deployment descriptor?</p>
+	</div>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">DIGEST</div>
+		<div class="correcta"><input type="checkbox">CLIENT-CERT</div>
+		<div><input type="checkbox">SECURE</div>
+		<div><input type="checkbox">HTTPS</div>
+	</div>
+
+
+	<div class="ex">
+		<p>auth-method acepta 4 valores: BASIC, CLIENT-CERT, DIGEST, FORM.</p>
+		<p>Un ejemplo de auth-method:</p>
+		<pre>
+			<code>
+&lt;login-config&gt;
+	&lt;auth-method&gt;FORM&lt;/auth-method&gt;
+	&lt;realm-name&gt;file&lt;/realm-name&gt;
+	&lt;form-login-config&gt;
+		&lt;form-login-page&gt;/login.xhtml&lt;/form-login-page&gt;
+		&lt;form-error-page&gt;/error.xhtml&lt;/form-error-page&gt;
+	&lt;/form-login-config&gt;
+&lt;/login-config&gt;
+			</code>
+		</pre>
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Consider the following code snippet in a servlet's service method that supports asynchronous processing:</p>
+		<pre>
+			<code>
+AsyncContext ac = request.startAsync();
+ac.addListener(myAsyncListener);
+			</code>
+		</pre>
+		<p>Assuming that myAsyncListener is a valid AsyncListener and there is no other asynchronous processing, in which of the following cases will its methods be invoked?</p>
+	</div>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Upon dispatch of the request to another resource.</div>
+		<div><input type="checkbox">Upon getting an interrupt from another request.</div>
+		<div class="correcta"><input type="checkbox">Upon completion of the asynchronous request processing.</div>
+		<div><input type="checkbox">At the start of the asynchronous request processing.</div>
+	</div>
+
+
+	<div class="ex">
+		<p>AsyncListener tiene cuatro métodos: onComplete, onError, onStartAsync, onTimeout. Como en el enunciado dice que todo ha ido bien, o se dispara onComplete o se dispara onStartAsyc, pero como el listener está colocado en la línea siguiente a cuando arranqué el proceso, este sólo podrá detectar cuando el proceso ha terminado.</p>
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Which of the following security mechanisms utilizes the concept of a realm?</p>
+	</div>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">Basic</div>
+		<div class="correcta"><input type="checkbox">Digest</div>
+		<div class="correcta"><input type="checkbox">Form</div>
+		<div><input type="checkbox">client-cert</div>
+	</div>
+
+
+	<div class="ex">
+		<p>Páginas en el mismo realm comparten credenciales. Si te logueas en un servidor con ciertas credenciales, podrás acceder al contenido de otro servidor con las mismas credenciales, siempre que compartan el mismo realm.</p>
+		
+		
+		<h3>Basic</h3>
+		<p>Se basa en usuario y contraseña. El navegador recoge estos datos y se los envía al servidor. El servidor autentifica al usuario en el realm (string) correspondiente </p>
+
+		<h3>Digest</h3>
+		<p>Se basa en usuario y contraseña. La password se envía encriptada en este caso.</p>
+
+		<h3>Client Certificate</h3>
+		<p>Utiliza certificado.</p>
+		<h3>Form</h3>
+		<p>Esta especificación permite al desarrollador controlar la apariencia del formulario de registro. Son los formularios de toda la vida.</p>
+
+		<pre>
+			<code>
+				&lt;web-app&gt;
+				&lt;security-constraint&gt;
+				&lt;web-resource-collection&gt;
+				&lt;web-resource-name&gt;User Auth&lt;/web-resource-name&gt;
+				&lt;url-pattern&gt;/auth/*&lt;/url-pattern&gt;
+				&lt;/web-resource-collection&gt;
+				&lt;auth-constraint&gt;
+				&lt;role-name&gt;admin&lt;/role-name&gt;
+				&lt;role-name&gt;manager&lt;/role-name&gt;
+				&lt;/auth-constraint&gt;
+				&lt;/security-constraint&gt;
+
+				&lt;login-config&gt;
+				&lt;auth-method&gt;BASIC&lt;/auth-method&gt;
+				&lt;realm-name&gt;User Auth&lt;/realm-name&gt;
+				&lt;/login-config&gt;
+
+				&lt;security-role&gt;
+				&lt;role-name&gt;admin&lt;/role-name&gt;
+				&lt;/security-role&gt;
+				&lt;security-role&gt;
+				&lt;role-name&gt;manager&lt;/role-name&gt;
+				&lt;/security-role&gt;
+				&lt;/web-app&gt;
+			</code>
+		</pre>
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>For what purpose are the following elements used together in the deployment descriptor of a webapp?</p>
+		<p>&lt;web-resource-collection&gt;</p>
+		<p>&lt;user-data-constraint&gt;</p>
+		<p>&lt;auth-constraint&gt;</p>
+	</div>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">For defining a security constraint.</div>
+		<div><input type="checkbox">For defining a security role.</div>
+		<div><input type="checkbox">For defining a resource reference</div>
+		<div><input type="checkbox">For defining a collection of protected resources.</div>
+		<div><input type="checkbox">None of the above.</div>
+	</div>
+
+
+	<div class="ex">
+		<p>Los tres nodos indicados en el enunciado, nos permiten definir una  security-constraint. Este elemento nos permite restringir el acceso a un determinado número de recursos para cierto perfil. Para determinar el grupo de elementos utilizamos el nodo,     &lt;web-resource-collection&gt;, pero como en el enunciado nos están dando los tres nodos, se refiere a una &lt;security-constraint&gt;     
+		</p>
+		<pre>
+			<code>
+&lt;security-constraint&gt;     
+	&lt;web-resource-collection&gt;      
+		&lt;web-resource-name&gt;Admin&lt;/web-resource-name&gt;        
+		&lt;http-method&gt;POST&lt;/http-method&gt;       
+		&lt;url-pattern&gt;/admin/*&lt;/url-pattern&gt;   
+	&lt;/web-resource-collection&gt;    
+	&lt;auth-constraint&gt;        
+		&lt;role-name&gt;Admin&lt;/role-name&gt;       
+		&lt;role-name&gt;Moderator&lt;/role-name&gt;    
+	&lt;/auth-constraint&gt;    
+	&lt;user-data-constraint&gt;       
+		&lt;transport-guarantee&gt;INTEGRAL&lt;/transport-guarantee&gt;   
+	&lt;/user-data-constraint&gt; 
+&lt;/security-constraint&gt;
+			</code>
+		</pre>		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>What requires &lt;login-config&gt; element during configuration?
+		</p>
+	</div>
+
+
+	<div class="responses">
+		<div><input type="checkbox">authorization of Web Services </div>
+		<div><input type="checkbox">data integrity of Web Services </div>
+		<div class="correcta"><input type="checkbox">authentication of Web Services </div>
+		<div><input type="checkbox">reference sharing of Web Services </div>
+	</div>
+
+
+	<div class="ex">
+		<p>La propia palabra login sugiere un proceso de autentificación.</p>
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Which of the following statements is correct?</p>
+	</div>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">RequestDispatcher.forward() is preferred over sendRedirect() when forwarding a request to a resource belonging to the same web application.</div>
+		<div><input type="checkbox">You should never do JNDI lookups to acquire resources such as a JMS queue in servlet's init() method.</div>
+		<div><input type="checkbox">In certain cases, the service() method of a servlet may be called before init() method.</div>
+		<div><input type="checkbox">In certain cases, the service(ServletRequest, ServletResponse) method of a servlet may not be called before doGet() method.</div>
+	</div>
+
+
+	<div class="ex">
+		<p>La respuesta correcta es el método que siempre usamos para hacer redireccionamientos en los servlets. sendRedirect() da una vuelta de más.</p>
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Which method can be invoked on a session object so that it is never invalidated by the servlet container automatically?</p>
+	</div>
+
+
+	<div class="responses">
+		<div><input type="checkbox">setTimeOut(-1)</div>
+		<div><input type="checkbox">setTimeOut(Integer.MAX_INT)</div>
+		<div><input type="checkbox">setTimeOut(0)</div>
+		<div class="correcta"><input type="checkbox">setMaxInactiveInterval(-1)</div>
+		<div><input type="checkbox">setMaxInactiveInterval(Integer.MAX_INT)</div>
+	</div>
+
+
+	<div class="ex">
+		<p>Tal como pone en la documentación, si el parámetro de la función setMaxInactiveInterval es 0 o -1, la sesión nunca expira. Esto hay que memorizarlo.</p>
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>You have packaged a file test.jsp in your web fragment jar file named mywf.jar under META-INF/resources path. This jar file is kept under WEB-INF/lib in the web application.</p>
+		<p>What path should you use in a servlet to access this file using the getResource method?</p>
+	</div>
+
+
+	<div class="responses">
+		<div><input type="checkbox">test.jsp</div>
+		<div class="correcta"><input type="checkbox">/test.jsp</div>
+		<div><input type="checkbox">/META-INF/resources/test.jsp</div>
+		<div><input type="checkbox">/mywf/META-INF/resources/test.jsp</div>
+		<div><input type="checkbox">It depends on whether the servlet code is part of the web fragment or the web app.</div>
+	</div>
+
+
+	<div class="ex">
+		<p>Tal como pone en la documentación, los métodos getResource y  getResourceAsStream reciben como argumento una cadena de texto que debe empezar por  "/" y que es relativa a la carpeta META-INF/resources del jar que está alojado en la carpeta WEB-INF/lib.
+		</p>
+	</div>
+</article>
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>An attribute named 'courses' is stored in the ServletContext by a servlet. It is a collection of Course objects. Which of the following JSTL code correctly iterates over this collection?</p>
+	</div>
+
+
+	<div class="responses">
+		<div><input type="checkbox">
+			<pre>
+				<code>
+&lt;c:iterate var=&quot;course&quot; items=&quot;${courses}&quot;&gt;
+	&lt;c:out value=&quot;${course.name}&quot;/&gt;&lt;br&gt;
+&lt;/c:iterate&gt;
+				</code>
+			</pre>
+		</div>
+		<div class="correcta"><input type="checkbox">
+			<pre>
+				<code>
+&lt;c:forEach var=&quot;course&quot; items=&quot;${courses}&quot;&gt;
+	&lt;c:out value=&quot;${course.name}&quot;/&gt;&lt;br&gt;
+&lt;/c:forEach&gt;
+				</code>
+			</pre>
+		</div>
+		<div><input type="checkbox">
+			<pre>
+				<code>
+&lt;c:for var=&quot;course&quot; items=&quot;${courses}&quot;&gt;
+	&#x00a0;&#x00a0;&lt;c:out value=&quot;${course.name}&quot;/&gt;&lt;br&gt;
+&lt;/c:for&gt;
+				</code>
+			</pre>
+		</div>
+		<div><input type="checkbox">
+			<pre>
+				<code>
+&lt;c:forEach var=&quot;course&quot; collection=&quot;${courses}&quot;&gt;
+	&lt;c:out value=&quot;${course.name}&quot;/&gt;&lt;br&gt; 
+&lt;/c:forEach&gt;
+				</code>
+			</pre>
+		</div>
+		<div><input type="checkbox">
+		<pre>
+			<code>
+&lt;c:iterate var=&quot;course&quot; collection=&quot;${courses}&quot;&gt;
+	&lt;c:out value=&quot;${course.name}&quot;/&gt;&lt;br&gt;
+&lt;/c:iterate&gt;				
+			</code>
+		</pre>
+
+		</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>A user of your Product Database application uses the following HTML page to submit a product:</p>
+
+		<pre>
+			<code>
+&lt;html&gt;
+	&lt;body&gt;
+		Submit Product:
+		&lt;form name='prdform' action='submitproduct.jsp'&gt;
+			&lt;input type=text name='id'&gt;
+			&lt;input type=text name='name'&gt;
+			&lt;input type=submit&gt;
+		&lt;/form&gt;
+	&lt;/body&gt; 
+&lt;/html&gt;
+			</code>
+		</pre>
+
+		<p>The submitproduct.jsp file uses a com.enthu.Product bean (See below) to capture the id and name values submitted by the HTML page.</p>
+
+		<p>Which of the following JSP code snippets will create and initialize a Product bean using the values submitted by the form?</p>
+
+		<pre><code>
+package com.enthu;
+	public class Product {
+		private String pid;
+			public void setPid(String id){ this.pid = id;
+		}
+
+	public String getPid(){
+		return pid;
+	}
+	
+	private String pname;
+	
+	public void setPname(String name){
+		this.pname = name;
+	}
+	
+	public String getPname(){ 
+		return pname; 
+	} 
+}
+</code></pre>
+</div>
+
+
+<div class="responses">
+	<div><input type="checkbox"><pre><code>
+&lt;jsp:useBean id='prd' scope='request' class='com.enthu.Product' &gt;
+	${prd.pid}=${param.id} &#x00a0;&#x00a0;${prd.pname}=${param.name}
+&lt;/jsp:useBean&gt;
+	</code></pre></div>
+	<div class="correcta"><input type="checkbox"><pre><code>
+&lt;jsp:useBean id='<span class="red">prd</span>' scope='request' class='com.enthu.Product' &gt;
+	&lt;%<span class="red">prd</span>.setPid(request.getParameter(&quot;id&quot;));%&gt;
+	&lt;%<span class="red">prd</span>.setPname(request.getParameter(&quot;name&quot;));%&gt;
+&lt;/jsp:useBean&gt;
+	</code></pre></div>
+	<div><input type="checkbox"><pre><code>
+&lt;jsp:useBean id='prd' scope='request' class='com.enthu.Product' &gt;
+	&lt;jsp:setProperty name='prd' property='pid'/&gt;
+	&lt;jsp:setProperty name='prd' property='pname'/&gt;
+&lt;/jsp:useBean&gt;
+		</code></pre>
+	</div>
+	<div class="correcta"><input type="checkbox"><pre><code>
+&lt;jsp:useBean id='<span class="red">prd</span>' scope='request' class='com.enthu.Product' &gt;
+	&lt;jsp:setProperty name='<span class="red">prd</span>' property='pid' param='id' /&gt;
+	&lt;jsp:setProperty name='<span class="red">prd</span>' property='pname' param='name' /&gt;
+&lt;/jsp:useBean&gt;
+	</code></pre></div>
+	<div><input type="checkbox"><pre><code>
+&lt;jsp:useBean id='prd' scope='request' class='com.enthu.Product' &gt;
+	${prd.pid = param.id}
+	${prd.pname = param.name} 
+&lt;/jsp:useBean&gt;
+	</code></pre>
+
+</div>
+
+
+<div class="ex">
+	<p>Para dar un valor a una propiedad de un objeto necesitas el valor que le vas a dar, el nombre de la propiedad, y el nombre del objeto</p>
+</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Which interface would you need to configure a servlet to support Asynchronous processing?</p>
+	</div>
+
+
+	<div class="responses">
+		<div><input type="checkbox">javax.servlet.ServletRegistration</div>
+		<div><input type="checkbox">javax.servlet.ServletRegistration.Dynamic</div>
+		<div><input type="checkbox">javax.servlet.Registration</div>
+		<div class="correcta"><input type="checkbox">javax.servlet.Registration.Dynamic</div>
+	</div>
+
+
+	<div class="ex">
+		<p>javax.servlet.Registration : métodos setInitParameter, setInitParameters.</p>
+
+		<p>javax.servlet.ServletRegistration extends javax.servlet.Registration: métodos addMapping, addMappings</p>
+
+		<p>javax.servlet.Registration.Dynamic extends javax.servlet.Registration: <span class="red bold"> métodos setAsyncSupported</span></p>
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Consider the following contents of a file named test.js:</p>
+		<pre>
+			<code>
+&lt;script language=&quot;JavaScript&quot;&gt;
+	function sayHello() { 
+		alert(&quot;Hello!&quot;); 
+	} 
+&lt;/script&gt; 
+		</code>
+	</pre>
+	<p>This content needs to be included in a JSP document. Which of the following options will accomplish that?</p>
+</div>
+
+
+<div class="responses">
+	<div><input type="checkbox">&lt;jsp:directive.include file=&quot;test.js&quot; content-type=&quot;application/JavaScript&quot; /&gt;</div>
+	<div><input type="checkbox">&lt;jsp:directive.include file=&quot;test.js&quot; language=&quot;JavaScript&quot;/&gt;</div>
+	<div><input type="checkbox">&lt;jsp:include file=&quot;test.js&quot; language=&quot;JavaScript&quot;/&gt;</div>
+	<div><input type="checkbox">&lt;jsp:include script=&quot;test.js&quot; /&gt;</div>
+	<div class="correcta"><input type="checkbox">&lt;jsp:directive.include file=&quot;test.js&quot; /&gt;</div>
+
+</div>
+
+
+
+<div class="ex">
+
+</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>You have developed a web application and have packaged it in a war file named sample.war. Which of the following are true?</p>
+	</div>
+
+
+	<div class="responses">
+		<div><input type="checkbox">When you deploy the war file, META-WAR folder, if required, should be created under /sample.</div>
+		<div class="correcta"><input type="checkbox">When you deploy the war file, META-INF folder, if required, should be created under /sample.</div>
+		<div><input type="checkbox">When you deploy the war file, MANIFEST.MF file, if required, should be created under /sample.</div>
+		<div><input type="checkbox">When you deploy the war file, META-INF folder, if required, should be created under /sample/WEB-INF.</div>
+		<div class="correcta"><input type="checkbox">When you deploy the war file, the container may validate whether you have configured your application classes correctly.</div>
+	</div>
+
+
+	<div class="ex">
+		<p>En archivos war y jar, la carpeta META-INF está en la raíz.</p>
+	</div>
+
+</article>
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Which of the following elements are required for a valid <taglib> tag in web.xml?</p>
+	</div>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">&lt;taglib-uri&gt;</div>
+		<div><input type="checkbox">&lt;tag-uri&gt;</div>
+		<div><input type="checkbox">&lt;taglib-name&gt;</div>
+		<div class="correcta"><input type="checkbox">&lt;taglib-location&gt;</div>
+		<div><input type="checkbox">&lt;taglib-file&gt;</div>
+	</div>
+
+
+	<div class="ex">
+		<p>Una declaración válida de un taglib requiere 2 subelementos</p>
+		<pre><code>
+&lt;taglib&gt;
+	&lt;taglib-uri&gt;/mylibrary&lt;/taglib-uri&gt;&#x00a0;&#x00a0;( You can use 'mylibrary' in the JSP taglib directive : &lt;%@taglib uri=&quot;/mylibrary&quot; prefix==&quot;mylquot;%&gt; ) &#x00a0;&#x00a0;
+	&lt;taglib-location&gt;/WEB-INF/tlds/MYLibrary.tld&lt;/taglib-location&gt; // This is the location of tld file for the tag library. 
+&lt;/taglib&gt;
+		</code></pre>
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Which of the following statements are correct regarding tag libraries?</p>
+		<p>Note: Some candidates have reported getting a question on this topic even though it is not mentioned in the objectives.</p>
+	</div>
+
+
+	<div class="responses">
+		<div><input type="checkbox">The tag library descriptor for a tag library must be kept in META-INF/taglib.tld, if the tag library is packaged in a jar file.</div>
+		<div><input type="checkbox">The tag library descriptor for a tag library may be kept in WEB-INF/taglib.tld, if the tag library is packaged in a jar file.</div>
+		<div class="correcta"><input type="checkbox">A JSP 2.0+ compliant container will automatically generate an implicit tag library for a set of tag files.</div>
+		<div><input type="checkbox">The tag library descriptor for a tag library not packaged as a jar file may be kept anywhere in /tld directory of the web application's document root.</div>
+	</div>
+
+
+	<div class="ex">
+		<p>A partir de la versión 2.0 dejó de ser necesario crear el tld. Sólo dejas la librería en el sitio correcto, usas la directiva en el jsp y listo.</p>
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>You are building a social networking website and on one of the web pages you want to allow the users to upload multiple pictures.
+		</p>
+
+		<p>Which of the following methods would you use in your servlet that processes the upload request?</p>
+	</div>
+
+
+	<div class="responses">
+		<div><input type="checkbox">getPart and getParts methods of ServletRequest interface.</div>
+		<div><input type="checkbox">getMultiPart and getMultiParts methods of ServletRequest interface.</div>
+		<div class="correcta"><input type="checkbox">getPart and getParts methods of HttpServletRequest interface.</div>
+		<div><input type="checkbox">getPart and getAllParts methods of HttpServletRequest interface.</div>
+	</div>
+
+
+	<div class="ex">
+		<p>Esta es de empollar</p>
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Consider the following web.xml code block:</p>
+		<pre>
+			<code>
+&lt;filter&gt;
+	&lt;filter-name&gt;SimpleFilter&lt;/filter-name&gt;
+	&lt;filter-class&gt;com.enthuware.jwebplus.SimpleFilter&lt;/filter-class&gt; 
+&lt;/filter&gt;
+&lt;filter-mapping&gt;
+	&lt;filter-name&gt;SimpleFilter&lt;/filter-name&gt;
+	&lt;servlet-name&gt;DestinationServlet&lt;/servlet-name&gt;
+&lt;/filter-mapping&gt;
+&lt;servlet&gt;
+	&lt;servlet-name&gt;<span class="pink bold">DestinationServlet</span>&lt;/servlet-name&gt;
+	&lt;servlet-class&gt;com.enthuware.jwebplus.<span class="bold cyan">DestinationServlet</span>&lt;/servlet-class&gt;
+&lt;/servlet&gt;
+&lt;servlet&gt;
+	&lt;servlet-name&gt;<span class="bold blue">SourceServlet</span>&lt;/servlet-name&gt;
+	&lt;servlet-class&gt;com.enthuware.jwebplus.<span class="bold purple">SourceServlet</span>&lt;/servlet-class&gt;
+&lt;/servlet&gt;
+&lt;servlet-mapping&gt;
+	&lt;servlet-name&gt;<span class="bold pink">DestinationServlet</span>&lt;/servlet-name&gt;
+	&lt;url-pattern&gt;<span class="orange bold">/DestinationServlet</span>&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt;
+&lt;servlet-mapping&gt;
+	&lt;servlet-name&gt;<span class="blue bold">SourceServlet</span>&lt;/servlet-name&gt;
+	&lt;url-pattern&gt;<span class="red bold">/SourceServlet</span>&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt;
+			</code>
+		</pre>
+		<p>and the following code blocks for the servlets and the filter:</p>
+
+		<pre>
+			<code>
+<span class="purple bold">//Code for doGet of SourceServlet.     </span>
+protected void doGet(HttpServletRequest request, HttpServletResponse response)     throws ServletException, IOException {
+	request.<span class="parpadeoAzul">getRequestDispatcher</span>("<span class="orange">/DestinationServlet</span>").forward(request, response);
+}  
+
+<span class="cyan bold">//code for doGet of DestinationServlet     </span>
+
+protected void doGet(HttpServletRequest request, HttpServletResponse response)     throws ServletException, IOException {
+	<span class="bold">System.out.println("Param Added by SimpleFilter : " + request.getAttribute("filterParam") );     </span>
+}
+
+//code for doFilter of SimpleFilter     
+public void doFilter(ServletRequest request, ServletResponse response, FilterChain chain) 
+	throws IOException, ServletException {
+	try {
+		request.setAttribute("filterParam", "SimpleFilter"); 
+		chain.doFilter(request, response);         
+	}catch(Throwable t) {
+		t.printStackTrace();         
+	}
+}
+</code>
+</pre>
+<p>What will be printed on the server console when SourceServlet is accessed through http://myserver.com/mywebapp/<span class="red bold">SourceServlet</span> url?</p>
+</div>
+
+
+<div class="responses">
+	<div><input type="checkbox">Param Added by SimpleFilter : SimpleFilter</div>
+	<div class="correcta"><input type="checkbox">Param Added by SimpleFilter : null</div>
+
+	<div><input type="checkbox">Param Added by SimpleFilter : </div>
+	<div><input type="checkbox">None of these.</div>
+	<div><input type="checkbox">Exception will be thrown at runtime in doGet method of SourceServlet.</div>
+	<div><input type="checkbox">Exception will be thrown at runtime in doGet method of DestinationServlet.</div>
+</div>
+
+
+<div class="ex">
+<p>Un filtro no se invoca cuando cuando recibe una petición a través del <span class="parpadeoAzul">request dispatcher</span>.</p>
+<p>Para que el SimpleFilter fuese invocado, habría que haber definido el filtro de la siguiente forma:</p>
+<pre>
+	<code>
+&#x00a0;&lt;filter-mapping&gt;
+	&lt;filter-name&gt;SimpleFilter&lt;/filter-name&gt;
+	&lt;servlet-name&gt;DestinationServlet&lt;/servlet-name&gt;
+	&lt;dispatcher&gt;FORWARD&lt;/dispatcher&gt;
+	&lt;dispatcher&gt;REQUEST&lt;/dispatcher&gt;
+&lt;/filter-mapping&gt;
+	</code>
+</pre>
+</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Consider the following code snippet in contextIntialized method of a ServletContextListener class:</p>
+		<pre>
+			<code>
+HttpConstraintElement constraint = new HttpConstraintElement(TransportGuarantee.NONE, new String[]{"employee"});
+List&lt;HttpMethodConstraintElement&gt; methodConstraints = new ArrayList&lt;HttpMethodConstraintElement&gt;();	
+methodConstraints.add(new HttpMethodConstraintElement("<span class="blue bold">GET</span>", constraint ));
+ServletSecurityElement <span class="red bold">servletSecurity</span> = new ServletSecurityElement(constraint, methodConstraints);
+
+ServletRegistration.Dynamic sd = ctx.addServlet("dynamicServlet", myDynamicServletClass);
+sd.addMapping("/dynamic");
+sd.setServletSecurity(<span class="red bold">servletSecurity</span>);
+sd.addMapping("/<span class="bold purple">secureDynamic</span>"); 
+			</code>
+		</pre>
+		<p>Further, the following appears in web.xml of the same web application:</p>
+<pre>
+	<code>
+&lt;security-constraint&gt;
+	&lt;web-resource-collection&gt;
+		&lt;web-resource-name&gt;SecurityTest&lt;/web-resource-name&gt; 
+		&lt;url-pattern&gt;/<span class="bold purple">secureDynamic</span>&lt;/url-pattern&gt;
+		&lt;http-method&gt;POST&lt;/http-method&gt;
+	&lt;/web-resource-collection&gt;
+	&lt;auth-constraint&gt;
+		&lt;role-name&gt;employee&lt;/role-name&gt;
+	&lt;/auth-constraint&gt;
+	&lt;user-data-constraint&gt;
+		&lt;transport-guarantee&gt;NONE&lt;/transport-guarantee&gt;
+	&lt;/user-data-constraint&gt;
+&lt;/security-constraint&gt;
+	</code>
+</pre>
+	</div>
+
+
+	<div class="responses">
+		<div><input type="checkbox">A user must be in employee role to access /dynamic but not /secureDynamic using any HTTP method.</div>
+		<div><input type="checkbox">A user must be in employee role to access /secureDynamic but not /dynamic through HTTP GET method.</div>
+		<div class="correcta"><input type="checkbox">A user must be in employee role to access /dynamic but not /<span class="bold purple">secureDynamic</span> through HTTP GET method.</div>
+		<div><input type="checkbox">None of these.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+<article>
+			<h2></h2>
+
+	<div class="question">
+		<p>Which method of ServletResponse would you use to set its content type?</p>
+	</div>
+
+
+	<div class="responses">
+		<div><input type="checkbox">setParameter</div>
+		<div><input type="checkbox">setHeader</div>
+		<div><input type="checkbox">setAttribute</div>
+		<div class="correcta"><input type="checkbox">setContentType</div>
+		<div><input type="checkbox">None of the above.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Consider the following line of code in a servlet:</p>
+
+		<pre>
+			<code>
+if(request.isUserInRole("boss"))   {
+	// other valid code   
+}
+		</code>
+	</pre>
+
+	<p>Given the following definitions in the deployment descriptor, which of the given options are correct:</p>
+
+	<pre>
+		<code>
+&lt;web-app&gt;
+	...
+	&lt;servlet&gt;
+		...
+		&lt;security-role-ref&gt;
+			&lt;role-name&gt;boss&lt;/role-name&gt;
+			&lt;role-link&gt;manager&lt;/role-link&gt;
+		&lt;/security-role-ref&gt;
+	&lt;/servlet&gt;
+	&lt;security-role&gt;
+		&lt;role-name&gt;boss&lt;/role-name&gt;
+		&lt;/security-role&gt;
+		&lt;security-role&gt;
+		&lt;role-name&gt;manager&lt;/role-name&gt;
+	&lt;/security-role&gt;
+		...
+&lt;/web-app&gt; 
+		</code>
+	</pre>
+</div>
+
+
+<div class="responses">
+	<div><input type="checkbox">At //other valid code, the user would be in boss role.</div>
+	<div class="correcta"><input type="checkbox">At //other valid code, the user would be in manager role.</div>
+	<div><input type="checkbox">At //other valid code, the user's role cannot be predicted.</div>
+	<div><input type="checkbox">The given configuration is invalid.</div>
+	<div><input type="checkbox">An exception will be thrown at run time.</div>
+</div>
+
+
+<div class="ex">
+<pre>
+	<code>
+&lt;servlet&gt;
+...
+	&lt;security-role-ref&gt;
+	&lt;role-name&gt;boss&lt;/role-name&gt; &lt;!-- used by the servlet --&gt;
+	&lt;role-link&gt;manager&lt;/role-link&gt;&#x00a0;&#x00a0;&lt;!-- actual role defined elsewhere as a &lt;security-role&gt; element in the web.xml --&gt;
+	&lt;/security-role-ref&gt; 
+&lt;/servlet&gt;
+</code>
+</pre>
+</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Identify the attributes that are valid for javax.servlet.WebFilter annotation.</p>
+	</div>
+
+
+	<div class="responses">
+		<div><input type="checkbox">servletName</div>
+		<div><input type="checkbox">name</div>
+		<div class="correcta"><input type="checkbox">dispatcherTypes</div>
+		<div class="correcta"><input type="checkbox">servletNames</div>
+		<div><input type="checkbox">servlets</div>
+	</div>
+
+
+	<div class="ex">
+	<p>Lista de atributos válidos</p>	
+<pre>
+	<code>
+boolean asyncSupported         
+java.lang.String description           
+DispatcherType[] dispatcherTypes
+java.lang.String displayName          
+java.lang.String filterName
+WebInitParam[] initParams 
+java.lang.String largeIcon
+java.lang.String[] servletNames 
+java.lang.String smallIcon 
+java.lang.String[] urlPatterns     
+java.lang.String[] value      
+	</code>
+</pre>
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2> <span class="soluciones">(4 soluciones)</span></h2>
+
+	<div class="question">
+		<p>A web.xml contains the following element:</p>
+
+		<pre>
+			<code>
+&lt;servlet-mapping&gt;
+	&lt;servlet-name&gt;BlueServlet&lt;/servlet-name&gt;
+	&lt;url-pattern&gt;*Insert code here*&lt;/url-pattern&gt;
+&lt;/servlet-mapping&gt;
+			</code>
+		</pre>
+
+		<p>Which of the following url-patterns can be put in place of *Insert code here*?</p>
+	</div>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">/blue/*</div>
+		<div><input type="checkbox">blue</div>
+		<div ><input type="checkbox">blue/*</div>
+		<div class="correcta"><input type="checkbox">/blue/</div>
+		<div class="correcta"><input type="checkbox">/*</div>
+		<div class="correcta"><input type="checkbox">*.blue</div>
+		<div class="correcta"><input type="checkbox">/blue/red/green.doc</div>
+	</div>
+
+
+	<div class="ex">
+		<p>La url-pattern debe comenzar por / o *</p>
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>What are the following deployment descriptor elements used for?</p>
+		<pre>
+			<code>
+&lt;login-config&gt;
+&lt;security-constraint&gt;
+&lt;security-role&gt; 
+			</code>
+		</pre>
+	</div>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Authorization</div>
+		<div><input type="checkbox">Authentication</div>
+		<div><input type="checkbox">Privacy</div>
+		<div class="correcta"><input type="checkbox">Authentication and Authorization</div>
+		<div><input type="checkbox">Data integrity.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Data Integrity is the biggest issue for your web application. What will you do?</p>
+	</div>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Use HTTP digest authentication.</div>
+		<div class="correcta"><input type="checkbox">Use HTTPS instead of HTTP.</div>
+		<div><input type="checkbox">Use form based authentication.</div>
+		<div><input type="checkbox">Use LDAP to store user credentials.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Select the methods that a class needs to implement in order to receive notifications for changes to attribute lists of a session.</p>
+	</div>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">attributeAdded</div>
+		<div class="correcta"><input type="checkbox">attributeRemoved</div>
+		<div class="correcta"><input type="checkbox">attributeReplaced</div>
+		<div><input type="checkbox">attributeUpdated </div>
+		<div><input type="checkbox">attributeChanged</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Which of the following is/are feature(s) of Intercepting Filter pattern</p>
+	</div>
+
+
+	<div class="responses">
+		<div><input type="checkbox">It reduces coupling between presentation and business layers.</div>
+		<div><input type="checkbox">It allows you to have request processing in a centralized place.</div>
+		<div><input type="checkbox">It forces centralized authentication and/or authorization.</div>
+		<div class="correcta"><input type="checkbox">It can be configured unobtrusively i.e. without touching any existing application code.</div>
+		<div class="correcta"><input type="checkbox">It allows an easy way to pre-process or post-process any request.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Which of the following security mechanisms is/are optional for a JEE 1.6 compliant container to implement?</p>
+	</div>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Basic</div>
+		<div class="correcta"><input type="checkbox">Digest</div>
+		<div><input type="checkbox">Form</div>
+		<div><input type="checkbox">client-cert</div>
+	</div>
+
+
+	<div class="ex">
+		<p>El método digest envía el usuario y contraseña encriptados; aunque este método es bastante seguro, no está muy extendido y por tanto es opcional que el contenedor de servlets lo implemente.</p>
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Your web application uses some files in a directory on the server machine. Further, it allows the path of this directory to be specified as a a context parameter in the deployment</p>
+		<p>Since this path is required by several servlets of the web application, you want to ensure that even if it is not specified in the deployment descriptor, the servlets can still see a default value. </p>
+		<p>How will you accomplish this?</p>
+	</div>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Use ServletContext.setAttribute</div>
+		<div><input type="checkbox">Use ServletContext.setParameter</div>
+		<div class="correcta"><input type="checkbox">Use ServletContext.setInitParameter</div>
+		<div><input type="checkbox">This cannot be done using init parameters. The servlets must be modified to use context attributes instead of parameters.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Your web application has a class MyRequestListener, which implements ServletRequestListener. Your web app also includes a web fragment. This web fragment also has a class WFRequestListener, which implements ServletRequestListener.</p>
+		<p>The listeners are configured in their respective web.xml and web-fragment.xml files.</p>
+		<p>Upon a request to this web application, what is the order in which the methods of the two listener classes will be called?</p>
+
+		<p>1. MyListener.requestInitialized()</p>
+		<p>2. MyListener.requestDestroyed()</p>
+		<p>3. WFListener.requestInitialized()</p>
+		<p>4. WFListener.requestDestroyed()</p>
+	</div>
+
+
+	<div class="responses">
+		<div><input type="checkbox">1, 2, 3, 4</div>
+		<div><input type="checkbox">3, 4, 1, 2</div>
+		<div class="correcta"><input type="checkbox">1, 3, 4, 2</div>
+		<div><input type="checkbox">1, 3, 2, 4</div>
+		<div><input type="checkbox">3, 1, 2, 4</div>
+		<div><input type="checkbox">3, 1, 4, 2</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Given the following code for doGet() method of a servlet.</p>
+		<pre>
+			<code>
+public void doGet(HttpServletRequest req, HttpServletResponse res) throws ServletException, IOException {
+	String userId = loginUser(req); //this method takes the credentials from the request and logs in the user.    
+		if(userId == null)    {
+			// 1 Should send SC_FORBIDDEN    
+		}    else    {
+			PrintWriter out = response.getWriter();      
+			generateAndPublishData(out); //this method writes appropriate date to out.    
+		} 
+	}
+</code>
+</pre>
+
+<p>The data should be sent to the client only if loginUser() returns a non null userid. Otherwise a status of SC_FORBIDDEN should be sent.</p>
+
+<p>What can be placed at //1 to fulfill this requirement?</p>
+</div>
+
+
+<div class="responses">
+	<div><input type="checkbox">req.getRequestDispatcher("errorpage.jsp").dispatch(req, res, HttpServletResponse.SC_FORBIDDEN);</div>
+	<div><input type="checkbox">throw new ServletException(HttpServletResponse.SC_FORBIDDEN);</div>
+	<div class="correcta"><input type="checkbox">res.setStatus(HttpServletResponse.SC_FORBIDDEN);</div>
+	<div class="correcta"><input type="checkbox">res.sendError(HttpServletResponse.SC_FORBIDDEN, "You are not authorized.");</div>
+	<div class="correcta"><input type="checkbox">res.sendError(HttpServletResponse.SC_FORBIDDEN);</div>
+</div>
+
+
+<div class="ex">
+Redireccionar a otro JSP no enviará un mensaje de estado HTTP al cliente. <br>
+A continuación, los métodos más relevantes de HttpServletResponse interface:
+
+<pre>
+	<code>
+void sendError(int sc)  
+void sendError(int sc, String msg) 
+void setStatus(int sc)
+		
+	</code>
+</pre>
+</div>
+</article>
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Your web application has a class MyRequestListener, which implements ServletRequestListener and is annotated with @WebListener. Your web app also includes a web fragment. This web fragment also has a class WFRequestListener, which implements ServletRequestListener and is annotated with @WebListener.</p>
+		<p>Upon a request to this web application, what is the order in which the methods of the two listener classes will be called?</p>
+		<p>1. MyListener.requestInitialized()</p>
+		<p>2. MyListener.requestDestroyed()</p>
+		<p>3. WFListener.requestInitialized()</p>
+		<p>4. WFListener.requestDestroyed()</p>
+	</div>
+
+
+	<div class="responses">
+		<div ><input type="checkbox">1, 2, 3, 4</div>
+		<div><input type="checkbox">3, 4, 1, 2</div>
+		<div><input type="checkbox">1, 3, 4, 2</div>
+		<div><input type="checkbox">1, 3, 2, 4</div>
+		<div><input type="checkbox">3, 1, 2, 4</div>
+
+		<div><input type="checkbox">3, 1, 4, 2</div>
+		<div class="correcta"><input type="checkbox">The order is unspecified.</div>
+
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>You need to store certain information in the session so that it can be used for other requests from the same client. Which of the following jsp directives would you use?</p>
+	</div>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">&lt;%@page session=&quot;true&quot;%&gt;</div>
+		<div><input type="checkbox">&lt;%@page session=&quot;1&quot;%&gt;</div>
+		<div><input type="checkbox">&lt;%@session=&quot;true&quot;%&gt;</div>
+		<div class="correcta"><input type="checkbox">There is no need to put any directive for this purpose.</div>
+		<div><input type="checkbox">There is no directive available for this purpose as all pages automatically have access to session.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>You need to use a taglibrary and you have the following constraints:
+		</p>
+		<p>
+			taglib prefix : myfinance <br>
+			tag name : tax <br>
+			Mandatory Attribute : rate <br>
+			Optional Attribute : age <br>
+			body : JSP
+
+		</p>
+		<p>Which of the following statements are valid?</p>
+	</div>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">&lt;myfinance:tax rate=&quot;28&quot;/&gt;</div>
+		<div><input type="checkbox">&lt;myfinance:tax age=&quot;32&quot;/&gt;</div>
+		<div class="correcta"><input type="checkbox">&lt;myfinance:tax age=&quot;32&quot; rate=&quot;28&quot;/&gt;</div>
+		<div class="correcta"><input type="checkbox">&lt;myfinance:tax rate=&quot;28&quot;&gt;JSP&lt;/myfinance:tax&gt;</div>
+		<div><input type="checkbox">&lt;myfinance:tax rate=&quot;28&quot;&gt;&lt;%=JSP%&gt;&lt;/myfinance:tax&gt;</div>
+	</div>
+
+
+	<div class="ex">
+		<p>Si el body está vacío, también es válido</p>
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Which of the following classes define the methods setStatus(...) and sendError(...) used to send an HTTP error back to the browser?</p>
+	</div>
+
+
+	<div class="responses">
+		<div><input type="checkbox">HttpServletResponse and ServletResponse respectively.</div>
+		<div><input type="checkbox">ServletResponse and HttpServletResponse respectively.</div>
+		<div class="correcta"><input type="checkbox">Both are defined in HttpServletResponse.</div>
+		<div><input type="checkbox">Both are defined in ServletResponse.</div>
+		<div><input type="checkbox">Both are defined in HttpServlet</div>
+	</div>
+
+
+	<div class="ex">
+		<p>Esto ya salió antes</p>
+	</div>
+</article>
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>You have written the following code to register a servlet dynamically.
+		</p>
+		<pre><code>
+			
+try {
+	ServletRegistration.Dynamic sd = <span class="bold">servletContext.addServlet</span>(&quot;dynamicServlet&quot;,(Class&lt;? extends Servlet&gt;)Class.forName(&quot;MyDynamicServlet&quot;)); &#x00a0;sd.addMapping(&quot;/dynamic&quot;);
+} catch (ClassNotFoundException ex) {
+	Logger.getLogger(TestServletContextListener.class.getName()).log(Level.SEVERE, null, ex);
+}			
+</code></pre>
+
+<p>Where can you put this code?</p>
+</div>
+
+
+<div class="responses">
+	<div><input type="checkbox">In init() method of any Servlet that has been declared in web.xml.</div>
+	<div><input type="checkbox">In service(...) method of any servlet that has been declared in web.xml.</div>
+	<div class="correcta"><input type="checkbox">In contextInitialized(...) method of a ServletContextListener.</div>
+	<div><input type="checkbox">In sessionCreated(...) of HttpSessionListener.</div>
+	<div><input type="checkbox">In attributeAdded(...) method of ServletContextAttributeListener.</div>
+	<div class="correcta"><input type="checkbox">In onStartup() of ServletContainerInitializer.</div>
+</div>
+
+
+<div class="ex">
+<p>Sólo es posible añadir un servlet dinámicamente antes de la inicialización del contexto.</p>
+</div>
+</article>
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Which of the given statements are correct regarding the following JSP page code?</p>
+		<p>&lt;jsp:useBean id=&quot;mystring&quot; class=&quot;java.lang.String&quot; /&gt;</p>
+		<p>&lt;jsp:setProperty name=&quot;mystring&quot; property=&quot;*&quot; /&gt;</p>
+		<p>&quot;&lt;%=mystring%&gt;&quot;</p>
+		<p>Assume that the request for this page contains a parameter mystring=hello.</p>
+	</div>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">It will print "".</div>
+		<div><input type="checkbox">It will print "hello"</div>
+		<div><input type="checkbox">It will not compile.</div>
+		<div><input type="checkbox">It will throw exception at runtime.</div>
+	</div>
+
+
+	<div class="ex">
+	<p>La condición para que una clase sea usada como bean en jsp es que tenga un constructor público y sin argumentos. 
+	La clase String no tiene un constructor con argumentos, así que se crea un String vacío.
+	</div>
+</article>
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Your business layer is implemented in a local session bean, which you want to access from a servlet. The component interface of the bean is Teller and the home interface is TellerHome. This bean is bound to ejb/Teller JNDI name. Which of the following web.xml entries will you use to make this bean available to your servlet?</p>
+		<p>(Note that the usage of Home and Component interfaces is EJB 2.1 way of accessing EJBs. In EJB 3.0, an EJB exposes a business interface. However, the exam may have questions on how to make a 2.1 EJB accessible to a servlet.)</p>
+	</div>
+
+
+	<div class="responses">
+		<div><input type="checkbox">
+			<pre>
+				<code>
+&lt;ejb-ref&gt;
+	&lt;ejb-ref-name&gt;TellerBean&lt;/ejb-ref-name&gt;
+	&lt;ejb-ref-type&gt;Session&lt;/ejb-ref-type&gt;
+	&lt;local-home&gt;com.enthu.ejbplus.TellerHome&lt;/local-home&gt; &lt;local&gt;com.enthu.ejbplus.Tellerlocal&gt; 
+	&lt;ejb-link&gt;ejb/Teller&lt;/ejb-link&gt;
+&lt;/ejb-ref&gt;		
+				</code>
+			</pre>
+		</div>
+		<div class="correcta"><input type="checkbox">
+			<pre>
+				<code>
+&lt;ejb-local-ref&gt;
+	&lt;ejb-ref-name&gt;TellerBean&lt;/ejb-ref-name&gt;
+	&lt;ejb-ref-type&gt;Session&lt;/ejb-ref-type&gt;
+	&lt;local-home&gt;com.enthu.ejbplus.TellerHome&lt;/local-home&gt;
+	&lt;local&gt;com.enthu.ejbplus.Teller&lt;/local&gt;
+	&lt;ejb-link&gt;ejb/Teller&lt;/ejb-link&gt;
+&lt;/ejb-local-ref&gt;
+				</code>
+			</pre>
+		</div>
+		<div><input type="checkbox">
+			<pre>
+				<code>
+&lt;resource-ref&gt;&lt;ejb-ref-name&gt;TellerBean&lt;/ejb-ref-name&gt;
+	&lt;ejb-ref-type&gt;Session&lt;/ejb-ref-type&gt;
+	&lt;local-home&gt;com.enthu.ejbplus.TellerHome&lt;/local-home&gt; &lt;local&gt;com.enthu.ejbplus.Teller&lt;/local&gt;
+	&lt;ejb-link&gt;ejb/Teller&lt;/ejb-link&gt;
+&lt;/resource-ref&gt;
+				</code>
+			</pre>
+		</div>
+		<div><input type="checkbox">
+<pre>
+	<code>
+&lt;resource-local-ref&gt;
+	&lt;ejb-ref-name&gt;TellerBean&lt;/ejb-ref-name&gt;
+	&lt;ejb-ref-type&gt;Session&lt;/ejb-ref-type&gt;&lt;local-home&gt;com.enthu.ejbplus.TellerHome&lt;/local-home&gtlt;local&gt;com.enthu.ejbplus.Teller&lt;/local&gt;
+	&lt;ejb-link&gt;ejb/Teller&lt;/ejb-link&gt;
+&lt;/resource-local-ref&gt;		
+	</code>
+</pre>
+
+		</div>
+	</div>
+
+
+	<div class="ex">
+		<p>env-entry  se usa para especificar parámetros de inicialización y sólo pueden ser cadenas o primitivas.</p>
+<pre>
+	<code>
+&lt;env-entry&gt;
+	&lt;env-entry-name&gt;DefaultTaxRate&lt;/env-entry-name&gt;
+	&lt;env-entry-type&gt;java.lang.String&lt;/env-entry-type&gt;
+	&lt;env-entry-value&gt;25&lt;/env-entry-value&gt;
+&lt;/env-entry&gt;
+	</code>
+</pre>
+
+<p>ejb-ref y ejb-local-ref se usan para referenciar otros EJBs locales o remotos. Este es el único que coincide</p>
+<pre>
+	<code>
+&lt;ejb-local-ref&gt;
+	&lt;ejb-ref-name&gt;TellerBean&lt;/ejb-ref-name&gt;
+	&lt;ejb-ref-type&gt;Session&lt;/ejb-ref-type&gt;
+	&lt;local-home&gt;com.enthu.ejbplus.TellerHome&lt;/local-home&gt;
+	&lt;local&gt;com.enthu.ejbplus.TellerLocal&lt;/local&gt; 
+	&lt;ejb-link&gt;ejb/Teller&lt;/ejb-link&gt; 
+&lt;/ejb-local-ref&gt;
+	</code>
+</pre>
+<p>resource-ref se usa para espicificar el origen de los datos. Aquí no coinciden los atributos.</p>
+<pre>
+	<code>
+&lt;resource-ref&gt;
+	&lt;res-ref-name&gt;MyDatasource&lt;/res-ref-name&gt;
+	&lt;res-type&gt;javax.sql.DataSource&lt;/res-type&gt; 
+	&lt;res-auth&gt;Container&lt;/res-auth&gt;
+	&lt;res-sharing-scope&gt;Shareable&lt;/res-sharing-scope&gt;
+&lt;/resource-ref&gt;
+	</code>
+</pre>
+<p>esource-env-ref is used to specify Topics and Queues. Este ni si quiera está en la lista.</p>
+<pre>
+	<code>
+&lt;resource-env-ref&gt;
+	&lt;resource-env-ref-name&gt;MyTopic&lt;/resource-env-ref-name&gt;
+	&lt;resource-env-ref-type&gt;javax.jms.Topic&lt;/resource-env-ref-type&gt;
+&lt;/resource-env-ref&gt;
+	</code>
+</pre>
+	</div>
+</article>
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>You need to put a com.enthu.User bean referred by 'userBean' variable in the request scope with an ID of "user" from within a servlet. Which of the following statements accomplishes this task?</p>		
+	</div>
+
+
+	<div class="responses">
+		<div><input type="checkbox">request.put("user", userBean);</div>
+		<div><input type="checkbox">request.add(userBean, "user");</div>
+		<div><input type="checkbox">request.putAttribute("user", userBean);</div>
+		<div class="correcta"><input type="checkbox">request.setAttribute("user", userBean);</div>
+		<div><input type="checkbox">request.setParameter(userBean, "user");</div>
+		<div><input type="checkbox">request.put(userBean, "user");</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Which of the following statements about ServletContext.getRequestDispatcher(String) method and ServletRequest.getRequestDispatcher(String) method are true?</p>
+	</div>
+
+
+	<div class="responses">
+		<div><input type="checkbox">both are exactly same and can be used as per convenience.</div>
+		<div><input type="checkbox">ServletContext.getRequestDispatcher(String) can take a relative path while the other one cannot.</div>
+		<div class="correcta"><input type="checkbox">ServletRequest.getRequestDispatcher(String) can take a relative path while the other one cannot.</div>
+		<div class="correcta"><input type="checkbox">Both calls are transparent to the browser.</div>
+		<div><input type="checkbox">Both calls send a redirect message to the browser.</div>
+	</div>
+
+
+	<div class="ex">
+		<p>forward(): hacemos un redireccionamiento. El navegador ni se entera</p>
+		<p>sendRedirect() of HttpServletResponse object. Enviamos un mensaje al navegador para que haga otro redirecionamiento. Esta ya había salido antes.</p>
+		<p>Sólo ServletRequest.getRequestDispatcher(String) acepta rutas relativas. ServletContext.getRequestDispatcher(String), no. </p>
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Which of the following statements correctly defines authorization?
+		</p>
+	</div>
+
+
+	<div class="responses">
+		<div><input type="checkbox">Authorization can only be used if HTTPS is used to transport the data.</div>
+		<div class="correcta"><input type="checkbox">Authorization means to verify whether a user has access to a specific resource.</div>
+		<div><input type="checkbox">Confidentiality and Authorization are one and the same thing.</div>
+		<div><input type="checkbox">Authorization requires encryption of data.</div>
+		<div><input type="checkbox">Authorization requires the verification of user's credentials.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>You want the client program to be able to check the size of your page or resource (such as an image) before it decides to actually download it. Which HTTP method will you use?</p>
+	</div>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">HEAD</div>
+		<div><input type="checkbox">GET</div>
+		<div><input type="checkbox">SIZE</div>
+		<div><input type="checkbox">GETSIZE</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Which method of HttpServletResponse would you use to set its content type?</p>
+	</div>
+
+
+	<div class="responses">
+		<div><input type="checkbox">setParameter</div>
+		<div class="correcta"><input type="checkbox">setContentType</div>
+		<div><input type="checkbox">setAttribute</div>
+		<div><input type="checkbox">setContent</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Which of the following statements is correct regarding a RequestDispatcher object?</p>
+	</div>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">A call to forward() clears the output buffer before the target resource is invoked.</div>
+		<div><input type="checkbox">A call to include() clears the output buffer before the target resource is invoked.</div>
+		<div class="correcta"><input type="checkbox">The execution control returns to the resource that has called the forward() method after the callee resource finishes processing.</div>
+		<div class="correcta"><input type="checkbox">It is not advisable for the forwarding resource to produce any output.</div>
+		<div><input type="checkbox">Both, forward() and include(), allow the caller resource to generate any amount of output.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Which of the following methods can be used to receive a file sent by a browser?</p>
+	</div>
+
+
+	<div class="responses">
+		<div><input type="checkbox">getFileInputStream() of HttpServletRequest</div>
+		<div><input type="checkbox">getInputStream() of HttpServletRequest</div>
+		<div class="correcta"><input type="checkbox">getInputStream() of ServletRequest</div>
+		<div class="correcta"><input type="checkbox">getReader() of ServletRequest</div>
+		<div><input type="checkbox">getReader() of HttpServletRequest</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Consider the following contents for two JSP files:</p>
+		<p>In file companyhome.jsp:</p>
+		<pre>
+			<code>
+&lt;html&gt;&lt;body&gt;
+Welcome to ABC Corp! &lt;jsp:include page=&quot;<span class="bold">companynews.jsp</span>&quot; /&gt;
+&lt;/body&gt;&lt;/html&gt;
+&lt;%@ page errorPage=&quot;simpleerrorhandler.jsp&quot; %&gt;
+			</code>
+		</pre>
+		<p>In file <span class="bold black">companynews.jsp</span>:</p>
+		<pre>
+			<code>
+&lt;%@ page errorPage=&quot;advancederrorhandler.jsp&quot; %&gt;
+&lt;h3&gt;Today's News&lt;/h3&gt;
+			</code>
+		</pre>
+		<p>Which of the following options are correct?</p>
+	</div>
+
+
+	<div class="responses">
+		<div class="correcta"><input type="checkbox">When companyhome.jsp is requested, the output will contain Welcome to ABC Corp! as well as Today's News.</div>
+		<div><input type="checkbox">companyhome.jsp will not compile.</div>
+		<div><input type="checkbox">companynews.jsp will not compile.</div>
+		<div><input type="checkbox">Both the files will compile but will throw an exception at runtime.</div>
+		<div><input type="checkbox">None of these.</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Which of the following expressions can be used to check whether the container is configured to support session tracking via URL Rewriting?</p>
+	</div>
+
+
+	<div class="responses">
+		<div><input type="checkbox">servletContext.getEffectiveSessionTrackingModes().contains(SessionTrackingMode.URL)</div>
+		<div><input type="checkbox">servletContext.getEffectiveSessionTrackingModes() == SessionTrackingMode.URL</div>
+		<div class="correcta"><input type="checkbox">servletContext.getDefaultSessionTrackingModes().contains(SessionTrackingMode.URL)</div>
+		<div><input type="checkbox">servletContext.getSessionConfig().isURLRewriting()</div>
+	</div>
+
+
+	<div class="ex">
+		getDefaultSessionTrackingModes() te devuelve los tracking modes soportados <br>
+		getEffectiveSessionTrackingModes() te devuelve los tracking modes en vigor para este ServletContext
+	</div>
+</article>
+
+
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		<p>Which of the following are valid JSP scriptlets?</p>
+	</div>
+
+
+	<div class="responses">
+		<div><input type="checkbox">&lt;% String uid = LoginHelper.login(request) %&gt; <span class="ex">Le falta el ;</span></div>
+		<div class="correcta"><input type="checkbox">&lt;% String uid = LoginHelper.login(request); %&gt;</div>
+		<div><input type="checkbox">&lt;%! String uid = LoginHelper.login(request) <span class="ex">! es para declaraciones</span> %&gt;</div>
+		<div><input type="checkbox">&lt;%@ String uid = LoginHelper.login(request) %&gt; <span class="ex">@ es para directivas</span></div>
+		<div class="correcta"><input type="checkbox">&lt;% for(int i=0; i&lt; 10; i++) { out.println(i); } %&gt;</div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+</body>
+</html>
+
+
+<!-- 
+
+<article>
+				<h2></h2>
+
+	<div class="question">
+		
+	</div>
+
+
+	<div class="responses">
+		<div><input type="checkbox"></div>
+		<div><input type="checkbox"></div>
+		<div><input type="checkbox"></div>
+		<div><input type="checkbox"></div>
+		<div><input type="checkbox"></div>
+	</div>
+
+
+	<div class="ex">
+		
+	</div>
+</article>
+
+
+-->

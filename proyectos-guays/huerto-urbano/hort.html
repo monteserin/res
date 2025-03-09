@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+	<!--CODE AND DESIGN BY JORDI RAFEL RODRIGUEZ VALL 2014-->
+	<meta charset="UTF-8">
+	<meta name="robots" content="noindex">
+
+	<meta name="author" content="Jordi Rafel Rodríguez Vall">
+	<link rel="stylesheet" type="text/css" href="css/button.css">
+	<link href='https://fonts.googleapis.com/css?family=Roboto:400,700' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Droid+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/hort_desktop.css">
+	
+	<link rel="stylesheet" type="text/css" media="only screen and (max-width: 640px)" href="css/hort_mobile.css">
+
+	<meta name="viewport" content="width=device-width">
+  <meta name="description" content="Aplicación para seleccionar correctamente las plantas que deseas plantar en tu huerto hurbano">
+	<!-- Nexus 4 -->
+	<link rel="stylesheet" type="text/css" media="screen and (orientation:portrait) and (device-width: 384px) and (device-height: 592px) and (-webkit-device-pixel-ratio: 2)" href="css/hort_mobile.css">
+
+	<!-- Nexus 5 -->
+	<link rel="stylesheet" type="text/css" media="screen and (device-width: 360px) and (device-height: 592px) and (-webkit-device-pixel-ratio: 3)" href="css/hort_mobile.css">
+
+	<link rel="stylesheet" type="text/css" media="screen and (device-width: 320px) and (device-height: 568px) and (-webkit-device-pixel-ratio: 2)" href="css/hort_mobile.css">
+
+	<link rel="stylesheet" type="text/css" media="screen and (device-width: 320px) and (device-height: 480px) and (-webkit-device-pixel-ratio: 2)" href="css/hort_mobile.css">
+
+	<!-- Iphone 5 -->
+	<link rel="stylesheet" type="text/css" media="screen and (device-width: 320px) and (device-height: 534px) and (-webkit-device-pixel-ratio: 1.5)" href="css/hort_mobile.css">
+
+	<!-- Galaxy S -->
+	<link rel="stylesheet" type="text/css" media="screen and (device-width: 320px) and (device-height: 480px)" href="css/hort_mobile.css">
+
+	<title>L'Hortet amb Gràcia - jordirafel.me</title>
+	<link rel="shortcut icon" type="image/vnd.microsoft.icon" href="favicon.ico"/>
+
+
+</head>
+<body>	
+	<div id="side-a">
+		<a id="home" title="home" href="index.html"></a>
+		<div id="locate" ></div>
+		<div id="element"><div id="element-name"></div><h1>El teu Hortet</h1><p>Consulta i afegeix el que vols cultivar<br><br>Un cop ho tinguis tot utilitza el botó d'Analitzar!</p></div>
+		<div id="my-selection">
+			<ul id="my-list">
+					
+			</ul>
+			
+		</div>
+		<div id="fixed-buttons"><input id="add-element" class="inactive" type="button" value="Afegir"><input id="result" type="button" class="button-side-a" value="Analitzar"><br><br></div>
+	</div>	
+	
+	<div id="content">
+		<div class="info"><div class="close button hovicon" title="Tancar"></div><div class="external-html"></div><div class="finalresult"></div><div class="finalresult2"></div><div class="printButton"></div></div>
+			<div class="margins">
+				<h2>Plantes</h2>
+				<h2>Aromàtiques i medicinals</h2>
+				<div id="circle1" class="circle button hovicon effect-9 sub-a" title="Alfàbrega"></div>
+				<div id="circle19" class="circle button hovicon effect-9 sub-a" title="Fonoll"></div>
+				<div id="circle31" class="circle button hovicon effect-9 sub-a" title="Farigola"></div>
+				<div id="circle33" class="circle button hovicon effect-9 sub-a" title="Menta"></div>
+				<div id="circle34" class="circle button hovicon effect-9 sub-a" title="Orenga"></div>
+				<h3>Comestibles</h3>
+				<div id="circle20" class="circle button hovicon effect-9 sub-a" title="Julivert"></div>
+				<div id="circle30" class="circle button hovicon effect-9 sub-a" title="Xicoira"></div>
+			</div>
+			<div class="separator"></div>
+			<div class="margins">
+				<h2>Verdures i hortalisses</h2>
+				<h3>Les més conreades</h3>	
+				<div id="circle0" class="circle button hovicon effect-9 sub-a" title="Alberginiera"></div>
+				<div id="circle2" class="circle button hovicon effect-9 sub-a" title="All"></div>	
+				<div id="circle3" class="circle button hovicon effect-9 sub-a" title="Api"></div>		
+				<div id="circle4" class="circle button hovicon effect-9 sub-a" title="Bròcoli"></div>	
+				<div id="circle10" class="circle button hovicon effect-9 sub-a" title="Bleda"></div>
+				<div id="circle6" class="circle button hovicon effect-9 sub-a" title="Carbassa"></div>
+				<div id="circle7" class="circle button hovicon effect-9 sub-a" title="Carbassó"></div>
+				<div id="circle8" class="circle button hovicon effect-9 sub-a" title="Carxofera"></div>
+				<div id="circle9" class="circle button hovicon effect-9 sub-a" title="Ceba"></div>
+				<div id="circle5" class="circle button hovicon effect-9 sub-a" title="Col"></div>
+				<div id="circle11" class="circle button hovicon effect-9 sub-a" title="Coliflor"></div>
+				<div id="circle12" class="circle button hovicon effect-9 sub-a" title="Colinap"></div>
+				<div id="circle13" class="circle button hovicon effect-9 sub-a" title="Cogombre"></div>
+				<div id="circle14" class="circle button hovicon effect-9 sub-a" title="Col xinesa"></div>
+				<div id="circle15" class="circle button hovicon effect-9 sub-a" title="Enciam"></div>
+				<div id="circle16" class="circle button hovicon effect-9 sub-a" title="Endívia"></div>
+				<div id="circle17" class="circle button hovicon effect-9 sub-a" title="Espinac"></div>
+				<div id="circle18" class="circle button hovicon effect-9 sub-a" title="Fava"></div>
+				<div id="circle32" class="circle button hovicon effect-9 sub-a" title="Maduixera"></div>
+				<div id="circle21" class="circle button hovicon effect-9 sub-a" title="Mongetera"></div>
+				<div id="circle22" class="circle button hovicon effect-9 sub-a" title="Pebrotera"></div>
+				<div id="circle23" class="circle button hovicon effect-9 sub-a" title="Pastanaga"></div>
+				<div id="circle24" class="circle button hovicon effect-9 sub-a" title="Patatera"></div>
+				<div id="circle25" class="circle button hovicon effect-9 sub-a" title="Pèsol"></div>
+				<div id="circle26" class="circle button hovicon effect-9 sub-a" title="Porro"></div>
+				<div id="circle27" class="circle button hovicon effect-9 sub-a" title="Remolatxa"></div>
+				<div id="circle28" class="circle button hovicon effect-9 sub-a" title="Tomaquera"></div>
+				<div id="circle29" class="circle button hovicon effect-9 sub-a" title="Rave"></div>
+			</div>
+			<div class="separator"></div>
+			<div class="margins">
+				<div class="google"><ins class="adsbygoogle" style="display:inline-block;width:320px;height:50px" data-ad-client="ca-pub-2698123358031622" data-ad-slot="8941728764"></ins></div>
+			</div>	
+			
+	</div>	
+
+
+	<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+
+	<script src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+	<!--<script src="https://code.jquery.com/jquery-1.11.1.min.js"></script>
+	<script src="https://ajax.microsoft.com/ajax/jQuery/jquery-1.4.2.min.js"></script>-->
+	
+	<script type="text/javascript" src="js/hort.js"></script>
+</body>
+
+</html>

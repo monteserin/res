@@ -1,0 +1,6 @@
+div.border-image {
+  border-width: 35px;
+  padding: 20px;
+  border-image: url(https://pablomonteserin.com/res/html5/ex/border-image/border-image/border.png) 30 30 stretch;
+  border-style: solid;
+}

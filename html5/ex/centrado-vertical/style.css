@@ -1,0 +1,17 @@
+.centrado {
+
+    position: absolute;
+
+    /* Anchura y altura de la capa */
+    width: 450px;
+    height: 300px;
+    background-color: lightgoldenrodyellow;
+
+    /* Posiciona la esquina superior izquierda de la capa en el centro de la pantalla */
+    top: 50%;
+
+    left: 50%;
+    /* Centro la capa al establecer un margen negativo superior e inferior igual a la mitad de la altura y la anchura de la capa*/
+    margin-top: -150px;
+    margin-left: -225px;
+}

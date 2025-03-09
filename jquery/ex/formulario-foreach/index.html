@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>formulario con foreach en jQuery | Pablo Monteserín</title>
+    <meta name="description"
+        content="Ejemplo de como recorrer un array de objetos HTML almacenados en una variable utilizando el bucle 'each' de jQuery">
+    <meta name="robots" content="noindex, follow">
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery/ex/jquery.js"></script>
+    <style type="text/css">
+        #coste {
+            background: pink;
+            padding: 1em;
+            display: block;
+            font-size: 4em
+        }
+    </style>
+    <script src="javascript.js"></script>
+
+</head>
+
+<body>
+    <h1>Recogida y procesamiento de información utilizando jQuery</h1>
+    <fieldset>
+        <legend>Diseño</legend>
+        <input name="design" type="radio" value="0" checked>
+        El cliente me suministra el diseño
+        <br>
+
+        <input type="radio" name="design" value="350">Yo me encargo del diseño
+    </fieldset>
+    <fieldset>
+        <legend>Tienda</legend>
+        <input type="radio" name="shop" value="0" checked>La página no incorpora un carrito de la compra
+        <br>
+        <input name="shop" type="radio" value="200">
+        La página incorpora un carrito de la compra
+        <br>
+
+    </fieldset>
+
+    <fieldset>
+        <legend>Membership</legend>
+        <input type="radio" name="membership" value="0" checked>La página no permite suscripción
+        <br>
+        <input name="membership" type="radio" value="120">
+        La página permite suscripción <br>
+
+    </fieldset>
+
+
+    <span id="coste"></span>
+</body>
+
+</html>

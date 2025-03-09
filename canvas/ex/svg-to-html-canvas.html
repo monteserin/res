@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>svg a html en canvas de HTML5 | Pablo Monteserín</title>
+			<meta name="description" content="Ejemplo de como incluir un svg convertido a código Javascript en la etiqueta canvas de HTML">
+
+	<head></head>
+	<body>
+	<h1>Dibujo de un corazón en el canvas de HTML</h1>
+		<canvas id="canvas" width="400px" height="400px" style="border:2px solid black" />
+		<script>
+			var c = document.getElementById("canvas");
+			var ctx = c.getContext("2d");
+	draw(ctx);
+
+function draw(ctx) {
+ctx.save();
+ctx.beginPath();
+ctx.moveTo(0,0);
+ctx.lineTo(48,0);
+ctx.lineTo(48,48);
+ctx.lineTo(0,48);
+ctx.closePath();
+ctx.clip();
+ctx.strokeStyle = 'rgba(0,0,0,0)';
+ctx.lineCap = 'butt';
+ctx.lineJoin = 'miter';
+ctx.miterLimit = 4;
+ctx.save();
+ctx.restore();
+ctx.save();
+ctx.restore();
+ctx.save();
+g=ctx.createRadialGradient(17.3125,25.53124940625,0,17.3125,25.53124940625,9.6875);
+g.addColorStop(0,"rgba(0, 0, 0, 1)");
+g.addColorStop(1,"rgba(0, 0, 0, 0)");
+ctx.fillStyle = g;
+ctx.strokeStyle = "rgba(0, 0, 0, 0)";
+ctx.lineWidth = 1.105339527130127;
+ctx.lineCap = "butt";
+ctx.lineJoin = "miter";
+ctx.miterLimit = 4;
+ctx.transform(2.182912,0,0,2.182912,-13.52704,-17.29028);
+ctx.globalAlpha = 0.40909090638160706;
+ctx.beginPath();
+ctx.moveTo(27,25.53125);
+ctx.translate(17.3125,25.53125);
+ctx.rotate(0);
+ctx.scale(1,0.35161290322580646);
+ctx.arc(0,0,9.6875,0,3.141592653589793,0);
+ctx.scale(1,2.8440366972477062);
+ctx.rotate(0);
+ctx.translate(-17.3125,-25.53125);
+ctx.translate(17.3125,25.53125);
+ctx.rotate(0);
+ctx.scale(1,0.35161290322580646);
+ctx.arc(0,0,9.6875,3.141592653589793,6.283185307179586,0);
+ctx.scale(1,2.8440366972477062);
+ctx.rotate(0);
+ctx.translate(-17.3125,-25.53125);
+ctx.closePath();
+ctx.fill();
+ctx.stroke();
+ctx.restore();
+ctx.save();
+ctx.fillStyle = "#d4572d";
+ctx.strokeStyle = "rgba(0, 0, 0, 0)";
+ctx.lineWidth = 1.25;
+ctx.lineCap = "butt";
+ctx.lineJoin = "miter";
+ctx.beginPath();
+ctx.moveTo(22.261974,36.308953);
+ctx.bezierCurveTo(22.319549,36.222659,23.258748,37.420744,23.258748,37.420744);
+ctx.bezierCurveTo(27.376818,32.94006,37.887671,24.568121,40.754981,17.585916);
+ctx.bezierCurveTo(34.956432,24.017034,25.482321,34.363325,22.261974,36.308953);
+ctx.closePath();
+ctx.fill();
+ctx.stroke();
+ctx.restore();
+ctx.save();
+g=ctx.createLinearGradient(25.344552601227,18.098829098128,15.903581066154999,10.014254095205999);
+g.addColorStop(0,"rgba(245, 161, 8, 0.0000000)");
+g.addColorStop(1,"rgba(254, 253, 195, 0.74251497)");
+ctx.fillStyle = g;
+ctx.strokeStyle = "rgba(0, 0, 0, 0)";
+ctx.lineWidth = 1.25;
+ctx.lineCap = "butt";
+ctx.lineJoin = "miter";
+ctx.beginPath();
+ctx.moveTo(15.165635,7.4843984);
+ctx.bezierCurveTo(10.367349,7.2482186,8.1319642,10.330635,6.9227946,13.262905);
+ctx.bezierCurveTo(5.7228453,17.12432,7.4190682,24.417626,15.731363,23.862782);
+ctx.bezierCurveTo(20.472655,23.862782,22.35715,19.000527,24.852467,17.738312);
+ctx.bezierCurveTo(27.120242,16.880853,27.298725,16.80411,29.694665,16.80411);
+ctx.bezierCurveTo(33.024276,16.80411,39.045484,14.394449,39.045485,12.003505);
+ctx.bezierCurveTo(38.022041,10.084917,35.304933,6.6682093,30.312072,7.2505473);
+ctx.bezierCurveTo(27.133914,7.6204422,24.127187,9.8922149,23.341787,11.022656);
+ctx.bezierCurveTo(21.41782,9.3256958,18.961206,7.4843984,15.165635,7.4843984);
+ctx.closePath();
+ctx.fill();
+ctx.stroke();
+ctx.restore();
+ctx.save();
+ctx.fillStyle = "#c71807";
+ctx.strokeStyle = "#820000";
+ctx.lineWidth = 1.0000001192092896;
+ctx.lineCap = "butt";
+ctx.lineJoin = "miter";
+ctx.miterLimit = 4;
+ctx.beginPath();
+ctx.moveTo(23.924948,9.0032158);
+ctx.bezierCurveTo(32.227971,0.70019061,43.638272,8.3531236,43.563217,16.227494);
+ctx.bezierCurveTo(43.494602,23.426038,38.008283,26.873511,24.225169,39.677567);
+ctx.bezierCurveTo(9.7983996,27.766131,4.7153311,25.019309,4.7903867,16.478476);
+ctx.bezierCurveTo(4.8654422,7.6374205,14.633621,1.0021667,23.924948,9.0032158);
+ctx.closePath();
+ctx.fill();
+ctx.stroke();
+ctx.restore();
+ctx.save();
+g=ctx.createLinearGradient(23.684833877691997,34.035972799794,13.628985724048398,5.2475242637215995);
+g.addColorStop(0,"rgba(245, 161, 8, 0.0000000)");
+g.addColorStop(1,"rgba(254, 253, 195, 0.74251497)");
+ctx.fillStyle = g;
+ctx.strokeStyle = "rgba(0, 0, 0, 0)";
+ctx.lineWidth = 1.25;
+ctx.lineCap = "butt";
+ctx.lineJoin = "miter";
+ctx.globalAlpha = 0.625;
+ctx.beginPath();
+ctx.moveTo(5.0781932,16.188619);
+ctx.bezierCurveTo(4.8602033,23.368557,5.8728347,22.230971,7.702467,24.505643);
+ctx.bezierCurveTo(9.5011547,26.741844,17.344378,25.334403,24.384714,18.69633);
+ctx.bezierCurveTo(31.50914,11.97897,38.771295,15.781074,42.291599,12.040936);
+ctx.bezierCurveTo(39.669103,7.5441045,31.483974,2.0956372,23.948408,9.6457059);
+ctx.bezierCurveTo(14.291385,0.91854006,5.2961831,8.9288309,5.0781932,16.188619);
+ctx.closePath();
+ctx.fill();
+ctx.stroke();
+ctx.restore();
+ctx.save();
+ctx.fillStyle = "rgba(0, 0, 0, 0)";
+g=ctx.createLinearGradient(33.771716687903,28.533013023197,18.094918732214,-4.045835490887599);
+g.addColorStop(0,"rgba(255, 255, 255, 1)");
+g.addColorStop(1,"rgba(255, 255, 255, 0)");
+ctx.strokeStyle = "[object CanvasGradient]";
+ctx.lineWidth = 1.0000007152557373;
+ctx.lineCap = "butt";
+ctx.lineJoin = "miter";
+ctx.miterLimit = 4;
+ctx.globalAlpha = 0.39204543828964233;
+ctx.beginPath();
+ctx.moveTo(24.022024,10.249144);
+ctx.bezierCurveTo(31.916622,1.7157434,42.705886,8.8450321,42.635965,16.180607);
+ctx.bezierCurveTo(42.572046,22.886598,37.061872,26.577281,24.221854,38.505233);
+ctx.bezierCurveTo(10.782221,27.408824,5.647706,24.4507,5.717626,16.494266);
+ctx.bezierCurveTo(5.787546,8.2581504,15.366447,1.7575067,24.022024,10.249144);
+ctx.closePath();
+ctx.fill();
+ctx.stroke();
+ctx.restore();
+ctx.restore();
+};
+		</script>
+	</body>
+</html>

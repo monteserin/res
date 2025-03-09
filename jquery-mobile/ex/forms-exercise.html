@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formularios en jQuery Mobile | Pablo Monteserín</title>
+    <meta charset='utf-8'>
+    <meta name="description"
+        content="Página hecha con jQuery Mobile que implementa un formulario en que el usuario indica que tipo de página quiere contratar y obtiene un presupuesto">
+    <meta name="robots" content="noindex, follow">
+    <link rel="stylesheet" type="text/css" href="https://pablomonteserin.com/res/jquery-mobile/ex/jquery.mobile.css">
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery-mobile/ex/jquery-1.11.js"></script>
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery-mobile/ex/jquery.mobile.js"></script>
+    <style>
+        h1 {
+            text-align: center
+        }
+    </style>
+    <script type="text/javascript">
+        $(function () {
+            optionClicked();
+            $("#formulario input").click(optionClicked);//
+            //$( "input" ).on( "slidestop", optionClicked );
+
+
+            $("#div-slider").change(function () {
+                optionClicked();
+            });
+            $("#gestor").change(optionClicked);
+
+        });
+
+        function optionClicked() {
+            var costeTotal = 0;
+            $inputs = $("#formulario input:checked");
+            $inputs.each(function () {
+                costeTotal = costeTotal + parseInt($(this).val());
+            });
+            costeTotal = costeTotal + $("#formulario input[type=number]").val() * 25;
+            costeTotal += parseInt($("#gestor").val());
+            $("#output").text(costeTotal);
+        }
+    </script>
+</head>
+
+<body>
+    <section id="firstpage" data-role="page">
+        <header data-role="header">
+            <div data-role="content">
+                <h1><span id="output"></span> €</h1>
+
+            </div>
+        </header>
+        <div data-role="content">
+            <form method="get" action="" id="formulario">
+                <fieldset data-role="controlgroup">
+                    <legend>
+                        <h2>Escoje una opción</h2>
+                    </legend>
+                    <label for="rb1">Catálogo. Muestra productos, eventos, trabajos (tipos portfolio, etc)</label>
+                    <input type="radio" id="rb1" name="rb1" value="200" checked>
+                    <label for="rb2">Tienda. Permite vendes directamente desde la página los productos mostrados.
+                    </label>
+                    <input type="radio" id="rb2" name="rb1" value="300">
+
+                </fieldset>
+                <br><br>
+                <fieldset>
+                    <legend>
+                        <h2>Tapping:</h2>
+                    </legend>
+                    <label for="cb1">Quiero una galería de fotos.</label>
+                    <input type="checkbox" value="20" id="cb1">
+
+                    <label for="cb2">Quiero una galería de videos.</label>
+                    <input type="checkbox" value="40" id="cb2">
+
+                    <label for="cb4">Quiero una página con parallax.</label>
+                    <input type="checkbox" value="60" id="cb4">
+                </fieldset>
+                <br><br>
+                <fieldset>
+                    <div id="div-slider">
+                        <label for="rango">
+                            <h2>Quiero este número de formularios:</h2>
+                        </label>
+                        <input id="rango" class="slider" type="range" data-show-value="true" data-popup-enabled="true"
+                            min="0" max="20" value="1">
+                    </div>
+                </fieldset>
+                <br><br>
+                <fieldset>
+                    <legend>
+                        <h2>¿Quieres un gestor de contenidos para encargarte del mantenimiento de tu página?</h2>
+                    </legend>
+                    <select data-role="slider" id="gestor">
+                        <option value="300">Sí</option>
+                        <option value="0">No</option>
+                    </select>
+                </fieldset>
+        </div>
+        </form>
+
+        </div>
+        <footer data-role="footer" data-position="fixed">
+            <h2>El pie de la página</h2>
+        </footer>
+    </section>
+</body>
+
+</html>

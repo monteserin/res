@@ -1,0 +1,12 @@
+div {
+    background: red;
+    width: 500px;
+    height: 500px;
+    border-radius: 0px 50px 100px 150px;
+    -moz-border-radius: 0px 50px 100px 150px;
+    -webkit-border-radius: 0px 50px 100px 150px;
+
+    box-shadow: 10px 50px 100px green, inset 10px 50px 100px blue;
+    -moz-box-shadow: 10px 50px 100px green, inset 10px 50px 100px blue;
+    -webkit-box-shadow: 10px 50px 100px green, inset 10px 50px 100px blue;
+}

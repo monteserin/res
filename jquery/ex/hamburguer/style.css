@@ -1,0 +1,26 @@
+body {
+    margin: 0;
+}
+
+#hamburger {
+    width: 50px;
+    height: 50px;
+    background: red;
+    display: block
+
+}
+
+.menu {
+    background: rgba(150, 150, 100, 0);
+    width: 800px;
+    height: 600px;
+    position: fixed;
+    right: -750px;
+    transition: 1s;
+    top: 0
+}
+
+.desplegado {
+    right: 0;
+    background: rgba(150, 150, 100, 1);
+}

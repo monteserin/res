@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Formulario HTML con fieldsets| Pablo Monteserín</title>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Ejemplo uso de la etiqueta fieldset para agrupar los inputs de formulario con HTML y CSS. Unos estarán colocados en horizontal y otros en vertical">
+    <meta name="robots" content="noindex, follow">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <h1>Ejemplo de uso de la etiqueta fieldset para crear formularios</h1>
+    <div>
+        <form action="#">
+            <fieldset class="fieldSetArriba">
+                <legend>Datos personales:</legend>
+
+                <label>Nombre: </label>
+                <input type="text">
+                <br>
+                <label>Apellidos: </label>
+                <input type="text">
+                <br>
+                <label>Email: </label>
+                <input type="text">
+                <br>
+            </fieldset>
+
+            <fieldset class="fieldSetArriba">
+                <legend>Otros datos:</legend>
+                <label for="opt11">Opción 1</label><input id="opt21" class="checkbox" type="checkbox"><br>
+                <label for="opt12">Opción 2</label><input id="opt22" class="checkbox" type="checkbox"><br>
+                <label for="opt13">Opción 3</label><input id="opt23" class="checkbox" type="checkbox"><br>
+            </fieldset>
+            <fieldset class="fieldSetAbajo">
+                <legend>Otras opciones...</legend>
+                <label for="opt21">Opción 1</label><input id="opt21" class="checkbox" type="checkbox"><br>
+                <label for="opt22">Opción 2</label><input id="opt22" class="checkbox" type="checkbox"><br>
+                <label for="opt23">Opcion 3</label><input id="opt23" class="checkbox" type="checkbox"><br>
+            </fieldset>
+        </form>
+    </div>
+
+
+</body>
+
+</html>

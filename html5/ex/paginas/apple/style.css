@@ -1,0 +1,239 @@
+@font-face{
+    font-family: 'SF Pro Text';
+    src:url('./FontsFree-Net-SFProText-Regular.ttf')
+}
+*{
+    font-family: 'SF Pro Text';
+}
+body{
+    margin:0
+}
+
+a{
+    text-decoration:none
+}
+nav{
+    background-color: rgba(0,0,0,0.95);
+    padding:12px 0 12px 0;
+}
+
+nav ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    margin:0
+}
+
+nav ul a{
+    color:rgba(255,255,255,0.7);
+    text-decoration: none;
+    margin: 0 37px 0 37px;
+    font-size: 0.9rem;
+}
+
+.icon{
+    width:20px;
+    height: 20px;
+    background-size: 230% 230%;
+    display: block;
+    background-position: -13px -11px;
+    background-repeat: no-repeat;
+}
+
+.manzanita{
+    background-image: url('./img/globalnav_apple_image__cxwwnrj0urau_large.svg');
+}
+
+.lupa{
+    background-image: url('./img/globalnav_search_image__fca9mfoh8a2q_large.svg');
+    background-position: -33px -9px;
+    background-size: 410% 410%;
+
+}
+
+.carrito{
+    background-image: url('./img/globalnav_bag_image__bmix8075eg4i_large.svg');
+}
+
+.small_txt{
+    font-size:0.8rem;
+    text-align: center;
+}
+
+.mainFoto{
+    text-align: center;
+    background-image: url('./img/hero__dvsxv8smkkgi_largetall_2x.jpg');
+    min-height: 650px;
+    background-position: center 70px;
+    background-size: 1200px auto;
+    background-repeat: no-repeat;
+    background-color: #131313;
+    padding-top: 15px
+}
+
+.t1{
+    font-size: 3.2rem;
+    color:white;
+    margin-bottom: 0;
+}
+.t2{
+    font-size: 1.7rem;
+    color:white;
+    margin: 7px 0 0 0;
+}
+.t3{
+    font-size: 1.2rem;
+    color:rgba(255,255,255,0.7);
+    margin-top:7px
+}
+
+.enlacesFinales a{
+    color:#1e89ff;
+    margin: 0 30px 0 30px;
+    font-size:1.2rem
+}
+
+.black{
+    color:black
+}
+
+.mainFotoWhite{
+    text-align: center;
+    background-image: url('./img/hero__dvsxv8smkkgi_largetall_2x0.jpg');
+    min-height: 630px;
+    background-position: center bottom;
+    background-size: 2300px auto;
+    background-repeat: no-repeat;
+    padding-top: 15px;
+    background-color: #FAFAFA;
+}
+
+.mainFoto3{
+    text-align: center;
+    background-image: url('./img/hero__dvsxv8smkkgi_largetall_2x1.jpg');
+    min-height: 680px;
+    background-position: center bottom;
+    background-size: 3000px auto;
+    background-repeat: no-repeat;
+    padding-top: 15px;
+    background-color: black;
+}
+
+.grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    row-gap: 14px;
+    column-gap:14px;
+    text-align: center;
+}
+
+.grid > div{
+    height:500px;
+    background-position:center center;
+    background-size:cover
+}
+
+.gird > div img{
+    display: block;
+}
+
+.c1{
+    background-image: url('./img/tile__cauwwcyyn9hy_large_2x1.jpg');
+}
+
+.c2{
+    background-image: url('./img/tile__cauwwcyyn9hy_large_2x0.jpg');
+}
+
+.c3{
+    background-image: url('./img/tile__cauwwcyyn9hy_large_2x2.jpg');
+}
+
+.c4{
+    background-image: url('./img/tile__cauwwcyyn9hy_large_2x.jpg');
+}
+.c5{
+    background-image: url('./img/rising_stars_large_2x.jpg');
+}
+
+.c6{
+    background-image: url('./img/tile__cauwwcyyn9hy_large_2x3.jpg');
+}
+
+.parrafada p{
+    max-width:900px;
+    margin: 20px auto;
+    color:gray;
+    font-size:0.8rem;
+
+
+}
+
+footer{
+    font-size:0.7rem;
+    width:900px;
+    margin:auto;
+}
+
+footer .footerGrid{
+    display:grid;
+    grid-template-columns: repeat(5, 1fr);
+    border-top: 1px solid gray;
+}
+
+footer a{
+    color:black;
+    display:block;
+    padding: 5px 0 5px 0
+}
+
+
+footer ul{
+    list-style: none;
+    padding-left:0;
+    margin:0
+}
+
+footer .titulo{
+    font-weight:bold
+}
+
+.footer_final{
+    display: grid;
+    grid-template-columns: 1fr 200px;
+}
+.footer_final ul li{
+    display: inline-block;
+    
+}
+
+
+.footer_final ul li:not(:last-child) a{
+    border-right:1px solid gray
+}
+.footer_final ul li a{
+    padding: 5px 20px;
+    display: block;
+}
+
+.footer_final ul li:first-child a{
+    padding-left:0;
+}
+
+.mb-0{
+margin-bottom:0
+}
+
+mt-1{
+    margin-top:5px;
+}
+
+.yaCasiEstamos img{
+    width:22px;
+    margin-right:10px
+}
+
+.yaCasiEstamos{
+    display: flex;
+    align-items: center;
+}

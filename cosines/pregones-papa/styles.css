@@ -1,0 +1,9 @@
+body{
+	background: url(hierba_50.jpg);
+	/*color:#051D00;*/
+	color:#600606;
+	font-size:2em;
+	font-family: 'Chela One', cursive;
+	text-shadow:1px 1px 1px green;
+	padding:2%;
+}

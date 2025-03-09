@@ -1,0 +1,42 @@
+@font-face {
+  font-family: myFont;
+  src: url(https://pablomonteserin.com/res/javascript-es6/ex/ahorcado//Poppins-Regular.ttf);
+}
+
+.container {
+  margin: auto;
+  max-width: 700px;
+  display: flex;
+  font-family: myFont;
+}
+
+.container .col {
+  flex: 1;
+}
+
+.ahorcado {
+  background-image: url('https://pablomonteserin.com/res/javascript-es6/ex/ahorcado/hangman-game_pm.png');
+  width: 300px;
+  height: 330px;
+}
+
+button {
+  background-color: #F77754;
+  color: white;
+  font-weight: bold;
+  border-radius: 20px;
+  border: none;
+  padding: 7px 15px;
+  margin-top: 15px;
+}
+
+input {
+  padding: 7px;
+  border-radius: 6px;
+  border: 1px solid gray;
+}
+
+.hiddenWord {
+  font-weight: bold;
+  font-size: 2rem;
+}

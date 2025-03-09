@@ -1,0 +1,8 @@
+#colLeft{min-width: 200px;padding-bottom: 20px}
+#colLeft ul{padding: 0; list-style: none; }
+#colLeft .menu a{padding: 20px; display: block}  
+#colLeft{background: pink; border-radius: 15px;}
+#colRight{background: paleGreen; border-radius: 15px; padding: 15px}
+#title{text-align: center; color: white; text-shadow: 2px 2px 2px black; font-size: 4em; background: gray}
+body{background: url(../img/giraffe-skin-seamless-pattern.png);}
+.lang{text-align: center}

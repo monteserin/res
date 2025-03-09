@@ -1,0 +1,15 @@
+input {
+    width: 200px;
+    height: 200px;
+    background: black;
+}
+
+input:hover {
+    background: gray
+}
+
+div#wrapper {
+    width: 600px;
+    height: 600px;
+    margin: auto
+}

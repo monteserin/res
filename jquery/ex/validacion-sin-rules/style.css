@@ -1,0 +1,17 @@
+label:not(.error) {
+    width: 200px;
+    display: inline-block;
+}
+
+input.error {
+    border: 1px solid red;
+}
+
+label.error {
+    background: url('unchecked.gif') no-repeat;
+    padding-left: 16px;
+}
+
+label.valid {
+    background: url('Checked.gif') no-repeat;
+}

@@ -1,0 +1,11 @@
+div.transform-rotate {
+    background-color: pink;
+    width: 300px;
+    height: 300px;
+    transition: all 2s;
+}
+
+div.transform-rotate:hover {
+    /*transform: function()*/
+    transform: rotate(720deg);
+}

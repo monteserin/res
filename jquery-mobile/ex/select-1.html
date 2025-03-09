@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Select en jQuery Mobile | Pablo Monteserín</title>
+    <meta charset='utf-8'>
+    <meta name="description"
+        content="Ejemplo de programación de una select en jQuery Mobile para que el usuario pueda seleccionar un valor concreto de entre un grupo de opciones">
+    <meta name="robots" content="noindex, follow">
+    <link rel="stylesheet" type="text/css" href="jquery.mobile.css">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery.mobile.js"></script>
+</head>
+
+<body>
+    <section id="firstpage" data-role="page">
+        <header data-role="header">
+            <h1>Select en jQuery Mobile</h1>
+        </header>
+        <div data-role="content">
+            <p>Esta es la primera página</p>
+            <form>
+                <fieldset>
+                    <legend for="select1">Opt 1:</legend>
+                    <select name="combo" id="combo">
+                        <option value="value1">Value 1</option>
+                        <option value="value2" disabled="disabled">Value 2</option>
+                        <option value="value3">Value 3</option>
+                        <option value="value4">Value 4</option>
+
+                    </select>
+
+                </fieldset>
+
+            </form>
+        </div>
+        <footer data-role="footer">El pie de la página</footer>
+    </section>
+</body>
+
+</html>

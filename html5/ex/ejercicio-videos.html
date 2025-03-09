@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Ejercicio Videos con HTML5 | Pablo Monteserín</title>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Ejemplo de insercción de varios videos en un documento HTML utilizando la etiqueta 'video' de dos formas diferentes, con un uno o con varios source">
+    <meta name="robots" content="noindex, follow">
+</head>
+
+<body>
+
+    <video src="https://pablomonteserin.com/res/html5/ex/img/leon.mp4" controls="controls" width="400" height="300"
+        poster="/res/html5/ex/img/leon.jpg" preload="preload">
+        Tu navegador no soporta html5
+    </video>
+    <br /><br>
+
+    <video controls="controls" width="400" height="300" poster="/res/html5/ex/img/leon.jpg" loop="loop">
+        <source src="https://pablomonteserin.com/res/html5/ex/img/leon.mp4" type="video/mp4" />
+        <source src="https://pablomonteserin.com/res/html5/ex/img/leon.ogv" type="video/ogg" />
+        <source src="https://pablomonteserin.com/res/html5/ex/img/leon.webm" type="video/webm" />
+        Tu navegador no soporta html5
+    </video>
+
+</body>
+
+</html>

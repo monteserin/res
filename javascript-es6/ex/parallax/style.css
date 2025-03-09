@@ -1,0 +1,37 @@
+body {
+  margin: 0;
+  background: url(https://pablomonteserin.com/res/javascript-es6/ex/parallax/img/pera.png)
+    fixed;
+}
+
+.pinas_and_oranges {
+  position: fixed;
+  width: 100%;
+  height: 1800px;
+}
+
+#pinas {
+  background: url(https://pablomonteserin.com/res/javascript-es6/ex/parallax/img/pina.png)
+    100px 200px;
+}
+
+#oranges {
+  background: url(https://pablomonteserin.com/res/javascript-es6/ex/parallax/img/orange.png)
+    50px 200px;
+}
+
+#whiteLayer {
+  top: 500px;
+  background: white;
+}
+
+#greenLayer {
+  top: 2500px;
+  background: green;
+}
+
+.contentLayer {
+  position: absolute;
+  width: 100%;
+  height: 100px;
+}

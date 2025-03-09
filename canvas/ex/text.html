@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>text en canvas de HTML5 | Pablo Monteserín</title>
+		<meta name="description" content="Ejemplo de como añadir un texto a la etiqueta canvas de html utilizando Javascript">
+
+	<head></head>
+	<body>
+	<h1>Ejemplo de escritura de texto en la etiqueta canvas de HTML</h1>
+		<canvas id="canvas" width="400px" height="400px" style="border:2px solid black" />
+		<script>
+			var c = document.getElementById("canvas");
+			var ctx = c.getContext("2d");
+
+    		ctx.font = "40pt Calibri";
+			ctx.fillStyle = "#0000ff"; // text color
+		    ctx.fillText("Hello World!", 50, 100);
+		    
+		    ctx.lineWidth = 3;
+			ctx.strokeStyle = "green";
+			//start, end, left, center, or right. left es el valor por defecto
+			//left equivale a start
+			//right equivale a end
+			ctx.textAlign = "center";
+			ctx.textBaseline = "middle";
+		    ctx.strokeText("Hello World!", 50, 100);		    
+    	</script>
+	</body>
+</html>

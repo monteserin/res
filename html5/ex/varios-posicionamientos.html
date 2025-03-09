@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Uso de los estilos display de CSS</title>
+
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Ejemplo de uso del estilo 'display' de CSS con los valores: 'inline', 'inline-block' y 'block' para maquetar elementos tanto en horizontal como en vertical">
+
+    <meta name="robots" content="noindex, follow">
+
+    <style>
+      .varios-posicionamientos .container {
+          text-align: left;
+          overflow: none;
+          background: pink;
+      }
+
+      .varios-posicionamientos .colKhaki {
+          background: Khaki;
+
+      }
+
+      .varios-posicionamientos .colSalmon {
+          background: salmon;
+      }
+
+      .varios-posicionamientos .col {
+          display: block;
+          width: 300px;
+          margin: 0;
+          float: none;
+      }
+
+      .varios-posicionamientos pre {
+          background: #D8D8D8;
+          border: 1px solid #00a9ff;
+          padding: 20px;
+      }
+
+      .varios-posicionamientos code {
+          background: #eaeaea;
+          padding: 15px;
+          display: block;
+          overflow: auto;
+      }
+    </style>
+</head>
+
+<body>
+    <h1>Uso de los estilos 'display y float'</h1>
+    <pre><code>&lt;style&gt;
+	.container{
+		text-align: <select id="text_align" style="width:auto; display:inline-block"><option value="left">left</option><option value="center">center</option><option
+            value="right">right</option></select>;
+		overflow: <select id="container_overflow" style="width:auto; display:inline-block"><option value="none">none</option><option
+            value="hidden">hidden</option><option value="auto">auto</option></select>;
+		background:pink;
+	}
+	.colKhaki{
+		background: Khaki;
+	}
+	.colSalmon{
+		background: salmon;
+	}
+	.col{
+		width:300px;
+		display: <select id="col_display" style="width:auto; display:inline-block"><option value="block">block</option><option value="inline">inline</option><option
+            value="inline-block">inline-block</option></select>;
+		float: <select id="col_float" style="width:auto;display:inline-block"><option value="none">none</option><option value="left">left</option><option
+            value="right">right</option></select>;
+		vertical-align: <select id="col_vertical_align" style="width:auto;display:inline-block"><option value="baseline">baseline</option><option value="top">top</option></select>;
+
+	}
+&lt;/style&gt;</code></pre>
+    <div class="container varios-posicionamientos">
+        <div class="col colKhaki">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum recusandae autem
+            sapiente
+            veritatis, perferendis ea fugiat, provident repellendus, vitae a iusto animi tenetur, rem tempore neque.
+            Atque
+            suscipit dolorem, ea!
+        </div>
+        <div class="col colSalmon">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates iure, a ad,
+            voluptas
+            beatae obcaecati dolorem asperiores libero nesciunt dignissimos.
+        </div>
+    </div>
+
+
+    <script>
+      alert(111)
+        document.getElementById("container_overflow").onchange = function () {
+            document.querySelector(".varios-posicionamientos.container").style.overflow = this.value;
+        }
+        document.getElementById("col_display").onchange = function () {
+            document.getElementsByClassName("col")[0].style.display = this.value;
+            document.getElementsByClassName("col")[1].style.display = this.value;
+        }
+        document.getElementById("col_float").onchange = function () {
+            document.getElementsByClassName("col")[0].style.float = this.value;
+            document.getElementsByClassName("col")[1].style.float = this.value;
+        }
+        document.getElementById("col_vertical_align").onchange = function () {
+            document.getElementsByClassName("col")[0].style.verticalAlign = this.value;
+            document.getElementsByClassName("col")[1].style.verticalAlign = this.value;
+        }
+
+        console.log(document.querySelector("#text_align"))
+
+        document.getElementById("text_align").onchange = function () {
+ alert(111)
+            document.querySelector(".varios-posicionamientos.container").style.textAlign = this.value;
+        }
+
+    </script>
+</body>
+
+</html>

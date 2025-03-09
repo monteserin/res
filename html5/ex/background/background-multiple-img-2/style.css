@@ -1,0 +1,7 @@
+.multiple-background div {
+  width: 500px;
+  height: 500px;
+  background: url(https://pablomonteserin.com/res/html5/ex/img/mundo.svg),
+    url(https://pablomonteserin.com/res/html5/ex/img/tijeras.svg);
+  background-size: 100% 100%, auto auto;
+}

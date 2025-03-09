@@ -1,0 +1,9 @@
+div.without-transition {
+    background: pink;
+    width: 300px;
+    height: 300px;
+}
+
+div.without-transition:hover {
+    background: black
+}

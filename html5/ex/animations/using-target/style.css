@@ -1,0 +1,12 @@
+.container.using-target {
+    width: 600px;
+    margin: auto;
+}
+
+.using-target h3 {
+    transition: 1s;
+}
+
+.using-target :target {
+    background-color: red;
+}

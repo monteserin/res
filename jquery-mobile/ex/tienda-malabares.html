@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Tienda malabares con jQuery Mobile | Pablo Monteserín</title>
+    <meta charset='utf-8'>
+    <meta name="description"
+        content="Ejemplo de creación de una página sencilla que funciona como catálogo, hecha con jQuery Mobile">
+    <meta name="robots" content="noindex, follow">
+    <link rel="stylesheet" type="text/css" href="https://pablomonteserin.com/res/jquery-mobile/ex/jquery.mobile.css">
+
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery-mobile/ex/jquery-1.11.js"></script>
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery-mobile/ex/jquery.mobile.js"></script>
+</head>
+
+<body>
+    <section id="firstpage" data-role="page">
+        <header data-role="header">
+            <h1>Tienda malabares</h1>
+        </header>
+        <div data-role="content">
+            <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="txt a buscar">
+                <li data-role="list-divider" style="list-style-type:none">Malabares de lanzar</li>
+
+                <li><a href="#"><img src="/curso/assets/images_juggling/pelotas.jpg" alt="pelotas malabares">
+                        <h3>Pelotas</h3>
+                    </a></li>
+                <li><a href="#"><img src="/curso/assets/images_juggling/mazas.jpg" alt="mazas malabares">
+                        <h3>Mazas</h3>
+                    </a></li>
+                <li><a href="#"><img src="/curso/assets/images_juggling/diabolo.jpg"
+                            alt="diabolo tienda malabares">Diábolos</a>
+                </li>
+                <li><a href="#"><img src="/curso/assets/images_juggling/cariocas.jpg"
+                            alt="cariocas tienda malabares">Cariocas</a>
+                </li>
+                <li><a href="#"><img src="/curso/assets/images_juggling/aros.jpg" alt="aros malabares">Aros</a></li>
+
+
+                <li data-role="list-divider" style="list-style-type:none">Equilibrio</li>
+                <li><a href="#monociclos"><img src="/curso/assets/images_juggling/monociclos.jpg" alt="monociclo">
+                        <h3>Monociclos</h3>
+                    </a></li>
+                <li><a href="#"><img src="/curso/assets/images_juggling/cuerda_floja.jpg" alt="cuerda floja">Cuerda
+                        floja</a>
+                </li>
+
+
+                <li data-role="list-divider" style="list-style-type:none">Otros malabares</li>
+
+                <li><a href="#"><img src="/curso/assets/images_juggling/yoyo.jpg" alt="yoyo para malabares">Yo-Yos</a>
+                </li>
+                <li><a href="#"><img src="/curso/assets/images_juggling/plato_chino.jpg"
+                            alt="plato chino para malabares">Platos
+                        Chinos</a></li>
+                <li><a href="#"><img src="/curso/assets/images_juggling/hula-hoop.jpg" alt="hula hoop malabares">Hula
+                        Hoops</a></li>
+
+
+            </ul>
+
+        </div>
+        <footer data-role="footer">El pie de la página</footer>
+    </section>
+    <section id="monociclos" data-role="page">
+        <header data-role="header">
+
+            <h2>Tipos de monociclos</h2>
+        </header>
+        <ol data-role="listview">
+            <li><a href="#monociclos-iniciacion">Iniciación</a></li>
+            <li><a href="#monociclos-largas_distancias">Largas distancias</a></li>
+            <li><a href="#" data-rel="back">Volver</a></li>
+
+        </ol>
+    </section>
+
+    <section id="monociclos-iniciacion" data-role="page">
+        <header data-role="header">
+            <h2>Monociclos Iniciación</h2>
+        </header>
+
+        <ul data-role="listview">
+            <li><a href="#monociclo_final"><img src="/curso/assets/images_juggling/monos/iniciacion/1.jpg"
+                        alt="monociclo malabares" class="ui-li-icon">
+                    <h3>Monociclo 1</h3>
+                </a></li>
+            <li><a href="#monociclo_final"><img src="/curso/assets/images_juggling/monos/iniciacion/2.jpg"
+                        alt="monociclo malabares" class="ui-li-icon">
+                    <h3>Monociclo 2</h3>
+                </a></li>
+            <li><a href="#monociclo_final"><img src="/curso/assets/images_juggling/monos/iniciacion/3.jpg"
+                        alt="monociclo malabares" class="ui-li-icon">
+                    <h3>Monociclo 3</h3>
+                </a></li>
+            <li><a href="#monociclo_final"><img src="/curso/assets/images_juggling/monos/iniciacion/4.jpg"
+                        alt="monociclo malabares" class="ui-li-icon">
+                    <h3>Monociclo 4</h3>
+                </a></li>
+            <li><a href="#monociclo_final"><img src="/curso/assets/images_juggling/monos/iniciacion/5.jpg"
+                        alt="monociclo malabares" class="ui-li-icon">
+                    <h3>Monociclo 5</h3>
+                </a></li>
+            <li><a href="#" data-rel="back">Volver</a></li>
+
+        </ul>
+    </section>
+    <section id="monociclos-largas_distancias" data-role="page">
+        <header data-role="header">
+            <h2>Monociclos Largas distancias</h2>
+        </header>
+
+        <ul data-role="listview">
+            <li><a href="#monociclo_final"><img src="/curso/assets/images_juggling/monos/largas_distancias/1.jpg"
+                        alt="monociclo malabares largas distancias" class="ui-li-icon">
+                    <h3>Monociclo 1</h3>
+                </a></li>
+            <li><a href="#monociclo_final"><img src="/curso/assets/images_juggling/monos/largas_distancias/2.jpg"
+                        alt="monociclo malabares largas distancias" class="ui-li-icon">
+                    <h3>Monociclo 2</h3>
+                </a></li>
+            <li><a href="#" data-rel="back">Volver</a></li>
+
+        </ul>
+    </section>
+
+    <section data-role="page" id="monociclo_final">
+        <header data-role="header">
+            <h3>Monociclo</h3>
+        </header>
+        <div data-role="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ratione beatae officia odit quia placeat
+                mollitia eos quam voluptas quo perspiciatis enim numquam dolor assumenda, suscipit ullam, similique
+                labore
+                asperiores!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ratione beatae officia odit quia placeat
+                mollitia eos quam voluptas quo perspiciatis enim numquam dolor assumenda, suscipit ullam, similique
+                labore
+                asperiores!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ratione beatae officia odit quia placeat
+                mollitia eos quam voluptas quo perspiciatis enim numquam dolor assumenda, suscipit ullam, similique
+                labore
+                asperiores!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ratione beatae officia odit quia placeat
+                mollitia eos quam voluptas quo perspiciatis enim numquam dolor assumenda, suscipit ullam, similique
+                labore
+                asperiores!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ratione beatae officia odit quia placeat
+                mollitia eos quam voluptas quo perspiciatis enim numquam dolor assumenda, suscipit ullam, similique
+                labore
+                asperiores!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ratione beatae officia odit quia placeat
+                mollitia eos quam voluptas quo perspiciatis enim numquam dolor assumenda, suscipit ullam, similique
+                labore
+                asperiores!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ratione beatae officia odit quia placeat
+                mollitia eos quam voluptas quo perspiciatis enim numquam dolor assumenda, suscipit ullam, similique
+                labore
+                asperiores!</p>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius ratione beatae officia odit quia placeat
+                mollitia eos quam voluptas quo perspiciatis enim numquam dolor assumenda, suscipit ullam, similique
+                labore
+                asperiores!</p>
+            <a href="#" data-rel="back" class="ui-btn"> Volver</a>
+        </div>
+
+    </section>
+</body>
+
+</html>

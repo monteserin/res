@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Listas en jQuery Mobile | Pablo Monteserín</title>
+    <meta charset='utf-8'>
+    <meta name="description"
+        content="Ejemplo de uso de listas de diferentes tipos en una página web hecha con jQuery Mobile, un plugin de jQuery para hacer aplicaciones móviles rápidamente">
+    <meta name="robots" content="noindex, follow">
+    <link rel="stylesheet" type="text/css" href="jquery.mobile.css">
+    <script type="text/javascript" src="jquery.js"></script>
+    <script type="text/javascript" src="jquery.mobile.js"></script>
+</head>
+
+<body>
+    <section id="firstpage" data-role="page">
+        <header data-role="header">
+            <h1>Listas en jQuery Mobile</h1>
+        </header>
+        <div data-role="content">
+            <ul data-role="listview" data-filter="true" data-inset="true" data-filter-placeholder="txt a buscar">
+                <li><a href="#">List item 1</a></li>
+                <li><a href="#">List item 2</a></li>
+                <li><a href="#">List item 3</a></li>
+                <li data-role="divider">Divisor</li>
+                <li><a href="#">List item con burbuja contadora
+                        <span class="ui-li-count">15</span>
+                    </a></li>
+
+
+                <li><a href="#"><img src="logo.png" alt="logo malabarista monty" class="ui-li-icon"></a></li>
+                <li data-role="list-divider">Divisor</li>
+
+                <li><a href="#"><img src="logo.png" alt="logo malabarista monty"></a></li>
+                <li><a href="#" data-rel="back" class="ui-btn"> Volver</a>
+                </li>
+            </ul>
+
+
+        </div>
+        <footer data-role="footer">El pie de la página</footer>
+    </section>
+</body>
+
+</html>

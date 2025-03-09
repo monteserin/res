@@ -1,0 +1,30 @@
+.container{
+    width: 900px;
+    margin:auto;
+    overflow: hidden;
+}
+
+.menu{
+    list-style: none;
+    border-top: 1px solid gray;  
+    padding-top: 20px
+}
+.menu a{
+    text-decoration: none;
+    color: black;
+}
+
+.col{
+    float:left;
+}
+
+.col_left{
+    width: 200px;
+}
+
+.col_right{
+    width: 699px;
+    border-left: 1px solid gray;
+    padding-left: 20px;
+    box-sizing: border-box;
+}

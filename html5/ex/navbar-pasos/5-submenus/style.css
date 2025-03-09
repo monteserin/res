@@ -1,0 +1,42 @@
+@font-face {
+  font-family: flechita;
+  src: url(../Arrows_tfb.ttf);
+}
+
+.menu-by-steps,
+.menu-by-steps ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.menu-by-steps li {
+  display: inline-block;
+}
+
+.menu-by-steps a {
+  background-color: pink;
+  padding: 15px;
+  border: 3px solid black;
+  display: block;
+  transition: 0.5s;
+  color: black;
+  text-decoration: none;
+  border-radius: 7px;
+}
+
+.menu-by-steps a:hover {
+  background-color: salmon;
+}
+
+.menu-by-steps li.hasChildren a:after {
+  font-family: flechita;
+  content: " o";
+}
+
+.menu-by-steps li.hasChildren ul {
+  position: absolute;
+}
+
+.menu-by-steps li.hasChildren li {
+  display: block;
+}

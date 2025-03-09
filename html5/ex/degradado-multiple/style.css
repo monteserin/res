@@ -1,0 +1,7 @@
+.box {
+  width: 400px;
+  height: 400px;
+  border: 1px solid black;
+  background: url(https://pablomonteserin.com/res/html5/ex/degradado-multiple/tijeras.svg) no-repeat bottom right, url(https://pablomonteserin.com/html5/ex/degradado-multiple/style.css), radial-gradient(ellipse at center, #f931a3 0%, #47aa20 51%, #7db9e8 100%);
+  background-size: auto auto, 50% 50%;
+}

@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input type="text" id="age" placeholder="age" />
+
+    <input type="text" id="weight" placeholder="weight" />
+
+    <input type="text" id="height" placeholder="height" />
+
+    <ul>
+      <li><a href="#" class="opt" id="mayores">Mayores de 200</a></li>
+      <li><a href="#" class="opt" id="mas40">Más de 40 kig</a></li>
+      <li><a href="#" class="opt" id="mas1metro">Más de 1 metro</a></li>
+    </ul>
+
+    <div id="mySelect"></div>
+
+    <script>
+      const mas40 = () => gnomes.filter((o) => o.weight > 40);
+      const getGnomesByAge = (age) => gnomes.filter((o) => o.age > age);
+      const getGnomesByWeight = (weight) =>
+        gnomes.filter((o) => o.weight > weight);
+      const getGnomesByHeight = (height) =>
+        gnomes.filter((o) => o.height > height);
+
+      const getGnomesByProfession = (profession) =>
+        gnomes.filter((o) => o.professions.includes(profession));
+
+      const mas1metro = () => gnomes.filter((o) => o.height > 100);
+      const hasFriends = () => gnomes.filter((o) => o.friends.length > 0);
+
+      // const filterByProperty = (res, propertyName, propertyValue) => res.filter( o => o[propertyName]>propertyValue);
+const getGnomeById = (id) => gnomes.filter( o => o.id == id)[0];
+
+      const printGnomeData = (id) => {
+          const gnome = getGnomeById( id);
+console.log(gnome);
+          localStorage.setItem('gnome', JSON.stringify(gnome));
+         location.href = 'gnome.html';
+      };
+
+      const pintarGnomes = (filteredData) => {
+        const codigo =
+          "<ul>" +
+          filteredData
+            .map(
+              (o) =>
+                `<li onClick="printGnomeData(${o.id})">ID: ${o.id} ---- Name: ${o.name}, Weight: ${o.weight}, Height: ${o.height}, Age: ${o.age}</li>`
+            )
+            .join("") +
+          "</ul>";
+
+        document.querySelector(".listado").innerHTML = codigo;
+      };
+
+      const getProfessions = () => {
+        const profesiones = [];
+        gnomes.forEach((o) => {
+          o.professions.forEach(
+            (p) => !profesiones.includes(p) && profesiones.push(p)
+          );
+        });
+        return profesiones;
+      };
+
+      const printProfessions = () => {
+        const selectCode = `<select class="professionSelect">${getProfessions(
+          gnomes
+        ).map((o) => `<option value="${o}">${o}</option>`)}</select>`;
+        document.querySelector("#mySelect").innerHTML = selectCode;
+
+        document
+          .querySelector(".professionSelect")
+          .addEventListener("change", (e) => {
+            const selectedValue = e.target.value;
+
+            console.log(getGnomesByProfession(e.target.value))
+            pintarGnomes(getGnomesByProfession(e.target.value));
+          });
+      };
+
+      const addListeners = () => {
+        printProfessions();
+
+        document.querySelector("#age").addEventListener("input", (e) => {
+          pintarGnomes(getGnomesByAge( e.target.value));
+        });
+
+        document.querySelector("#weight").addEventListener("input", (e) => {
+          pintarGnomes(getGnomesByWeight(e.target.value));
+        });
+
+        document.querySelector("#height").addEventListener("input", (e) => {
+          pintarGnomes(getGnomesByHeight(e.target.value));
+        });
+
+        document.querySelectorAll(".opt").forEach((enlace) =>
+          enlace.addEventListener("click", (e) => {
+            e.preventDefault();
+            const opt = e.target.getAttribute("id");
+
+            let filteredData;
+
+            if (opt == "mayores") {
+              filteredData = mayores();
+            } else if (opt == "mas40") {
+              filteredData = mas40();
+            } else if (opt == "mas1metro") {
+              filteredData = mas1metro();
+            } else if (opt == "tieneFriends") {
+              filteredData = hasFriends();
+            }
+            pintarGnomes(filteredData);
+          })
+        );
+      };
+
+let gnomes;
+
+      fetch(
+        "https://raw.githubusercontent.com/rrafols/mobile_test/master/data.json"
+      )
+        .then((res) => res.json())
+        .then((res) => {
+          console.log(res.Brastlewark);
+          gnomes = res.Brastlewark;
+
+          console.log(gnomes)
+          getProfessions();
+          addListeners();
+        });
+    </script>
+
+    <div class="listado"></div>
+  </body>
+</html>

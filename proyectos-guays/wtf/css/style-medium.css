@@ -1,0 +1,158 @@
+footer {
+
+	position: relative;
+
+}
+
+
+
+.index h1, .resultados h1 {
+
+	display: block;
+
+	text-align: center;
+
+	margin-left: auto;
+
+}
+
+.index h1 span, .resultados h1 span {
+
+	font-size: 1em;
+
+}
+
+.index .logo, .resultados .logo {
+
+	margin: 10px auto;
+
+}
+
+a.btn_varios {
+	
+	display: block;
+}
+
+#div_emoticonos {
+
+	background: url(../img/film-1_medium.png) repeat-x;
+
+}
+
+
+
+.film-cuadrado {
+
+	background: url(../img/film-2_medium.png) ;
+
+	width: 100px;
+
+}
+
+.film-imgs {
+
+	height: 100px;
+
+}
+
+.final {
+
+	min-width: 4%;
+
+}
+
+.class_emoticonos {
+
+  width: 40px;
+
+}
+
+#emoticonos {
+
+	margin-top: 30px;
+
+}
+
+#temporizador {
+
+	width:60px;
+
+	height: 60px;
+
+	margin-top: 20px;
+
+}
+
+#marcador {
+
+	font-size: 4em;
+
+	line-height: 100px;
+
+}
+
+
+
+.class_titulos {
+
+	height: auto;
+
+	padding: 10px;
+
+	width: 80%;
+
+	margin: auto;
+
+	margin-top: 25px;	
+
+}
+
+
+
+.lightbox {
+
+	left: 5%;
+
+	width: 90%;
+
+}
+
+.lightbox a.btn {
+
+    font-size: 1.2em;
+
+}
+
+
+
+.help ol{
+
+	width: 80%;
+
+}
+
+
+
+.cartel_youtube, #sinopsis  {
+
+/* */
+
+	width: 47%;
+
+}
+
+
+
+#titulopeli {
+
+	font-size: 1.5em;
+
+}
+
+
+
+#resultado_img img {
+
+	width: 50px;
+
+}

@@ -1,0 +1,15 @@
+.container {
+    display: table;
+}
+
+.main {
+    width: 400px;
+    background: green;
+    display: table-cell;
+}
+
+.sidebar {
+    width: 200px;
+    display: table-cell;
+    background: tomato;
+}

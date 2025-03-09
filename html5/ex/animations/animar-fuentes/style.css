@@ -1,0 +1,9 @@
+span.animate-fonts {
+    text-shadow: 60px 60px 2px green, -60px -60px 2px blue, -60px 60px 2px brown, 60px -60px 2px orange;
+    transition: 1s;
+    font-size: 5rem
+}
+
+span.animate-fonts:hover {
+    text-shadow: -60px 60px 2px orange, 60px 60px 2px red, 60px -60px 2px green, -60px -60px 2px blue
+}

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<h1>hemos llegado</h1>
+	<div>
+		<div th:each="paciente:${pacientes}">
+			<a th:href="@{|/consultaPaciente/${paciente.id}|}" style="display:inline">
+				<span th:text="${paciente.id}"></span></a>-
+			<span th:text="${paciente.nombre}"></span>-
+			<span th:text="${paciente.apellidos}"></span> -
+			<span th:text="${#dates.format(paciente.fecha_alta, 'yyyy-MM-dd')}"></span>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,24 @@
+.kwicks {
+  width: 515px;
+  height: 500px;
+}
+
+.kwicks > li {
+  width: 125px;
+  height: 500px;
+  /* overridden by kwicks but good for when JavaScript is disabled */
+  margin-left: 5px;
+  float: left;
+}
+
+#panel-1 {
+  background-color: #53b388;
+}
+
+#panel-2 {
+  background: url(https://pablomonteserin.com/res/jquery/ex/kwicks/img/azul.jpg);
+}
+
+#panel-3 {
+  background: url(https://pablomonteserin.com/res/jquery/ex/kwicks/img/flor.jpg);
+}

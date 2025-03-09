@@ -1,0 +1,89 @@
+dinero <- 50
+stopLoss = 32
+objetivoGanancias = 50
+apuestaInicial <- 0.5
+
+#################################################
+#probabilidad de ganar
+p <- 0.5
+dineroActual <- 0
+plantillaArray <- c(apuestaInicial)
+arrayApuesta <- plantillaArray
+tiempo <- 1
+historialdinero <- c(dinero, rep(NA, 99))
+dineroQueLlegueATenerMax <- dinero
+dineroQueLlegueATenerMin <- dinero
+apuestaMax = 0;
+sumaValoresArrayMax <- 0
+
+print("===============================================================================")
+print("===============================================================================")
+apuesta = 0;
+while (historialdinero[tiempo] > 0 & tiempo < 30000) {
+  tiempo <- tiempo + 1
+  ruleta <- runif(1)
+
+  if (length(arrayApuesta) >= 2) {
+    apuesta <- arrayApuesta[1] + arrayApuesta[length(arrayApuesta)]
+  } else {
+    apuesta <- arrayApuesta[1]
+  }
+    if (apuesta > stopLoss) {
+      print("................................................")
+      print("........................TOPE DE APUESTA REBASADO")
+      print("................................................")
+ 
+      arrayApuesta <- plantillaArray
+      historialdinero[tiempo] <- historialdinero[tiempo - 1]
+      next
+    }
+
+  # Dinero del array
+
+  if (apuestaMax < apuesta) {
+    sumaValoresArrayMax = 0
+    for (i in 1:length(arrayApuesta)) {
+      sumaValoresArrayMax <- sumaValoresArrayMax + arrayApuesta[i]
+    }
+    apuestaMax = apuesta
+  }
+  if (ruleta > p) {
+    # Si ganamos la apuesta
+    historialdinero[tiempo] <- historialdinero[(tiempo - 1)] + apuesta
+    if (length(arrayApuesta) >= 2) {
+      arrayApuesta <- arrayApuesta[-c(1, length(arrayApuesta))]
+    } else {
+      arrayApuesta <- arrayApuesta[-c(1)]
+    }
+
+    if (dineroQueLlegueATenerMax < historialdinero[tiempo]) {
+      dineroQueLlegueATenerMax = historialdinero[tiempo];
+    }
+    if (dineroQueLlegueATenerMin > historialdinero[tiempo]) {
+      dineroQueLlegueATenerMin = historialdinero[tiempo];
+    }
+
+    if (TRUE && dineroQueLlegueATenerMax >= dinero + objetivoGanancias) {
+      print(paste("OBJETIVO CUMPLIDO. Dinero acumulado: ", historialdinero[tiempo]));
+      break;
+    }
+    if (length(arrayApuesta) == 0) {
+      #ganamos un ciclo
+      print(paste("******ARRAY DE APUESTAS COMPLETADO. Money: ", historialdinero[tiempo]))
+      arrayApuesta <- plantillaArray
+    }
+    print(paste("APUESTA GANADA. Historial Dinero:", historialdinero[tiempo], ",Array de apuestas:", paste(arrayApuesta, collapse = "-")))
+
+  } else {
+    # Si perdemos la apuesta
+    dineroActual <- dineroActual - apuesta
+    historialdinero[tiempo] <- historialdinero[(tiempo - 1)] - apuesta
+    arrayApuesta <- append(arrayApuesta, apuesta, length(arrayApuesta))
+    print(paste("APUESTA PERDIDA. Historial Dinero:", historialdinero[tiempo], ", Array de apuestas:", paste(arrayApuesta, collapse = "-")))
+  }
+  print(paste("--------------------", historialdinero[tiempo]))
+
+}
+
+print(paste("Dinero que llegue a tener. Max: ", dineroQueLlegueATenerMax, ", Min: ", dineroQueLlegueATenerMin, ", Apuesta MAX: ", apuestaMax, ", Suma de los valores del array en ese momento: ", sumaValoresArrayMax))
+plot.ts(historialdinero, lwd = 3)

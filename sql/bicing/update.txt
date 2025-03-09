@@ -1,0 +1,8 @@
+1)
+UPDATE bicicleta SET kilometros=200 WHERE id=5
+
+2)
+UPDATE ciudadano SET password='secreto', nombre='Marcos Azuquita Montana' WHERE dni='52333333C'
+
+3)
+UPDATE bicicleta SET kilometros=0 WHERE id_parking=2

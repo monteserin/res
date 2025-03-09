@@ -1,0 +1,66 @@
+a {
+    display: block;
+}
+
+#ventana {
+    margin: 0 auto;
+    width: 860px;
+}
+
+#barraIzd {
+    width: 30px;
+    height: 500px;
+    background: red;
+    float: left
+}
+
+#centro {
+    width: 800px;
+    float: left;
+    background: yellow;
+}
+
+#barraArriba {
+    width: 800px;
+    height: 50px;
+    background: orange;
+}
+
+#contenido {
+    width: 800px;
+    height: 400px;
+    background: blue;
+}
+
+#barraAbajo {
+    width: 800px;
+    height: 50px;
+    background: purple;
+}
+
+#barraDch {
+    width: 30px;
+    height: 500px;
+    background: green;
+    float: left;
+}
+
+a#barraIzd:hover {
+    background: pink
+}
+
+a#barraArriba:hover {
+    background: green
+}
+
+a#contenido:hover {
+    background: red
+}
+
+a#barraAbajo:hover {
+    background: pink
+}
+
+a#barraDch:hover {
+    background: blue;
+}

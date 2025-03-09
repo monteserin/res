@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>double buffer animation en canvas de HTML5</title>
+	<meta name="description" content="Ejemplo de una animación utilizando el canvas de HTML para hacer una animación con doble buffer" />
+	<head></head>
+	<body>
+	<h1>Animación con doble buffer usando Javascript con la etiqueta canvas</h1>
+		<canvas id="testCanvas" width="400px" height="400px" style="border:2px solid black"></canvas>
+		<script>
+		var canvas = null;
+			var context = null;
+			var bufferCanvas = null;
+			var bufferCanvasCtx = null;
+			var flakeArray = [];
+			var flakeTimer = null;
+			var maxFlakes = 200;
+
+			function Flake() {
+			    this.x = Math.round(Math.random() * context.canvas.width);
+			    this.y = -10;
+			    this.drift = Math.random();
+			    this.speed = Math.round(Math.random() * 5) + 1;
+			    this.width = (Math.random() * 3) + 2;
+			    this.height = this.width;
+			}
+			
+			function init() {
+				testCanvas = document.getElementById('testCanvas');
+				context = testCanvas.getContext("2d");
+				
+				bufferCanvas = document.createElement("canvas"); //bufferCanvas es un canvas auxiliar donde dibujaremos mientras mostramos información en testCanvas
+				bufferCanvasCtx = bufferCanvas.getContext("2d");
+				bufferCanvasCtx.canvas.width = context.canvas.width;
+				bufferCanvasCtx.canvas.height = context.canvas.height;
+
+				// initialize the rects
+				flakeTimer = setInterval(addFlake, 200);
+		
+				Draw();
+				
+				setInterval(animate, 30);
+			}
+
+			function addFlake() {
+			    flakeArray[flakeArray.length] = new Flake();
+			    if (flakeArray.length == maxFlakes)
+			        clearInterval(flakeTimer);
+			}
+
+			function blank() {
+				bufferCanvasCtx.fillStyle = "#330033";
+				bufferCanvasCtx.fillRect(0,0,bufferCanvasCtx.canvas.width, bufferCanvasCtx.canvas.height);
+			}
+
+			function animate() {
+				Update();// Esta función desplaza el flake drift unidades en caso de que este no haya excedido los límites del canvas
+				Draw();
+			}
+
+			function Update() {
+			    for (var i = 0; i < flakeArray.length; i++) {
+                    if (flakeArray[i].y < context.canvas.height) {
+                        flakeArray[i].y += flakeArray[i].speed;
+                        if (flakeArray[i].y > context.canvas.height)
+                            flakeArray[i].y = -5;
+                        flakeArray[i].x += flakeArray[i].drift;
+                        if (flakeArray[i].x > context.canvas.width)
+                            flakeArray[i].x = 0;
+                    }
+			    }
+			}
+			
+			function Draw(){
+				context.save();
+				blank();
+
+				for (var i = 0; i < flakeArray.length; i++) {
+				    bufferCanvasCtx.fillStyle = "white";
+				    //Las coordenadas x,y de cada flake fueron definidas dentro de su método de creación Flake()
+				    bufferCanvasCtx.fillRect(flakeArray[i].x,flakeArray[i].y,flakeArray[i].width,flakeArray[i].height);
+				}
+				
+				// copy the entire rendered image from the buffer canvas to the visible one
+				context.drawImage(bufferCanvas, 0,0,bufferCanvas.width, bufferCanvas.height);
+				context.restore();
+			}
+			window.onload = init;
+		</script>
+	</body>
+</html>

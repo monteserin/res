@@ -1,0 +1,227 @@
+
+@font-face{
+    font-family:    app;
+    src:            url(fonts/Mochary_PERSONAL_USE_ONLY.ttf)
+}
+
+.boton {
+    text-decoration:        none;
+    font:                   40px/1em app, sans-serif;
+    text-shadow:            rgba(0,0,0,1) 0 2px 1;
+    -webkit-user-select:    none;
+    -moz-user-select:       none;
+    user-select:            none;
+    padding:                .5em .6em .4em .6em;
+    color:                  rgba(0,0,0,1) !important;
+
+    display:    block;
+    margin:     0 auto;
+    width:      170px;
+    text-align: center;
+
+    -webkit-border-radius:  8px;
+    -moz-border-radius:     8px;
+    border-radius:          8px;
+    border-top:             1px solid rgba(90,92,93,0.8);
+    border-bottom:          1px solid rgba(0,0,0,0.1);
+    background-image:       -webkit-gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(51,61,90,0) ), to( rgba(51,61,90,0.7) ));
+    background-image:       -moz-radial-gradient(top, ellipse cover, rgba(51,61,90,0.7) 0%, rgba(51,61,90,0) 100%);
+    background-image:       gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(51,61,90,0) ), to( rgba(51,61,90,0.7) ));
+    -webkit-transition:     background .2s ease-in-out;
+    -moz-transition:        background .2s ease-in-out;
+    transition:             background .2s ease-in-out;  
+    
+}
+/* -------------- Sizes -------------- */
+
+.xs { font-size: 20px; }
+.xl { font-size: 32px; }
+
+.boton:hover {
+    background-color:   hsl(0, 0%, 83%);
+    text-shadow:        rgba(0,0,0,0.5) 0 1px 2px;
+}
+
+.boton:active {
+    background-image:   -webkit-gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(90,92,93,0) ), to( rgba(90,92,93,0.5) ));
+    background-image:   -moz-gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(90,92,93,0) ), to( rgba(90,92,93,0.5) ));
+    background-image:   gradient(radial, 50% 0, 100, 50% 0, 0, from( rgba(90,92,93,0) ), to( rgba(90,92,93,0.5) ));
+   
+    -webkit-transform:  translateY(.2em);
+    -moz-transform:     translateY(.2em);
+    transform:          translateY(.2em);
+}
+
+.boton:focus {
+    outline:        none;
+    color:          rgba(0,0,0,1) !important;
+    text-shadow:    rgba(0,0,0,0.5) 0 1px 2px;
+}
+
+.boton[disabled], .boton[disabled]:hover, .boton.disabled, .boton.disabled:hover {
+    opacity:            1;
+    cursor:             default;
+    color:              rgba(0,0,0,1) !important;
+    text-shadow:        none !important;
+    background-color:   rgba(90,92,93,0.05);
+    background-image:   none;
+    border-top:         none;
+
+   
+    -webkit-transform:  translateY(5px);
+    -moz-transform:     translateY(5px);
+    transform:          translateY(5px);
+}
+
+/* -------------- Apariencia APP -------------- */
+@font-face{
+    font-family:    app;
+    src:            url(fonts/Mochary_PERSONAL_USE_ONLY.ttf);
+}
+
+body{
+    background-image:       url(fotos/backapp.png);
+    background-attachment:  fixed;
+}
+
+.container{
+    width:      100%;
+    max-width:  600px;
+    height:     300px;
+    margin:     0 auto;
+
+    background-image:       url(fotos/backapp-blur.png);
+    background-attachment:  fixed;
+
+    border-radius:          30px 30px 30px 30px;
+    -moz-border-radius:     30px 30px 30px 30px;
+    -webkit-border-radius:  30px 30px 30px 30px;
+    display:                inline-block;
+    margin-top:             40px;
+    vertical-align:         top;
+}
+
+.etiqueta{
+    top:                10px;
+   
+    width:              100%;
+    max-width:          300px;
+    height:             360px;
+    display:            inline-block;
+    background-image:   url(fotos/etiqueta.png);
+    background-size:         100% auto;
+    background-position:    center top;
+    background-repeat:      no-repeat;
+}
+
+/* -------------- SLIDER -------------- */
+#owl-demo{
+margin-top: 20px;    
+}
+
+#owl-demo .item{
+  margin-top:    5px;
+  margin-right:  1px;
+  margin-left:   1px;
+  margin-bottom: 5px;
+  padding-right: 5px;
+  padding-left:  5px;
+  top:           0;
+}
+
+#owl-demo .item img{
+  display:  block;
+  margin: 0 auto;
+  width:    100%;
+  height:   auto;
+}
+
+@media screen and (max-width:919px) {
+
+.etiqueta{
+    margin-top:             5px;
+    width:                  100%;
+    max-width:              400px;
+    height:                 210px;
+
+    display:                block;
+    margin:                 0 auto;
+    background-image:       url(fotos/etiquetahorizontal.png);
+    background-size:        100% auto;
+    background-position:    center top;
+    background-repeat:      no-repeat;
+    margin-bottom:          0;
+    padding:                0;
+}
+    #owl-demo{
+        margin-top: 10px;    
+    }
+
+    .container{
+        margin-top: 10px;
+        margin:     0 auto;
+        display:    block;
+        height:     260px;
+    }
+}
+
+
+@media screen and (max-width:768px) {
+
+.etiqueta{
+    top:                    10px;
+    width:                  100%;
+    max-width:              400px;
+    height:                 210px;
+
+    display:                block;
+    margin:                 0 auto;
+    background-image:       url(fotos/etiquetahorizontal.png);
+    background-size:         100% auto;
+    background-position:    center top;
+    background-repeat:      no-repeat;
+    }
+
+    .container{
+        margin:     0 auto;
+        display:    block;
+        height:     313px;
+    }
+}
+
+@media screen and (max-width:479px) {
+
+    .boton{
+        font:       20px/.5em app, sans-serif;
+        width:      130px;
+    }
+    .container{
+        margin:     0 auto;
+        display:    block;
+        width:      90%;
+        max-width:  500px;
+        height:     310px;
+        }
+
+    #owl-demo .item img{
+      display:  block;
+      width:    90%;
+      height:   auto;
+    }
+
+}
+
+
+@media screen and (max-width:300px) {
+
+ .etiqueta{
+    height: 150px;
+}
+
+.container{
+    height: 280
+}
+}
+
+}
+

@@ -1,0 +1,6 @@
+.box {
+  width: 400px;
+  height: 400px;
+  border: 1px solid black;
+  background: url(https://pablomonteserin.com/res/html5/ex/back2/html-left.png) no-repeat center left, url(https://pablomonteserin.com/res/html5/ex/back2/html-right.png) no-repeat right;
+}

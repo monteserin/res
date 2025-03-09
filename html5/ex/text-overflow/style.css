@@ -1,0 +1,12 @@
+div {
+    width: 300px;
+    height: 1em;
+    overflow: hidden; /*Recorta la capa para ajustara a sus dimensiones*/
+    text-overflow: ellipsis; /*tras haber recortado, añade unos puntos al final para indicar que el texto continua*/
+    white-space: nowrap; /*si el texto no cabe en el ancho de la capa el comportamiento normal es saltar a la siguiente línea. Este estilo lo evita el salto de línea*/
+}
+
+div:hover {
+    overflow: visible;
+    white-space: normal;
+}

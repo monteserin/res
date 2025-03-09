@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>simple animation con HTML5 - player en pantalla</title>
+            <meta name="description" content="Ya tenemos en pantalla el cangrejo y sus enemigos que se mueven horizontalmente con el fin de no dejarle llegar a la otra orilla">
+
+</head>
+<body>
+	<canvas id="canvas" width="400" height="400"></canvas>
+
+<script>
+var c = document.getElementById("canvas");
+var ctx = c.getContext("2d");
+
+   var enemies = [
+      {
+        x: 100, //x coordinate
+        y: 100, //y coordinate
+        speedY: 1, //speed in Y
+        w: 40, //width
+        h: 40 //heght
+      },
+      {
+        x: 260,
+        y: 100,
+        speedY: 2,
+        w: 40,
+        h: 40
+      },
+      {
+        x: 380,
+        y: 100,
+        speedY: 3,
+        w: 40,
+        h: 40
+      },
+      {
+        x: 450,
+        y: 100,
+        speedY: 7,
+        w: 40,
+        h: 40
+      }
+    ];
+
+var player ={
+         x: 40,
+        y: 200,
+        speedX: 2,
+        w: 40,
+        h: 40,
+        isMoving:false
+}
+canvas.addEventListener('mousedown', function(){
+  player.isMoving = true;
+});
+canvas.addEventListener('mouseup', function(){
+  player.isMoving = false;
+});
+var update = function(){
+	var n = enemies.length;
+	for (var i =0; i < n; i++) {
+		enemies[i].y+=enemies[i].speedY;
+		if(enemies[i].y>400 || enemies[i].y<0)enemies[i].speedY=-enemies[i].speedY;
+
+	};
+  if(player.isMoving==true){
+      player.x += player.speedX;
+  }
+}
+var draw = function(){
+	ctx.clearRect(0,0,400,400);
+	ctx.fillStyle = "rgb(200, 0, 100)";
+		var n = enemies.length;
+
+		for (var i =0; i < n; i++) {
+				ctx.fillRect(enemies[i].x, enemies[i].y, enemies[i].w, enemies[i].h);
+
+		}
+    ctx.fillRect(player.x, player.y, player.w, player.h);
+
+}
+var step = function(){
+	update();
+	draw();
+	window.requestAnimationFrame(step);
+};
+
+step();
+
+</script>
+	
+</body>
+</html>

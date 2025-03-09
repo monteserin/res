@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <ol>
+        <li>
+            <h2>El usuario debe introducir dos números y un operador y visualizar por consola el resultado de la
+                operación.</h2>
+            <p>Las
+                operaciones serán +, -, *, /.</p>
+            <a href="./calculadora.html">Ver ejercicio</a>
+
+            <h3>Sin DOM</h3>
+            <ol>
+                <li>Recogida de datos: numero1, numero2, operador</li>
+                <li>Hacer un log de los datos introducidos: numero1, numero2, operador</li>
+                <li>Calculo de resultado: Utilizaremos la instrucción if-else para evaluar la operación a realizar</li>
+                <li>Realizar la operación</li>
+                <li>Mostrar el resultado: en un log</li>
+            </ol>
+            <hr>
+
+            <h3>Con DOM</h3>
+
+            <ol>
+                <li>Escuchar el click sobre el botón de calcular y llamar a la función "hacerCalculos"</li>
+                <li>Hacer un log que diga "11111111111111111" en el momento en el que hacemos click</li>
+                <li>Recogida de datos dentro de la función "hacerCalculos": numero1, numero2, operador</li>
+                <li>Hacer un log de los datos introducidos: numero1, numero2, operador</li>
+                <li>Calculo de resultado: Utilizaremos la instrucción if-else para evaluar la operación a realizar</li>
+                <li>Realizar la operación</li>
+                <li>Mostrar el resultado mediante un acceso al DOM</li>
+            </ol>
+
+            <pre>
+&lt;input type=&quot;text&quot; id=&quot;n1&quot;&gt;
+&lt;input type=&quot;text&quot; id=&quot;op&quot;&gt;
+&lt;input type=&quot;text&quot; id=&quot;n2&quot;&gt;
+&lt;button id=&quot;btn&quot;&gt;Calcular&lt;/button&gt;
+&lt;div id=&quot;resultado&quot;&gt;&lt;/div&gt;
+            </pre>
+        </li>
+        <li>
+            <h2>Calcular número secreto</h2>
+
+            <ol>
+                <li>Almacenar en una constante un número aleatorio, que será el número secreto</li>
+                <li>Hacer un log del número aleatorio</li>
+                <li>Recogida de datos: numero</li>
+                <li>Hacer un log de los datos introducidos: numero</li>
+                <li>Calculo de resultado: Utilizaremos la instrucción if-else para evaluar si el número introducido
+                    coincide con el número secreto</li>
+                <li>Mostrar el resultado: en un log</li>
+            </ol>
+
+
+            <a href="./numero-secreto.html">Ver ejercicio</a>
+            <a href="https://pablomonteserin.com/curso/javascript/numeros-aleatorios/" target="_blank">Teoría de número
+                aleatorios</a>
+        </li>
+
+        <li>
+            <h2>Calcular número secreto con 3 oportunidades</h2>
+            <a href="./numero-secreto-con-oportunidades.html">Ver ejercicio</a>
+
+            <ol>
+                <li>Almacenar en una constante un número aleatorio, que será el número secreto</li>
+                <li>Hacer un log del número aleatorio</li>
+
+
+                <li>Los siguientes pasos los daríamos en cada una de las iteraciones del bucle for:
+                    <ol>
+                        <li>Recogida de datos: numero</li>
+                        <li>Hacer un log de los datos introducidos: numero</li>
+                        <li>Calculo de resultado: Utilizaremos la instrucción if-else para evaluar si el número
+                            introducido
+                            coincide con el número secreto</li>
+                        <li>Mostrar el resultado: en un log</li>
+                    </ol>
+                </li>
+
+                <li>Hacemos un log de fin del juego</li>
+            </ol>
+
+        </li>
+        <li>
+            <h2>Letra DNI</h2>
+
+            <p>Pasos a seguir:</p>
+
+
+
+
+
+
+            <ol>
+                <li>Recogida de datos: dni sin letra</li>
+                <li>Hacer un log de los datos introducidos: dni</li>
+                <li>Creamos una función para obtener la letra del dni
+                    <ul>
+                        <li>Hacemos validaciones. Si la validación es incorrecta, la función devolverá el valor -1.
+
+                            <ul>
+                                <li>Que el dni este dentro del rango</li>
+                                <li>Que el valor introducido sea un número</li>
+                            </ul>
+                        </li>
+
+                        <li>Calculo de resultado:
+                            <ol>
+                                <li>Dividimos el valor introducido entre 23. Almacenamos el resto de la división.</li>
+                                <li>Utilizamos la función charAt para obtener la letra del DNI</li>
+                            </ol>
+
+                        </li>
+                    </ul>
+                </li>
+                <li>Llamamos a la función</li>
+                <li>Mostrar el resultado: en un log</li>
+            </ol>
+
+            <pre>
+&lt;input type=&quot;text&quot; id=&quot;txt&quot;&gt;
+&lt;button&gt;Calcular&lt;/button&gt;
+&lt;div id=&quot;resultado&quot;&gt;&lt;/div&gt;
+</pre>
+
+            <ol>
+                <li>
+                    Escuchar el click sobre el botón de envío
+                </li>
+                <li>
+                    Hacemos un log para comprobar que llegamos a la función
+                </li>
+                <li>
+                    Leer lo que hay escrito en el input
+                </li>
+                <li>
+                    Hacemos un log del valor leído
+                </li>
+                <li>
+                    Llamamos a la función y almacenamos el valor que devuelve
+                </li>
+                <li>
+                    Pintamos el resultado
+                </li>
+            </ol>
+
+            <p><a target="_blank" href="https://pablomonteserin.com/curso/javascript/obtener-la-letra-del-dni/">Enlace
+                    del
+                    original</a></p>
+            <a href="./letra-dni.html" target="_blank">Ver ejercicio</a>
+        </li>
+        <li>
+            <h2>Coste viaje</h2>
+
+            <a href="./coste-viaje.html">Ver ejercicio</a>
+            <pre><code>
+        const calcularCoste = () => {
+            const numNoches = prompt('numero de noches');
+            const destino = prompt('destino');
+            
+            const resultado1 = costeHotel(numNoches);
+            const resultado2 = costeAvion(destino, numNoches);
+            const resultado3 = costeAlquilerCoche(numNoches)
+            
+            console.log("Coste viaje: " + resultado1);
+            console.log("Resultado viaje: ", resultado2);
+            console.log("Resultado alquiler coche: ", resultado3);
+            
+            console.log("Total:", resultado1 + resultado2 + resultado3);
+        }
+        </code></pre>
+        </li>
+    </ol>
+</body>
+
+</html>

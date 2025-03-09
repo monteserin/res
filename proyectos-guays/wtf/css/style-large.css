@@ -1,0 +1,899 @@
+body {
+
+	background: url(../img/depositphotos_37501839.png);
+
+	text-align: center;
+
+	margin: 0;
+
+	overflow-x: hidden;
+
+}
+
+.wrapper {
+
+	margin: auto;
+
+}
+
+/********************************
+
+CLASES COMUNES ÚTILES
+
+********************************/
+
+.font-bevan {
+
+	font-family: 'Bevan', cursive !important;
+
+	font-weight: normal !important;
+
+}
+
+.element-block {
+
+	display: block !important;
+
+}
+
+.element-inline {
+
+	display: inline !important;	
+
+}
+
+.element-inlineblock {
+
+	display: inline-block !important;
+
+}
+
+.img-100pc {
+
+	width: 100% !important;
+
+}
+
+.margin-0 {
+
+	margin: 0 !important;	
+
+}
+
+.margin-bottom-0 {
+
+	margin-bottom: 0 !important;	
+
+}
+
+.padding-0 {
+
+	padding: 0 !important;	
+
+}
+
+.bgcolor-blanco {
+
+	background-color: #FFF !important;
+
+}
+
+.bgcolor-casinegro {
+
+	background-color: #282828 !important;
+
+}
+
+.bgcolor-amarillo {
+
+	background-color: #FFE619 !important;
+
+}
+
+.bgcolor-naranja {
+
+	background-color: #FF7F50 !important;
+
+}
+
+.bgcolor-azul {
+
+	background-color: #14B3CC !important;
+
+}
+
+.bgcolor-verde {
+
+	background-color: #CCFF00 !important;
+
+}
+
+.bgcolor-rojo {
+
+	background-color: #FF3A2C !important;
+
+}
+
+.bgcolor-rosa {
+
+	background-color: #FF0079 !important;
+
+}
+
+/********************************/
+
+p, a, li {
+
+	font-family: 'Roboto', sans-serif; 
+
+	font-weight: bold;
+
+	font-size: 12px;
+
+	color: #282828;
+
+	text-decoration: none;
+
+}
+
+p {
+	text-align: justify;
+	line-height: 20px;
+	margin: 0 20px;
+}
+
+header, footer {
+
+	font-family: 'Roboto', sans-serif;
+
+	background-color: rgba(255,255,255, 0.5);
+
+	box-shadow: #808080 2px 2px 10px;
+
+	padding: 20px 0;
+
+	font-size: 0.8em;
+
+	position:fixed;
+
+	width: 100%;
+
+/*	bottom: 0;*/
+
+}
+
+
+
+header {
+
+	top:0;
+
+	/*background-color: rgb(40,40,40);*/
+
+	background-color: #282828;
+
+	color:#FFF;
+
+	position: relative;
+
+	margin-bottom: 30px;
+
+	padding: 15px 0 25px 0;
+
+}
+
+
+
+footer {
+
+	bottom:0;
+
+	margin-top: 30px;
+
+}
+
+footer a{
+
+	font-family: 'Roboto', sans-serif;
+
+	text-decoration: none;
+
+	color: #282828;
+
+	padding: 2px 2px;
+
+	transition: 0.5s;
+
+}
+
+
+
+footer a:hover {
+
+	color: #FF7F50;
+
+}
+
+footer span {
+
+	margin-top: 5px;
+
+	color: #808080;
+
+}
+
+
+
+section {
+
+	margin-bottom: 100px;
+
+}
+
+h1 {
+
+	font-family: 'Bevan', cursive;
+
+	color: #FFF;
+
+	font-weight: normal;
+
+}
+
+
+h2 {
+
+	font-family: 'Roboto', sans-serif;
+
+	text-transform: uppercase;
+
+	text-shadow: #a9a9a9 2px 2px 2px;
+
+	font-size: 2em;
+
+}
+
+
+
+.resultados h2 {
+
+	color:#fff;
+
+	text-shadow: none;
+
+	padding: 20px;
+
+}
+
+
+
+h3 {
+
+	font-family: 'Roboto', sans-serif;
+
+	margin: 0;
+
+}
+
+header a.btn {
+
+	background-color: #FFF;
+
+	width: 40px;
+
+	margin: 5px;
+
+	padding: 10px 5px;
+
+	vertical-align: top;
+
+	box-shadow: none;
+
+	color: #282828;
+
+	font-size: 18px;
+
+}
+
+nav {
+
+	vertical-align: top;
+
+	margin: auto 10px;
+
+}
+
+nav:first-child {
+
+	float: left;
+
+}
+
+nav:last-child {
+
+	float: right;
+
+}
+
+
+
+ul {
+
+	list-style: none;
+
+	margin: auto;
+
+	text-align: center;
+
+	padding: 0px;
+
+}
+
+li {
+
+	font-size: 1.5em;
+
+}
+
+.help li {
+
+	font-size: 1em;
+
+	text-align: left;
+
+	margin: 10px;
+
+	font-weight: normal;
+
+}
+
+.help ul li {
+	color: #14B3CC;
+	margin: 0px;
+}
+
+.help ul {
+
+	margin-top: 10px;
+}
+
+
+
+
+.help ol{
+
+	width: 50%;
+
+	margin: auto;
+
+	padding-left: 15%;
+
+	margin-bottom: 30px;
+
+}
+
+li a {
+
+	margin: 10px;
+
+	color: #FFF;
+
+}
+
+input[type=radio] {
+
+	display: none;
+
+}
+
+.index h1, .resultados h1 {
+
+	font-size: 5em;
+
+	line-height: 85px;
+
+	margin-bottom: 20px;
+
+	display: inline-block;
+
+	text-align: left;
+
+	margin-left: 70px;
+
+	text-shadow: 2px 2px #ddd;
+
+	color: #282828;
+
+}
+
+.index h1:before , .resultados h1:before {
+
+	content: "";
+
+}
+
+.index h1 span, .resultados h1 span {
+
+	display: block;
+
+}
+
+.index .logo, .resultados .logo {
+
+	background: transparent url("../img/logo_WTF.svg") no-repeat scroll 0% 0% / 200px auto;
+
+	padding: 100px;
+
+	margin: 95px 45px 50px 40px;
+
+}
+
+
+
+.resultados .logo {
+
+	margin: 0;
+
+}
+
+
+
+.logo {
+
+	background: transparent url("../img/logo_WTF_blanco.svg") no-repeat scroll 0% 0% / 35px auto;
+
+	padding: 17px 20px;
+
+	vertical-align: top;
+
+	margin: 0 10px auto 10px;
+
+}
+
+
+
+a.btn {
+
+	padding: 20px;	
+
+	text-transform: uppercase;
+
+	margin-top: 25px;	
+
+	box-shadow: 5px 5px 5px #ddd;
+
+	max-width: 300px;
+
+	font-size: 45px;
+
+	text-decoration: none;
+
+	margin: auto;
+
+	box-sizing: border-box;
+
+}
+
+
+
+.resultados a.btn {
+
+	margin: 30px;
+
+}
+
+
+div.btn_info {
+
+	text-align: center;
+
+	display: inline-block;
+
+}
+
+a.btn_varios {
+
+
+	background-color: #282828;
+
+	color: #FFF;
+
+	font-size: 25px;
+
+	margin: 15px 10px;
+
+	display: inline-block;
+
+}
+
+
+.btn_info a span {
+
+
+	font-family: 'Roboto', sans-serif;
+
+	text-transform: uppercase;
+
+	margin-left: 20px;
+
+	font-size: 1.2rem;
+}
+
+
+div.parrafo {
+	margin: 30px 0;
+	width: 80%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+div.parrafo p {
+	margin-bottom: 10px;
+}
+
+
+.listado_pelis li.cartel {
+
+	position: relative;
+
+	width: 200px;
+
+	height: 300px;
+
+	display: inline-block;
+
+	margin: 5px;
+
+}
+
+
+
+.listado_pelis li.cartel a {
+
+	margin: 0;
+
+}
+
+
+
+.listado_pelis li.cartel a:hover span 
+
+	{opacity: 1}
+
+
+
+.listado_pelis li.cartel a:hover img 
+
+	{opacity: 0.5}
+
+
+
+.listado_pelis li.cartel a img {
+
+	width: 100%;
+
+	height: 100%;
+
+	transition:1s;
+
+	position: absolute;
+
+	left: 0; 
+
+	box-shadow: 2px 2px 5px #333;
+
+}
+
+.listado_pelis li.cartel a span {
+
+	margin: auto;
+
+	opacity: 0; 
+
+	position: absolute;
+
+	transition:1s; 
+
+	text-align: center; 
+
+	width: 100%;
+
+	font-size: 15px;
+
+	padding: 10px;
+
+	box-sizing:border-box;
+
+	color: #282828;
+
+	bottom: 100px;
+
+	background-color: rgba(255,255,255,0.6);
+
+}
+
+
+
+
+
+.black_overlay{
+
+	display: none;
+
+	position: absolute;
+
+	top: 0%;
+
+	left: 0%;
+
+	width: 100%;
+
+	height: 100%;
+
+	z-index:1001;
+
+	background-color:rgba(0,0,0,0.7);
+
+	
+
+}
+
+.lightbox{
+
+	position: absolute;
+
+/*	top: 25%;*/
+
+	top: 8%;
+
+	left: 20%;
+
+	width: 60%;
+
+	height: auto;
+
+	padding: 30px;
+
+	background-color: #FFF;
+
+	box-shadow: 2px 2px 4px 1px #333;
+
+	z-index: 1002;
+
+	overflow: auto;
+
+	box-sizing: border-box;
+
+}
+
+
+
+.lightbox a.btn { 
+
+	font-size: 15px;
+
+	margin: auto;
+
+	margin-top: 15px;
+
+}
+
+
+
+
+
+.lightbox a.btn_cerrar  { 
+
+	float: right;
+
+	color: #FFF;
+
+	width: auto;
+
+	margin-top: 50px;
+
+	font-size: 12px;
+
+	padding: 15px;
+
+}
+
+
+
+.lightbox a.btn span {
+
+	margin-left: 15px;
+
+	float: right;
+
+}
+
+
+
+#div_emoticonos {
+
+	width: 100%;
+
+	background: url(../img/film-1.png) repeat-x;
+
+}
+
+
+
+.film-cuadrado {
+
+	background:red;
+
+	background: url(../img/film-2.png) ;
+
+	width: 200px;
+
+}
+
+.film-imgs {
+
+	height: 200px;
+
+	vertical-align: top;
+
+}
+
+.final {
+
+	min-width: 8%;
+
+}
+
+
+
+.cartel_youtube a.btn {  
+
+	width: 70%;
+
+	padding: 10px;
+
+	line-height: 22px;
+
+	margin: 10px;
+
+ }
+
+.cartel_youtube a.btn span {
+
+	font-size: 1.5em;
+
+}
+
+
+
+ #infopeli .lightbox a.btn_cerrar {  
+
+	margin-top: 10px;
+
+ }
+
+
+
+.cartel_youtube {
+
+	width: 30%;
+
+	margin: 0;
+
+}
+
+.cartel_youtube img {
+
+	box-shadow: 2px 2px 13px #332;
+
+	width: 80%;
+
+}
+
+#sinopsis {
+
+	width: 60%;
+
+	vertical-align: top;
+
+}
+
+#sinopsis p {
+
+	font-family: 'Roboto', sans-serif;
+
+	line-height: 18px;
+
+	margin-top: 0;
+
+	text-align: left;
+
+}
+
+
+
+#emoticonos {
+
+  margin: 50px 20px;
+
+  box-sizing: border-box;
+
+}
+
+
+
+#marcador {
+
+	font-size: 8em;
+
+	font-family: 'Roboto', sans-serif; font-weight: bold;
+
+	line-height: 200px;
+
+	color: #FFCC00;
+
+}
+
+
+
+/********************************
+
+addClass JQuery
+
+********************************/
+
+/*#respuestas a.titulos */
+
+.class_titulos{
+
+	font-family: 'Roboto', sans-serif;
+
+	font-size: 1.5em;
+
+	vertical-align: middle;
+
+	padding: 20px;
+
+	border: solid 2px white;
+
+  	box-shadow: 2px 2px 4px 1px #ccc;
+
+	display: inline-block;
+
+	background-color: white;
+
+	width: 40%;
+
+	height: 75px;
+
+	margin: 15px;
+
+	text-decoration: none;
+
+	box-sizing: border-box;
+
+}
+
+
+
+.class_titulos a {
+
+	padding-top: 25px;
+
+}
+
+/*#respuestas a.titulos:hover */
+
+.class_titulos:hover {
+
+	background-color: #FFCC00;
+
+}
+
+
+
+.class_emoticonos {
+
+	width: 90px;
+
+}

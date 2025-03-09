@@ -1,0 +1,1 @@
+fputs es más rápida que fwritefputs es más rápida que fwrite

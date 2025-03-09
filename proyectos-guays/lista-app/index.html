@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="robots" content="noindex">
+
+	<title>Aplicación lista de la compra | ListaAPP</title>
+	 <meta name="description" content="Aplicación que te ayudará a crear la lista de la compra, almacenando en ella tanto los productos como los comercios donde los comprarás">
+
+	<link rel="stylesheet" type="text/css" href="Compras.css">
+	<script src="jquery-3.1.1.min.js"></script>
+	<script src="compras.js"></script>
+	<link rel="icon" type="image/png" href="listaappicono.png">
+</head>
+<body>
+	<header>
+		<ul>			
+			<li class="home"><h1 style="font-size: 1rem"><a href="#">ListApp - menu</a></h1><div class="faltas"></div><div class="precioTotal"></div></li
+			><li class="agregar"><h2>+Prod.</h2></li
+			><li class="buscar"><input type="text" id="busqueda"><input type="button" value="Buscar" id="buscar"></li>
+		</ul>
+
+	</header>
+	<div class="lightbox">
+		<div class="pantallaAgregar">
+			Nombre del producto: <br>
+			<input type="text" id="nombre"> <br>
+			Comercio: <br>
+			<span id="comercio"></span>
+			Precio: <br>
+			<input type="text" id="precio"> <br>
+			<input type="button" id="enviar" value="Añadir">
+			<div class="cerrar"></div>
+		</div>
+	</div>
+	<div style="height: 100px"></div>
+	<div class="cuerpo">
+		
+	</div>
+	<div style="height: 50px"></div>
+	<nav>
+		<ul class="general">
+			<li class="comercios"><h2><a href="comercios.html">Comercios</a></h2></li
+			><li class="todo seleccion"><h2><a href="#">Productos</a></h2></li
+			><li class="lista"><h2><a href="lista-compra.html">Lista</a></h2></li>
+		</ul>
+	</nav>
+</body>
+</html>

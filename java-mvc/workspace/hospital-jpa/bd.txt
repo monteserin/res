@@ -1,0 +1,14 @@
+ mysql://beb57a8121b4fa:e1c47f03@eu-cdbr-west-02.cleardb.net/heroku_dbd0d8ee45401c9?reconnect=true
+
+
+user:
+beb57a8121b4fa
+
+pass:
+e1c47f03
+
+host:
+eu-cdbr-west-02.cleardb.net
+
+bd:
+heroku_dbd0d8ee45401c9

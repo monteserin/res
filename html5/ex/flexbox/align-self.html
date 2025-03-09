@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>flexbox, align-self | Pablo Monteserín</title>
+    <meta charset="UTF-8">
+    <meta name="description"
+        content="Ejemplo práctico de como usar el estilo CSS align-self de flexbox para alinear una capa independientemente de lo que indique la contenedora">
+    <meta name="robots" content="noindex, follow">
+
+    <style>
+        .container {
+            display: flex;
+        }
+
+        .colKhaki {
+            background: Khaki;
+        }
+
+        .colGreen {
+            background: paleGreen;
+        }
+
+        .colSalmon {
+            background: salmon;
+        }
+
+        .col {
+            width: 300px
+        }
+
+        pre {
+            background: #D8D8D8;
+            border: 1px solid #00a9ff;
+            padding: 20px;
+        }
+
+        code {
+            background: #eaeaea;
+            padding: 15px;
+            display: block;
+            overflow: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>Uso del estilo 'align-self'</h1>
+    <pre><code>&lt;style&gt;
+	.container{
+			display: flex;
+	}
+	.colKhaki{
+		background: Khaki;
+	}
+	.colGreen{
+		background: paleGreen;
+		align-self: <select id="align_self"><option value="stretch">stretch</option><option value="flex-start">flex-start</option><option
+            value="flex-end">flex-end</option><option value="center">center</option><option
+            value="baseline">baseline</option></select>;
+	}
+	.colSalmon{
+		background: salmon;
+	}
+	
+&lt;/style&gt;</code></pre>
+    <div class="container">
+        <div class="col colKhaki">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsum recusandae autem
+            sapiente
+            veritatis, perferendis ea fugiat, provident repellendus, vitae a iusto animi tenetur, rem tempore neque.
+            Atque
+            suscipit dolorem, ea!
+        </div>
+        <div class="col colGreen">Lorem ipsum dolor sit amet, consectetur</div>
+        <div class="col colSalmon">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates iure, a ad,
+            voluptas
+            beatae obcaecati dolorem asperiores libero nesciunt dignissimos.
+        </div>
+    </div>
+
+
+    <script>
+
+
+        document.getElementById("align_self").onchange = function () {
+            document.querySelector(".colGreen").style.alignSelf = this.value;
+        }
+
+
+    </script>
+</body>
+
+</html>

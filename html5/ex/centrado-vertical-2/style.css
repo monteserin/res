@@ -1,0 +1,12 @@
+.container {
+    display: table; /*Si quiero que las sucesivas tablas se vayan apilando en horizontal, usaré display:inline-table*/
+    background: red;
+    height: 500px
+}
+
+.info {
+    display: table-cell;
+    text-align: center;
+    vertical-align: middle;
+    background: pink;
+}

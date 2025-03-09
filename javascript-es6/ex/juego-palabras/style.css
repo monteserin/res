@@ -1,0 +1,35 @@
+.container{
+    width: 800px;
+    margin: auto;
+}
+
+.frase, .frasePropuesta{
+    padding: 20px;
+    border: 3px dashed red;
+    border-radius: 15px;
+    font-size: 2rem;
+}
+
+.frasePropuesta{
+    border-color: blue;
+    margin-top: 30px;
+    min-height: 2rem;
+}
+
+.frase .button{
+    padding: 10px;
+    display: inline-block;
+    cursor: pointer
+}
+
+.frase .button:hover{
+    background-color: pink;
+}
+
+button{
+    padding:10px;
+    font-size: 2rem;
+    margin-top: 30px;
+    border-radius: 7px;
+    cursor: pointer;
+}

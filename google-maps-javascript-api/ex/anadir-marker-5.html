@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Añadir Marker HTML5 | Pablo Monteserín</title>
+        <meta name="description" content="Ejemplo de como cargar varios markers personalizados en un mapa de Google Maps con Javascript">
+
+	
+<!-- API
+	http://code.google.com/apis/maps/documentation/javascript/tutorial.html
+-->
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDRzpL0lfAREobXgI1yxvk8uKHkVXz8Mf4">
+</script>
+
+<script>
+	var geo;
+	var latlng = new google.maps.LatLng(43.5293101753168, -5.6773233792);
+	var markerArray = [[43.529492, -5.677978, "texto1"],[43.528921, -5.676688, "texto2"], [43.529522, -5.676489, "texto3"]];
+
+	window.onload = init;
+
+	function init(){
+		var myOptions = {
+			center: latlng,
+			zoom: 18,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		map = new google.maps.Map(document.getElementById("mapa"), myOptions);
+		for(i in markerArray){
+			addMarker(markerArray[i][0],markerArray[i][1], markerArray[i][2] );
+		}
+	}
+
+	var pinIcon = new google.maps.MarkerImage(
+		"../Tux.svg",
+		null, /* size is determined at runtime */
+		null, /* origin is 0,0 */
+		null, /* anchor is bottom center of the scaled image */
+		new google.maps.Size(42, 68)
+		);
+
+
+
+	function addMarker(lat, lng, texto){
+		var mapMarker = new google.maps.Marker({
+			position:new google.maps.LatLng(lat, lng),
+			title: "Estás aquí.",
+			icon:pinIcon
+		});
+
+		
+		var infoWindowOpts = { content: texto };
+		var infoWindow = new google.maps.InfoWindow(infoWindowOpts);
+
+		google.maps.event.addListener(mapMarker, 'click', function() {
+			infoWindow.open(map,mapMarker); 
+		});
+
+		mapMarker.setMap(map);
+	}
+
+
+</script>
+
+</head>
+<body>
+<h1>Añadir un Marker a un mapa</h1>
+	<div id="mapa" style="width:100%; height:500px; background: red"></div>
+	
+</body>
+</html>
+

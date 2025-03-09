@@ -1,0 +1,13 @@
+.articulo {
+    column-count: 4;
+    -moz-column-count: 4;
+    -webkit-column-count: 4;
+    /*espaciado entre columnas*/
+    column-gap: 150px;
+    -moz-column-gap: 150px;
+    -webkit-column-gap: 150px;
+    /*lineas separadoras*/
+    column-rule: 4px solid black;
+    -moz-column-rule: 4px solid black;
+    -webkit-column-rule: 1px solid grey
+}

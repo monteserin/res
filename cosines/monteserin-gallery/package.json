@@ -1,0 +1,22 @@
+{
+  "name": "monteserin-gallery",
+  "version": "3.5.0",
+  "description": "Simple carousel gallery",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "jquery-plugin"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/monteserin/monteserinGallery.git"
+  },
+  "author": "Pablo Monteserín",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/monteserin/monteserinGallery/issues"
+  },
+  "homepage": "http://www.pablomonteserin.com/monteserin-gallery"
+}

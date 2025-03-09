@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>ejercicio coste hotel con Javascript | Pablo Monteserín</title>
+    <meta name="description"
+        content="Esta es la primera parte de un ejercicio que el que utilizaremos las funciones de Javascript para calcular el coste de unas supuestas vacaciones">
+    <meta name="robots" content="noindex, follow">
+</head>
+
+<body>
+    <h1>Ejemplo uso de funciones en Javascript</h1>
+
+    <label>Introduzca el número de noches</label>
+    <input id="numNoches" type="text">
+    <input id="btn" value="calcular coste" type="button">
+    <br><br>
+
+    <input id="resultado" type="text">
+
+    <script>
+        const costeHotel = (numNoches) => 140 * numNoches;
+
+        const calcularCoste = () => {
+            const numNoches = document.querySelector("#numNoches").value;
+            const resultado = costeHotel(numNoches);
+
+            document.querySelector("#resultado").value = resultado;
+        }
+
+        document.querySelector('#btn').addEventListener('click', calcularCoste);
+    </script>
+</body>
+
+</html>

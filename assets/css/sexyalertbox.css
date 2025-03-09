@@ -1,0 +1,56 @@
+#SexyAlertBox-Box {
+  padding-bottom: 24px;
+  background: url('../images/bg-box-bottom.png') bottom left no-repeat !important;
+  background: url('../images/bg-box-bottom.gif') bottom left no-repeat;
+}
+
+#SexyAlertBox-InBox {
+  padding-top: 15px;
+  background: url('../images/bg-box-top.png') top left no-repeat !important;	
+  background: url('../images/bg-box-top.gif') top left no-repeat;	
+}
+
+#SexyAlertBox-BoxContent {
+  background: url('../images/bg-box-body.png') top left repeat-y !important;
+  background: url('../images/bg-box-body.gif') top left repeat-y;
+  padding: 0px 20px;
+}
+
+#SexyAlertBox-BoxContenedor {
+  padding: 0px 0px 5px 55px;
+  text-align: left;
+  font-family:Verdana;
+  font-size:12px;
+  color:#000;
+}
+
+#SexyAlertBox-BoxContenedor p{
+  width:110px;
+	float:right;
+	margin-right:30px;
+		margin-top:100px;
+
+  font-family:Verdana;
+  font-size:12px;
+  color:#000;
+  font-weight:bold;
+}
+
+#BoxAlertBtnOk{
+  text-align:center;
+  float:right
+	margin-right:10px;
+	margin-top:50px;
+	margin-right:10px;
+
+}
+
+#SexyAlertBox-Buttons{
+  margin-top: 220px;
+  text-align:right;
+}
+
+#SexyAlertBox-Box .BoxAlert {
+  background: url('../images/1.jpg') top left no-repeat;
+  height:300px;
+}

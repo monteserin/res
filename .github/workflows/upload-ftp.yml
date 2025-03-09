@@ -1,0 +1,23 @@
+name: Upload FTP
+
+on:
+  push:
+    branches:
+      - master
+  
+
+jobs:
+  build:
+    runs-on: ubuntu-latest  # windows-latest | macos-latest
+    name: Test changed-files
+    steps:
+      - uses: actions/checkout@v3
+      - name: 📂 Sync files with FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+        with:
+          server-dir: 'www/res/'
+          server: pablomonteserin.com
+          username: pablomonteserin
+          password: S5mEwHmf
+          timeout: 6git00000
+          log-level: minimal

@@ -1,0 +1,46 @@
+[gd_scene load_steps=5 format=3 uid="uid://cjq3rvohnujlh"]
+
+[ext_resource type="Script" path="res://scenes/main/main.gd" id="1_o3bua"]
+[ext_resource type="PackedScene" uid="uid://c8fwqmg1nen0k" path="res://scenes/spacehip/spaceship.tscn" id="2_d5ktf"]
+[ext_resource type="Texture2D" uid="uid://gf2orkw3cxxn" path="res://assets/img/space.jpg" id="2_trtjx"]
+[ext_resource type="PackedScene" uid="uid://d0qengnhn4wbx" path="res://scenes/earth/earth.tscn" id="3_dqomy"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_o3bua")
+spaceship_scene = ExtResource("2_d5ktf")
+earth_scene = ExtResource("3_dqomy")
+
+[node name="Container" type="Container" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="TextureRect" type="TextureRect" parent="Container"]
+layout_mode = 2
+texture = ExtResource("2_trtjx")
+
+[node name="SpaceshipButton" type="Button" parent="Container/TextureRect"]
+layout_mode = 0
+offset_left = 150.0
+offset_top = 13.0
+offset_right = 624.0
+offset_bottom = 382.0
+
+[node name="EarthButton" type="Button" parent="Container/TextureRect"]
+layout_mode = 0
+offset_left = 581.0
+offset_top = 250.0
+offset_right = 959.0
+offset_bottom = 642.0
+
+[connection signal="pressed" from="Container/TextureRect/SpaceshipButton" to="." method="_on_spaceship_button_pressed"]
+[connection signal="pressed" from="Container/TextureRect/EarthButton" to="." method="_on_earth_button_pressed"]

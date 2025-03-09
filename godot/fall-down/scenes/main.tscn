@@ -1,0 +1,20 @@
+[gd_scene load_steps=4 format=3 uid="uid://dltinir4770rb"]
+
+[ext_resource type="Texture2D" uid="uid://bkfhyklc74dgs" path="res://assets/back.jpg" id="1_02r4h"]
+[ext_resource type="Script" path="res://scenes/main.gd" id="1_4vxga"]
+[ext_resource type="PackedScene" uid="uid://df87vhqf3ec8e" path="res://scenes/gravity_rocket.tscn" id="5_dr20m"]
+
+[node name="Main" type="Node2D"]
+script = ExtResource("1_4vxga")
+rocket = ExtResource("5_dr20m")
+
+[node name="Timer" type="Timer" parent="."]
+autostart = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+layer = -1
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+offset_right = 960.0
+offset_bottom = 640.0
+texture = ExtResource("1_02r4h")

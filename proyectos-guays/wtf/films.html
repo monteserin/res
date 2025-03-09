@@ -1,0 +1,151 @@
+ <!DOCTYPE html>
+
+ <html lang="es">
+
+ <head>
+
+	<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+
+ 	<title>WTF? - Listado de películas</title>
+
+
+ 	<meta name="description" content="Listado de las películas que aparecen en la aplicación What's the film y que tendrás que adivinar en un tiempo limitado">
+
+ 	<meta name="author" content="Carme Carrillo. Proyecto UF1586 - ASEDEM 2015">
+
+	<!-- favicon-->
+
+	<link rel="shortcut icon" href="img/logo_WTF.png" />
+
+	<!-- CSS quesito -->
+
+	<link rel="stylesheet" href="css/pie.css">
+
+	<!-- responsive -->
+
+	<link rel="stylesheet" type="text/css" href="css/style-large.css">
+
+
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+
+	<link rel="stylesheet" type="text/css" media="only screen and (min-width:50px) and (max-width:500px)" href="css/style-small.css">
+
+	<link rel="stylesheet" type="text/css" media="only screen and (min-width:501px) and (max-width:800px)" href="css/style-medium.css">
+
+	<!-- CSS fuentes  
+
+	<link rel="stylesheet" href="fonts/font.css">-->
+
+	<link href='css/css.css' rel='stylesheet' type='text/css'>
+
+	<link href="css/font-awesome.css" rel="stylesheet">
+
+	<!-- CSS animaciones  -->
+
+	<link rel="stylesheet" href="css/animate.css">
+
+	<link rel="stylesheet" href="css/hover.css">
+
+	<!-- JS -->
+
+	<script type="text/javascript" src="js/jquery-1.11.3.min.js"></script>
+
+	<script type="text/javascript" src="js/wtf.js"></script>
+
+ </head>
+
+ <body>
+
+ 	
+
+ 	<div class="wrapper films">
+
+ 		<!-- <h1><span>What's</span> <span>the</span> <span class="element-inlineblock">film</span> <span  class="element-inlineblock">?</span></h1> -->
+
+		<header>
+
+			<nav class="element-inlineblock">
+
+				<a href="play.html" class="hvr-pulse element-inlineblock btn btn_varios animated pulse"><span class="fa fa-chevron-left"></span></a><!-- fa-gamepad -->
+
+			</nav>
+
+			<div class="logo element-inlineblock animated bounceInDown"></div>
+
+	 		<a href="index.html"><h1 class="margin-0 element-inlineblock animated bounceIn">Listado de películas</h1></a>	 		
+
+			<nav class="element-inlineblock">
+
+				<a href="mailto:wtf@esteemailnoexiste.com" target="_blank" class="hvr-pulse element-inlineblock btn btn_varios animated pulse"><span class="fa fa-info"></span></a>
+
+				<a href="help.html" class="hvr-pulse element-inlineblock btn btn_varios animated pulse"><span class="fa fa-question"></span></a>
+
+			</nav>
+
+		</header>
+
+
+
+		<section class="listado_pelis">
+
+			<ul id="listado_carteles">
+
+			</ul>
+
+		<div class="black_overlay" id="infopeli">
+
+			<div class="lightbox">
+
+				<div>
+
+					<h2 id="titulopeli"></h2>
+
+					<div class="cartel_youtube element-inlineblock">						
+
+						<h3 id="cartel_img">
+
+							<img src="" alt="">
+
+						</h3> 
+
+						<a class="btn btn_films animated pulse element-inlineblock bgcolor-rojo" href="" target="_blank">TRÁILER <span class=" fa fa-youtube"></span></a>
+
+					</div>
+
+					<div class="element-inlineblock " id="sinopsis">
+
+						<p></p>
+
+						<a href="#" target="_blank">+ Ver más en FILMAFFINITY</a>
+
+						<p id="ano"></p>
+
+					</div>
+
+					<a class="btn btn_cerrar hvr-buzz bgcolor-casinegro element-block" href="#" onclick="hide()">CERRAR<span class="fa fa-times"></span></a>
+
+				</div>
+
+
+
+			</div>
+
+		</div>
+
+
+
+		</section>
+
+	
+
+	
+
+	</div>
+
+
+
+ </body>
+
+ </html>

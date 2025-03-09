@@ -1,0 +1,58 @@
+body {
+  background-image: url(./img/bg.gif);
+}
+
+h1 {
+  text-align: center;
+}
+
+h2 {
+  color: #b52025;
+}
+
+.container {
+  max-width: 965px;
+  min-height: 400px;
+  background-color: white;
+  margin: auto;
+  border-radius: 25px;
+}
+
+.row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.justify {
+  text-align: justify;
+}
+.horizontalPadding {
+  padding: 0 40px;
+}
+
+.menu {
+  display: flex;
+  list-style: none;
+}
+
+.menu a {
+  display: block;
+  padding: 14px;
+  text-decoration: none;
+  color: black;
+}
+
+.menu a:hover {
+  background-color: #b52025;
+}
+
+.unformattedLink {
+  text-decoration: none;
+  color: black;
+}
+
+.w100 {
+  max-width: 100%;
+}

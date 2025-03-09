@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Slider OutfiTips</title>
+		<link rel="shortcut icon"  href="fotos/etiqueta.png" type="image/jpg"/>
+		<link rel="stylesheet" href="slider-estilo.css">
+		<!-- Important Owl stylesheet -->
+		<link rel="stylesheet" href="owl.carousel/owl-carousel/owl.carousel.css">
+		<!-- Default Theme -->
+		<link rel="stylesheet" href="owl.carousel/owl-carousel/owl.theme.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no"/>
+
+</head>
+<body>
+	<script type="text/javascript"	src="libreria.min.js"></script>
+<div class="etiqueta"></div>
+<div class="container">
+		<div id="owl-demo">
+		  <div class="item"><img src="fotosSlider/f1.jpg" alt="outfit1"></div>
+		  <div class="item"><img src="fotosSlider/f2.jpg" alt="outfit2"></div>
+		  <div class="item"><img src="fotosSlider/f3.jpg" alt="outfit3"></div>
+		  <div class="item"><img src="fotosSlider/f4.jpg" alt="outfit4"></div>
+		  <div class="item"><img src="fotosSlider/f5.jpg" alt="outfit5"></div>
+		  <div class="item"><img src="fotosSlider/f6.jpg" alt="outfit6"></div>
+		  <div class="item"><img src="fotosSlider/f7.jpg" alt="Outfit7"></div>
+		  <div class="item"><img src="fotosSlider/f8.jpg" alt="Outfit8"></div>
+		  <div class="item"><img src="fotosSlider/f9.jpg" alt="Outfit9"></div>
+		  <div class="item"><img src="fotosSlider/f10.jpg" alt="Outfit10"></div>
+		  <div class="item"><img src="fotosSlider/f11.jpg" alt="Outfit11"></div>
+		  <div class="item"><img src="fotosSlider/f12.jpg" alt="Outfit12"></div>
+		</div>
+	
+	<a href="#" id="boton" class="boton xl">Acceder al armario</a>	
+</div>
+
+<script src="owl.carousel/assets/js/jquery-1.9.1.min.js"></script>
+<script src="owl.carousel/owl-carousel/owl.carousel.js"></script>
+
+<script>
+$(document).ready(function() {
+
+  $("#owl-demo").owlCarousel({
+ 
+      autoPlay: 3000, //Set AutoPlay to 3 seconds
+      items : 3,
+      itemsDesktop : [1199,4],
+      itemsDesktopSmall : [979,3],
+      
+      responsive: true,
+      responsiveRefreshRate : 200,
+      responsiveBaseWidth: window,
+  });
+
+ 	$("#boton").click(function () {
+ 		location.href = "index.html"
+	});
+});
+</script>
+</body>
+</html>

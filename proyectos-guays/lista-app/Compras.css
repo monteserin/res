@@ -1,0 +1,329 @@
+@font-face{
+	font-family: comfortaaR;
+	src: url(Comfortaa/Comfortaa-Regular.ttf);
+}
+@font-face{
+	font-family: comfortaaL;
+	src: url(Comfortaa/Comfortaa-Light.ttf);
+}
+@font-face{
+	font-family: comfortaaB;
+	src: url(Comfortaa/Comfortaa-Bold.ttf);
+}
+html, body{
+	background: #4A4A4A;
+	font-family: comfortaaL;
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	padding: 0;
+	position: static;
+	box-sizing: border-box;
+	padding-bottom: 50px;
+	font-variant: small-caps;
+}
+
+header{
+	position: fixed;
+	top: 0;
+	width: 100%;
+	margin: 0;
+	padding:0;
+	z-index: 90
+}
+
+nav{
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	margin: 0;
+	padding:0;
+}
+
+ul{
+	margin: 0;
+	padding:0;
+}
+
+li{
+	list-style: none;
+	display: inline-block;
+	text-align: center;
+	background: lightgray;
+	border: 0px solid black;
+	box-sizing: border-box;
+}
+
+h2{
+	font-size: 14px;
+	margin: 0;
+	padding: 17px;
+	padding-left: 10px;
+}
+h3{
+	text-transform: lowercase;
+	vertical-align: top;
+	font-size: 16px;
+	font-weight: normal;
+	width: 24%;
+	display: inline-block;
+	text-align: left;
+	padding-left: 10px;
+	margin-top: 15px;
+	float: left;
+}
+h4{
+	margin-top: 30px;
+	margin-bottom: 5px;
+	text-transform: lowercase;
+	vertical-align: top;
+	width: 70px;
+	font-size: 12px;
+	font-weight: lighter;
+	display: inline-block;
+	text-align: right;
+	padding-right: 10px;
+	float: right;
+}
+.moneda{
+	width: 40px;
+}
+.cuerpo{
+	position: relative;
+	width: 100%;
+}
+.productos{
+	width: 100%;
+	vertical-align: middle;
+	background: #FAF8F0;
+	border-bottom: 1px solid #CCCCCC;
+	border-top: 1px solid #CCCCCC;
+	box-sizing: border-box;
+}
+.lightbox, .lightbox2, .lightbox3{
+	top: 0;
+	display: none;
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	z-index: 100;
+}
+.pantallaAgregar{
+	width: 98%;
+	height: 98%;
+	background: #E04A38;
+	margin: auto;
+	margin-top: 1%;
+	vertical-align: middle;
+	padding: 20px;
+	padding-top: 50px;
+	box-sizing: border-box;
+}
+.home{
+	position: relative;
+	width: 100%;
+	background: #E0D57E;
+}
+
+.faltas{
+	position: absolute;
+	top: 10px;
+	left: 10px;
+	color: #963333;
+	font-weight: bold;
+	width: 30px;
+	height: 30px;
+	background: white;
+	border-radius: 15px;
+	padding: 4px;
+	box-sizing: border-box;
+	border: 2px solid #963333;
+}
+.precioTotal, .precioTotal2{
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	color: #203A52;
+	font-weight: bold;
+	width: auto;
+	height: 30px;
+	background: white;
+	border-radius: 5px;
+	padding: 5px;
+	box-sizing: border-box;
+	border: 1px solid #203A52;
+}
+.precioTotal2{
+	float: right;
+	position: relative;
+}
+.faltasEn{
+	width: 30px;
+	height: 30px;
+	display: inline-block;
+	float: right;
+	padding: 4px;
+	margin-top: 10px;
+	margin-right: 10px;
+	color: #963333;
+	border-radius: 15px;
+	border: 2px solid #963333;
+	box-sizing: border-box;
+}
+.menu, .usuarios{
+	width: 20%;
+}
+.agregar, .agregar2{
+	width: 20%;
+	background: #3B4A3D;
+}
+.buscar, .buscar2{
+	vertical-align: top;	
+	width: 80%;
+}
+.buscar input, .buscar2 input{
+	display: inline-block;
+	height: 50px;
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	border: 0 solid black;
+	padding: 10px;
+}
+.cerrar{
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	background: white;
+	width: 20px;
+	height: 20px;
+	border-radius: 10px;
+}
+.eliminarC, .eliminarP{
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	box-sizing: border-box;
+	margin-top: 5px;
+	margin-left: 10px;
+	background: grey;
+	border-radius: 5px;
+	float: left;
+}
+.ekis{
+	display: none;
+	width: 100%;
+	height: 100%;
+	background: #D44E0D;
+	margin: auto;
+	border-radius: 5px;
+}
+.home a, .todo a, .comercios a, .lista a, .menu a, .usuarios a{
+	text-decoration: none;
+	color: black;
+	font-weight: lighter;
+	text-align: center;
+}
+.home a{
+	color: black;
+	letter-spacing: 30px;
+	font-weight: bold;
+}
+.agregar h2, .agregar2 h2{
+	color: white;
+	font-weight: lighter;
+}
+#busqueda, #busqueda2{
+	width: 75%;
+	font-size: 13px;
+	font-family: comfortaaL;
+	font-variant: small-caps;
+}
+#nombre, #comercio, #precio, #nombreComercio{
+	width: 100%;
+	font-size: 13px;
+	font-family: comfortaaL;
+	font-variant: small-caps;
+	border: 0 solid black;
+	padding: 10px;
+	margin-bottom: 15px;
+	box-sizing: border-box;
+}
+#buscar, #buscar2{
+	font-size: 13px;
+	font-family: comfortaaL;
+	font-variant: small-caps;
+	width: 25%
+}
+.comercios, .lista, .todo{
+	width: 33.33%;
+}
+#enviar, #enviar3{
+	display: block;
+	width: 50px;
+	height: 50px;
+	font-size: 13px;
+	font-family: comfortaaL;
+	font-variant: small-caps;
+	margin: 10px auto;
+	padding: 5px;
+	border: 0 solid black;
+	border-radius: 5px;
+
+}
+.checker, .checker2{
+	width: 40px;
+	height: 40px;
+	display: inline-block;
+	box-sizing: border-box;
+	margin-top: 5px;
+	border-radius: 5px;
+	float: right;
+	margin-right: 10px;
+
+}
+.seleccion{
+	background: #203A52;
+	font-weight: bold;
+	color: white;
+}
+.seleccion a{
+	color: white;
+}
+.rojo{
+	background: #963333;
+}
+.verde{
+	background: #2C9E56;
+}
+.botCom{
+	float: left;
+}
+.colorCom{
+	background: #E5DDBC;
+	position: relative;
+}
+.despliegue{
+	display: none;
+	max-height: 0;
+	overflow: hidden;
+}
+span#comercio{
+	padding: 0;
+	margin: 20px 0;
+}
+.botonD{
+	float: right;
+	vertical-align: top;
+	width: 30px;
+	height: 30px;
+	border-radius: 5px;
+	margin-top: 10px;
+	margin-right: 10px;
+	background: #D9AF1A;
+	display: inline-block;
+}
+.desplegado{
+	display: block;
+	max-height: 1000px;
+}

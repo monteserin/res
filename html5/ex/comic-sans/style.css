@@ -1,0 +1,47 @@
+@charset "utf-8";
+
+body {
+    margin: 0;
+    background-color: #C6D9EE;
+    font-family: sans-serif;
+}
+
+.contenedora {
+    width: 1024px;
+    margin: auto
+}
+
+h1 {
+    margin: 0;
+    font-size: 3rem;
+    text-align: right;
+}
+
+h2 {
+    margin: 0;
+    font-size: 2rem;
+    font-variant: small-caps;
+}
+
+
+
+.marron{
+    font-weight: bold;
+    color: brown;
+}
+
+.doble_subrayado{
+    text-decoration: underline overline;
+    color: brown
+}
+
+.fondo_blanco{
+    background: white;
+    color: green
+}
+
+.cursiva{
+    font-style: italic;
+    color:blue;
+    font-size: 3rem
+}

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Touch Events en jQuery Mobile | Pablo Monteserín</title>
+    <meta charset='utf-8'>
+    <meta name="description"
+        content="Ejemplo de programación con jQuery mobile que detecta cuando hacemos un swipe right para cambiar a la siguiente pantalla de la aplicación móvil">
+    <meta name="robots" content="noindex, follow">
+    <link rel="stylesheet" type="text/css" href="https://pablomonteserin.com/res/jquery-mobile/ex/jquery.mobile.css">
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery-mobile/ex/jquery-1.11.js"></script>
+    <script type="text/javascript" src="https://pablomonteserin.com/res/jquery-mobile/ex/jquery.mobile.js"></script>
+    <script type="text/javascript">
+        $(document).on("pageinit", "#firstpage", function (evt) {
+            $("#firstpage").on("swiperight", function (e) {
+                $.mobile.changePage("externalPage.html");
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <section id="firstpage" data-role="page">
+        <header data-role="header">
+            <h1>Touch Events en jQuery Mobile </h1>
+        </header>
+        <div data-role="content">
+            <p>Esta es la primera página</p>
+        </div>
+        <footer data-role="footer">El pie de la página</footer>
+    </section>
+</body>
+
+</html>

@@ -1,0 +1,12 @@
+https://education.oracle.com/java-foundations/pexam_1Z0-811
+
+https://coderanch.com/t/695865/certification/Passed
+
+The 1Z0-808 exam is at a more advanced level than 1Z0‑811
+
+https://www.selikoff.net/2015/06/07/jeannes-impressions-of-the-java-foundations-certified-junior-associate/
+
+
+ We can directly take 808 exam. 
+
+The exam tests your basic knowledge to program with Java. It requires you to pass 65% and there are totally 75 multiple choice questions in real exam.

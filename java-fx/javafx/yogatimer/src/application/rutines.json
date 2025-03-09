@@ -1,0 +1,37 @@
+[
+	{
+		"title": "sentado",
+		"exercises": [
+			{
+				"title": "Sentarse como los indios, pierna izquierda por delante",
+				"img": "sukhasana.jpg",
+				"time": "3"
+			},
+						{
+				"title": "Sentarse como los indios, pierna derecha por delante",
+				"img": "sukhasana.jpg",
+				"time": "60"
+			},
+						{
+				"title": "Sentado con piernas estiradas",
+				"img": "Upavistha_Konasana-flexion-sentada-delante.jpg",
+				"time": "120"
+			},
+			{
+				"title": "Malasana",
+				"img": "malasana.jpg",
+				"time": "120"
+			}
+		]
+	},
+	{
+		"title": "de pie",
+		"exercises": [
+			{
+				"title": "paso profundo",
+				"img": "sukhasana.jpg",
+				"time": "30"
+			}
+		]
+	}
+]

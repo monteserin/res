@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>gradient en canvas de HTML5 | Pablo Monteserín</title>
+		<meta name="description" content="Ejemplo de como crear un gradiente en el canvas de html utilizando Javascript">
+
+	</head>
+	<body>
+	<h1>Grandiente en un canvas de HTML</h1>
+		<canvas id="canvas" width="400px" height="400px" style="border:2px solid black">
+		</canvas>
+				<script>
+			var c = document.getElementById("canvas");
+			var ctx = c.getContext("2d");
+			//coordenadas del punto inicial y final del degradadoj_canvas.html
+			var grd = ctx.createLinearGradient(0, 0, 400, 400);
+			grd.addColorStop(0, "pink");
+			grd.addColorStop(0.5, "red");
+			grd.addColorStop(1, "blue");
+			ctx.fillStyle = grd;
+			ctx.fillRect(0,0,400,400);
+			</script>
+	</body>
+</html>

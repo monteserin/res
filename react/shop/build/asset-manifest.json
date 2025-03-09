@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/res/react/shop/build/static/css/main.d8aad994.css",
+    "main.js": "/res/react/shop/build/static/js/main.97185317.js",
+    "static/media/pablo-monteserin.jpg": "/res/react/shop/build/static/media/pablo-monteserin.ec6f94d7065a366daddd.jpg",
+    "index.html": "/res/react/shop/build/index.html",
+    "main.d8aad994.css.map": "/res/react/shop/build/static/css/main.d8aad994.css.map",
+    "main.97185317.js.map": "/res/react/shop/build/static/js/main.97185317.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d8aad994.css",
+    "static/js/main.97185317.js"
+  ]
+}

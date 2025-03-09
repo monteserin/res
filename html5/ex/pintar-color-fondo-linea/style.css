@@ -1,0 +1,6 @@
+.pintar-linea p {
+  display: inline;
+  background: pink;
+  font-size: 1em;
+  line-height: 1.5em;
+}

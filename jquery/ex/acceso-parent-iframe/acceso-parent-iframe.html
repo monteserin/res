@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Acceso a parent iframe</title>
+    <meta name="robots" content="noindex, follow">
+    <script type="text/javascript">
+        function show(url) {
+            if ($('#contendor_pop', window.parent.document).css("display") == "none") {
+                $('#contendor_pop', window.parent.document).html("<img src='" + url + "'>");
+                $('#contendor_pop', window.parent.document).css("display", "block");
+            } else {
+                $('#contendor_pop', window.parent.document).css("display", "none");
+            }
+        }
+    </script>
+    <a href="javascript:show('perro.jpg');">enlace
+    </a>
+
+
+</head>
+
+<body>
+
+</body>
+
+</html>

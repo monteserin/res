@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="./js/ScrollMagic.min.js"></script>
+    <script src="./js//debug.addIndicators.min.js"></script>
+    <script src="./js/TweenMax.min.js"></script>
+    <script src="./js/animation.gsap.min.js"></script>
+
+    <style>
+        .back {
+            max-width: 900px;
+            height: 780px;
+            margin: auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* 1 ******************************************/
+        .nubeIzq {
+            position: absolute;
+            top: 0;
+            left: 0px;
+        }
+
+        .nubeIzq.extender {
+            left: 50px
+        }
+
+        .nubeDerecha {
+            position: absolute;
+            top: 0;
+            left: 570px;
+        }
+
+        .nubeDerecha.extender {
+            left: 400px
+        }
+
+        .skyline {
+            position: absolute;
+            top: 100px;
+            left: 0px;
+        }
+
+        .skyline.extender {
+            left: -50px;
+        }
+
+        .brillo {
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .ventana {
+            position: absolute;
+            background-image: url(./img/1/ventana.png);
+            top: 0;
+            left: 100px;
+            width: 441px;
+            height: 400px;
+            overflow: hidden;
+        }
+
+        .sonadora {
+            position: absolute;
+            top: 100px;
+            left: 300px;
+        }
+
+        /*********************************************************************************/
+        .suelo {
+            position: absolute;
+            bottom: 0;
+        }
+
+        .cielo {
+            position: absolute;
+            top: 100px;
+            left: 25px;
+        }
+
+        .nina {
+            position: absolute;
+            bottom: 80px;
+            left: 300px;
+
+        }
+
+        .sol2 {
+            position: absolute;
+            top: 350px;
+            left: 700px
+        }
+
+        .sol2.extender {
+            left: 400px;
+
+        }
+
+        .tuberia2 {
+            position: absolute;
+            bottom: 190px;
+            right: 160px;
+        }
+
+        .tubrana {
+            position: absolute;
+            bottom: 0;
+            bottom: -150px;
+        }
+
+        .tubranaOverflow {
+            position: absolute;
+            width: 87px;
+            height: 150px;
+            bottom: 150px;
+            left: 175px;
+            overflow: hidden;
+        }
+
+        .tubrana.extender {
+            bottom: 0px
+        }
+
+        .tubdebajo {
+            position: absolute;
+            bottom: 165px;
+            left: 155px;
+        }
+
+        .tubcover {
+            position: absolute;
+            bottom: 50px;
+            left: 100px;
+        }
+
+        .ojos_buho {
+            position: absolute;
+            bottom: 155px;
+            left: 238px;
+        }
+
+
+
+        .horizonte {
+            position: absolute;
+            bottom: 200px;
+            right: 0;
+        }
+
+        .horizonte1 {
+            position: absolute;
+            bottom: 150px;
+        }
+
+        .fondo1 {
+            position: absolute;
+            top: 0px;
+            left: 40px;
+        }
+
+        .fondo1.extender {
+            top: 50px
+        }
+
+        .fondo2 {
+            position: absolute;
+            top: 50px;
+            left: 50px;
+        }
+
+        .fondo2.extender {
+            top: 0
+        }
+
+        .cubos3 {
+            position: absolute;
+            bottom: 250px;
+            left: 140px;
+            animation: myOrbit2 2s linear infinite;
+        }
+
+        .cubos2 {
+            position: absolute;
+            bottom: 395px;
+            left: 70px;
+            animation: myOrbit 2s linear infinite;
+        }
+
+
+        .monedas1 {
+            position: absolute;
+            bottom: 320px;
+            left: 200px;
+            position: absolute;
+            animation: myOrbit 2s linear infinite;
+        }
+
+
+
+        .arbol-izq {
+            position: absolute;
+            bottom: 150px;
+            left: 50px;
+        }
+
+        .arbol-izq.extender {
+            left: -50px;
+        }
+
+        .arbol-drch {
+            position: absolute;
+            bottom: 250px;
+            right: 50px;
+        }
+
+        .arbol-drch.extender {
+            right: -50px
+        }
+
+        /*********************************************************************************/
+        .box {
+            height: 100vh;
+        }
+
+        .main3 {
+            background-image: url(./img/3/sky.png);
+            background-repeat: no-repeat;
+            background-position: center 0px;
+            background-size: 100% auto;
+
+        }
+
+        .main3.extender {
+            background-position: center 0px;
+        }
+
+
+
+        .forest {
+            position: absolute;
+            bottom: 0;
+        }
+
+        .arquera {
+            position: absolute;
+            bottom: 40px;
+            left: 200px;
+            width: 100%;
+            height: 401px;
+            text-align: center;
+        }
+
+        .arquera.extender {
+            left: 100px;
+        }
+
+        .flecha1 {
+            position: absolute;
+            top: 200px;
+            left: 350px;
+        }
+
+        .flecha1.extender {
+            top: 100px;
+            left: 0px;
+        }
+
+        .flecha2 {
+            position: absolute;
+            top: 300px;
+            left: 350px;
+        }
+
+        .flecha2.extender {
+            left: 0px;
+        }
+
+        .flecha3 {
+            position: absolute;
+            top: 500px;
+            left: 350px;
+        }
+
+        .flecha3.extender {
+            left: 0px;
+        }
+
+        .mountains {
+            position: absolute;
+            top: 550px;
+            transform: scale(0.9);
+        }
+
+        .mountains.extender {
+            top: 300px;
+            transform: scale(1);
+
+        }
+
+        .tortuga {
+            position: absolute;
+            top: 30%;
+            left: 10%;
+            animation: myOrbit 2s linear infinite;
+        }
+
+
+        .tronco {
+            position: absolute;
+            bottom: 50px;
+            left: 120px;
+            transform: scale(1);
+
+        }
+
+        .sol {
+            position: absolute;
+            bottom: 200px;
+            left: 400px;
+        }
+
+        .sol.extender {
+            bottom: 500px
+        }
+
+        .tronco.extender {
+            transform: scale(0.7);
+            bottom: 60px;
+        }
+
+        @keyframes myOrbit {
+            from {
+                transform: rotate(0deg) translateX(15px) rotate(0deg);
+            }
+
+            to {
+                transform: rotate(360deg) translateX(15px) rotate(-360deg);
+            }
+        }
+
+
+        @keyframes myOrbit2 {
+            from {
+                transform: rotate(0deg) translateX(15px) rotate(0deg);
+            }
+
+            to {
+                transform: rotate(-360deg) translateX(15px) rotate(+360deg);
+            }
+        }
+
+        /************************************************/
+
+
+        @media only screen and (max-width: 768px) {
+            .arquera {
+                left: 0;
+            }
+
+            .hideOnMobile {
+                display: none
+            }
+        }
+
+        .invisible {
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="box"></div>
+
+
+    <section class="main1">
+
+        <div class="back">
+
+
+            <div class="ventana">
+                <img class="skyline triggerSkyline" src="./img/1/skyline.png" alt="">
+                <img class="brillo" src="./img/1/brillo.png" alt="">
+
+            </div>
+            <img class="nubeIzq triggerNubeIzq" src="./img/1/nibe_izq.png" alt="">
+            <img class="nubeDerecha triggerNubeDerecha" src="./img/1/nube_drch.png" alt="">
+
+            <img class="sonadora" src="./img/1/sonadora.png" alt="">
+
+
+        </div>
+    </section>
+
+    <section class="main2">
+        <div class="back">
+            <img class="fondo2 triggerFondo2" src="./img/2/fondo2.png" alt="">
+
+            <img class="fondo1 triggerFondo1" src="./img/2/fondo1.png" alt="">
+
+
+            <img class="cielo" src="./img/2/cielo.png" alt="">
+            <img class="sol2 triggerSol2" src="./img/2/sol.png" alt="">
+
+            <img class="horizonte" src="./img/2/horizonte2.png" alt="">
+            <img class="horizonte1" src="./img/2/horizonte1.png" alt="">
+
+            <img class="suelo" src="./img//2/suelo.png" alt="">
+            <div class="arbol-izq triggerArbolIzq">
+                <img src="./img/2/arbol-izq.png" alt="">
+                <img class="ojos_buho" src="./img/2/ojos_buho.png" alt="">
+
+            </div>
+            <img class="arbol-drch triggerArbolDch" src="./img/2/arbol-drch.png" alt="">
+            <img class="monedas1" src="./img/2/monedas1.png" alt="">
+
+            <img class="tuberia2" src="./img/2/tuberia 2.png" alt="">
+            <img class="tubdebajo" src="./img/2/tub-debajo.png" alt="">
+            <div class="tubranaOverflow">
+                <img class="tubrana triggertweenTubRana" src="./img/2/tub-rana.png" src="" alt="">
+            </div>
+            <img class="tubcover" src="./img/2/tub-cover.png" alt="">
+
+            <img class="cubos3 triggerCubos3" src="./img/2/cubos3.png" alt="">
+            <img class="cubos2" src="./img/2/cubos2.png" alt="">
+            <img class="nina" src="./img/2/nina.png" alt="">
+
+
+        </div>
+
+    </section>
+
+    <section class="main3">
+        <div class="back">
+
+
+            <img class="sol triggerSol" src="./img/3/sol.png" alt="">
+            <img class="mountains mountainsTrigger" src="./img/3/mountains.png" alt="">
+
+            <img class="forest triggerForest" src="./img/3/forest.png" alt="">
+
+            <img class="tronco triggerTronco" src="./img/3/tronco.png" alt="">
+            <div class="arquera">
+                <img class="triggerArquera" src="./img/3/arquera.png" alt="">
+            </div>
+            <img class="tortuga" src="./img/3/tortuga.png" alt="">
+            <img class="flecha1 triggerFlecha1 hideOnMobile" src="./img/3/flecha1.png" />
+            <img class="flecha2 triggerFlecha2 hideOnMobile" src="./img/3/flecha2.png" />
+            <img class="flecha3 triggerFlecha3 hideOnMobile" src="./img/3/flecha3.png" />
+        </div>
+
+
+    </section>
+
+    <div class="back2">
+
+
+    </div>
+
+
+    <div class="box"></div>
+
+    <script>
+        const controller = new ScrollMagic.Controller();
+        // 1 ///////////////////////////////////////
+
+        const tweenSkyLine = TweenMax.to(".skyline", 1, { className: "+=extender" });
+        const tweenNube1 = TweenMax.to(".nubeIzq", 1, { className: "+=extender" });
+        const tweenNube2 = TweenMax.to(".nubeDerecha", 1, { className: "+=extender" });
+
+        new ScrollMagic.Scene({ triggerElement: ".triggerNubeIzq", duration: 900, offset: -200 })
+            .setTween(tweenNube1)
+            .addTo(controller);
+
+        new ScrollMagic.Scene({ triggerElement: ".triggerNubeDerecha", duration: 900, offset: -200 })
+            .setTween(tweenNube2)
+            .addTo(controller);
+
+        new ScrollMagic.Scene({ triggerElement: ".triggerSkyline", duration: 900, offset: -200 })
+            .setTween(tweenSkyLine)
+            .addTo(controller);
+
+
+
+        // 3 ///////////////////////////////////////
+        const tweenMountains = TweenMax.to(".mountains", 1, { className: "+=extender" });
+        const tweenSol = TweenMax.to(".sol", 1, { className: "+=extender" });
+
+        const tweenTronco = TweenMax.to(".tronco", 1, { className: "+=extender" });
+        const tweenBack = TweenMax.to(".back", 1, { className: "+=extender" });
+        const tweenArquera = TweenMax.to(".arquera", 1, { className: "+=extender" });
+        const tweenFlecha1 = TweenMax.to(".flecha1", 1, { className: "+=extender" });
+        const tweenFlecha2 = TweenMax.to(".flecha2", 1, { className: "+=extender" });
+        const tweenFlecha3 = TweenMax.to(".flecha3", 1, { className: "+=extender" });
+
+        // Cuando el objeto .trigger pasa por el trigger marcador se detona la animación tween
+        new ScrollMagic.Scene({ triggerElement: ".triggerSol", duration: 900, offset: -200 })
+            .setTween(tweenSol)
+            .addTo(controller);
+
+        new ScrollMagic.Scene({ triggerElement: ".triggerBack", duration: 600, offset: 300 })
+            .setTween(tweenBack)
+            .addTo(controller);
+
+        new ScrollMagic.Scene({ triggerElement: ".mountainsTrigger", duration: 900, offset: -400 })
+            .setTween(tweenMountains)
+            .addTo(controller);
+
+        new ScrollMagic.Scene({ triggerElement: ".triggerTronco", duration: 900, offset: -400 })
+            .setTween(tweenTronco)
+            .addTo(controller);
+
+        new ScrollMagic.Scene({ triggerElement: ".triggerArquera", duration: 900, offset: -400 })
+            .setTween(tweenArquera)
+            .addTo(controller);
+
+        new ScrollMagic.Scene({ triggerElement: ".triggerFlecha1", duration: 900, offset: -400 })
+            .setTween(tweenFlecha1)
+            .addTo(controller);
+
+        new ScrollMagic.Scene({ triggerElement: ".triggerFlecha2", duration: 900, offset: -400 })
+            .setTween(tweenFlecha2)
+            .addTo(controller);
+
+        new ScrollMagic.Scene({ triggerElement: ".triggerFlecha3", duration: 900, offset: -400 })
+            .setTween(tweenFlecha3)
+            .addTo(controller);
+
+        //  2/////////////////////////////////////////////////////////////
+        const tweenSol2 = TweenMax.to(".sol2", 1, { className: "+=extender" });
+        const tweenTubRana = TweenMax.to(".tubrana", 1, { className: "+=extender" });
+        const tweenArbolIzq = TweenMax.to(".arbol-izq", 1, { className: "+=extender" });
+        const tweenArbolDch = TweenMax.to(".arbol-drch", 1, { className: "+=extender" });
+        const tweenFondo1 = TweenMax.to(".fondo1", 1, { className: "+=extender" });
+        const tweenFondo2 = TweenMax.to(".fondo2", 1, { className: "+=extender" });
+
+        new ScrollMagic.Scene({ triggerElement: ".triggerSol2", duration: 1000, offset: -500 })
+            .setTween(tweenSol2)
+            .addTo(controller);
+
+        new ScrollMagic.Scene({ triggerElement: ".triggerFondo1", duration: 600, offset: -600 })
+            .setTween(tweenFondo1)
+            .addTo(controller);
+
+        new ScrollMagic.Scene({ triggerElement: ".triggerFondo2", duration: 600, offset: -600 })
+            .setTween(tweenFondo2)
+            .addTo(controller);
+
+        new ScrollMagic.Scene({ triggerElement: ".triggertweenTubRana", duration: 200, offset: -200 })
+            .setTween(tweenTubRana)
+            .addTo(controller);
+
+
+        new ScrollMagic.Scene({ triggerElement: ".triggerArbolIzq", duration: 1100, offset: -200 })
+            .setTween(tweenArbolIzq)
+            .addTo(controller);
+
+        new ScrollMagic.Scene({ triggerElement: ".triggerArbolDch", duration: 1100, offset: -200 })
+            .setTween(tweenArbolDch)
+            .addTo(controller);
+
+        const eyes = document.querySelector('.ojos_buho');
+        setInterval(() => { eyes.classList.toggle('invisible') }, 3000)
+    </script>
+</body>
+
+</html>

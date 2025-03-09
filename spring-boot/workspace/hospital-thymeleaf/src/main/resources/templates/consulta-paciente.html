@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<h1>hemos llegado</h1>
+
+	<form action="/modificaPaciente">
+
+		<input type="hidden" name="identificador" th:value="${paciente.id}">
+
+		<input type="text" name="nombre" placeholder="nombre" th:value="${paciente.nombre}">
+
+		<input type="text" name="apellidos" placeholder="apellidos" th:value="${paciente.apellidos}">
+
+		<input type="date" name="fecha_alta" th:value="${#dates.format(paciente.fecha_alta, 'yyyy-MM-dd')}"  />
+		
+
+		<button>Enviar</button>
+	</form>
+
+
+</body>
+
+</html>

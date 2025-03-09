@@ -1,0 +1,29 @@
+.slide {
+  width: 512px;
+  height: 512px;
+}
+
+
+.batman {
+  background-image: url(https://pablomonteserin.com/res/javascript-es6/ex/slider/un-solo-boton/tuxes/PinguLinux_Batman.png);
+}
+
+.bob {
+  background-image: url(https://pablomonteserin.com/res/javascript-es6/ex/slider/un-solo-boton/tuxes/PinguLinux_Bob_Marley.png);
+}
+
+.captain {
+  background-image: url(https://pablomonteserin.com/res/javascript-es6/ex/slider/un-solo-boton/tuxes/PinguLinux_Capitan_America.png);
+}
+
+.slider {
+  display: flex;
+  width: 1536px;
+  transition: 1s;
+}
+
+.sliderContainer {
+  width: 512px;
+  height: 512px;
+  overflow: hidden;
+}

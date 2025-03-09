@@ -1,0 +1,51 @@
+<script>
+
+
+    const costeHotel = numNoches => 140 * numNoches;
+
+
+    const costeAvion = (destino, n_noches) => {
+        let c = 0;
+        if (destino == "Oviedo") {
+            c = 15;
+        } else if (destino == "Tokyo") {
+            c = 700;
+        } else if (destino == "Madrid") {
+            c = 90;
+        } else if (destino == "Barcelona") {
+            c = 90;
+        }
+        if (n_noches > 3) {
+            c = c * 0.9;
+        }
+        return c;
+    }
+
+
+    const calcularCoste = () => {
+        const numNoches = prompt('numero de noches');
+        const destino = prompt('destino');
+
+        const resultado1 = costeHotel(numNoches);
+        const resultado2 = costeAvion(destino, numNoches);
+        const resultado3 = costeAlquilerCoche(numNoches)
+
+        console.log("Coste viaje: " + resultado1);
+        console.log("Resultado viaje: ", resultado2);
+        console.log("Resultado alquiler coche: ", resultado3);
+
+        console.log("Total:", resultado1 + resultado2 + resultado3);
+    }
+
+    const costeAlquilerCoche = n => {
+        let valorDevuelto = n * 40;
+        if (n >= 7) {
+            valorDevuelto -= 50;
+        } else if (n >= 3) {
+            valorDevuelto -= 20
+        }
+        return valorDevuelto;
+    }
+
+</script>
+</script>

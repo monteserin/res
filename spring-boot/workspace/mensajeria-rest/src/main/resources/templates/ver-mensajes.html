@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<title>Insert title here</title>
+</head>
+
+<body>
+	<ul>
+		<li th:each="mensaje : ${mensajes}">
+			<p th:text="${mensaje?.texto}"></p>
+		</li>
+	</ul>
+</body>
+
+</html>
